@@ -8,17 +8,31 @@
 
 NAME     := reference-model
 LATEXMK  := latexmk
+CP       := cp
 RM       := rm -f
 
 GENERATED_FILES := $(wildcard *.aux *.bbl *.blg *.fdb_latexmk *.fls *.log *.out *.pdf *.synctex.gz *.toc figures/*.pdf)
 FIGURES         := $(patsubst %.svg,%.pdf,$(wildcard figures/*)) 
 SECTIONS        := $(wildcard sections/*.tex)
 
+default: $(NAME).pdf
+
 $(NAME).pdf: $(NAME).tex bibliography.bib $(FIGURES)
 	$(LATEXMK) -cd -pdf $(NAME).tex
 
 figures/%.pdf: figures/%.svg
 	inkscape $< --export-filename=$@
+
+ifdef ASSEMBLY_PATH
+
+assemble: $(ASSEMBLY_PATH)/$(NAME).pdf
+
+$(ASSEMBLY_PATH)/$(NAME).pdf: $(NAME).pdf
+	$(CP) $< $(ASSEMBLY_PATH)/arrowhead-$(patsubst %.pdf,%-$(ASSEMBLY_VERSION).pdf,$<)
+
+.PHONY: assemble
+
+endif
 
 clean:
 	$(foreach file,$(GENERATED_FILES),$(RM) $(file)$(nl))
