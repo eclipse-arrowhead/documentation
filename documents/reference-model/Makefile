@@ -7,24 +7,15 @@
 # SPDX-License-Identifier: EPL-2.0
 
 NAME     := reference-model
-MKBIB    := bibtex
-MKPDF    := pdflatex
+LATEXMK  := latexmk
 RM       := rm -f
 
-GENERATED_FILES := $(wildcard *.aux *.bbl *.blg *.log *.out *.pdf *.synctex.gz *.toc figures/*.pdf)
-VECTOR_IMAGES   := $(patsubst %.svg,%.pdf,$(wildcard figures/*.svg)) 
+GENERATED_FILES := $(wildcard *.aux *.bbl *.blg *.fdb_latexmk *.fls *.log *.out *.pdf *.synctex.gz *.toc figures/*.pdf)
+FIGURES         := $(patsubst %.svg,%.pdf,$(wildcard figures/*)) 
 SECTIONS        := $(wildcard sections/*.tex)
 
-$(NAME).pdf: $(VECTOR_IMAGES) $(NAME).aux $(NAME).bbl
-	$(MKPDF) $(NAME).tex
-
-.PHONY: $(NAME).pdf
-
-./%.bbl: %.aux bibliography.bib
-	$(MKBIB) $<
-
-$(NAME).aux: $(NAME).tex $(SECTIONS)
-	$(MKPDF) $<
+$(NAME).pdf: $(NAME).tex bibliography.bib $(FIGURES)
+	$(LATEXMK) -cd -pdf $(NAME).tex
 
 figures/%.pdf: figures/%.svg
 	inkscape $< --export-filename=$@
