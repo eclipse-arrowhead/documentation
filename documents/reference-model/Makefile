@@ -17,7 +17,7 @@ SECTIONS        := $(wildcard sections/*.tex)
 
 default: $(NAME).pdf
 
-$(NAME).pdf: $(NAME).tex bibliography.bib $(FIGURES)
+$(NAME).pdf: $(NAME).tex bibliography.bib $(FIGURES) $(SECTIONS)
 	$(LATEXMK) -cd -pdf $(NAME).tex
 
 figures/%.pdf: figures/%.svg
