@@ -77,6 +77,9 @@
 
 \makeatletter
 
+\let\originsection\section
+\renewcommand\section{\newpage\originsection}
+
 \let\origsubsubsection\subsubsection
 \renewcommand\subsubsection{\@ifstar{\starsubsubsection}{\nostarsubsubsection}}
 \newcommand\starsubsubsection[1]{\vspace*{-0.5ex}\origsubsubsection*{#1}\vspace*{-0.75ex}}
