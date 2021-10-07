@@ -1,4 +1,4 @@
-% Copyright (c) 2021-08-19 Eclipse Arrowhead Project
+% Copyright (c) 2021-10-07 Eclipse Arrowhead Project
 %
 % This program and the accompanying materials are made available under the
 % terms of the Eclipse Public License 2.0 which is available at
@@ -6,8 +6,8 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-\def\fileversion{1.3}
-\def\filedate{2021/10/04}
+\def\fileversion{1.4}
+\def\filedate{2021/10/07}
 \NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{arrowhead}[\filedate\space Version \fileversion\space]
