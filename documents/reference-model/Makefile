@@ -6,14 +6,16 @@
 #
 # SPDX-License-Identifier: EPL-2.0
 
-NAME     := reference-model
-LATEXMK  := latexmk
-CP       := cp
-RM       := rm -f
+ASSEMBLY_NAME := Eclipse Arrowhead Reference Model v
+NAME          := reference-model
+LATEXMK       := latexmk
+CP            := cp
+RM            := rm -f
 
 GENERATED_FILES := $(wildcard *.aux *.bbl *.blg *.fdb_latexmk *.fls *.log *.out *.pdf *.synctex.gz *.toc figures/*.pdf)
 FIGURES         := $(patsubst %.svg,%.pdf,$(wildcard figures/*)) 
 SECTIONS        := $(wildcard sections/*.tex)
+VERSION         := $(shell sed -n 's/.*\\ArrowheadVersion{\(\s*[^\s]*\s*\)}.*/\1/p' ./*.tex)
 
 default: $(NAME).pdf
 
@@ -28,7 +30,7 @@ ifdef ASSEMBLY_PATH
 assemble: $(ASSEMBLY_PATH)/$(NAME).pdf
 
 $(ASSEMBLY_PATH)/$(NAME).pdf: $(NAME).pdf
-	$(CP) $< $(ASSEMBLY_PATH)/arrowhead-$(patsubst %.pdf,%-$(ASSEMBLY_VERSION).pdf,$<)
+	$(CP) $< "$(ASSEMBLY_PATH)/$(ASSEMBLY_NAME)$(VERSION).pdf"
 
 .PHONY: assemble
 

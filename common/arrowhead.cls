@@ -27,6 +27,7 @@
 \RequirePackage{listings}
 \RequirePackage{microtype}
 \RequirePackage{tabularx}
+\RequirePackage{xstring}
 \RequirePackage{xparse}
 
 \definecolor{ArrowheadBlue}{HTML}{006F99}
@@ -48,15 +49,23 @@
 \NewDocumentCommand{\ArrowheadTypeShort}{m}{\newcommand{\arrowtypeshort}{#1}}
 \NewDocumentCommand{\ArrowheadVersion}{m}{\newcommand{\arrowversion}{#1}}
 \NewDocumentCommand{\ArrowheadDate}{m}{\newcommand{\arrowdate}{#1}}
-\NewDocumentCommand{\ArrowheadAuthor}{m}{\newcommand{\arrowauthor}{#1}}
-\NewDocumentCommand{\ArrowheadCoauthors}{m}{\newcommand{\arrowcoauthors}{#1}}
+\NewDocumentCommand{\ArrowheadAuthor}{m}{
+  \IfSubStr{#1}{ and }{
+    \newcommand{\ifarrowauthormultiple}[2]{##1}
+    \newcommand{\arrowauthorfirst}{\StrLeft{#1}{\StrPosition{#1}{ and }}}
+    \newcommand{\arrowauthor}{\StrSubstitute{#1}{ and }{, }}
+  }{
+    \newcommand{\ifarrowauthormultiple}[2]{##2}
+    \newcommand{\arrowauthorfirst}{#1}
+    \newcommand{\arrowauthor}{#1}
+  }
+}
 \NewDocumentCommand{\ArrowheadStatus}{m}{\newcommand{\arrowstatus}{#1}}
 \NewDocumentCommand{\ArrowheadContact}{m}{\newcommand{\arrowcontact}{#1}}
 \NewDocumentCommand{\ArrowheadFooter}{m}{\newcommand{\arrowfooter}{#1}}
 \NewDocumentCommand{\ArrowheadSetup}{}{
   \hypersetup{
     pdftitle={\arrowtitle\ -- \ \arrowtypeshort},
-    pdfauthor={\arrowauthor\ <\arrowcontact>}
   }
 }
 \NewDocumentCommand{\ArrowheadBox}{mm}{
@@ -126,17 +135,10 @@
       \footnotesize{\textbf{\arrowtitle}} & \footnotesize{\textbf{\arrowtypeshort}} \\
       \tiny{Date} & \tiny{Version} \\
       \footnotesize{\textbf{\arrowdate}} & \footnotesize{\textbf{\arrowversion}} \\
-      \ifthenelse{\isundefined{\arrowcoauthors}}{
-        \tiny{Author} & \tiny{Status} \\
-        \footnotesize{\textbf{\arrowauthor}} & \footnotesize{\textbf{\arrowstatus}} \\
-        \tiny{Contact} & \tiny{Page} \\
-        \footnotesize{\textbf{\arrowcontact}} & \footnotesize{\textbf{\thepage \ (\pageref{LastPage})}}
-      }{
-        \tiny{Authors} & \tiny{Status} \\
-        \footnotesize{\textbf{\arrowauthor, \arrowcoauthors}} & \footnotesize{\textbf{\arrowstatus}} \\
-        \tiny{Contact} & \tiny{Page} \\
-        \footnotesize{\textbf{\arrowauthor\ \textless\arrowcontact\textgreater}} & \footnotesize{\textbf{\thepage \ (\pageref{LastPage})}} \\
-      }
+      \tiny{Author\ifarrowauthormultiple{s}{}} & \tiny{Status} \\
+      \footnotesize{\textbf{\arrowauthor}} & \footnotesize{\textbf{\arrowstatus}} \\
+      \tiny{Contact} & \tiny{Page} \\
+      \footnotesize{\textbf{\arrowcontact}} & \footnotesize{\textbf{\thepage \ (\pageref{LastPage})}}
     }{
       % Page header for remaining pages.
       \tiny{Document title} & \tiny{Version} \\

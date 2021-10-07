@@ -7,11 +7,11 @@
 # SPDX-License-Identifier: EPL-2.0
 
 
-export ASSEMBLY_PATH    := $(abspath distribution)
-export ASSEMBLY_VERSION := $(shell git describe --always)
+export ASSEMBLY_PATH := $(abspath distribution)
 
 ASSEMBLY_DOCUMENTS := $(wildcard $(ASSEMBLY_PATH)/*.pdf)
 ASSEMBLY_PREFIX    := eclipse-arrowhead-core-documentation-
+ASSEMBLY_VERSION   := $(shell git describe --always)
 ASSEMBLY_NAME      := $(ASSEMBLY_PREFIX)$(ASSEMBLY_VERSION)
 MKDIR              := mkdir
 RM                 := rm -Rf
@@ -22,8 +22,8 @@ default: assemble
 $(ASSEMBLY_PATH):
 	$(MKDIR) $(ASSEMBLY_PATH)
 
-$(ASSEMBLY_NAME).zip: $(ASSEMBLY_DOCUMENTS)
-	$(ZIP) -j $@ $^
+$(ASSEMBLY_NAME).zip:
+	$(ZIP) -jr $@ $(ASSEMBLY_PATH)
 
 assemble: $(ASSEMBLY_PATH)
 	cd documents && $(MAKE) assemble
@@ -34,4 +34,4 @@ clean:
 	$(RM) $(ASSEMBLY_PATH)
 	$(RM) $(ASSEMBLY_PREFIX)*.zip
 
-.PHONY: assemble clean
+.PHONY: $(ASSEMBLY_NAME).zip assemble clean
