@@ -7,12 +7,11 @@
 % SPDX-License-Identifier: EPL-2.0
 
 The Arrowhead framework is a growing research and engineering effort aimed at providing a tangible way for Industry 4.0 software to be created and used.
-Ensuring that its growing community of decision-makers, engineers, researchers and other stakeholders can communicate effectively requires a concice and sufficient Arrowhead vocabulary.
+Ensuring that its growing community of decision-makers, engineers, as well as other stakeholders, can communicate effectively requires a concice and sufficiently precise Arrowhead vocabulary.
 
 In this document, an authoritative set of fundamental concept definitions for the Arrowhead framework is presented.
-The document is meant to provide the foundation required for any discussions about design to be efficient and fruitful.
-It is also intended to serve as a foundation for defining Arrowhead models.
-It does not mandate how systems are to be designed.
+These definitions are meant to serve as the foundational language for discussions about and modelling of Arrowhead-based designs.
+How systems are to be designed or what concrete modelling tools or languages to use are not considered.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
@@ -32,7 +31,7 @@ Others are advised to read all sections carefully, in the order they are present
 
 We understand a \textit{reference model} to be a set of definitions for technical concepts of fundamental importance to a specific problem domain.
 It does not mandate how its definitions should be used to design systems, either abstract or concrete.
-In the context of this document, the problem domain in question is \textit{the design of Industry 4.0 software}.
+In the context of this document, the problem domain in question must be understood to be \textit{the design of Industry 4.0 software}.
 
 Reference models are used as vocabularies for defining \textit{reference architectures}, which in turn can be used to derive \textit{concrete architectures} and, finally, software \textit{implementations}, as illustrated in Figure \ref{fig:model-implementation-hierarchy}.
 
@@ -55,8 +54,8 @@ By implication, this document is not concerned with dictating how any of the con
 
 \subsubsection{Diagrams}
 
-Boxes with names inside them denote arbitrary entities.
-A named arrow denote the relationship implied by its name.
+A boxes with a name inside it denotes a named entity.
+A named arrow between boxes denotes the relationship implied by the name.
 A box being inside another box means that it is owned by the containing box.
 See Figure \ref{fig:model-implementation-hierarchy} for an example of this graphical notation being used.
 
@@ -85,8 +84,8 @@ As RAMI4.0 is a reference \textit{architecture} rather than a reference \textit{
 This delimitation excludes the ``architectural layers'', ``life-cycle \& value-stream'' phases and ``hierarchical levels'' of RAMI4.0.
 
 \item \textit{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}.
-This standard has come to underpin many key trends within software engineering, such as cloud computing and microservices.
-Service-oriented architecture is explicitly designated as an ontological foundation of RAMI4.0, which gives SOA-RM an indirect relationship to this document.
+This standard captures a concept that has come to underpin many key trends within software engineering: Service-Oriented Architecture (SOA).
+While RAMI4.0 does not include SOA-RM in its reference list, it does mention the standard and requires that all communications adhere to SOA principles. 
 
 \item \textit{Prior work directly concerned with Arrowhead}.
 This significantly includes \textit{IoT Automation: Arrowhead Framework} \cite{delsing2017iot}, which was written to provide a comprehensive overview of the framework.
@@ -99,7 +98,7 @@ Concepts derived from the above sources are reiterated in this document as neces
 \subsection{Section Overview}
 \label{sec:introduction:sections}
 
-\begin{itemize}[leftmargin=3cm,rightmargin=0pt,labelwidth=2cm,labelsep=0pt,itemindent=0pt,parsep=0.25cm,topsep=0.25cm,align=left]
+\begin{itemize}[leftmargin=3cm,rightmargin=0pt,labelwidth=2cm,labelsep=0pt,itemindent=0pt,parsep=0.1cm,topsep=0.1cm,align=left]
 
 %\item[Section \ref{sec:introduction}]
 %This section.
