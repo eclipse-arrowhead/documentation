@@ -31,6 +31,7 @@
 \RequirePackage{xparse}
 
 \definecolor{ArrowheadBlue}{HTML}{006F99}
+\definecolor{ArrowheadDarkBlue}{HTML}{004875}
 \definecolor{ArrowheadGrey}{HTML}{333333}
 \definecolor{ArrowheadOrange}{HTML}{D77734}
 \definecolor{ArrowheadPurple}{HTML}{8F3165}

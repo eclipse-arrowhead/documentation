@@ -7,21 +7,41 @@
 % SPDX-License-Identifier: EPL-2.0
 
 \newcommand{\GlossaryEntry}[2]{\paragraph{#1}\label{sec:glossary:#2}}
-\newcommand{\GlossaryRef}[1]{\textbf{\nameref{sec:glossary:#1}}}
+\newcommand{\GlossaryHyperRef}[2]{{\color{ArrowheadDarkBlue}\hyperref[sec:glossary:#2]{#1}}}
+\newcommand{\GlossaryNameRef}[1]{{\color{ArrowheadDarkBlue}\nameref{sec:glossary:#1}}}
 
 \GlossaryEntry{Administration}{administration}
 
 \GlossaryEntry{Administrator}{administrator}
 
-\GlossaryEntry{ANI}{ani} See \GlossaryRef{interface-application-network}.
+\GlossaryEntry{ANI}{ani} See \GlossaryNameRef{interface-application-network}.
 
-\GlossaryEntry{API}{api} See \GlossaryRef{interface-application-programming}.
+\GlossaryEntry{API}{api} See \GlossaryNameRef{interface-application-programming}.
 
-\GlossaryEntry{Asset}{asset}
+\GlossaryEntry{Application}{application}
 
-\GlossaryEntry{Authentication}{authentication}
+\GlossaryEntry{Architecture}{architecture}
+A \GlossaryHyperRef{model}{model} describing a \GlossaryHyperRef{system}{system}, such as a vehicle or software artifact, constrained either by \GlossaryHyperRef{abstract}{architecture-abstract} or \GlossaryHyperRef{concrete}{architecture-concrete} context \GlossaryHyperRef{descriptions}{description}.
+See also Section \ref{sec:introduction:scope}.
 
-\GlossaryEntry{Authorization}{authorization}
+\GlossaryEntry{Architecture, Abstract}{architecture-abstract} A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system}{system} in an \textit{abstract} context.
+An abstract \GlossaryHyperRef{architecture}{architecture} can serve as a component or \GlossaryHyperRef{reference}{architecture-reference} for other abstract and \GlossaryHyperRef{concrete}{architecture-concrete} architectures.
+
+\GlossaryEntry{Architecture, Concrete}{architecture-concrete}
+A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system}{system} constrained by a \textit{concrete} context, which may also be represented by an explicit model.
+A concrete \GlossaryHyperRef{architecture}{architecture} can be realized as a concrete system, such as a physical car or an executable software artifact, or be used as a component or \GlossaryHyperRef{reference}{architecture-reference} of another concrete architecture.
+
+\GlossaryEntry{Architecture, Reference}{architecture-reference}
+An \GlossaryHyperRef{architecture}{architecture} recognized as being useful as reference, or foundation, for another architecture or work.
+A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-abstract} or \GlossaryHyperRef{concrete}{architecture-concrete}.
+
+\GlossaryEntry{Arrowhead}{arrowhead} TODO
+
+\GlossaryEntry{Asset}{asset} An object, tangible or intangible, of any sort that is deemed to be of value to an owning \GlossaryHyperRef{organization}{organization}.
+
+\GlossaryEntry{Authentication}{authentication} TODO
+
+\GlossaryEntry{Authorization}{authorization} TODO
 
 \GlossaryEntry{Certificate}{certificate}
 
@@ -35,19 +55,21 @@
 
 \GlossaryEntry{Cloud, Virtual}{cloud-virtual}
 
-\GlossaryEntry{Codec}{codec}
+\GlossaryEntry{Codec}{codec} TODO
 
-\GlossaryEntry{Coding}{coding}
+\GlossaryEntry{Coding}{coding} TODO
 
 \GlossaryEntry{Configuration}{configuration}
 
-\GlossaryEntry{Data}{data}
+\GlossaryEntry{Consumer, Service}{consumer-service} TODO
 
-\GlossaryEntry{Decode}{decode}
+\GlossaryEntry{Data}{data} TODO
 
-\GlossaryEntry{Decoding}{decoding}
+\GlossaryEntry{Decode}{decode} TODO
 
-\GlossaryEntry{Description}{description}
+\GlossaryEntry{Decoding}{decoding} TODO
+
+\GlossaryEntry{Description}{description} TODO
 
 \GlossaryEntry{Design}{design}
 
@@ -55,13 +77,17 @@
 
 \GlossaryEntry{Device, Human Interface (HID)}{device-human-interface}
 
-\GlossaryEntry{Encode}{encode}
+\GlossaryEntry{Encode}{encode} TODO
 
-\GlossaryEntry{Encoding}{encoding}
+\GlossaryEntry{Encoding}{encoding} TODO
 
 \GlossaryEntry{Entity}{entity}
 
-\GlossaryEntry{Enumerator}{enumerator} See \GlossaryRef{type-enumerating}.
+\GlossaryEntry{Enumerator}{enumerator} See \GlossaryNameRef{type-enumerating}.
+
+\GlossaryEntry{Framework}{framework}
+
+\GlossaryEntry{Function}{function}
 
 \GlossaryEntry{Identifier}{identifier}
 
@@ -81,54 +107,74 @@
 
 \GlossaryEntry{Interface, Operator}{interface-operator}
 
+\GlossaryEntry{Invocation, Function}{invocation-function}
+
 \GlossaryEntry{Manager}{manager}
 
 \GlossaryEntry{Management}{management}
 
+\GlossaryEntry{Message}{message} TODO
+
+\GlossaryEntry{Model}{model} TODO
+
+\GlossaryEntry{Model, Reference}{model-reference} TODO
+
 \GlossaryEntry{Operator}{operator}
+
+\GlossaryEntry{Organization}{origanization}
 
 \GlossaryEntry{Policy}{policy}
 
 \GlossaryEntry{Policy, Access}{policy-access}
 
+\GlossaryEntry{Process, Application}{process-application}
+
 \GlossaryEntry{Profile}{profile}
 
 \GlossaryEntry{Protocol}{protocol}
 
+\GlossaryEntry{Provider, Service}{provider-service}
+A \GlossaryHyperRef{system}{system} making the \GlossaryHyperRef{functions}{function} of a \GlossaryHyperRef{service}{service} available to be \GlossaryHyperRef{invoked}{invocation-function} by a set of potential service \GlossaryHyperRef{consumers}{consumer-service}.
+Only the consumers that can be successfully \GlossaryHyperRef{authenticated}{authentication} and \GlossaryHyperRef{authorized}{authorization} by the service provider will receive successful invocation results.
+
 \GlossaryEntry{Service}{service}
+A set of \GlossaryHyperRef{functions}{function} \GlossaryHyperRef{provided}{provider-service} by a \GlossaryHyperRef{system}{system} via an \GlossaryHyperRef{interface}{interface}.
+A service can be provided via an \GlossaryHyperRef{ANI}{interface-application-network}, \GlossaryHyperRef{API}{interface-application-programming}, or any other kind of interface.
 
 \GlossaryEntry{Session}{session}
 
 \GlossaryEntry{Shell, Administrative}{shell-administrative}
 
-\GlossaryEntry{SoLC}{solc} See \GlossaryRef{system-of-local-clouds}.
+\GlossaryEntry{SoLC}{solc} See \GlossaryNameRef{system-of-local-clouds}.
 
-\GlossaryEntry{SoS}{sos} See \GlossaryRef{system-of-systems}.
+\GlossaryEntry{SoS}{sos} See \GlossaryNameRef{system-of-systems}.
 
 \GlossaryEntry{Specification}{specification}
 
-\GlossaryEntry{Stack, Protocol}{stack-protocol} See \GlossaryRef{protocol}.
+\GlossaryEntry{Stack, Protocol}{stack-protocol} See \GlossaryNameRef{protocol}.
 
 \GlossaryEntry{Standard}{standard}
 
 \GlossaryEntry{Stakeholder}{stakeholder}
 
-\GlossaryEntry{System}{system}
+\GlossaryEntry{System}{system} TODO
+
+\GlossaryEntry{System, Arrowhead}{system-arrowhead} TODO
 
 \GlossaryEntry{System-of-Local-Clouds (SoLC)}{system-of-local-clouds}
 
 \GlossaryEntry{System-of-Systems (SoS)}{system-of-systems}
 
-\GlossaryEntry{Token}{token} See \GlossaryRef{token-authentication}.
+\GlossaryEntry{Token}{token} See \GlossaryNameRef{token-authentication}.
 
 \GlossaryEntry{Token, Authentication}{token-authentication}
 
-\GlossaryEntry{Type, Data}{type-data}
+\GlossaryEntry{Type, Data}{type-data} TODO
 
-\GlossaryEntry{Type, Enumerating}{type-enumerating}
+\GlossaryEntry{Type, Enumerating}{type-enumerating} TODO
 
-\GlossaryEntry{Type, Primitive}{type-primitive}
+\GlossaryEntry{Type, Primitive}{type-primitive} TODO
 
-\GlossaryEntry{Type, Structured}{type-structured}
+\GlossaryEntry{Type, Structured}{type-structured} TODO
 
 \GlossaryEntry{User}{user}
