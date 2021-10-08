@@ -9,6 +9,7 @@
 \newcommand{\GlossaryEntry}[2]{\paragraph{#1}\label{sec:glossary:#2}}
 \newcommand{\GlossaryHyperRef}[2]{{\color{ArrowheadDarkBlue}\hyperref[sec:glossary:#2]{#1}}}
 \newcommand{\GlossaryNameRef}[1]{{\color{ArrowheadDarkBlue}\nameref{sec:glossary:#1}}}
+\newcommand{\GlossarySourceNote}[2]{\begin{minipage}[b]{\dimexpr\linewidth-0.5cm\relax}\vspace*{0.33cm}\footnotesize{\textbf{#1}\ #2}\end{minipage}}
 
 \GlossaryEntry{Administration}{administration}
 
@@ -21,27 +22,45 @@
 \GlossaryEntry{Application}{application}
 
 \GlossaryEntry{Architecture}{architecture}
-A \GlossaryHyperRef{model}{model} describing a \GlossaryHyperRef{system}{system}, such as a vehicle or software artifact, constrained either by \GlossaryHyperRef{abstract}{architecture-abstract} or \GlossaryHyperRef{concrete}{architecture-concrete} context \GlossaryHyperRef{descriptions}{description}.
+A \GlossaryHyperRef{model}{model} \GlossaryHyperRef{describing}{description} a \GlossaryHyperRef{system}{system}, such as a vehicle or \GlossaryHyperRef{software}{software} artifact, \GlossaryHyperRef{constrained}{constraint-model} either by \GlossaryHyperRef{abstract}{architecture-abstract} or \GlossaryHyperRef{concrete}{architecture-concrete} \GlossaryHyperRef{context}{context} \GlossaryHyperRef{descriptions}{description}.
 See also Section \ref{sec:introduction:scope}.
 
-\GlossaryEntry{Architecture, Abstract}{architecture-abstract} A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system}{system} in an \textit{abstract} context.
+	\GlossarySourceNote{RAMI4.0}{
+		This definition replaces ``combinations of elements of a model'' with ``system'' and ``based on principles and rules'' with ``constrained ... by''.
+		It also clarifies that an architecture can be either abstract or concrete.
+	}
+
+\GlossaryEntry{Architecture, Abstract}{architecture-abstract} A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system}{system} in an \textit{abstract} \GlossaryHyperRef{context}{context}.
 An abstract \GlossaryHyperRef{architecture}{architecture} can serve as a component or \GlossaryHyperRef{reference}{architecture-reference} for other abstract and \GlossaryHyperRef{concrete}{architecture-concrete} architectures.
 
 \GlossaryEntry{Architecture, Concrete}{architecture-concrete}
-A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system}{system} constrained by a \textit{concrete} context, which may also be represented by an explicit model.
+A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system}{system} \GlossaryHyperRef{constrained}{constraint-model} by a \textit{concrete} \GlossaryHyperRef{context}{context}, which may also be represented by an explicit model.
 A concrete \GlossaryHyperRef{architecture}{architecture} can be realized as a concrete system, such as a physical car or an executable software artifact, or be used as a component or \GlossaryHyperRef{reference}{architecture-reference} of another concrete architecture.
 
 \GlossaryEntry{Architecture, Reference}{architecture-reference}
 An \GlossaryHyperRef{architecture}{architecture} recognized as being useful as reference, or foundation, for another architecture or work.
 A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-abstract} or \GlossaryHyperRef{concrete}{architecture-concrete}.
 
+	\GlossarySourceNote{RAMI4.0}{This definition clarifies that an architecture can be either abstract or concrete.}
+
 \GlossaryEntry{Arrowhead}{arrowhead} TODO
 
-\GlossaryEntry{Asset}{asset} An object, tangible or intangible, of any sort that is deemed to be of value to an owning \GlossaryHyperRef{organization}{organization}.
+\GlossaryEntry{Asset}{asset}
+An object, tangible or intangible, of any sort that is deemed to be of value to an owning \GlossaryHyperRef{organization}{organization}.
+
+	\GlossarySourceNote{RAMI4.0}{This definition clarifies that an object can be either tangible or intangible.}
 
 \GlossaryEntry{Authentication}{authentication} TODO
 
 \GlossaryEntry{Authorization}{authorization} TODO
+
+\GlossaryEntry{Capability}{capability}
+An action that can be performed by an \GlossaryHyperRef{entity}{entity}.
+
+	\GlossarySourceNote{OASIS-RM}{
+		OASIS-RM defines a capability as ``a real-world effect that a service provider is able to provide to a service consumer''.
+		As we fear that some could interpret ``real-world'' as ``physical-world'' and that our scope is wider, we adjusted their definition accordingly.
+	}
 
 \GlossaryEntry{Certificate}{certificate}
 
@@ -59,9 +78,24 @@ A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-
 
 \GlossaryEntry{Coding}{coding} TODO
 
+\GlossaryEntry{Component}{component}
+A part or subsystem of a larger \GlossaryHyperRef{system}{system}.
+
 \GlossaryEntry{Configuration}{configuration}
 
+\GlossaryEntry{Constraint, Model}{constraint-model}
+A relation between two \GlossaryHyperRef{entities}{entity} of a \GlossaryHyperRef{model}{model} where one entity imposes constraints, or limits, on the other.
+The existence of model constraints enable \GlossaryHyperRef{model validation}{validation-model}.
+
 \GlossaryEntry{Consumer, Service}{consumer-service} TODO
+
+\GlossaryEntry{Context}{context}
+A \GlossaryHyperRef{model}{model} of an \GlossaryHyperRef{abstract}{context-abstract} or \GlossaryHyperRef{concrete}{context-concrete} environment in which an \GlossaryHyperRef{entity}{entity} can be situated.
+The entity in question is \GlossaryHyperRef{constrained}{constraint-model} by, or limited to, the \GlossaryHyperRef{data}{data} and other resources the context provides.
+
+\GlossaryEntry{Context, Abstract}{context-abstract}
+
+\GlossaryEntry{Context, Concrete}{context-concrete}
 
 \GlossaryEntry{Data}{data} TODO
 
@@ -69,7 +103,8 @@ A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-
 
 \GlossaryEntry{Decoding}{decoding} TODO
 
-\GlossaryEntry{Description}{description} TODO
+\GlossaryEntry{Description}{description}
+A set of details about an \GlossaryHyperRef{entity}{entity}, concretely represented by a \GlossaryHyperRef{model}{model} or a human-readable text.
 
 \GlossaryEntry{Design}{design}
 
@@ -88,6 +123,8 @@ A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-
 \GlossaryEntry{Framework}{framework}
 
 \GlossaryEntry{Function}{function}
+An \GlossaryHyperRef{invocable}{invocation-function} subroutine, exercising one or more \GlossaryHyperRef{capabilities}{capability} of a \GlossaryHyperRef{providing}{provider-service} \GlossaryHyperRef{system}{system}.
+Every function \textit{must} be made available via a \GlossaryHyperRef{service}{service} and comply to a \GlossaryHyperRef{function signature}{signature-function}, which specifies the \GlossaryHyperRef{type}{type-data} of \GlossaryHyperRef{message}{message} the function expects when invoked, as well as the types of every message the function could return in response.
 
 \GlossaryEntry{Identifier}{identifier}
 
@@ -108,6 +145,8 @@ A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-
 \GlossaryEntry{Interface, Operator}{interface-operator}
 
 \GlossaryEntry{Invocation, Function}{invocation-function}
+The attempt to trigger one or more \GlossaryHyperRef{capabilities}{capability} associated with a \GlossaryHyperRef{function}{function} by sending a \GlossaryHyperRef{message}{message} to the \GlossaryHyperRef{service}{service} through which it is \GlossaryHyperRef{provided}{provider-service}.
+A function invocation \textit{must} cause its provider to return a response message if mandated by the \GlossaryHyperRef{signature}{signature-function} of the function.
 
 \GlossaryEntry{Manager}{manager}
 
@@ -115,17 +154,19 @@ A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-
 
 \GlossaryEntry{Message}{message} TODO
 
+\GlossaryEntry{Metadata}{metadata} TODO
+
 \GlossaryEntry{Model}{model} TODO
 
 \GlossaryEntry{Model, Reference}{model-reference} TODO
 
 \GlossaryEntry{Operator}{operator}
 
-\GlossaryEntry{Organization}{origanization}
+\GlossaryEntry{Organization}{organization}
 
 \GlossaryEntry{Policy}{policy}
 
-\GlossaryEntry{Policy, Access}{policy-access}
+\GlossaryEntry{Policy, Service Consumption}{policy-service-consumption}
 
 \GlossaryEntry{Process, Application}{process-application}
 
@@ -134,16 +175,30 @@ A reference architecture can be either \GlossaryHyperRef{abstract}{architecture-
 \GlossaryEntry{Protocol}{protocol}
 
 \GlossaryEntry{Provider, Service}{provider-service}
-A \GlossaryHyperRef{system}{system} making the \GlossaryHyperRef{functions}{function} of a \GlossaryHyperRef{service}{service} available to be \GlossaryHyperRef{invoked}{invocation-function} by a set of potential service \GlossaryHyperRef{consumers}{consumer-service}.
-Only the consumers that can be successfully \GlossaryHyperRef{authenticated}{authentication} and \GlossaryHyperRef{authorized}{authorization} by the service provider will receive successful invocation results.
+A \GlossaryHyperRef{system}{system} making the \GlossaryHyperRef{functions}{function} of a \GlossaryHyperRef{service}{service} available to be \GlossaryHyperRef{invoked}{invocation-function} by a set of \GlossaryHyperRef{service consumers}{consumer-service}, which are made eligible by conforming to whatever \GlossaryHyperRef{service consumption policies}{policy-service-consumption} are set up by the provider.
+
+	\GlossarySourceNote{OASIS-RM}{
+		OASIS-RM defines a service provider as ``an entity (person or organization) that offers the use of capabilities by means of a service''.
+		While we require that the one being offered the service be a \GlossaryHyperRef{system}{system}, that system could be seen as representing the interests of a person or organization.
+		We consider the definitions to be compatible, even though our definition is more specific.
+	}
 
 \GlossaryEntry{Service}{service}
 A set of \GlossaryHyperRef{functions}{function} \GlossaryHyperRef{provided}{provider-service} by a \GlossaryHyperRef{system}{system} via an \GlossaryHyperRef{interface}{interface}.
 A service can be provided via an \GlossaryHyperRef{ANI}{interface-application-network}, \GlossaryHyperRef{API}{interface-application-programming}, or any other kind of interface.
 
+	\GlossarySourceNote{RAMI4.0}{This definition clarifies that a service could be provided via an \GlossaryHyperRef{ANI}{interface-application-network} or \GlossaryHyperRef{API}{interface-application-programming}.}
+
+	\GlossarySourceNote{OASIS-RM}{As noted in RAMI4.0, this definition is \textit{not compatible} with that of OASIS-RM, which defines a service as ``the means by which the needs of a consumer are brought together with the capabilities of a provider''.}
+
 \GlossaryEntry{Session}{session}
 
 \GlossaryEntry{Shell, Administrative}{shell-administrative}
+
+\GlossaryEntry{Signature, Function}{signature-function}
+A \GlossaryHyperRef{model}{model} specifying the \GlossaryHyperRef{type}{type-data} of the \GlossaryHyperRef{message}{message} a given \GlossaryHyperRef{function}{function} accepts when \GlossaryHyperRef{invoked}{invocation-function}, as well as the types of any messages that it could return in response.
+
+\GlossaryEntry{Software}{software}
 
 \GlossaryEntry{SoLC}{solc} See \GlossaryNameRef{system-of-local-clouds}.
 
@@ -156,6 +211,8 @@ A service can be provided via an \GlossaryHyperRef{ANI}{interface-application-ne
 \GlossaryEntry{Standard}{standard}
 
 \GlossaryEntry{Stakeholder}{stakeholder}
+
+\GlossaryEntry{Subsystem}{subsystem} See \GlossaryNameRef{component}.
 
 \GlossaryEntry{System}{system} TODO
 
@@ -178,3 +235,6 @@ A service can be provided via an \GlossaryHyperRef{ANI}{interface-application-ne
 \GlossaryEntry{Type, Structured}{type-structured} TODO
 
 \GlossaryEntry{User}{user}
+
+\GlossaryEntry{Validation, Model}{validation-model}
+The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies all of its \GlossaryHyperRef{constraints}{constraint-model}.
