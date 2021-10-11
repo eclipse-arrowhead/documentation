@@ -6,12 +6,18 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-The Arrowhead framework is a growing research and engineering effort aimed at providing a tangible way for Industry 4.0 software to be created and used.
-Ensuring that its growing community of decision-makers, engineers, as well as other stakeholders, can communicate effectively requires a concice and sufficiently precise Arrowhead vocabulary.
+Eclipse Arrowhead is a growing research and engineering effort, aimed at producing a world-class software framework for the efficient and effective construction of Industry 4.0 systems.
+As the community around Arrowhead keeps expanding and its scope increasing, it is becoming more important than ever to ensure that its community agrees on what, at a fundamental level, Arrowhead \textit{is}.
+This to help avoid misunderstandings, which, apart from slowing down progress, could eventually divide the community around different interpretations of what Arrowhead is about.
 
-In this document, an authoritative set of fundamental concept definitions for the Arrowhead framework is presented.
-These definitions are meant to serve as the foundational language for discussions about and modelling of Arrowhead-based designs.
-How systems are to be designed or what concrete modelling tools or languages to use are not considered.
+In this document, we present and authoritative set of Arrowhead concept definitions, meant to serve as the foundational language for discussions about and the modelling of Arrowhead-based designs.
+They are not specified in terms of any particular modelling tools or languages, but should be useful as foundation for any modelling or documentation effort.
+
+The description of Arrowhead we present here should be seen as an extension of \textit{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}.
+This means that we take key concepts from RAMI4.0 and present them here in the context of the Arrowhead framework.
+As RAMI4.0 is defined partly in terms of \textit{Service-Oriented Architecture} (SOA), we also builds upon \textit{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}.
+In other words, this document assumes a world-view of service-oriented communication in an Industry 4.0 setting.
+This world-view is introduced more fully in Section \ref{sec:arrowhead}.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
@@ -31,8 +37,9 @@ Others are advised to read all sections carefully, in the order they are present
 \label{sec:introduction:scope}
 
 We understand a \textit{reference model} to be a set of definitions for technical concepts of fundamental importance to a specific problem domain.
-It does not mandate how its definitions should be used to design systems, either abstract or concrete.
-In the context of this document, the problem domain in question must be understood to be \textit{the design of Industry 4.0 software}.
+It does not specify how its definitions should be used to design systems, either abstract or concrete.
+In the context of this document, the problem domain in question must be understood to be \textit{the design of service-oriented Industry 4.0 systems}.
+Only a reference model is specified here.
 
 Reference models are used as vocabularies for defining \textit{reference architectures}, which in turn can be used to derive \textit{concrete architectures} and, finally, software \textit{implementations}, as illustrated in Figure \ref{fig:model-implementation-hierarchy}.
 
@@ -40,23 +47,22 @@ Reference models are used as vocabularies for defining \textit{reference archite
   \centering
   \includegraphics{figures/model-implementation-hierarchy}
   \caption{
-    The hierarchical levels comprising the steps from a reference model to a software implementation.
+    The hierarchical levels comprising the steps from one or more reference models to a software implementation.
     This document specifies a reference model only.
   }
   \label{fig:model-implementation-hierarchy}
 \end{figure}
-
-By implication, this document is not concerned with dictating how any of the concepts it defines relate to any \textit{protocols}, \textit{profiles}, \textit{specifications} or \textit{standards}, where a \textit{protocol} is understood to be a pattern of communication, a \textit{profile} to be a description of how a protocol is applied, a \textit{specification} to be a set of design constraints and, finally, a \textit{standard} to be a protocol, profile or specification ratified by a standards body.
-
-\newpage
 
 \subsection{Notational Conventions}
 \label{sec:introduction:conventions}
 
 \subsubsection{Diagrams}
 
-A boxes with a name inside it denotes a named entity.
-A named arrow between boxes denotes the relationship implied by the name.
+A box with a name inside it denotes a named \GlossaryHyperRef{entity}{entity-model}.
+A named arrow between boxes denotes the \GlossaryHyperRef{relation}{relation-model} implied by the name.
+If a named arrow has an associated positive integer or range, the relation is to be considered as extending to the number of unique entities indicated by that integer or range.
+A range is denoted by $x..y$, where $x$ and $y$ are positive integers and $x<y$.
+Omitting $y$ when using the range notation means that the range is infinite from $x$.
 A box being inside another box means that it is owned by the containing box.
 See Figure \ref{fig:model-implementation-hierarchy} for an example of this graphical notation being used.
 
@@ -79,13 +85,11 @@ These word definitions are derived from and are meant to capture what is outline
 The reference model outlined in this document is based on the following works, in order of precedence:
 
 \begin{enumerate}
-\item \textit{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}.
-The model provides a ontological and architectural view of Industry 4.0, which makes it highly relevant to the Arrowhead framework.
+\item \textit{RAMI4.0} \cite{adolphs2016reference}, which outlines a ontological and architectural view of Industry 4.0.
 As RAMI4.0 is a reference \textit{architecture} rather than a reference \textit{model}, however, its 5\textsuperscript{th} section is disregarded and its remaining sections treated as if being a reference model.
 This delimitation excludes the ``architectural layers'', ``life-cycle \& value-stream'' phases and ``hierarchical levels'' of RAMI4.0.
 
-\item \textit{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}.
-This standard captures a concept that has come to underpin many key trends within software engineering: Service-Oriented Architecture (SOA).
+\item \textit{SOA-RM} \cite{mackenzie2006reference}, which provides a standardized definition of SOA.
 While RAMI4.0 does not include SOA-RM in its reference list, it does mention the standard and requires that all communications adhere to SOA principles. 
 
 \item \textit{Prior work directly concerned with Arrowhead}.
