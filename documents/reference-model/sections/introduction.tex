@@ -6,12 +6,9 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-Eclipse Arrowhead is a growing research and engineering effort, aimed at producing a world-class software framework for the efficient and effective construction of Industry 4.0 systems.
-As the community around Arrowhead keeps expanding and its scope increasing, it is becoming more important than ever to ensure that its community agrees on what, at a fundamental level, Arrowhead \textit{is}.
-This to help avoid misunderstandings, which, apart from slowing down progress, could eventually divide the community around different interpretations of what Arrowhead is about.
-
-In this document, we present and authoritative set of Arrowhead concept definitions, meant to serve as the foundational language for discussions about and the modelling of Arrowhead-based designs.
-They are not specified in terms of any particular modelling tools or languages, but should be useful as foundation for any modelling or documentation effort.
+We, the Eclipse Arrowhead project, here present and authoritative set of Arrowhead concept definitions, meant to serve as the foundational language for discussions about and the modelling of Arrowhead-based designs.
+The document exists to help mitigate compatibility and consistency issues in software, tooling, models and all other things of relevance to Arrowhead.
+The concepts established here are not specified in terms of any particular modelling tools or languages, but should be useful as foundation for any other Arrowhead modelling or documentation effort.
 
 The description of Arrowhead we present here should be seen as an extension of \textit{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}.
 This means that we take key concepts from RAMI4.0 and present them here in the context of the Arrowhead framework.
@@ -39,16 +36,17 @@ Others are advised to read all sections carefully, in the order they are present
 We understand a \textit{reference model} to be a set of definitions for technical concepts of fundamental importance to a specific problem domain.
 It does not specify how its definitions should be used to design systems, either abstract or concrete.
 In the context of this document, the problem domain in question must be understood to be \textit{the design of service-oriented Industry 4.0 systems}.
-Only a reference model is specified here.
 
-Reference models are used as vocabularies for defining \textit{reference architectures}, which in turn can be used to derive \textit{concrete architectures} and, finally, software \textit{implementations}, as illustrated in Figure \ref{fig:model-implementation-hierarchy}.
+\GlossaryHyperRef{Reference models}{model-reference} can ve used as vocabularies for defining \GlossaryHyperRef{reference architectures}{architecture-reference}, which in turn can be used to derive \GlossaryHyperRef{concrete architectures}{architecture} and, finally, \GlossaryHyperRef{software implementations}{implementation-software}, as illustrated in Figure \ref{fig:model-implementation-hierarchy}.
+
+\vspace*{\fill}
 
 \begin{figure}[ht]
   \centering
   \includegraphics{figures/model-implementation-hierarchy}
   \caption{
-    The hierarchical levels comprising the steps from one or more reference models to a software implementation.
-    This document specifies a reference model only.
+    The hierarchical levels comprising the steps from reference models to their software implementation, going from highly abstract to entirly concrete.
+    Reference models define fundamental concepts, reference architectures adds abstracts limits to how they may be used together, concrete architectures makes those limits realizable in the real world, and implementations do realize all above levels in practice.
   }
   \label{fig:model-implementation-hierarchy}
 \end{figure}
