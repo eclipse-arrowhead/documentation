@@ -8,35 +8,23 @@
 
 {
 
-\newcommand{\GlossaryEntry}[2]{\paragraph{#1}\label{sec:glossary:#2}\,}
+\newcommand{\GlossaryEntry}[2]{\paragraph{#2}\label{sec:glossary:#1}\,}
 \newcommand{\GlossaryNote}[2]{\begin{minipage}[b]{\dimexpr\linewidth-0.5cm\relax}\vspace*{0.33cm}\footnotesize{\textbf{#1}\ #2}\end{minipage}}
 
-\GlossaryEntry{Abstract}{abstract}
+\GlossaryEntry{abstract}{Abstract}
 See \GlossaryNameRef{model-abstract}
 
-\GlossaryEntry{Administration}{administration}
+\GlossaryEntry{administration}{Administration}
 
-\GlossaryEntry{Administrator}{administrator}
+\GlossaryEntry{administrator}{Administrator}
 
-\GlossaryEntry{ANI}{ani}
-See \GlossaryNameRef{interface-application-network}.
-
-\GlossaryEntry{API}{api}
-See \GlossaryNameRef{interface-application-programming}.
-
-\GlossaryEntry{Application}{application}
-
-\GlossaryEntry{Architecture}{architecture}
-A \GlossaryHyperRef{concrete model}{model-concrete} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{reference models}{model-reference}, \GlossaryHyperRef{reference architectures}{architecture-reference}, \GlossaryHyperRef{protocols}{protocol}, \GlossaryHyperRef{profiles}{profile} and \GlossaryHyperRef{specifications}{specification}.
+\GlossaryEntry{architecture}{Architecture}
+A \GlossaryHyperRef{model-concrete}{concrete model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{model-reference}{reference models}, \GlossaryHyperRef{architecture-reference}{reference architectures} and other concrete architectures.
 See also Section \ref{sec:introduction:scope}.
-
-	\GlossaryNote{Note 1}{
-		An \GlossaryHyperRef{architecture}{architecture} can be extended by another architecture or realized as a concrete system-of-systems.
-	}
 
 	\GlossaryNote{RAMI4.0}{
 	    defines architecture as the ``combination of elements of a model based on principles and rules for constructing, refining and using it''.
-		We consider ``combinations of elements of a model'' to be a ``model of a system-of-systems'' and to be ``based on principles and rules for constructing, refining and using it'' as building upon the artifacts we list above.
+		We consider ``combinations of elements of a model'' to be a ``model of a system-of-systems'' and to be ``based on principles and rules for constructing, refining and using it'' as building upon reference models and architectures.
 		Our definition should be interpreted as being compatible but more specific.
 	}
 
@@ -46,80 +34,71 @@ See also Section \ref{sec:introduction:scope}.
 		As our definition is concerned with a model and a system-of-systems, which must be an information system, we regard out definition as compatible but more specific.
 	}
 
-\GlossaryEntry{Architecture, Reference}{architecture-reference}
-An \GlossaryHyperRef{abstract model}{model-abstract} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{reference models}{model-reference}, abstract \GlossaryHyperRef{protocols}{protocol}, abstract \GlossaryHyperRef{profiles}{profile} and abstract \GlossaryHyperRef{specifications}{specification}.
-
-	\GlossaryNote{Note 1}{
-		A reference architecture can be extended by another reference architecture or be \GlossaryHyperRef{concretized}{concretization-model} by a regular \GlossaryHyperRef{architecture}{architecture}.
-	}
+\GlossaryEntry{architecture-reference}{Architecture, Reference}
+A significantly useful \GlossaryHyperRef{model-abstract}{abstract model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{model-reference}{reference models} and other reference architectures.
+See also Section \ref{sec:introduction:scope}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines reference architecture as a ``model for an architecture description (for I[ndustry ]4.0) which is generally used and recognized as being suitable (has reference character)''.
-		We consider ``model for an architecture description'' to be a ``model of a system-of-systems'' and assume that there is no need to explicitly mention that a given reference architecture must be suitable for meeting real-world business objectives or be useful as foundation for other architectures.
-		ur definition should be interpreted as being compatible but more specific.
+		We consider a ``model for an architecture description'' to be an ``abstract model of a system-of-systems''.
+		Our definition should be interpreted as being compatible but more specific.
 	}
 
 	\GlossaryNote{SOA-RM}{
 	    defines reference architecture as ``an architectural design pattern that indicates how an abstract set of mechanisms and relationships realizes a predetermined set of requirements''.
-	    It complements its definition with explanations in its first section, which also make it clear that a reference architecture is defined in terms of \GlossaryHyperRef{protocols}{protocol}, \GlossaryHyperRef{profiles}{profile}, \GlossaryHyperRef{specifications}{specification} and standards, the latter of which we understand to be any other the earlier three in standardized form.
 	    While we let the part about requirements be implicit, our definition should be interpreted as being compatible but more specific.
 	}
 
-\GlossaryEntry{Arrowhead}{arrowhead}
+\GlossaryEntry{arrowhead}{Arrowhead}
+See \GlossaryNameRef{framework-arrowhead}.
 
-\GlossaryEntry{Asset}{asset}
-An object, tangible or intangible, that is of value to an \GlossaryHyperRef{organization}{organization}.
+\GlossaryEntry{artifact}{Artifact}
+A thing or object, tangible or intangible.
+
+\GlossaryEntry{asset}{Asset}
+An \GlossaryHyperRef{artifact}{artifact} that is of value to an \GlossaryHyperRef{organization}{organization}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines asset as an ``object which has a value for an organization''.
 		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{Authentication}{authentication}
+\GlossaryEntry{authentication}{Authentication}
 
-\GlossaryEntry{Authorization}{authorization}
+\GlossaryEntry{authorization}{Authorization}
 
-\GlossaryEntry{Capability}{capability}
-A task, of any nature, that can be performed by a \GlossaryHyperRef{service provider}{provider-service}.
+\GlossaryEntry{capability}{Capability}
+A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-service}{service provider}.
 
 	\GlossaryNote{SOA-RM}{
 		defines a capability as ``a real-world effect that a service provider is able to provide to a service consumer''.
 		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{Certificate}{certificate}
+\GlossaryEntry{certificate}{Certificate}
 
-\GlossaryEntry{Cloud}{cloud}
+\GlossaryEntry{cloud}{Cloud}
 
-\GlossaryEntry{Cloud, Compute}{cloud-compute}
+\GlossaryEntry{cloud-compute}{Cloud, Compute}
 
-\GlossaryEntry{Cloud, Local}{cloud-local}
+\GlossaryEntry{cloud-local}{Cloud, Local}
 
-\GlossaryEntry{Cloud, Storage}{cloud-storage}
+\GlossaryEntry{cloud-storage}{Cloud, Storage}
 
-\GlossaryEntry{Cloud, Virtual}{cloud-virtual}
+\GlossaryEntry{cloud-virtual}{Cloud, Virtual}
 
-\GlossaryEntry{Codec}{codec}
-%A \GlossaryHyperRef{model}{model} specifying a fundamental set of \GlossaryHyperRef{primitive}{type-primitive} and \GlossaryHyperRef{structured}{type-structured} \GlossaryHyperRef{data}{data} \GlossaryHyperRef{types}{type-data} useful for \GlossaryHyperRef{coding}{coding} data.
-%A codec can be either \GlossaryHyperRef{abstract}{codec-abstract} or \GlossaryHyperRef{concrete}{codec-concrete}.
+\GlossaryEntry{codec}{Codec}
+A \GlossaryHyperRef{model-concrete}{concrete} \GlossaryHyperRef{type-data}{data type} used to structure \GlossaryHyperRef{data}{data} for transmission, storage and/or interpretation.
 
-%\GlossaryEntry{Codec, Abstract}{codec-abstract}
-%A \GlossaryHyperRef{codec}{codec} specified only in terms of \GlossaryHyperRef{abstract data types}{type-abstract-data}.
-%Such a codec can be used to \GlossaryHyperRef{model}{model} \GlossaryHyperRef{abstract messages}{message-abstract}, serve as \GlossaryHyperRef{component}{component} of a larger abstract codec, or \GlossaryHyperRef{constrain}{constraint-model} a \GlossaryHyperRef{concrete codec}{codec-concrete}.
-
-%\GlossaryEntry{Codec, Concrete}{codec-concrete}
-%A \GlossaryHyperRef{codec}{codec} specified only in terms of \GlossaryHyperRef{concrete data types}{type-concrete-data}.
-%Such a codec can be used to \GlossaryHyperRef{encode}{encoding} and \GlossaryHyperRef{decode}{decoding} \GlossaryHyperRef{concrete messages}{message-concrete}, or serve as \GlossaryHyperRef{component}{component} of a larger concrete codec.
-
-\GlossaryEntry{Coding}{coding}
+\GlossaryEntry{coding}{Coding}
 Transforming \GlossaryHyperRef{data}{data} from being expressed in one \GlossaryHyperRef{codec}{codec} into another.
 See also \GlossaryHyperRef{decoding}{decoding} and \GlossaryHyperRef{encoding}{encoding}.
 
-\GlossaryEntry{Coding, A}{coding-a}
+\GlossaryEntry{coding-a}{Coding, A}
 Synonymous to \GlossaryNameRef{codec}.
 
-\GlossaryEntry{Component}{component}
-A part of a \GlossaryHyperRef{system}{system}, contributing to it facilitating its \GlossaryHyperRef{capabilities}{capability}.
+\GlossaryEntry{component}{Component}
+A part of a \GlossaryHyperRef{system}{system}, contributing to it facilitating its \GlossaryHyperRef{capability}{capabilities}.
 
 	\GlossaryNote{Note 1}{
 		While it is also correct that a system can be regarded as a component of a \GlossaryHyperRef{system-of-systems}{system-of-systems}, we associate the word ``component'' primarily with plain systems.
@@ -127,57 +106,45 @@ A part of a \GlossaryHyperRef{system}{system}, contributing to it facilitating i
 	}
 
 	\GlossaryNote{Note 2}{
-		A component is practically distinct from a system by being unable to \GlossaryHyperRef{provide}{provider-service} or \GlossaryHyperRef{consume}{consumer-service} \GlossaryHyperRef{services}{service} independently.
+		A component is practically distinct from a system by being unable to \GlossaryHyperRef{provider-service}{provide} or \GlossaryHyperRef{consumer-service}{consume} \GlossaryHyperRef{service}{services} independently.
 	}
 
-\GlossaryEntry{Concrete}{concrete}
+\GlossaryEntry{concrete}{Concrete}
 See \GlossaryNameRef{model-concrete}.
 
-\GlossaryEntry{Concretization, Model}{concretization-model}
-Making an \GlossaryHyperRef{abstract model}{model-abstract} less abstract by \GlossaryHyperRef{specifying}{specification} details required to realize it.
+\GlossaryEntry{concretization}{Concretization}
+Making an \GlossaryHyperRef{model-abstract}{abstract model} less abstract by specifying details required to realize it.
 
-\GlossaryEntry{Configuration}{configuration}
+\GlossaryEntry{configuration}{Configuration}
 
-\GlossaryEntry{Constraint, Model}{constraint-model}
-A \GlossaryHyperRef{model relation}{relation} where one \GlossaryHyperRef{entity}{entity-model} imposes constraints, or limits, on the other.
+\GlossaryEntry{constraint}{Constraint}
+A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{relationship}{relationship}.
 
 	\GlossaryNote{Note 1}{
-		The presence of explicit model constraints enable \GlossaryHyperRef{model validation}{validation-model}.
+		The presence of constraints enable \GlossaryHyperRef{validation}{validation}.
 	}
 
 	\GlossaryNote{Note 2}{
-		Perhaps a bit counterintuitively, a constraint \textit{adds} information to the constrained entity by narrowing down the the ways in which it could be realized.
-		See also \GlossaryNameRef{property-model} and \GlossaryNameRef{specification}.
+		Perhaps a bit counterintuitively, a constraint \textit{adds} information to its target by reducing the ways in which it could be realized.
 	}
 
-\GlossaryEntry{Consumer, Service}{consumer-service}
-A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invoking}{invocation-function} a \GlossaryHyperRef{function}{function} \GlossaryHyperRef{provided}{provider-service} via a \GlossaryHyperRef{service}{service}.
+\GlossaryEntry{consumer-service}{Consumer, Service}
+A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-function}{invoking} a \GlossaryHyperRef{function}{function} \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{service}{service}.
+See also TODO.
 
 	\GlossaryNote{SOA-RM}{
 		defines a service consumer as ``an entity which seeks to satisfy a particular need through the use [of] capabilities offered by means of a service''.
-		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} rather than just any \GlossaryHyperRef{entity}{entity}, (2) that the \GlossaryHyperRef{capabilities}{capability} of the consumed service be exercised by invoking a function, as well as (3) that the invocation satisfies a service consumption policy.
+		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} rather than just any \GlossaryHyperRef{entity}{entity}, (2) that the \GlossaryHyperRef{capability}{capabilities} of the consumed service be exercised by invoking a function, as well as (3) that the invocation satisfies a service consumption policy.
 	}
 
-%\GlossaryEntry{Context}{context}
-%A \GlossaryHyperRef{model}{model} of an \GlossaryHyperRef{abstract}{context-abstract} or \GlossaryHyperRef{concrete}{context-concrete} environment in which a \GlossaryHyperRef{model entity}{entity-model} can be situated.
-%The entity in question is \GlossaryHyperRef{constrained}{constraint-model} by, or limited to, the \GlossaryHyperRef{data}{data} and other resources the context provides.
-
-%\GlossaryEntry{Context, Abstract}{context-abstract}
-%A \GlossaryHyperRef{model}{model} of an abstract environment in which an abstract \GlossaryHyperRef{entity}{entity} can be situated.
-%It can serve as \GlossaryHyperRef{reference}{model-reference} for or \GlossaryHyperRef{component}{component} of another \GlossaryHyperRef{context}{context}, or as a \GlossaryHyperRef{constraint}{constraint-model} for an \GlossaryHyperRef{abstract architecture}{architecture-abstract}.
-
-%\GlossaryEntry{Context, Concrete}{context-concrete}
-%A \GlossaryHyperRef{model}{model} of a concrete environment in which a concrete \GlossaryHyperRef{entity}{entity} can be situated.
-%It can serve as \GlossaryHyperRef{reference}{model-reference} for or \GlossaryHyperRef{component}{component} of another \GlossaryHyperRef{concrete context}{context-concrete}, or as a \GlossaryHyperRef{constraint}{constraint-model} for a \GlossaryHyperRef{concrete architecture}{architecture-concrete}.
-
-\GlossaryEntry{Data}{data}
-A sequence of datums, such as binary digits or other symbols, expressing a set of \GlossaryHyperRef{descriptions}{description}.
+\GlossaryEntry{data}{Data}
+A sequence of datums forming a set of \GlossaryHyperRef{description}{descriptions} via the structure imposed by a \GlossaryHyperRef{type-data}{data type}.
 
 	\GlossaryNote{Note 1}{
-		The descriptions can only be interpreted if the \GlossaryHyperRef{data types}{type-data} used to organize the datums are known to the interpreter.
+		Without complete knowledge of the types associated with some data, that data cannot be interpreted.
 	}
 
-\GlossaryEntry{Decoding}{decoding}
+\GlossaryEntry{decoding}{Decoding}
 The process through which \GlossaryHyperRef{data}{data} is transformed from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for transmission or storage to another codec suitable for interpretation.
 
 	\GlossaryNote{Note 1}{
@@ -189,20 +156,20 @@ The process through which \GlossaryHyperRef{data}{data} is transformed from bein
 	}
 
 
-\GlossaryEntry{Description}{description}
-\GlossaryHyperRef{Data}{data} about a \GlossaryHyperRef{entity}{entity}, concretely represented by a \GlossaryHyperRef{model}{model}, a human-readable text, or both.
+\GlossaryEntry{description}{Description}
+Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
 
-\GlossaryEntry{Description, Interface Design}{description-interface-design}
+\GlossaryEntry{description-interface-design}{Description, Interface Design}
 
-\GlossaryEntry{Design}{design}
+\GlossaryEntry{design}{Design}
 
-\GlossaryEntry{Design, Interface}{design-interface}
+\GlossaryEntry{design-interface}{Design, Interface}
 
-\GlossaryEntry{Device}{device}
+\GlossaryEntry{device}{Device}
 
-\GlossaryEntry{Device, Human Interface (HID)}{device-human-interface}
+\GlossaryEntry{device-human-interface}{Device, Human Interface (HID)}
 
-\GlossaryEntry{Encoding}{encoding}
+\GlossaryEntry{encoding}{Encoding}
 The process through which \GlossaryHyperRef{data}{data} is transformed from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for interpretation to another codec suitable for transmission or storage.
 
 	\GlossaryNote{Note 1}{
@@ -213,11 +180,11 @@ The process through which \GlossaryHyperRef{data}{data} is transformed from bein
 		The term can also be used to express the act of a human recording data.
 	}
 
-\GlossaryEntry{Encoding, An}{encoding-an}
+\GlossaryEntry{encoding-an}{Encoding, An}
 Synonymous to \GlossaryNameRef{codec}.
 
-\GlossaryEntry{Entity}{entity}
-An object, tangible or intangible, that is uniquely \GlossaryHyperRef{identifiable}{identity}.
+\GlossaryEntry{entity}{Entity}
+An object, tangible or intangible, that is uniquely \GlossaryHyperRef{identity}{identifiable}.
 
 	\GlossaryNote{Note 1}{
 		An entity being uniquely identifiable does not necessarily mean that it is associated with a \GlossaryHyperRef{certificate}{certificate} or \GlossaryHyperRef{identifier}{identifier}.
@@ -235,81 +202,103 @@ An object, tangible or intangible, that is uniquely \GlossaryHyperRef{identifiab
 		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{Entity, Model}{entity-model}
-An \GlossaryHyperRef{entity}{entity} represented as part of a \GlossaryHyperRef{model}{model}.
+\GlossaryEntry{entity-class-of}{Entity, Class of}
+A set of \GlossaryHyperRef{entity}{entities} that share a common \GlossaryHyperRef{property}{property}.
 
-\GlossaryEntry{Framework}{framework}
+\GlossaryEntry{framework}{Framework}
+A set of assumptions, concepts, values and practices that frame a certain problem domain.
 
-\GlossaryEntry{Function}{function}
-An \GlossaryHyperRef{invocable}{invocation-function} \GlossaryHyperRef{subroutine}{subroutine} adhering to the \GlossaryHyperRef{protocol}{protocol} established by a certain \GlossaryHyperRef{signature}{signature-functon}.
+	\GlossaryNote{SOA-RM}{
+		defines framework as ``a set of assumptions, concepts, values, and practices that constitutes a way of viewing the current environment''.
+		Our definition should be interpreted as being equivalent.
+	}
 
-\GlossaryEntry{HID}{hid} See \GlossaryNameRef{device-human-interface}.
+\GlossaryEntry{framework-arrowhead}{Framework, Arrowhead}
+Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the Arrowhead project.
 
-\GlossaryEntry{Industry 4.0}{industry40}
+\GlossaryEntry{framework-software}{Framework, Software}
+A set of software specifications, \GlossaryHyperRef{implementation-software}{implementations} and other \GlossaryHyperRef{artifact}{artifacts} meant to help address the problem domain of a certain \GlossaryHyperRef{framework}{framework}.
 
-\GlossaryEntry{Identification}{identification}
+\GlossaryEntry{function}{Function}
+The realization of the \GlossaryHyperRef{protocol}{protocol} established by a certain \GlossaryHyperRef{signature-function}{function signature}.
+See also TODO.
+
+\GlossaryEntry{hid}{HID} See \GlossaryNameRef{device-human-interface}.
+
+\GlossaryEntry{industry40}{Industry 4.0}
+
+\GlossaryEntry{identification}{Identification}
 The process through which an \GlossaryHyperRef{entity}{entity} collects and verifies the \GlossaryHyperRef{identity}{identity} of another entity. 
 
-\GlossaryEntry{Identifier}{identifier}
-\GlossaryHyperRef{Data}{data} associated with an \GlossaryHyperRef{entity}{entity} that allows for it to be \GlossaryHyperRef{identified}{identification}.
+\GlossaryEntry{identifier}{Identifier}
+\GlossaryHyperRef{data}{Data} associated with an \GlossaryHyperRef{entity}{entity} that allows for it to be \GlossaryHyperRef{identification}{identified}.
 
-\GlossaryEntry{Identity}{identity}
-The aspect or aspects, such as \GlossaryHyperRef{identifiers}{identifier}, that makes an \GlossaryHyperRef{entity}{entity} distinct from all other entities.
+\GlossaryEntry{identity}{Identity}
+The aspect or aspects, such as \GlossaryHyperRef{identifier}{identifiers}, that makes an \GlossaryHyperRef{entity}{entity} distinct from all other entities.
 
-\GlossaryEntry{Implementation}{implementation}
+\GlossaryEntry{implementation}{Implementation}
 See \GlossaryNameRef{implementation-software}.
 
-\GlossaryEntry{Implementation, Software}{implementation-software}
+\GlossaryEntry{implementation-software}{Implementation, Software}
 
+\GlossaryEntry{interface}{Interface}
+A means of moving \GlossaryHyperRef{message}{messages} between a \GlossaryHyperRef{medium}{medium} and a \GlossaryHyperRef{system}{system}.
 
-\GlossaryEntry{Interface}{interface}
+\GlossaryEntry{interface-administrative}{Interface, Administrative}
 
-\GlossaryEntry{Interface, Administrative}{interface-administrative}
+\GlossaryEntry{interface-management}{Interface, Management}
 
-\GlossaryEntry{Interface, Application Network (ANI)}{interface-application-network}
+\GlossaryEntry{interface-operator}{Interface, Operator}
 
-\GlossaryEntry{Interface, Application Programming (API)}{interface-application-programming}
+\GlossaryEntry{invocation-function}{Invocation, Function}
+The attempt to excercise \GlossaryHyperRef{capability}{capabilities} associated with a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
+See also TODO.
 
-\GlossaryEntry{Interface, Management}{interface-management}
+\GlossaryEntry{manager}{Manager}
 
-\GlossaryEntry{Interface, Network}{interface-network}
+\GlossaryEntry{management}{Management}
 
-\GlossaryEntry{Interface, Operator}{interface-operator}
+\GlossaryEntry{medium}{Medium}
+A means of connecting \GlossaryHyperRef{interface}{interfaces} such that \GlossaryHyperRef{message}{messages} of a certain \GlossaryHyperRef{protocol}{protocol} can be transmitted between them.
 
-\GlossaryEntry{Invocation, Function}{invocation-function}
-The attempt to trigger the \GlossaryHyperRef{capabilities}{capability} associated with a \GlossaryHyperRef{function}{function} by sending a \GlossaryHyperRef{message}{message} to the \GlossaryHyperRef{service}{service} through which the function is \GlossaryHyperRef{provided}{provider-service}.
-See also \GlossaryNameRef{signature-function}. TODO: Make use of subroutine definition to simplify this.
+\GlossaryEntry{message}{Message}
 
-\GlossaryEntry{Manager}{manager}
+\GlossaryEntry{metadata}{Metadata}
 
-\GlossaryEntry{Management}{management}
+\GlossaryEntry{model}{Model}
+A representation of facts in the form of a graph, consisting of \GlossaryHyperRef{entity}{entities}, \GlossaryHyperRef{relationship}{relationships} and \GlossaryHyperRef{property}{properties}.
 
-\GlossaryEntry{Message}{message}
+	\GlossaryNote{Note 1}{
+		Models can be expressed or recorded in many ways, including as visual diagrams, spoken words, text and binary data.
+	}
 
-\GlossaryEntry{Metadata}{metadata}
+	\GlossaryNote{Note 2}{
+		Models can be human-readable, machine-readable, or both.
+	}
 
-\GlossaryEntry{Model}{model}
-A representation of facts in the form of a graph, consisting of \GlossaryHyperRef{entities}{entity-model}, \GlossaryHyperRef{relations}{relation-model} and \GlossaryHyperRef{properties}{property-model}.
-Models can be expressed as visual diagrams, text or binary data.
-They can be human-readable, machine-readable, or both.
-They can be either \GlossaryHyperRef{abstract}{model-abstract} or \GlossaryHyperRef{concrete}{model-concrete}.
-See also \GlossaryNameRef{model-reference}.
+\GlossaryEntry{model-abstract}{Model, Abstract}
+A \GlossaryHyperRef{model}{model} that is \textit{insufficiently} specified to be possible to realize as the \GlossaryHyperRef{artifact}{artifact} it represents.
 
-\GlossaryEntry{Model, Abstract}{model-abstract}
-A \GlossaryHyperRef{model}{model} that is insufficiently specified to be possible to realize as a concrete artifact.
-Abstract models can be used for imposing \GlossaryHyperRef{constraints}{constraint-model} on other models, which creates room for producing \GlossaryHyperRef{reference arhictecures}{architecture-reference}, abstract \GlossaryHyperRef{service descriptions}{service}, and so on.
+	\GlossaryNote{Note 1}{
+		Abstract models can be referred to by other models, serving as a form of \GlossaryHyperRef{constraint}{constraint}.
+		They are commonly used to enforce a degree of uniformity across multiple other models.
+	}
 
-\GlossaryEntry{Model, Concrete}{model-concrete}
-A \GlossaryHyperRef{model}{model} that is sufficiently specified to be possible to realize as a concrete artifact, such as a \GlossaryHyperRef{protocol}{protocol} or \GlossaryHyperRef{software}{software}.
+\GlossaryEntry{model-concrete}{Model, Concrete}
+A \GlossaryHyperRef{model}{model} that is \textit{sufficiently} specified to be possible to realize as the \GlossaryHyperRef{artifact}{artifact} it represents.
 
-\GlossaryEntry{Model, Reference}{model-reference}
-An \GlossaryHyperRef{abstract model}{model-abstract} defining technical concepts of fundamental importance to a specific problem domain.
+	\GlossaryNote{Note 1}{
+		Two examples of artifacts that could be produced from a concrete model are concrete \GlossaryHyperRef{protocol}{protocols}, the \GlossaryHyperRef{message}{messages} of which can be practically \GlossaryHyperRef{coding}{coded}, and \GlossaryHyperRef{implementation-software}{software implementations}.
+	}
+
+\GlossaryEntry{model-reference}{Model, Reference}
+An \GlossaryHyperRef{model-abstract}{abstract model} defining technical concepts of fundamental importance to a specific problem domain.
 See also Section \ref{sec:introduction:scope}.
 
 	\GlossaryNote{RAMI4.0}{
-		defines reference model as a ``model that is generally used and recognized as being suitable (has recommendation character) for deriving
-specific models.
-		We adds that the model must be abstract and define fundamental concepts for a problem domain, setting it apart as more significant than other abstract models.
+		defines reference model as a ``model that is generally used and recognized as being suitable (has recommendation character) for deriving specific models''.
+		We understand their use of the word ``specific'' to be equivalent to how we use ``concrete''.
+		Even though our definition clarifies that the model in question must be abstract, it should be interpreted as being equivalent.
 	}
 
 	\GlossaryNote{SOA-RM}{
@@ -318,43 +307,47 @@ specific models.
 		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{Model, Specific}{model-specific}
-See \GlossaryNameRef{model-concrete}.
+\GlossaryEntry{operator}{Operator}
 
-\GlossaryEntry{Operator}{operator}
+\GlossaryEntry{organization}{Organization}
 
-\GlossaryEntry{Organization}{organization}
+\GlossaryEntry{policy}{Policy}
+A set of obligations, \GlossaryHyperRef{constraint}{constraints} and/or other conditions under which some activity is permitted.
 
-\GlossaryEntry{Policy}{policy}
+	\GlossaryNote{SOA-RM}{
+		defines policy as ``a statement of obligations, constraints or other conditions of use of an owned entity as defined by a participant''.
+		Our definition should be interpreted as being equivalent.
+	}
 
-\GlossaryEntry{Policy, Service Consumption}{policy-service-consumption}
+\GlossaryEntry{policy-service-consumption}{Policy, Service Consumption}
+The \GlossaryHyperRef{policy}{policy} under which a \GlossaryHyperRef{provider-service}{provided service} is permitted to be \GlossaryHyperRef{consumer-service}{consumed}.
 
-\GlossaryEntry{Process, Application}{process-application}
-
-\GlossaryEntry{Profile}{profile}
+\GlossaryEntry{profile}{Profile}
 A \GlossaryHyperRef{model}{model} imposing constraints on a \GlossaryHyperRef{protocol}{protocol}.
-A profile could specify a \GlossaryHyperRef{protocol stack}{stack-protocol}, certain message semantics, how authentication and authorization are to be carried out, among many other possible examples.
+A profile could specify a \GlossaryHyperRef{stack-protocol}{protocol stack}, certain message semantics, how authentication and authorization are to be carried out, among many other possible examples.
 
-\GlossaryEntry{Property, Model}{property-model}
-Named \GlossaryHyperRef{data}{data} associated with either a model \GlossaryHyperRef{entity}{entity-model} or \GlossaryHyperRef{relation}{relation-model}.
+\GlossaryEntry{property}{Property}
+A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \GlossaryHyperRef{entity}{entity} or a \GlossaryHyperRef{relationship}{relationship}.
 
-\GlossaryEntry{Protocol}{protocol}
-A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{messages}{message}.
+\GlossaryEntry{protocol}{Protocol}
+A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{message}{messages}.
 See also \GlossaryNameRef{stack-protocol}.
 
-\GlossaryEntry{Provider, Service}{provider-service}
-A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{services}{service} available for \GlossaryHyperRef{consumption}{consumer-service} by any systems able to satisfy its \GlossaryHyperRef{consumption policies}{policy-service-consumption}.
+\GlossaryEntry{provider-service}{Provider, Service}
+A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumer-service}{consumption} by any systems able to satisfy its \GlossaryHyperRef{policy-service-consumption}{consumption policies}.
+See also TODO.
 
 	\GlossaryNote{SOA-RM}{
 		defines a service provider as ``an entity (person or organization) that offers the use of capabilities by means of a service''.
 		Our definition is more specific in that it requires the \GlossaryHyperRef{entity}{entity} be a system.
 	}
 
-\GlossaryEntry{Relation, Model}{relation-model}
-A uni-directional association of two \GlossaryHyperRef{entities}{entity-model} part of the same \GlossaryHyperRef{model}{model}.
+\GlossaryEntry{relationship}{Relationship}
+A uni-directional association of two \GlossaryHyperRef{entity}{entities}, possibly with an associated \GlossaryHyperRef{data}{data} name.
 
-\GlossaryEntry{Service}{service}
-A set of \GlossaryHyperRef{functions}{function} that can be \GlossaryHyperRef{provided}{provider-service} via an \GlossaryHyperRef{interface}{interface}.
+\GlossaryEntry{service}{Service}
+A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{provider-service}{provided} via an \GlossaryHyperRef{interface}{interface}.
+See also TODO.
 
 	\GlossaryNote{RAMI4.0}{
 		defines a service as ``separate scope of functions offered by an entity or organization via interfaces''.
@@ -363,77 +356,75 @@ A set of \GlossaryHyperRef{functions}{function} that can be \GlossaryHyperRef{pr
 
 	\GlossaryNote{SOA-RM}{
 		defines a service as ``the means by which the needs of a consumer are brought together with the capabilities of a provider''.
-		Our definition is more specific about how the \GlossaryHyperRef{capabilities}{capability} of a service are made available.
+		Our definition is more specific about how the \GlossaryHyperRef{capability}{capabilities} of a service are made available.
 	}
 
-\GlossaryEntry{Session}{session}
+\GlossaryEntry{session}{Session}
 
-\GlossaryEntry{Shell, Administrative}{shell-administrative}
+\GlossaryEntry{shell-administrative}{Shell, Administrative}
 
-\GlossaryEntry{Signature, Function}{signature-function}
-A \GlossaryHyperRef{model}{model} specifying the \GlossaryHyperRef{type}{type-data} of the \GlossaryHyperRef{message}{message} a given \GlossaryHyperRef{function}{function} accepts when \GlossaryHyperRef{invoked}{invocation-function}, as well as the types of any messages it could return in response.
+\GlossaryEntry{signature-function}{Signature, Function}
+A \GlossaryHyperRef{model}{model} specifying the \GlossaryHyperRef{type-data}{type} of the \GlossaryHyperRef{message}{message} a given \GlossaryHyperRef{function}{function} accepts when \GlossaryHyperRef{invocation-function}{invoked}, as well as the types of any messages it could return in response.
+See also TODO.
 
 	\GlossaryNote{Note 1}{
 		This means that a function signature establishes a \GlossaryHyperRef{protocol}{protocol} for a certain \GlossaryHyperRef{service}{service} function.
 	}
 
-\GlossaryEntry{Software}{software}
+\GlossaryEntry{software}{Software}
 See \GlossaryNameRef{implementation-software}.
 
-\GlossaryEntry{SoLC}{solc} See \GlossaryNameRef{system-of-local-clouds}.
+\GlossaryEntry{solc}{SoLC} See \GlossaryNameRef{system-of-local-clouds}.
 
-\GlossaryEntry{SoS}{sos} See \GlossaryNameRef{system-of-systems}.
+\GlossaryEntry{sos}{SoS} See \GlossaryNameRef{system-of-systems}.
 
-\GlossaryEntry{Specification}{specification}
-A \GlossaryHyperRef{model}{model} of \GlossaryHyperRef{properties}{property-model}, constituting \GlossaryHyperRef{constraints}{constraint-model} a target model must satisfy.
-A specification may refer to \GlossaryHyperRef{prototols}{protocol}, \GlossaryHyperRef{profiles}{profile}, \GlossaryHyperRef{services}{service}, as well as other things the entity in question must conform to or provide.
+\GlossaryEntry{stack-protocol}{Stack, Protocol}
 
-\GlossaryEntry{Stack, Protocol}{stack-protocol}
+\GlossaryEntry{standard}{Standard}
 
-\GlossaryEntry{Standard}{standard}
+\GlossaryEntry{stakeholder}{Stakeholder}
 
-\GlossaryEntry{Stakeholder}{stakeholder}
+\GlossaryEntry{subsystem}{Subsystem} See \GlossaryNameRef{component}.
 
-\GlossaryEntry{Subroutine}{subroutine}
-A provision of a \GlossaryHyperRef{service provider}{provider-service} that could exercise one or more of its \GlossaryHyperRef{capabilities}{capability} if triggered. TODO: Improve.
-
-\GlossaryEntry{Subsystem}{subsystem} See \GlossaryNameRef{component}.
-
-\GlossaryEntry{System}{system}
-An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{providing services}{provider-service}, \GlossaryHyperRef{consuming services}{consumer-service}, or both.
+\GlossaryEntry{system}{System}
+An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-service}{providing services}, \GlossaryHyperRef{consumer-service}{consuming services}, or both.
 
 	\GlossaryNote{Note 1}{
-		The word ``system'' is more generally understood to be very inclusive, expressing the larger idea of connected \GlossaryHyperRef{components}{component} facilitating one or more \GlossaryHyperRef{capabilities}{capability}.
-		From the perspective of Arrowhead, however, capabilities can only be \GlossaryHyperRef{invoked}{invocation-function} through \GlossaryHyperRef{services}{service}, which means that a system unable to provide or consume services can only be described as a component of another system.
+		The word ``system'' is more generally understood to be very inclusive, expressing the larger idea of connected \GlossaryHyperRef{component}{components} facilitating one or more \GlossaryHyperRef{capability}{capabilities}.
+		From the perspective of Arrowhead, however, capabilities can only be \GlossaryHyperRef{invocation-function}{invoked} through \GlossaryHyperRef{service}{services}, which means that a system unable to provide or consume services can only be described as a component of another system.
 	}
 
 	\GlossaryNote{Note 2}{
 		A system is practically distinct from a \GlossaryHyperRef{system-of-systems}{system-of-systems} by being represented only by a single \GlossaryHyperRef{identity}{identity}.
 	}
 
-\GlossaryEntry{System-of-Local-Clouds (SoLC)}{system-of-local-clouds}
-A set of \GlossaryHyperRef{local clouds}{cloud-local} that \GlossaryHyperRef{consume}{consumer-service} each other's \GlossaryHyperRef{services}{service} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent local clouds could \GlossaryHyperRef{provide}{provider-service} on its own.
+\GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
+A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
 
-\GlossaryEntry{System-of-Systems (SoS)}{system-of-systems}
-A set of \GlossaryHyperRef{systems}{system} that \GlossaryHyperRef{consume}{consumer-service} each other's \GlossaryHyperRef{services}{service} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent systems could \GlossaryHyperRef{provide}{provider-service} on its own.
+\GlossaryEntry{system-of-systems}{System-of-Systems (SoS)}
+A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent systems could \GlossaryHyperRef{provider-service}{provide} on its own.
 
-\GlossaryEntry{Token}{token} See \GlossaryNameRef{token-authentication}.
+	\GlossaryNote{Note 1}{
+		The system-of-systems concept is not restricted to the boundaries imposed by local clouds, organizations and systems-of-local-clouds, even though a local cloud could, for example, be regarded as a type system-of-systems.
+	}
 
-\GlossaryEntry{Token, Authentication}{token-authentication}
+\GlossaryEntry{token}{Token} See \GlossaryNameRef{token-authentication}.
 
-\GlossaryEntry{Type, Data}{type-data}
+\GlossaryEntry{token-authentication}{Token, Authentication}
 
-\GlossaryEntry{Type, Enumerating}{type-enumerating}
+\GlossaryEntry{type-data}{Type, Data}
 
-\GlossaryEntry{Type, Primitive}{type-primitive}
+\GlossaryEntry{type-enumerating}{Type, Enumerating}
 
-\GlossaryEntry{Type, Structured}{type-structured}
+\GlossaryEntry{type-primitive}{Type, Primitive}
 
-\GlossaryEntry{Type, Union}{type-union}
+\GlossaryEntry{type-structured}{Type, Structured}
 
-\GlossaryEntry{User}{user}
+\GlossaryEntry{type-union}{Type, Union}
 
-\GlossaryEntry{Validation, Model}{validation-model}
-The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies all of its \GlossaryHyperRef{constraints}{constraint-model}.
+\GlossaryEntry{user}{User}
+
+\GlossaryEntry{validation}{Validation}
+The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies all of its \GlossaryHyperRef{constraint}{constraints}.
 
 }
