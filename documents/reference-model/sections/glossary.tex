@@ -8,7 +8,7 @@
 
 {
 
-\newcommand{\GlossaryEntry}[2]{\paragraph{#2}\label{sec:glossary:#1}\,}
+\newcommand{\GlossaryEntry}[2]{\subsubsection*{#2}\label{sec:glossary:#1}}
 \newcommand{\GlossaryNote}[2]{\begin{minipage}[b]{\dimexpr\linewidth-0.5cm\relax}\vspace*{0.33cm}\footnotesize{\textbf{#1}\ #2}\end{minipage}}
 
 \GlossaryEntry{abstract}{Abstract}
@@ -64,7 +64,7 @@ See \GlossaryNameRef{framework-arrowhead}.
 A thing or object, tangible or intangible.
 
 \GlossaryEntry{asset}{Asset}
-An \GlossaryHyperRef{artifact}{artifact} that is of value to an \GlossaryHyperRef{organization}{organization}.
+An \GlossaryHyperRef{artifact}{artifact} that is of value to a person or \GlossaryHyperRef{organization}{organization}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines asset as an ``object which has a value for an organization''.
@@ -112,10 +112,11 @@ Synonymous to \GlossaryNameRef{codec}.
 
 \GlossaryEntry{component}{Component}
 A part of a \GlossaryHyperRef{system}{system}, contributing to it facilitating its \GlossaryHyperRef{capability}{capabilities}.
+Compare with \GlossaryNameRef{subsystem}.
 
 	\GlossaryNote{Note 1}{
-		While it is also correct that a system can be regarded as a component of a \GlossaryHyperRef{system-of-systems}{system-of-systems}, we associate the word ``component'' primarily with plain systems.
-		When referring to the systems of a system-of-systems, we recommend using the words ``system'' and ``\GlossaryHyperRef{subsystem}{subsystem}'' to avoid confusion.
+		While ``component'' generally is a rather open-ended term, in the context of Arrowhead it gains the rather specific meaning of being a constituent of a system.
+		If referring to a constituent of a \GlossaryHyperRef{system-of-systems}{system-of-systems}, prefer use of the words ``system'' and ``subsystem''.
 	}
 
 	\GlossaryNote{Note 2}{
@@ -171,7 +172,12 @@ See also TODO.
 A sequence of datums forming a set of \GlossaryHyperRef{description}{descriptions} via the structure imposed by a \GlossaryHyperRef{type-data}{data type}.
 
 	\GlossaryNote{Note 1}{
-		Without complete knowledge of the types associated with some data, that data cannot be interpreted.
+		Even though one may expect datums to typically be bits, any consistent set of symbols would theoretically suffice.
+	}
+
+	\GlossaryNote{Note 2}{
+		Without knowledge of the types and context associated with some data, that data cannot be interpreted.
+		See also \GlossaryNameRef{type-data}.
 	}
 
 \GlossaryEntry{decoding}{Decoding}
@@ -256,6 +262,7 @@ A set of assumptions, concepts, values and practices that frame a certain proble
 
 \GlossaryEntry{framework-arrowhead}{Framework, Arrowhead}
 Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the Arrowhead project.
+See also Section \ref{sec:arrowhead:overview}.
 
 \GlossaryEntry{framework-software}{Framework, Software}
 A set of software specifications, \GlossaryHyperRef{implementation-software}{implementations} and other \GlossaryHyperRef{artifact}{artifacts} meant to help address the problem domain of a certain \GlossaryHyperRef{framework}{framework}.
@@ -287,14 +294,8 @@ See \GlossaryNameRef{implementation-software}.
 \GlossaryEntry{interface}{Interface}
 A boundary between a \GlossaryHyperRef{medium}{medium} and a \GlossaryHyperRef{system}{system} over which \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can move.
 
-\GlossaryEntry{interface-administrative}{Interface, Administrative}
-
-\GlossaryEntry{interface-management}{Interface, Management}
-
-\GlossaryEntry{interface-operator}{Interface, Operator}
-
 \GlossaryEntry{interface-service}{Interface, Service}
-The \GlossaryHyperRef{interface}{interface} through which \GlossaryHyperRef{message}{messages} may be sent to a certain \GlossaryHyperRef{service}{service}.
+The \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} may receive \GlossaryHyperRef{message}{messages}.
 
 	\GlossaryNote{SOA-RM}{
 		defines service interface as ``the means by which the underlying capabilities of a service are accessed''.
@@ -306,27 +307,38 @@ The attempt to excercise \GlossaryHyperRef{capability}{capabilities} associated 
 See also TODO.
 
 \GlossaryEntry{manager}{Manager}
-A person or \GlossaryHyperRef{system}{system} tasked with a \GlossaryHyperRef{management}{management} responsibility.
+See \GlossaryNameRef{manager-system}.
 
 \GlossaryEntry{manager-component}{Manager, Component}
-A means of \GlossaryHyperRef{management}{managing} the \GlossaryHyperRef{component}{components} of a \GlossaryHyperRef{system}{system}.
+See \GlossaryNameRef{manager-system}.
 
 	\GlossaryNote{RAMI4.0}{
-		defines component manager as an ``organizer of autonomous administration and access to resources of the relevant I[ndustry ]4.0 component, such as the I[ndustry ]4.0 component itself, object, technical functionality, virtual representation''.
-		In other words, RAMI4.0 uses the term exclusively for referring to the means of component management in an \GlossaryHyperRef{component-industry40}{Industry 4.0 component}.
-		Our definition is more general.
-		See \GlossaryNameRef{manager-industry40-component} for a comparable definition.
+		introduces this concept.
+		To make it align better with the rest of our definitions, we refer to such managers as \textit{system} managers.
 	}
 
-\GlossaryEntry{manager-industry40-component}{Manager, Industry 4.0 Component}
-A \GlossaryHyperRef{manager-component}{component manager} used to \GlossaryHyperRef{management}{manage} the \GlossaryHyperRef{component}{components} of an \GlossaryHyperRef{system-industry40}{Industry 4.0 system}.
-See also TODO.
+\GlossaryEntry{manager-system}{Manager, System}
+A means of \GlossaryHyperRef{management}{managing} a \GlossaryHyperRef{system}{system}.
+
+	\GlossaryNote{RAMI4.0}{
+		introduces the ``component manager'', which is an ``organizer of autonomous administration and access to resources of the relevant I[ndustry ]4.0 component, such as the I[ndustry ]4.0 component itself, object, technical functionality, virtual representation''.
+		Due to the difference in interpretation of the terms ``component'' and ``system'', we use the term ``system manager'' to refer to the same idea.
+		Our definitions should be interpreted as being equivalent to that of the RAMI4.0 component manager, with the difference that we do not require that such a manager be associated with an \GlossaryHyperRef{system-industry40-compliant}{Industry 4.0 compliant system}.
+	}
 
 \GlossaryEntry{management}{Management}
-The activity of \GlossaryHyperRef{configure}{configuring} or retreiving restricted \GlossaryHyperRef{data}{data} from an \GlossaryHyperRef{asset}{asset}.
+See \GlossaryNameRef{management-system}.
+
+\GlossaryEntry{management-system}{Management, System}
+The activity of \GlossaryHyperRef{configure}{configuring} or retreiving restricted \GlossaryHyperRef{data}{data} from a \GlossaryHyperRef{system}{system}.
+
+	\GlossaryNote{Note 1}{
+		Both of these activities may be performed via \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by the managed system in question.
+		The definition does, however, open up for management to happen some other way, for example via the manual handling of some \GlossaryHyperRef{device}{device} with a system is running on it.
+	}
 
 \GlossaryEntry{manifest}{Manifest}
-A set of \GlossaryHyperRef{data}{data} \GlossaryHyperRef{description}{describing} relevant aspects about a particular \GlossaryHyperRef{entity}{entity}.
+A set of \GlossaryHyperRef{metadata}{metadata} about relevant aspects of a particular \GlossaryHyperRef{entity}{entity}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines manifest as an ``externally accessible, defined set of meta-information on the functional and non-functional properties of the relevant [Industry ]4.0 component''.
@@ -344,6 +356,11 @@ A \GlossaryHyperRef{manifest}{manifest} \GlossaryHyperRef{description}{describin
 A means of connecting \GlossaryHyperRef{interface}{interfaces} such that the \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can be transmitted between them.
 
 \GlossaryEntry{message}{Message}
+A set of \GlossaryHyperRef{data}{data} able to move between the \GlossaryHyperRef{interface}{interfaces} of \GlossaryHyperRef{system}{systems}.
+
+	\GlossaryNote{Note 1}{
+		In the context of Arrowhead, messages are only sent to \GlossaryHyperRef{invocation-function}{invoke} the \GlossaryHyperRef{function}{functions} of \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by other systems.
+	}
 
 \GlossaryEntry{metadata}{Metadata}
 \GlossaryHyperRef{data}{Data} \GlossaryHyperRef{description}{describing} other data.
@@ -391,8 +408,10 @@ See also Section \ref{sec:introduction:scope}.
 	}
 
 \GlossaryEntry{operator}{Operator}
+A person or \GlossaryHyperRef{entity}{entity} tasked with the \GlossaryHyperRef{management}{management} of a set of \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{organization}{Organization}
+A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of other stakeholders.
 
 \GlossaryEntry{policy}{Policy}
 A set of obligations, \GlossaryHyperRef{constraint}{constraints} and/or other conditions under which some activity is permitted.
@@ -420,11 +439,12 @@ A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \G
 	}
 
 \GlossaryEntry{protocol}{Protocol}
-A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{message}{messages}.
-See also \GlossaryNameRef{stack-protocol}.
+A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{type-data}{typed} \GlossaryHyperRef{message}{messages}.
+See also \GlossaryNameRef{protocol-extensible}.
 
 \GlossaryEntry{protocol-extensible}{Protocol, Extensible}
 A \GlossaryHyperRef{protocol}{protocol} defining at least one \GlossaryHyperRef{message}{message} thay may contain arbitrary data, which enables the formulation of \GlossaryHyperRef{subprotocol}{subprotocols} of that protocol.
+See also \GlossaryNameRef{stack-protocol}.
 
 \GlossaryEntry{provider-service}{Provider, Service}
 A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumer-service}{consumption} by any systems able to satisfy its \GlossaryHyperRef{policy-service-consumption}{consumption policies}.
@@ -458,9 +478,27 @@ See also TODO.
 \GlossaryEntry{service-quality-of}{Service, Quality of (QoS)}
 The degree of performance at which a given \GlossaryHyperRef{service}{service} is \GlossaryHyperRef{provider-service}{provided}. 
 
-\GlossaryEntry{session}{Session}
-
 \GlossaryEntry{shell-administrative}{Shell, Administrative}
+A \GlossaryHyperRef{manifest}{manifest} and a \GlossaryHyperRef{manager-component}{component manager} associated with a certain \GlossaryHyperRef{system}{system}.
+
+	\GlossaryNote{Note 1}{
+		The availability of both a manifest and a component manager allows for both static and dynamic details about a system to be queried, as well as providing for the system to be \GlossaryHyperRef{configuration}{reconfigured}.
+	}
+
+	\GlossaryNote{Note 2}{
+		By definition, every system with an administrative shell is \GlossaryHyperRef{system-industry40}{Industry 4.0 compliant}.
+	}
+
+	\GlossaryNote{Note 3}{
+		Note that the manifest and component manager only have to be \textit{associated} with a certain system.
+		Nothing is specified about where the manifest or component manager are physically or virtually located with the respect to the system.
+	}
+
+	\GlossaryNote{RAMI4.0}{
+		defines administration shell as a ``virtual digital and active representation of an I[ndustry ]4.0 component in the I[nustry ]4.0 system''.
+		In a note associated with the term, it adds that ``an administration shell contains the manifest and the component manager''.
+		Our definition should be interpreted as being equivalent.
+	}
 
 \GlossaryEntry{signature-function}{Signature, Function}
 A \GlossaryHyperRef{model}{model} specifying the \GlossaryHyperRef{type-data}{type} of the \GlossaryHyperRef{message}{message} a given \GlossaryHyperRef{function}{function} accepts when \GlossaryHyperRef{invocation-function}{invoked}, as well as the types of any messages it could return in response.
@@ -485,17 +523,24 @@ See \GlossaryNameRef{system-of-local-clouds}.
 \GlossaryEntry{sos}{SoS}
 See \GlossaryNameRef{system-of-systems}.
 
-\GlossaryEntry{stack-protocol}{Stack, Protocol}
-A stack with an \GlossaryHyperRef{protocol-extensible}{extensible protocol} at the bottom and $n > 0$ \GlossaryHyperRef{subprotocol}{subprotocols} layered on top of it.
+\GlossaryEntry{stack-extensible-protocol}{Stack, Extensible Protocol}
+A \GlossaryHyperRef{stack-protocol}{protocol stack} whose topmost \GlossaryHyperRef{protocol}{protocol} is \GlossaryHyperRef{protocol-extensible}{extensible}.
 
-	\GlossaryHyperRef{Note 1}{
-		For example, the ubiquitous HTTP \cite{fielding2014hypertext} protocol assumes that the IP and TCP protocols be used ``underneath'' it.
-		HTTP is, in turn, also extensible, which allows for an engineer to define an application-specific protocol on top of its stack.
+\GlossaryEntry{stack-protocol}{Stack, Protocol}
+A stack with an \GlossaryHyperRef{protocol-extensible}{extensible protocol} as base and $n > 0$ \GlossaryHyperRef{subprotocol}{subprotocols} layered on top of it.
+
+	\GlossaryNote{Note 1}{
+		Every protocol part of a protocol stack, with the exception of the topmost, must be extensible.
 	}
 
-\GlossaryEntry{standard}{Standard}
+	\GlossaryNote{Note 2}{
+		An example of a notable protocol stack is that of HTTP \cite{fielding2014hypertext}.
+		It is defined as an extension of the TCP protocol, which in turn extends the IP protocol, which can work as a subprotocol of several other lower-level protocols.
+		HTTP is an extensible protocol, which allows for an engineer to define an application-specific protocol on top of its stack.
+	}
 
 \GlossaryEntry{stakeholder}{Stakeholder}
+A person or group of persons who are involved in or affected by certain \GlossaryHyperRef{entity}{entities} or enterprises.
 
 \GlossaryEntry{subprotocol}{Subprotocol}
 A \GlossaryHyperRef{protocol}{protocol} that is realized as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol.
@@ -513,6 +558,7 @@ An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-servi
 
 	\GlossaryNote{Note 2}{
 		A system is practically distinct from a \GlossaryHyperRef{system-of-systems}{system-of-systems} by being represented only by a single \GlossaryHyperRef{identity}{identity}.
+		In contrast, a system-of-systems does either not have its own identity, or has both its own identity and another identity for each of its \GlossaryHyperRef{subsystem}{subsystems}.
 	}
 
 \GlossaryEntry{system-industry40}{System, Industry 4.0}
@@ -525,30 +571,41 @@ A \GlossaryHyperRef{system}{system} with an associated \GlossaryHyperRef{shell-a
 		Our definition should be interpreted as being equivalent to that of the RAMI4.0 Industry 4.0 component.
 	}
 
+\GlossaryEntry{system-industry40-compliant}{System, Industry 4.0 Compliant}
+See \GlossaryNameRef{system-industry40}.
+
 \GlossaryEntry{system-of-clouds}{System-of-Clouds (SoC)}
 A set of \GlossaryHyperRef{cloud}{clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
 
 \GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
-A \GlossaryHyperRef{system-of-clouds}{system-of-clouds} where every cloud is a \GlossaryHyperRef{cloud-local}{local cloud}.
+A \GlossaryHyperRef{system-of-clouds}{system-of-clouds} where every \GlossaryHyperRef{cloud}{cloud} is a \GlossaryHyperRef{cloud-local}{local cloud}.
 
 \GlossaryEntry{system-of-systems}{System-of-Systems (SoS)}
 A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent systems could \GlossaryHyperRef{provider-service}{provide} on its own.
 
 	\GlossaryNote{Note 1}{
-		The system-of-systems concept is not restricted to the boundaries imposed by local clouds, organizations and systems-of-local-clouds, even though a local cloud could, for example, be regarded as a type system-of-systems.
+		The system-of-systems concept is not restricted to the boundaries imposed by \GlossaryHyperRef{organization}{organizations}, \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-clouds}{systems-of-clouds}, even though a cloud, for example, could be regarded as a type of system-of-systems.
 	}
 
 \GlossaryEntry{type-data}{Type, Data}
+A \GlossaryHyperRef{description}{description} of how datums are to be arranged to \GlossaryHyperRef{coding}{code} certain facts.
+See also \GlossaryNameRef{data}.
 
-\GlossaryEntry{type-enumerating}{Type, Enumerating}
+	\GlossaryNote{Note 1}{
+		While this definition may seem foreign, it does capture how integer types, classes, enumerators and other general data type are used in the context of a programming language or \GlossaryHyperRef{codec}{codec}.
+		In the end, all data are bits or other symbols.
+		From our perspective, types serve to group those symbols and assign them meaning.
+	}
 
-\GlossaryEntry{type-primitive}{Type, Primitive}
-
-\GlossaryEntry{type-structured}{Type, Structured}
-
-\GlossaryEntry{type-union}{Type, Union}
+	\GlossaryNote{Note 2}{
+		A data type provides only syntactic, or structural, information about data.
+		While knowing the data type used to code some data is required for its interpretation, contextual knowledge is also needed.
+		For example, a data type may specify a \texttt{name}, but it will not indicate when or why that name is useful.
+		That information would have to be provided via documentation or some other means.
+	}
 
 \GlossaryEntry{user}{User}
+A \GlossaryHyperRef{stakeholder}{stakeholder} associated with the usage of a certain \GlossaryHyperRef{entity}{entity}.
 
 \GlossaryEntry{validation}{Validation}
 The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies a \GlossaryHyperRef{constraint}{constraint}.
