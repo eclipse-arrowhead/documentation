@@ -161,7 +161,6 @@ A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on 
 
 \GlossaryEntry{consumer-service}{Consumer, Service}
 A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-function}{invoking} a \GlossaryHyperRef{function}{function} \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{service}{service}.
-See also TODO.
 
 	\GlossaryNote{SOA-RM}{
 		defines a service consumer as ``an entity which seeks to satisfy a particular need through the use [of] capabilities offered by means of a service''.
@@ -194,6 +193,13 @@ The process through which \GlossaryHyperRef{data}{data} is transformed from bein
 \GlossaryEntry{description}{Description}
 Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
 
+\GlossaryEntry{description-design}{Description, Design}
+A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{design}{design}.
+
+	\GlossaryNote{Note 1}{
+		A design description is a form of \GlossaryHyperRef{metadata}{metadata}.
+	}
+
 \GlossaryEntry{description-interface-design}{Description, Interface Design}
 
 \GlossaryEntry{description-service}{Description, Service}
@@ -205,12 +211,16 @@ The \GlossaryHyperRef{metadata}{metadata} required for a \GlossaryHyperRef{syste
 	}
 
 \GlossaryEntry{design}{Design}
+Synonymous to \GlossaryNameRef{model-concrete}.
 
 \GlossaryEntry{design-interface}{Design, Interface}
+A \GlossaryHyperRef{model-concrete}{concrete model} of an \GlossaryHyperRef{interface}{interface}, specifying the \GlossaryHyperRef{protocol}{protocols} it supports. TODO
 
 \GlossaryEntry{device}{Device}
+A physical \GlossaryHyperRef{entity}{entity} capable of hosting \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{device-human-interface}{Device, Human Interface (HID)}
+A \GlossaryHyperRef{device}{device} that provides sensors and actuators that together make up an interface through which a human can exchange messages with one or more \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{encoding}{Encoding}
 The process through which \GlossaryHyperRef{data}{data} is transformed from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for interpretation to another codec suitable for transmission or storage.
@@ -250,7 +260,6 @@ A set of \GlossaryHyperRef{entity}{entities} that share a common \GlossaryHyperR
 
 \GlossaryEntry{entity-systemic}{Entity, Systemic}
 An \GlossaryHyperRef{entity}{entity} being either a \GlossaryHyperRef{component}{component}, a \GlossaryHyperRef{system}{system}, a \GlossaryHyperRef{system-of-systems}{system-of-systems}, a \GlossaryHyperRef{cloud}{cloud}, or any kind of \GlossaryHyperRef{system-of-clouds}{system-of-clouds}.
-See also \GlossaryNameRef{subsystem}.
 
 \GlossaryEntry{framework}{Framework}
 A set of assumptions, concepts, values and practices that frame a certain problem domain.
@@ -262,19 +271,18 @@ A set of assumptions, concepts, values and practices that frame a certain proble
 
 \GlossaryEntry{framework-arrowhead}{Framework, Arrowhead}
 Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the Arrowhead project.
-See also Section \ref{sec:arrowhead:overview}.
 
 \GlossaryEntry{framework-software}{Framework, Software}
 A set of software specifications, \GlossaryHyperRef{implementation-software}{implementations} and other \GlossaryHyperRef{artifact}{artifacts} meant to help address the problem domain of a certain \GlossaryHyperRef{framework}{framework}.
 
 \GlossaryEntry{function}{Function}
 The realization of the \GlossaryHyperRef{protocol}{protocol} established by a certain \GlossaryHyperRef{signature-function}{function signature}.
-See also TODO.
 
-\GlossaryEntry{hid}{HID} See \GlossaryNameRef{device-human-interface}.
+\GlossaryEntry{hid}{HID}
+See \GlossaryNameRef{device-human-interface}.
 
 \GlossaryEntry{industry40}{Industry 4.0}
-The fourth industrial paradigm, characterized by high degrees of computerization, digitalization and interconnectivity.
+The fourth industrial paradigm, primarily characterized by high degrees of computerization, digitalization and interconnectivity.
 See also Section \ref{sec:arrowhead:industry40}.
 
 \GlossaryEntry{identification}{Identification}
@@ -287,15 +295,16 @@ The process through which an \GlossaryHyperRef{entity}{entity} collects and veri
 The aspect or aspects, such as \GlossaryHyperRef{identifier}{identifiers}, that makes an \GlossaryHyperRef{entity}{entity} distinct from all other entities.
 
 \GlossaryEntry{implementation}{Implementation}
-See \GlossaryNameRef{implementation-software}.
+The realization of a \GlossaryHyperRef{model-concrete}{concrete model} as a set of \GlossaryHyperRef{artifact}{artifacts}.
 
 \GlossaryEntry{implementation-software}{Implementation, Software}
+An \GlossaryHyperRef{implementation}{implementation} comprised of executable software \GlossaryHyperRef{artifact}{artifacts}.
 
 \GlossaryEntry{interface}{Interface}
 A boundary between a \GlossaryHyperRef{medium}{medium} and a \GlossaryHyperRef{system}{system} over which \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can move.
 
 \GlossaryEntry{interface-service}{Interface, Service}
-The \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} may receive \GlossaryHyperRef{message}{messages}.
+An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
 
 	\GlossaryNote{SOA-RM}{
 		defines service interface as ``the means by which the underlying capabilities of a service are accessed''.
@@ -303,8 +312,7 @@ The \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyp
 	}
 
 \GlossaryEntry{invocation-function}{Invocation, Function}
-The attempt to excercise \GlossaryHyperRef{capability}{capabilities} associated with a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
-See also TODO.
+The attempt to excercise the \GlossaryHyperRef{capability}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
 
 \GlossaryEntry{manager}{Manager}
 See \GlossaryNameRef{manager-system}.
@@ -356,7 +364,7 @@ A \GlossaryHyperRef{manifest}{manifest} \GlossaryHyperRef{description}{describin
 A means of connecting \GlossaryHyperRef{interface}{interfaces} such that the \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can be transmitted between them.
 
 \GlossaryEntry{message}{Message}
-A set of \GlossaryHyperRef{data}{data} able to move between the \GlossaryHyperRef{interface}{interfaces} of \GlossaryHyperRef{system}{systems}.
+\GlossaryHyperRef{data}{Data} that can be moved between the \GlossaryHyperRef{interface}{interfaces} of \GlossaryHyperRef{system}{systems}.
 
 	\GlossaryNote{Note 1}{
 		In the context of Arrowhead, messages are only sent to \GlossaryHyperRef{invocation-function}{invoke} the \GlossaryHyperRef{function}{functions} of \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by other systems.
@@ -448,7 +456,6 @@ See also \GlossaryNameRef{stack-protocol}.
 
 \GlossaryEntry{provider-service}{Provider, Service}
 A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumer-service}{consumption} by any systems able to satisfy its \GlossaryHyperRef{policy-service-consumption}{consumption policies}.
-See also TODO.
 
 	\GlossaryNote{SOA-RM}{
 		defines a service provider as ``an entity (person or organization) that offers the use of capabilities by means of a service''.
@@ -463,7 +470,6 @@ A uni-directional association of two \GlossaryHyperRef{entity}{entities}, possib
 
 \GlossaryEntry{service}{Service}
 A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{provider-service}{provided} via an \GlossaryHyperRef{interface}{interface}.
-See also TODO.
 
 	\GlossaryNote{RAMI4.0}{
 		defines a service as ``separate scope of functions offered by an entity or organization via interfaces''.
@@ -502,7 +508,6 @@ A \GlossaryHyperRef{manifest}{manifest} and a \GlossaryHyperRef{manager-componen
 
 \GlossaryEntry{signature-function}{Signature, Function}
 A \GlossaryHyperRef{model}{model} specifying the \GlossaryHyperRef{type-data}{type} of the \GlossaryHyperRef{message}{message} a given \GlossaryHyperRef{function}{function} accepts when \GlossaryHyperRef{invocation-function}{invoked}, as well as the types of any messages it could return in response.
-See also TODO.
 
 	\GlossaryNote{Note 1}{
 		This means that a function signature establishes a \GlossaryHyperRef{protocol}{protocol} for a certain \GlossaryHyperRef{service}{service} function.
