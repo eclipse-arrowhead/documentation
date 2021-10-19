@@ -14,10 +14,6 @@
 \GlossaryEntry{abstract}{Abstract}
 See \GlossaryNameRef{model-abstract}
 
-\GlossaryEntry{administration}{Administration}
-
-\GlossaryEntry{administrator}{Administrator}
-
 \GlossaryEntry{architecture}{Architecture}
 A \GlossaryHyperRef{model-concrete}{concrete model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{model-reference}{reference models}, \GlossaryHyperRef{architecture-reference}{reference architectures} and other concrete architectures.
 See also Section \ref{sec:introduction:scope}.
@@ -30,7 +26,7 @@ See also Section \ref{sec:introduction:scope}.
 
 	\GlossaryNote{SOA-RM}{
 		defines software architecture as ``the structure or structures of an information system consisting of entities and their externally visible properties, and the relationships among them''.
-		That definition is equivalent to our definition of \GlossaryHyperRef{model}{model}, with the exception that the thing being modelled has to be an information system.
+		That definition is equivalent to our definition of \GlossaryHyperRef{model}{model}, with the exception that the thing being modeled has to be an information system.
 		As our definition is concerned with a model and a system-of-systems, which must be an information system, we regard out definition as compatible but more specific.
 	}
 
@@ -71,10 +67,6 @@ An \GlossaryHyperRef{artifact}{artifact} that is of value to a person or \Glossa
 		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{authentication}{Authentication}
-
-\GlossaryEntry{authorization}{Authorization}
-
 \GlossaryEntry{capability}{Capability}
 A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-service}{service provider}.
 
@@ -88,17 +80,14 @@ A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-ser
 		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{certificate}{Certificate}
-
 \GlossaryEntry{cloud}{Cloud}
-
-\GlossaryEntry{cloud-compute}{Cloud, Compute}
+TODO
 
 \GlossaryEntry{cloud-local}{Cloud, Local}
-
-\GlossaryEntry{cloud-storage}{Cloud, Storage}
+TODO
 
 \GlossaryEntry{cloud-virtual}{Cloud, Virtual}
+TODO
 
 \GlossaryEntry{codec}{Codec}
 A \GlossaryHyperRef{model-concrete}{concrete} \GlossaryHyperRef{type-data}{data type} used to structure \GlossaryHyperRef{data}{data} for transmission, storage and/or interpretation.
@@ -168,15 +157,27 @@ A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-funct
 	}
 
 \GlossaryEntry{data}{Data}
-A sequence of datums forming a set of \GlossaryHyperRef{description}{descriptions} via the structure imposed by a \GlossaryHyperRef{type-data}{data type}.
+A sequence of \GlossaryHyperRef{datum}{datums} recording a set of \GlossaryHyperRef{description}{descriptions} via the structure superimposed by a \GlossaryHyperRef{type-data}{data type}.
 
 	\GlossaryNote{Note 1}{
-		Even though one may expect datums to typically be bits, any consistent set of symbols would theoretically suffice.
+		Let us assume that some data is going to be sent to a drilling machine.
+		The type associated with the data requires that it always consists of 8 bits, organized such that the first 4 bits indicate the speed of drilling in multiples of 100 rotations per minute, while the latter 4 determine how much to lower the drill in multiples of 5 millimeters.
+		A \GlossaryHyperRef{state}{state} that could be expressed with those 8 bits is \texttt{0100 1101}.
+		If each of the two sequences of 4 bits is treated as a big-endian integer with base 2, they record $4$ and $13$ in decimal notation.
+		This would indicate that the drill should spin at $4 * 100 = 400$ rotations per minute and be lowered $13 * 5 = 65$ millimeters.
 	}
 
 	\GlossaryNote{Note 2}{
 		Without knowledge of the types and context associated with some data, that data cannot be interpreted.
-		See also \GlossaryNameRef{type-data}.
+	}
+
+\GlossaryEntry{datum}{Datum}
+A memory cell that records exactly one out of a set of possible symbols.
+See also \GlossaryNameRef{state}.
+
+	\GlossaryNote{Note 1}{
+		A familiar example of a datum may be the bit, or binary digit.
+		Its possible set of symbols is $\{0, 1\}$.
 	}
 
 \GlossaryEntry{decoding}{Decoding}
@@ -191,19 +192,20 @@ The process through which \GlossaryHyperRef{data}{data} is transformed from bein
 	}
 
 \GlossaryEntry{description}{Description}
-Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
+Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both. TODO?
 
 \GlossaryEntry{description-design}{Description, Design}
 A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{design}{design}.
 
 	\GlossaryNote{Note 1}{
-		A design description is a form of \GlossaryHyperRef{metadata}{metadata}.
+		Since a design description is a description of a \GlossaryHyperRef{model}{model}, it is a form of \GlossaryHyperRef{metadata}{metadata}.
 	}
 
 \GlossaryEntry{description-interface-design}{Description, Interface Design}
+A \GlossaryHyperRef{description}{description} of an \GlossaryHyperRef{interface}{interface} that is complete enough ... TODO
 
 \GlossaryEntry{description-service}{Description, Service}
-The \GlossaryHyperRef{metadata}{metadata} required for a \GlossaryHyperRef{system}{system} to be able to \GlossaryHyperRef{consumer-service}{consume} a \GlossaryHyperRef{service}{service}.
+The \GlossaryHyperRef{metadata}{metadata} required for a \GlossaryHyperRef{system}{system} to be able to \GlossaryHyperRef{consumer-service}{consume} a \GlossaryHyperRef{service}{service}. TODO
 
 	\GlossaryNote{SOA-RM}{
 		defines service description as ``the information needed in order to use, or consider using, a service''.
@@ -211,16 +213,17 @@ The \GlossaryHyperRef{metadata}{metadata} required for a \GlossaryHyperRef{syste
 	}
 
 \GlossaryEntry{design}{Design}
+A \GlossaryHyperRef{description}{description} of an \GlossaryHyperRef{entity}{entity}. TODO
 Synonymous to \GlossaryNameRef{model-concrete}.
 
 \GlossaryEntry{design-interface}{Design, Interface}
-A \GlossaryHyperRef{model-concrete}{concrete model} of an \GlossaryHyperRef{interface}{interface}, specifying the \GlossaryHyperRef{protocol}{protocols} it supports. TODO
+Every detail of relevance to produce a \GlossaryHyperRef{description}{described} \GlossaryHyperRef{interface}{interface}. TODO
 
 \GlossaryEntry{device}{Device}
 A physical \GlossaryHyperRef{entity}{entity} capable of hosting \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{device-human-interface}{Device, Human Interface (HID)}
-A \GlossaryHyperRef{device}{device} that provides sensors and actuators that together make up an interface through which a human can exchange messages with one or more \GlossaryHyperRef{system}{systems}.
+A \GlossaryHyperRef{device}{device} that provides sensors and actuators that together make up an \GlossaryHyperRef{interface}{interface} through which a human can exchange messages with one or more \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{encoding}{Encoding}
 The process through which \GlossaryHyperRef{data}{data} is transformed from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for interpretation to another codec suitable for transmission or storage.
@@ -237,7 +240,7 @@ The process through which \GlossaryHyperRef{data}{data} is transformed from bein
 Synonymous to \GlossaryNameRef{codec}.
 
 \GlossaryEntry{entity}{Entity}
-An object, tangible or intangible, that is uniquely \GlossaryHyperRef{identity}{identifiable}.
+An \GlossaryHyperRef{artifact}{artifact} that is uniquely \GlossaryHyperRef{identity}{identifiable}.
 
 	\GlossaryNote{Note 1}{
 		An entity being uniquely identifiable does not necessarily mean that it is associated with a \GlossaryHyperRef{certificate}{certificate} or \GlossaryHyperRef{identifier}{identifier}.
@@ -301,10 +304,15 @@ The realization of a \GlossaryHyperRef{model-concrete}{concrete model} as a set 
 An \GlossaryHyperRef{implementation}{implementation} comprised of executable software \GlossaryHyperRef{artifact}{artifacts}.
 
 \GlossaryEntry{interface}{Interface}
-A boundary between a \GlossaryHyperRef{medium}{medium} and a \GlossaryHyperRef{system}{system} over which \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can move.
+An \GlossaryHyperRef{entity}{entity} able to mediate communications that satisfy a certain set of \GlossaryHyperRef{constraint}{constraints}.
+
+	\GlossaryNote{Note 1}{
+		The are many possible constraints, or prerequisites, to communication via an interface.
+		Physical links may have to exist and be online, certain \GlossaryHyperRef{protocol}{protocols} may have to used, the receiver of a communication may have to be ready, and so on.
+	}
 
 \GlossaryEntry{interface-service}{Interface, Service}
-An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
+The \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
 
 	\GlossaryNote{SOA-RM}{
 		defines service interface as ``the means by which the underlying capabilities of a service are accessed''.
@@ -312,7 +320,7 @@ An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHype
 	}
 
 \GlossaryEntry{invocation-function}{Invocation, Function}
-The attempt to excercise the \GlossaryHyperRef{capability}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
+The attempt to exercise the \GlossaryHyperRef{capability}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
 
 \GlossaryEntry{manager}{Manager}
 See \GlossaryNameRef{manager-system}.
@@ -338,7 +346,7 @@ A means of \GlossaryHyperRef{management}{managing} a \GlossaryHyperRef{system}{s
 See \GlossaryNameRef{management-system}.
 
 \GlossaryEntry{management-system}{Management, System}
-The activity of \GlossaryHyperRef{configure}{configuring} or retreiving restricted \GlossaryHyperRef{data}{data} from a \GlossaryHyperRef{system}{system}.
+The activity of \GlossaryHyperRef{configure}{configuring} or retrieving restricted \GlossaryHyperRef{data}{data} from a \GlossaryHyperRef{system}{system}.
 
 	\GlossaryNote{Note 1}{
 		Both of these activities may be performed via \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by the managed system in question.
@@ -359,9 +367,6 @@ A \GlossaryHyperRef{manifest}{manifest} \GlossaryHyperRef{description}{describin
 
 \GlossaryEntry{manifest-industry40-system}{Manifest, Industry 4.0 System}
 A \GlossaryHyperRef{manifest}{manifest} \GlossaryHyperRef{description}{describing} an \GlossaryHyperRef{system-industry40}{Industry 4.0 system}.
-
-\GlossaryEntry{medium}{Medium}
-A means of connecting \GlossaryHyperRef{interface}{interfaces} such that the \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can be transmitted between them.
 
 \GlossaryEntry{message}{Message}
 \GlossaryHyperRef{data}{Data} that can be moved between the \GlossaryHyperRef{interface}{interfaces} of \GlossaryHyperRef{system}{systems}.
@@ -433,10 +438,16 @@ A set of obligations, \GlossaryHyperRef{constraint}{constraints} and/or other co
 The \GlossaryHyperRef{policy}{policy} under which a \GlossaryHyperRef{provider-service}{provided service} is permitted to be \GlossaryHyperRef{consumer-service}{consumed}.
 
 \GlossaryEntry{profile}{Profile}
-A \GlossaryHyperRef{model}{model} imposing \GlossaryHyperRef{constraint}{constraints} on a \GlossaryHyperRef{protocol}{protocol}.
+A set of \GlossaryHyperRef{constraint}{constraints} superimposed on a \GlossaryHyperRef{protocol}{protocol}.
 
 	\GlossaryNote{Note 1}{
-		A profile could specify a \GlossaryHyperRef{stack-protocol}{protocol stack}, certain message semantics, how authentication and authorization are to be carried out, among many other possible examples.
+		A profile \textit{never} introduces more \GlossaryHyperRef{message}{messages} to a protocol.
+		It adds constraints to the existing messages of a protocol.
+	}
+
+	\GlossaryNote{Note 2}{
+		A profile could, for example, introduce an authentication mechanism to a protocol by requiring that a certain type of token be included in each message.
+		It could demand that a certain protocol be extended, or that a particular kind of \GlossaryHyperRef{codec}{codec} be used for message bodies, and so on.
 	}
 
 \GlossaryEntry{property}{Property}
@@ -447,12 +458,26 @@ A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \G
 	}
 
 \GlossaryEntry{protocol}{Protocol}
-A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{type-data}{typed} \GlossaryHyperRef{message}{messages}.
+A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{state}{states} and \GlossaryHyperRef{type-data}{typed} \GlossaryHyperRef{message}{messages}.
 See also \GlossaryNameRef{protocol-extensible}.
 
 \GlossaryEntry{protocol-extensible}{Protocol, Extensible}
-A \GlossaryHyperRef{protocol}{protocol} defining at least one \GlossaryHyperRef{message}{message} thay may contain arbitrary data, which enables the formulation of \GlossaryHyperRef{subprotocol}{subprotocols} of that protocol.
+A \GlossaryHyperRef{protocol}{protocol} allowing for \GlossaryHyperRef{subprotocol}{subprotocols} to be formulated in terms of its \GlossaryHyperRef{message}{messages}.
 See also \GlossaryNameRef{stack-protocol}.
+
+	\GlossaryNote{Note 1}{
+		Every new message introduced by a subprotocol must be a \GlossaryHyperRef{validation}{valid} message of its superprotocol.
+	}
+
+	\GlossaryNote{Note 2}{
+		Many of the currently prevalent protocols are designed with the intent of being extensible.
+		For example, HTTP \cite{fielding2014hypertext} provides provisions for an extending protocol to define its own set of directory operations, to simultaneously support multiple \GlossaryHyperRef{codec}{codecs}, and so on.
+	}
+
+	\GlossaryNote{Note 3}{
+		As long as a given protocol provides at least one message whose contents can be arbitrary, a subprotocol can be produced.
+		This means that even protocols not designed to be extended can, in some context, be meaningfully used to define subprotocols.
+	}
 
 \GlossaryEntry{provider-service}{Provider, Service}
 A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumer-service}{consumption} by any systems able to satisfy its \GlossaryHyperRef{policy-service-consumption}{consumption policies}.
@@ -469,7 +494,7 @@ See \GlossaryNameRef{service-quality-of}.
 A uni-directional association of two \GlossaryHyperRef{entity}{entities}, possibly with an associated \GlossaryHyperRef{data}{data} name.
 
 \GlossaryEntry{service}{Service}
-A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{provider-service}{provided} via an \GlossaryHyperRef{interface}{interface}.
+A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{provider-service}{provided} via an \GlossaryHyperRef{interface-service}{interface}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines a service as ``separate scope of functions offered by an entity or organization via interfaces''.
@@ -547,6 +572,15 @@ A stack with an \GlossaryHyperRef{protocol-extensible}{extensible protocol} as b
 \GlossaryEntry{stakeholder}{Stakeholder}
 A person or group of persons who are involved in or affected by certain \GlossaryHyperRef{entity}{entities} or enterprises.
 
+\GlossaryEntry{state}{State}
+A possible sequence of symbols that can be recorded by a certain sequence of \GlossaryHyperRef{datum}{datums}.
+Compare with \GlossaryNameRef{data}.
+
+	\GlossaryNote{Note 1}{
+		If the data in question would be a finite sequence of bits, a state is a possible combination of ones and zeroes made out of those bits.
+		Given four bits, possible states could, for example, be \texttt{0010} or \texttt{1001}. 
+	}
+
 \GlossaryEntry{subprotocol}{Subprotocol}
 A \GlossaryHyperRef{protocol}{protocol} that is realized as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol.
 
@@ -571,7 +605,7 @@ A \GlossaryHyperRef{system}{system} with an associated \GlossaryHyperRef{shell-a
 
 	\GlossaryNote{RAMI4.0}{
 		introduces the concept of ``Industry 4.0 components'', which ``are globally and uniquely identifiable participants capable of communication, and consist of the administration shell and the asset [...] with a digital connection within an I[ndustry ]4.0 system [...], and offer services there with defined quality of service [...] properties''.
-		Given that you have read our definitions for system and \GlossaryHyperRef{component}{component}, you will notice that our understanding of the system aligns more closely with the above quotation than our undestanding of the component.
+		Given that you have read our definitions for system and \GlossaryHyperRef{component}{component}, you will notice that our understanding of the system aligns more closely with the above quotation than our understanding of the component.
 		For this reason, we adopt the RAMI4.0 concept with the modified name, Industry 4.0 \textit{system}.
 		Our definition should be interpreted as being equivalent to that of the RAMI4.0 Industry 4.0 component.
 	}
