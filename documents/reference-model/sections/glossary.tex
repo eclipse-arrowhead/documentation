@@ -6,13 +6,20 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
+This section provides an alphabetically sorted list of all significant terms introduced or named in this document.
+Each term consisting of more than one word is sorted by its final, or qualified, word.
+This means that the definition of \GlossaryHyperRef{description-service}{service description}, for example, is found at \GlossaryNameRef{description-service}.
+
+Many of the definitions are amended with notes and references to RAMI4.0 \cite{adolphs2016reference} and SOA-RM \cite{mackenzie2006reference}, which are always listed after the definition they amend.
+Regular notes are numbered, while those making a comment on a definition in RAMI4.0 or SOA-RM are introduced with the two abbreviations just mentioned.
+
 {
 
-\newcommand{\GlossaryEntry}[2]{\subsubsection*{#2}\label{sec:glossary:#1}}
+\newcommand{\GlossaryEntry}[3][]{\subsubsection*{#3\IfStrEq{#1}{}{}{ {\normalfont \textit{#1}}}}\label{sec:glossary:#2}}
 \newcommand{\GlossaryNote}[2]{\begin{minipage}[b]{\dimexpr\linewidth-0.5cm\relax}\vspace*{0.33cm}\footnotesize{\textbf{#1}\ #2}\end{minipage}}
 
 \GlossaryEntry{abstract}{Abstract}
-See \GlossaryNameRef{model-abstract}
+See \GlossaryNameRef{model-abstract}.
 
 \GlossaryEntry{architecture}{Architecture}
 A \GlossaryHyperRef{model-concrete}{concrete model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{model-reference}{reference models}, \GlossaryHyperRef{architecture-reference}{reference architectures} and other concrete architectures.
@@ -81,22 +88,22 @@ A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-ser
 	}
 
 \GlossaryEntry{cloud}{Cloud}
-TODO
+A pool of \GlossaryHyperRef{system}{systems} that can execute tasks provided by external \GlossaryHyperRef{user}{users} or other \GlossaryHyperRef{entity}{entities} satisfying its \GlossaryHyperRef{policy}{policies}.
 
 \GlossaryEntry{cloud-local}{Cloud, Local}
-TODO
+A \GlossaryHyperRef{cloud}{cloud} whose \GlossaryHyperRef{system}{systems} may act on physical \GlossaryHyperRef{artifact}{artifacts}, meaning it is practically bound to a physical location.
 
 \GlossaryEntry{cloud-virtual}{Cloud, Virtual}
-TODO
+A \GlossaryHyperRef{cloud}{cloud} whose \GlossaryHyperRef{system}{systems} only act on virtual \GlossaryHyperRef{artifact}{artifacts}, meaning it is not strictly bound to a physical location.
 
 \GlossaryEntry{codec}{Codec}
 A \GlossaryHyperRef{model-concrete}{concrete} \GlossaryHyperRef{type-data}{data type} used to structure \GlossaryHyperRef{data}{data} for transmission, storage and/or interpretation.
 
-\GlossaryEntry{coding}{Coding}
+\GlossaryEntry[(verb)]{code}{Code}
 Transforming \GlossaryHyperRef{data}{data} from being expressed in one \GlossaryHyperRef{codec}{codec} into another.
-See also \GlossaryHyperRef{decoding}{decoding} and \GlossaryHyperRef{encoding}{encoding}.
+See also \GlossaryHyperRef{decode}{decode} and \GlossaryHyperRef{encode}{encode}.
 
-\GlossaryEntry{coding-a}{Coding, A}
+\GlossaryEntry{coding}{Coding}
 Synonymous to \GlossaryNameRef{codec}.
 
 \GlossaryEntry{component}{Component}
@@ -153,7 +160,7 @@ A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-funct
 
 	\GlossaryNote{SOA-RM}{
 		defines a service consumer as ``an entity which seeks to satisfy a particular need through the use [of] capabilities offered by means of a service''.
-		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} rather than just any \GlossaryHyperRef{entity}{entity}, (2) that the \GlossaryHyperRef{capability}{capabilities} of the consumed service be exercised by invoking a function, as well as (3) that the invocation satisfies a service consumption policy.
+		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} rather than just any \GlossaryHyperRef{entity}{entity}, as well as (2) that the \GlossaryHyperRef{capability}{capabilities} of the consumed service be exercised by invoking a function.
 	}
 
 \GlossaryEntry{data}{Data}
@@ -172,7 +179,7 @@ A sequence of \GlossaryHyperRef{datum}{datums} recording a set of \GlossaryHyper
 	}
 
 \GlossaryEntry{datum}{Datum}
-A memory cell that records exactly one out of a set of possible symbols.
+A variable expressing one out of a set of possible values.
 See also \GlossaryNameRef{state}.
 
 	\GlossaryNote{Note 1}{
@@ -180,11 +187,11 @@ See also \GlossaryNameRef{state}.
 		Its possible set of symbols is $\{0, 1\}$.
 	}
 
-\GlossaryEntry{decoding}{Decoding}
-The process through which \GlossaryHyperRef{data}{data} is transformed from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for transmission or storage to another codec suitable for interpretation.
+\GlossaryEntry{decode}{Decode}
+The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for transmission or storage to another codec suitable for interpretation.
 
 	\GlossaryNote{Note 1}{
-		The operation is the reverse of \GlossaryHyperRef{encoding}{encoding}.
+		Decoding is the reverse of \GlossaryHyperRef{encode}{encoding}.
 	}
 
 	\GlossaryNote{Note 2}{
@@ -192,32 +199,39 @@ The process through which \GlossaryHyperRef{data}{data} is transformed from bein
 	}
 
 \GlossaryEntry{description}{Description}
-Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both. TODO?
+Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
 
 \GlossaryEntry{description-design}{Description, Design}
-A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{design}{design}.
+A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{design}{design}, especially in terms of how a particular engineering task can be accomplished with respect to that design.
 
 	\GlossaryNote{Note 1}{
-		Since a design description is a description of a \GlossaryHyperRef{model}{model}, it is a form of \GlossaryHyperRef{metadata}{metadata}.
+		Design descriptions, which can be seen as targeted summaries of design documents, could be written to help engineers integrate, configure, migrate, decommission or install certain systems or other entities, among other possible examples.
+	}
+
+	\GlossaryNote{Note 2}{
+		Since a design also is a form of description, a design description becomes a kind of \GlossaryHyperRef{metadata}{metadata}.
 	}
 
 \GlossaryEntry{description-interface-design}{Description, Interface Design}
-A \GlossaryHyperRef{description}{description} of an \GlossaryHyperRef{interface}{interface} that is complete enough ... TODO
+A \GlossaryHyperRef{description-design}{design description} of an \GlossaryHyperRef{interface}{interface}.
+
+	\GlossaryNote{Note 1}{
+		In the context of Arrowhead, the term is only used to refer to design descriptions of \GlossaryHyperRef{interface-service}{interfaces}.
+	}
 
 \GlossaryEntry{description-service}{Description, Service}
-The \GlossaryHyperRef{metadata}{metadata} required for a \GlossaryHyperRef{system}{system} to be able to \GlossaryHyperRef{consumer-service}{consume} a \GlossaryHyperRef{service}{service}. TODO
+A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{service}{service}, especially in terms of its utility and its \GlossaryHyperRef{interface-service}{interfaces}.
 
 	\GlossaryNote{SOA-RM}{
 		defines service description as ``the information needed in order to use, or consider using, a service''.
-		While being more specific about the nature of the information and the way the service must be used, our definition should be interpreted as being equivalent.
+		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{design}{Design}
-A \GlossaryHyperRef{description}{description} of an \GlossaryHyperRef{entity}{entity}. TODO
-Synonymous to \GlossaryNameRef{model-concrete}.
+\GlossaryEntry[(noun)]{design}{Design}
+Every document, \GlossaryHyperRef{model}{model} and other record \GlossaryHyperRef{description}{describing} how a certain \GlossaryHyperRef{artifact}{artifact} can be \GlossaryHyperRef{implementation}{implemented} or realized.
 
 \GlossaryEntry{design-interface}{Design, Interface}
-Every detail of relevance to produce a \GlossaryHyperRef{description}{described} \GlossaryHyperRef{interface}{interface}. TODO
+The \GlossaryHyperRef{design}{design} of an \GlossaryHyperRef{interface}{interface}, which must specify how it enables communication and under what conditions.
 
 \GlossaryEntry{device}{Device}
 A physical \GlossaryHyperRef{entity}{entity} capable of hosting \GlossaryHyperRef{system}{systems}.
@@ -225,25 +239,25 @@ A physical \GlossaryHyperRef{entity}{entity} capable of hosting \GlossaryHyperRe
 \GlossaryEntry{device-human-interface}{Device, Human Interface (HID)}
 A \GlossaryHyperRef{device}{device} that provides sensors and actuators that together make up an \GlossaryHyperRef{interface}{interface} through which a human can exchange messages with one or more \GlossaryHyperRef{system}{systems}.
 
-\GlossaryEntry{encoding}{Encoding}
-The process through which \GlossaryHyperRef{data}{data} is transformed from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for interpretation to another codec suitable for transmission or storage.
+\GlossaryEntry{encode}{Encode}
+The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{codec}{codec} suitable for interpretation to another codec suitable for transmission or storage.
 
 	\GlossaryNote{Note 1}{
-		The operation is the reverse of \GlossaryHyperRef{decoding}{decoding}.
+		Encoding is the reverse of \GlossaryHyperRef{decode}{decoding}.
 	}
 
 	\GlossaryNote{Note 2}{
 		The term can also be used to express the act of a human recording data.
 	}
 
-\GlossaryEntry{encoding-an}{Encoding, An}
+\GlossaryEntry{encoding}{Encoding}
 Synonymous to \GlossaryNameRef{codec}.
 
 \GlossaryEntry{entity}{Entity}
 An \GlossaryHyperRef{artifact}{artifact} that is uniquely \GlossaryHyperRef{identity}{identifiable}.
 
 	\GlossaryNote{Note 1}{
-		An entity being uniquely identifiable does not necessarily mean that it is associated with a \GlossaryHyperRef{certificate}{certificate} or \GlossaryHyperRef{identifier}{identifier}.
+		An entity being uniquely identifiable does not necessarily mean that it is associated with a certificate or \GlossaryHyperRef{identifier}{identifier}.
 		It only means that a \GlossaryHyperRef{description}{description} can be rendered that unambigously refers to the entity in question.
 	}
 
@@ -298,7 +312,7 @@ The process through which an \GlossaryHyperRef{entity}{entity} collects and veri
 The aspect or aspects, such as \GlossaryHyperRef{identifier}{identifiers}, that makes an \GlossaryHyperRef{entity}{entity} distinct from all other entities.
 
 \GlossaryEntry{implementation}{Implementation}
-The realization of a \GlossaryHyperRef{model-concrete}{concrete model} as a set of \GlossaryHyperRef{artifact}{artifacts}.
+The realization of a \GlossaryHyperRef{design}{design} as a set of \GlossaryHyperRef{artifact}{artifacts}.
 
 \GlossaryEntry{implementation-software}{Implementation, Software}
 An \GlossaryHyperRef{implementation}{implementation} comprised of executable software \GlossaryHyperRef{artifact}{artifacts}.
@@ -312,45 +326,39 @@ An \GlossaryHyperRef{entity}{entity} able to mediate communications that satisfy
 	}
 
 \GlossaryEntry{interface-service}{Interface, Service}
-The \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
+An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
 
 	\GlossaryNote{SOA-RM}{
 		defines service interface as ``the means by which the underlying capabilities of a service are accessed''.
 		Our definition should be interpreted as being equivalent.
 	}
 
-\GlossaryEntry{invocation-function}{Invocation, Function}
-The attempt to exercise the \GlossaryHyperRef{capability}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
-
-\GlossaryEntry{manager}{Manager}
-See \GlossaryNameRef{manager-system}.
-
-\GlossaryEntry{manager-component}{Manager, Component}
-See \GlossaryNameRef{manager-system}.
-
-	\GlossaryNote{RAMI4.0}{
-		introduces this concept.
-		To make it align better with the rest of our definitions, we refer to such managers as \textit{system} managers.
-	}
-
-\GlossaryEntry{manager-system}{Manager, System}
-A means of \GlossaryHyperRef{management}{managing} a \GlossaryHyperRef{system}{system}.
+\GlossaryEntry{interface-system-management}{Interface, System Management}
+An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{system}{system} can be \GlossaryHyperRef{management-system}{managed}.
 
 	\GlossaryNote{RAMI4.0}{
 		introduces the ``component manager'', which is an ``organizer of autonomous administration and access to resources of the relevant I[ndustry ]4.0 component, such as the I[ndustry ]4.0 component itself, object, technical functionality, virtual representation''.
-		Due to the difference in interpretation of the terms ``component'' and ``system'', we use the term ``system manager'' to refer to the same idea.
-		Our definitions should be interpreted as being equivalent to that of the RAMI4.0 component manager, with the difference that we do not require that such a manager be associated with an \GlossaryHyperRef{system-industry40-compliant}{Industry 4.0 compliant system}.
+		Due to the difference in interpretation of the terms ``component'' and ``system'', as well as to make it more explicit that the ``manager'' in question is not a human, we use the term ``system management interface'' to refer to the same idea.
+		Our definition should be interpreted as being equivalent to that of the RAMI4.0 component manager, with the difference that we do not require that such a manager be associated with an \GlossaryHyperRef{system-industry40}{Industry 4.0 system}.
 	}
 
-\GlossaryEntry{management}{Management}
-See \GlossaryNameRef{management-system}.
+\GlossaryEntry{invocation-function}{Invocation, Function}
+The attempt to exercise the \GlossaryHyperRef{capability}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
+
+\GlossaryEntry{manager-component}{Manager, Component}
+See \GlossaryNameRef{interface-system-management}.
+
+	\GlossaryNote{RAMI4.0}{
+		introduces this concept.
+		We refer to such managers as \textit{system management interfaces}.
+	}
 
 \GlossaryEntry{management-system}{Management, System}
 The activity of \GlossaryHyperRef{configure}{configuring} or retrieving restricted \GlossaryHyperRef{data}{data} from a \GlossaryHyperRef{system}{system}.
 
 	\GlossaryNote{Note 1}{
 		Both of these activities may be performed via \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by the managed system in question.
-		The definition does, however, open up for management to happen some other way, for example via the manual handling of some \GlossaryHyperRef{device}{device} with a system is running on it.
+		The definition does, however, open up for management to happen some other way, such as by physically interacting with a \GlossaryHyperRef{device}{device} hosting systems.
 	}
 
 \GlossaryEntry{manifest}{Manifest}
@@ -359,20 +367,16 @@ A set of \GlossaryHyperRef{metadata}{metadata} about relevant aspects of a parti
 	\GlossaryNote{RAMI4.0}{
 		defines manifest as an ``externally accessible, defined set of meta-information on the functional and non-functional properties of the relevant [Industry ]4.0 component''.
 		Our definition is more inclusive, as it allows for any entity to be the subject of the manifest, not only \GlossaryHyperRef{component-industry40}{Industry 4.0 components}.
-		See \GlossaryNameRef{manifest-industry40-system} for a comparable definition.
 	}
 
 \GlossaryEntry{manifest-system}{Manifest, System}
 A \GlossaryHyperRef{manifest}{manifest} \GlossaryHyperRef{description}{describing} a \GlossaryHyperRef{system}{system}.
 
-\GlossaryEntry{manifest-industry40-system}{Manifest, Industry 4.0 System}
-A \GlossaryHyperRef{manifest}{manifest} \GlossaryHyperRef{description}{describing} an \GlossaryHyperRef{system-industry40}{Industry 4.0 system}.
-
-\GlossaryEntry{message}{Message}
-\GlossaryHyperRef{data}{Data} that can be moved between the \GlossaryHyperRef{interface}{interfaces} of \GlossaryHyperRef{system}{systems}.
+\GlossaryEntry[(noun)]{message}{Message}
+\GlossaryHyperRef{data}{Data} sent or received via a \GlossaryHyperRef{interface-service}{service interface}.
 
 	\GlossaryNote{Note 1}{
-		In the context of Arrowhead, messages are only sent to \GlossaryHyperRef{invocation-function}{invoke} the \GlossaryHyperRef{function}{functions} of \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by other systems.
+		In the context of Arrowhead, messages are only sent to \GlossaryHyperRef{invocation-function}{invoke} the \GlossaryHyperRef{function}{functions} of \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by \GlossaryHyperRef{system}{systems}.
 	}
 
 \GlossaryEntry{metadata}{Metadata}
@@ -401,7 +405,7 @@ A \GlossaryHyperRef{model}{model} that is \textit{insufficiently} specified to b
 A \GlossaryHyperRef{model}{model} that is \textit{sufficiently} specified to be possible to realize as the \GlossaryHyperRef{artifact}{artifact} it represents.
 
 	\GlossaryNote{Note 1}{
-		Two examples of artifacts that could be produced from a concrete model are concrete \GlossaryHyperRef{protocol}{protocols}, the \GlossaryHyperRef{message}{messages} of which can be practically \GlossaryHyperRef{coding}{coded}, and \GlossaryHyperRef{implementation-software}{software implementations}.
+		Two examples of artifacts that could be produced from a concrete model are concrete \GlossaryHyperRef{protocol}{protocols}, the \GlossaryHyperRef{message}{messages} of which can be practically \GlossaryHyperRef{code}{coded}, and \GlossaryHyperRef{implementation-software}{software implementations}.
 	}
 
 \GlossaryEntry{model-reference}{Model, Reference}
@@ -421,7 +425,7 @@ See also Section \ref{sec:introduction:scope}.
 	}
 
 \GlossaryEntry{operator}{Operator}
-A person or \GlossaryHyperRef{entity}{entity} tasked with the \GlossaryHyperRef{management}{management} of a set of \GlossaryHyperRef{system}{systems}.
+A person or \GlossaryHyperRef{entity}{entity} tasked with the \GlossaryHyperRef{management-system}{management} of a set of \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{organization}{Organization}
 A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of other stakeholders.
@@ -458,8 +462,15 @@ A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \G
 	}
 
 \GlossaryEntry{protocol}{Protocol}
-A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{state}{states} and \GlossaryHyperRef{type-data}{typed} \GlossaryHyperRef{message}{messages}.
+A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{state}{states} and \GlossaryHyperRef{message}{messages}.
 See also \GlossaryNameRef{protocol-extensible}.
+
+	\GlossaryNote{Note 1}{
+		The states, if any, dictate the outcomes of sending certain messages.
+		For example, let us assume that some state can be either \texttt{BUSY} or \texttt{READY}.
+		If the former state would be the active when a certain message is received, the designated response could be an error message.
+		If, however, the \texttt{READY} state would have been active, the state could be transitioned to the \texttt{BUSY} value and a success response be provided to the sender.
+	}
 
 \GlossaryEntry{protocol-extensible}{Protocol, Extensible}
 A \GlossaryHyperRef{protocol}{protocol} allowing for \GlossaryHyperRef{subprotocol}{subprotocols} to be formulated in terms of its \GlossaryHyperRef{message}{messages}.
@@ -493,12 +504,21 @@ See \GlossaryNameRef{service-quality-of}.
 \GlossaryEntry{relationship}{Relationship}
 A uni-directional association of two \GlossaryHyperRef{entity}{entities}, possibly with an associated \GlossaryHyperRef{data}{data} name.
 
+\GlossaryEntry{routing-message}{Routing, Message}
+The act of forwarding a \GlossaryHyperRef{message}{message} towards the \GlossaryHyperRef{function}{function} it is meant to \GlossaryHyperRef{invocation-function}{invoke}.
+
 \GlossaryEntry{service}{Service}
-A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{provider-service}{provided} via an \GlossaryHyperRef{interface-service}{interface}.
+A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{interface-service}{service interface}.
+
+	\GlossaryNote{Note 1}{
+		As each function of a service represents its own \GlossaryHyperRef{protocol}{protocol}, the service itself becomes the union of all those protocols.
+		This introduces the need to be able to determine how to forward \GlossaryHyperRef{message}{messages} received by the service to the correct functions.
+		This is accomplished through \GlossaryHyperRef{routing-message}{message routing}.
+	}
 
 	\GlossaryNote{RAMI4.0}{
 		defines a service as ``separate scope of functions offered by an entity or organization via interfaces''.
-		Our definition restricts service provision to systems.
+		Our definition implicitly restricts service provision to systems, as only \GlossaryHyperRef{system}{systems} can provide services.
 	}
 
 	\GlossaryNote{SOA-RM}{
@@ -510,25 +530,16 @@ A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{pr
 The degree of performance at which a given \GlossaryHyperRef{service}{service} is \GlossaryHyperRef{provider-service}{provided}. 
 
 \GlossaryEntry{shell-administrative}{Shell, Administrative}
-A \GlossaryHyperRef{manifest}{manifest} and a \GlossaryHyperRef{manager-component}{component manager} associated with a certain \GlossaryHyperRef{system}{system}.
+A \GlossaryHyperRef{manifest-system}{manifest} and a \GlossaryHyperRef{interface-system-management}{management interface} associated with a certain \GlossaryHyperRef{system}{system}.
 
 	\GlossaryNote{Note 1}{
-		The availability of both a manifest and a component manager allows for both static and dynamic details about a system to be queried, as well as providing for the system to be \GlossaryHyperRef{configuration}{reconfigured}.
-	}
-
-	\GlossaryNote{Note 2}{
-		By definition, every system with an administrative shell is \GlossaryHyperRef{system-industry40}{Industry 4.0 compliant}.
-	}
-
-	\GlossaryNote{Note 3}{
-		Note that the manifest and component manager only have to be \textit{associated} with a certain system.
-		Nothing is specified about where the manifest or component manager are physically or virtually located with the respect to the system.
+		The availability of both a manifest and a management interface allows for both static and dynamic details about a system to be queried, as well as providing for the \GlossaryHyperRef{configuration}{configuration} of the system to be changed.
 	}
 
 	\GlossaryNote{RAMI4.0}{
 		defines administration shell as a ``virtual digital and active representation of an I[ndustry ]4.0 component in the I[nustry ]4.0 system''.
-		In a note associated with the term, it adds that ``an administration shell contains the manifest and the component manager''.
-		Our definition should be interpreted as being equivalent.
+		It also adds that ``an administration shell contains the manifest and the component manager'' and depicts the shell as wrapping, or being associated with, an \GlossaryHyperRef{asset}{asset}.
+		Apart from our referring to \GlossaryHyperRef{component-industry40}{Industry 4.0 components} as \GlossaryHyperRef{system-industry40}{Industry 4.0 systems}, as well as the added qualification that the asset in question be a system, our definitions should be interpreted as being equivalent.
 	}
 
 \GlossaryEntry{signature-function}{Signature, Function}
@@ -566,19 +577,22 @@ A stack with an \GlossaryHyperRef{protocol-extensible}{extensible protocol} as b
 	\GlossaryNote{Note 2}{
 		An example of a notable protocol stack is that of HTTP \cite{fielding2014hypertext}.
 		It is defined as an extension of the TCP protocol, which in turn extends the IP protocol, which can work as a subprotocol of several other lower-level protocols.
-		HTTP is an extensible protocol, which allows for an engineer to define an application-specific protocol on top of its stack.
+		HTTP is an \GlossaryHyperRef{stack-extensible-protocol}{extensible protocol stack}, which allows for an engineer to define an application-specific protocol on top of its stack.
 	}
 
 \GlossaryEntry{stakeholder}{Stakeholder}
 A person or group of persons who are involved in or affected by certain \GlossaryHyperRef{entity}{entities} or enterprises.
 
-\GlossaryEntry{state}{State}
-A possible sequence of symbols that can be recorded by a certain sequence of \GlossaryHyperRef{datum}{datums}.
-Compare with \GlossaryNameRef{data}.
+\GlossaryEntry[(noun)]{state}{State}
+One out of all possible sequences of values that could be expressed by the \GlossaryHyperRef{datum}{datums} of some \GlossaryHyperRef{data}{data}.
 
 	\GlossaryNote{Note 1}{
-		If the data in question would be a finite sequence of bits, a state is a possible combination of ones and zeroes made out of those bits.
+		If the data would consist of a sequence bits, which can only have the values 0 and 1, a state becomes a pattern of zeroes and ones those bits can record.
 		Given four bits, possible states could, for example, be \texttt{0010} or \texttt{1001}. 
+	}
+
+	\GlossaryNote{Note 2}{
+		The term is often used as a wildcard for any kind of storage construct, including bit flags, state machines and graph databases.
 	}
 
 \GlossaryEntry{subprotocol}{Subprotocol}
@@ -603,15 +617,17 @@ An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-servi
 \GlossaryEntry{system-industry40}{System, Industry 4.0}
 A \GlossaryHyperRef{system}{system} with an associated \GlossaryHyperRef{shell-administrative}{administrative shell}.
 
+	\GlossaryNote{Note 1}{
+		A system being an Industry 4.0 system is not necessarily the same as it being Industry 4.0 \textit{compliant}.
+		Industry 4.0 compliance is outside the scope of this reference model.
+	}
+
 	\GlossaryNote{RAMI4.0}{
 		introduces the concept of ``Industry 4.0 components'', which ``are globally and uniquely identifiable participants capable of communication, and consist of the administration shell and the asset [...] with a digital connection within an I[ndustry ]4.0 system [...], and offer services there with defined quality of service [...] properties''.
 		Given that you have read our definitions for system and \GlossaryHyperRef{component}{component}, you will notice that our understanding of the system aligns more closely with the above quotation than our understanding of the component.
 		For this reason, we adopt the RAMI4.0 concept with the modified name, Industry 4.0 \textit{system}.
 		Our definition should be interpreted as being equivalent to that of the RAMI4.0 Industry 4.0 component.
 	}
-
-\GlossaryEntry{system-industry40-compliant}{System, Industry 4.0 Compliant}
-See \GlossaryNameRef{system-industry40}.
 
 \GlossaryEntry{system-of-clouds}{System-of-Clouds (SoC)}
 A set of \GlossaryHyperRef{cloud}{clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
@@ -627,7 +643,7 @@ A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-serv
 	}
 
 \GlossaryEntry{type-data}{Type, Data}
-A \GlossaryHyperRef{description}{description} of how datums are to be arranged to \GlossaryHyperRef{coding}{code} certain facts.
+A \GlossaryHyperRef{description}{description} of how datums are to be arranged to \GlossaryHyperRef{code}{code} certain facts.
 See also \GlossaryNameRef{data}.
 
 	\GlossaryNote{Note 1}{
