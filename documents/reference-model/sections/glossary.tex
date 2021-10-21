@@ -10,8 +10,8 @@ This section provides an alphabetically sorted list of all significant terms int
 Each term consisting of more than one word is sorted by its final, or qualified, word.
 This means that the definition of \GlossaryHyperRef{description-service}{service description}, for example, is found at \GlossaryNameRef{description-service}.
 
-Many of the definitions are amended with notes and references to RAMI4.0 \cite{adolphs2016reference} and SOA-RM \cite{mackenzie2006reference}, which are always listed after the definition they amend.
-Regular notes are numbered, while those making a comment on a definition in RAMI4.0 or SOA-RM are introduced with the two abbreviations just mentioned.
+Many of the definitions are amended with notes and references to RAMI4.0 \cite{adolphs2016reference}, SOA-RM \cite{mackenzie2006reference} and IoTA:AF \cite{delsing2017iot}, which are always listed after the definition they amend.
+Regular notes are numbered, while those making a comment on a definition in RAMI4.0, SOA-RM or IoTA:AF are introduced with the three abbreviations just listed.
 
 {
 
@@ -88,13 +88,47 @@ A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-ser
 	}
 
 \GlossaryEntry{cloud}{Cloud}
-A pool of \GlossaryHyperRef{system}{systems} that can execute tasks provided by external \GlossaryHyperRef{user}{users} or other \GlossaryHyperRef{entity}{entities} satisfying its \GlossaryHyperRef{policy}{policies}.
+A \GlossaryHyperRef{system-of-systems}{system-of-systems} able independently execute given tasks through the use of pools of owned resources.
+
+	\GlossaryNote{Note 1}{
+		When the term ``cloud'' is used elsewhere, it often refers to clouds with only virtual resources, such as compute, storage and software-defined network utilities.
+		Here, we refer to such clouds as \GlossaryHyperRef{cloud-virtual}{virtual clouds}.
+		By making the unqualified word ``cloud'' less specific, it becomes more clear how our \GlossaryHyperRef{cloud-local}{local cloud} concept shares similarities with other types of clouds.
+	}
 
 \GlossaryEntry{cloud-local}{Cloud, Local}
-A \GlossaryHyperRef{cloud}{cloud} whose \GlossaryHyperRef{system}{systems} may act on physical \GlossaryHyperRef{artifact}{artifacts}, meaning it is practically bound to a physical location.
+A \GlossaryHyperRef{cloud}{cloud} bound to a physical location due to its acting on or producing physical \GlossaryHyperRef{artifact}{artifacts}.
+
+	\GlossaryNote{IoTA:AF}{
+		provides an introduction to the local cloud concept in its second chapter, as well as an architectural definition in its third chapter.
+		The following is an excerpt from the introduction:
+		\begin{quote}
+		The local cloud concept takes the view that specific geographically local automation tasks should be encapsulated and protected.
+		These tasks have strong requirements on real time, ease of engineering, operation and maintenance, and system security and safety.
+		The local cloud idea is to let the local cloud include the devices and systems required to perform the desired automation tasks, thus providing a local ``room'' which can be protected from outside activities.
+		In other words, the cloud will provide a boundary to the open internet, thus aiming to protect the internal of the local cloud from the open internet.
+		\end{quote}
+		The third chapter contains the following:
+		\begin{quote}
+		In the Arrowhead Framework context a local cloud is defined as a self-contained network with the three mandatory core systems deployed and at least one application system deployed [...]
+		\end{quote}
+		Both of these descriptions are practical, in the sense that they emphasize engineering aspects.
+		However, as this document is a reference model, engineering aspects are out of scope.
+		To be able to use the above descriptions, we look for indications of what a local cloud is, rather than what requirements such should fulfill.
+		The terms ``geographically local'', ``room'' and ``boundary'' clearly highlight the physicality of the local cloud itself, while the depiction of ``devices'' performing ``automation tasks'' makes it apparent that some kind of physical activity is involved, such as manufacturing.
+		Finally, the local cloud being ``encapsulated'', ``protected'' and ``self-contained'' indicates that it is understood to exhibit a degree of independence with respect to the tasks it is given, which we expect all kinds of clouds to exhibit.
+		Our definition should be interpreted as a summation of these characteristics.
+	}
+
+\GlossaryEntry{cloud-local-automation}{Cloud, Local Automation}
+See \GlossaryNameRef{cloud-local}.
 
 \GlossaryEntry{cloud-virtual}{Cloud, Virtual}
-A \GlossaryHyperRef{cloud}{cloud} whose \GlossaryHyperRef{system}{systems} only act on virtual \GlossaryHyperRef{artifact}{artifacts}, meaning it is not strictly bound to a physical location.
+A \GlossaryHyperRef{cloud}{cloud} unbound by physical location by only acting on or producing virtual \GlossaryHyperRef{artifact}{artifacts}.
+
+	\GlossaryNote{Note 1}{
+		Examples of virtual resources could be compute, storage and software-defined network utilities.
+	}
 
 \GlossaryEntry{codec}{Codec}
 A \GlossaryHyperRef{model-concrete}{concrete} \GlossaryHyperRef{type-data}{data type} used to structure \GlossaryHyperRef{data}{data} for transmission, storage and/or interpretation.
@@ -202,13 +236,9 @@ The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a 
 Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
 
 \GlossaryEntry{description-design}{Description, Design}
-A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{design}{design}, especially in terms of how a particular engineering task can be accomplished with respect to that design.
+A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{design}{design}. TODO
 
 	\GlossaryNote{Note 1}{
-		Design descriptions, which can be seen as targeted summaries of design documents, could be written to help engineers integrate, configure, migrate, decommission or install certain systems or other entities, among other possible examples.
-	}
-
-	\GlossaryNote{Note 2}{
 		Since a design also is a form of description, a design description becomes a kind of \GlossaryHyperRef{metadata}{metadata}.
 	}
 
@@ -235,6 +265,14 @@ The \GlossaryHyperRef{design}{design} of an \GlossaryHyperRef{interface}{interfa
 
 \GlossaryEntry{device}{Device}
 A physical \GlossaryHyperRef{entity}{entity} capable of hosting \GlossaryHyperRef{system}{systems}.
+
+	\GlossaryNote{IoTA:AF}{
+		provides the following architectural definition of device in its third chapter:
+		\begin{quote}
+		An Arrowhead compliant device is a piece of equipment, machine, hardware, etc. with computational, memory and communication capabilities which hosts one or several Arrowhead Framework systems and can be bootstrapped in an Arrowhead local cloud [...] Any other device, equipment, machine, hardware component etc. is non-Arrowhead compliant.
+		\end{quote}
+		The definition provided here should be interpreted as being equivalent.
+	}
 
 \GlossaryEntry{device-human-interface}{Device, Human Interface (HID)}
 A \GlossaryHyperRef{device}{device} that provides sensors and actuators that together make up an \GlossaryHyperRef{interface}{interface} through which a human can exchange messages with one or more \GlossaryHyperRef{system}{systems}.
@@ -477,7 +515,7 @@ A \GlossaryHyperRef{protocol}{protocol} allowing for \GlossaryHyperRef{subprotoc
 See also \GlossaryNameRef{stack-protocol}.
 
 	\GlossaryNote{Note 1}{
-		Every new message introduced by a subprotocol must be a \GlossaryHyperRef{validation}{valid} message of its superprotocol.
+		Every new message introduced by a subprotocol must be a \GlossaryHyperRef{validation}{valid} message of its \GlossaryHyperRef{superprotocol}{superprotocol}.
 	}
 
 	\GlossaryNote{Note 2}{
@@ -512,7 +550,7 @@ A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{pr
 
 	\GlossaryNote{Note 1}{
 		As each function of a service represents its own \GlossaryHyperRef{protocol}{protocol}, the service itself becomes the union of all those protocols.
-		This introduces the need to be able to determine how to forward \GlossaryHyperRef{message}{messages} received by the service to the correct functions.
+		This introduces the need to be able to determine how to forward \GlossaryHyperRef{message}{messages} received by the service to its functions.
 		This is accomplished through \GlossaryHyperRef{routing-message}{message routing}.
 	}
 
@@ -524,6 +562,12 @@ A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{pr
 	\GlossaryNote{SOA-RM}{
 		defines a service as ``the means by which the needs of a consumer are brought together with the capabilities of a provider''.
 		Our definition is more specific about how the \GlossaryHyperRef{capability}{capabilities} of a service are made available.
+	}
+
+	\GlossaryNote{IoTA:AF}{
+		defines a service as ``what [is] used to exchange information from a providing system to a consuming system''.
+		It further adds that ``in a service, capabilities are grouped together if they share the same context''.
+		The definition presented here should be interpreted as being compatible but more specific about how information is exchanged and capabilities are \GlossaryHyperRef{invocation-function}{invoked}.
 	}
 
 \GlossaryEntry{service-quality-of}{Service, Quality of (QoS)}
@@ -601,6 +645,9 @@ A \GlossaryHyperRef{protocol}{protocol} that is realized as an \GlossaryHyperRef
 \GlossaryEntry{subsystem}{Subsystem}
 An \GlossaryHyperRef{entity-systemic}{systemic entity} being a part of than another such. Compare with \GlossaryNameRef{component}.
 
+\GlossaryEntry{superprotocol}{Superprotocol}
+A \GlossaryHyperRef{protocol}{protocol} that is \GlossaryHyperRef{protocol-extensible}{extended} by another protocol.
+
 \GlossaryEntry{system}{System}
 An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-service}{providing services}, \GlossaryHyperRef{consumer-service}{consuming services}, or both.
 
@@ -612,6 +659,12 @@ An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-servi
 	\GlossaryNote{Note 2}{
 		A system is practically distinct from a \GlossaryHyperRef{system-of-systems}{system-of-systems} by being represented only by a single \GlossaryHyperRef{identity}{identity}.
 		In contrast, a system-of-systems does either not have its own identity, or has both its own identity and another identity for each of its \GlossaryHyperRef{subsystem}{subsystems}.
+	}
+
+	\GlossaryNote{IoTA:AF}{
+		defines a system as ``what is providing and/or consuming services''.
+		It further adds that ``a system can be the service provider of one or more services and at the same time the service consumer of one or more services''.
+		The definition presented here should be interpreted as equivalent.
 	}
 
 \GlossaryEntry{system-industry40}{System, Industry 4.0}
@@ -640,6 +693,12 @@ A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-serv
 
 	\GlossaryNote{Note 1}{
 		The system-of-systems concept is not restricted to the boundaries imposed by \GlossaryHyperRef{organization}{organizations}, \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-clouds}{systems-of-clouds}, even though a cloud, for example, could be regarded as a type of system-of-systems.
+	}
+
+	\GlossaryNote{IoTA:AF}{
+		defines a system-of-systems as ``a set of system, which [...] exchange information by means of services''.
+		It further adds that ``when Arrowhead compliant systems collaborate, they become a System of Systems in the Arrowhead Framework's definition''.
+		While we clarify here that the desired outcome of collaboration is the facilitation of new capabilities, the definitions should be interpreted as being equivalent.
 	}
 
 \GlossaryEntry{type-data}{Type, Data}
