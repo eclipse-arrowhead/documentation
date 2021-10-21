@@ -1,4 +1,4 @@
-% Copyright (c) 2021-10-07 Eclipse Arrowhead Project
+% Copyright (c) 2021-10-21 Eclipse Arrowhead Project
 %
 % This program and the accompanying materials are made available under the
 % terms of the Eclipse Public License 2.0 which is available at
@@ -6,8 +6,8 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-\def\fileversion{1.4}
-\def\filedate{2021/10/07}
+\def\fileversion{1.5}
+\def\filedate{2021/10/21}
 \NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{arrowhead}[\filedate\space Version \fileversion\space]
@@ -94,6 +94,19 @@
 \renewcommand\subsubsection{\@ifstar{\starsubsubsection}{\nostarsubsubsection}}
 \newcommand\starsubsubsection[1]{\vspace*{-0.5ex}\origsubsubsection*{#1}\vspace*{-0.75ex}}
 \newcommand\nostarsubsubsection[1]{\vspace*{-0.5ex}\origsubsubsection{#1}\vspace*{-0.75ex}}
+
+\renewenvironment{quote}{
+
+  \vspace*{1.33ex}
+  \noindent
+  \hspace*{0.5cm}
+  \begin{minipage}{\dimexpr\linewidth-0.5cm\relax}
+  \em
+}{
+  \end{minipage}
+  \vspace*{1ex}
+
+}
 
 \renewcommand\tiny{\@setfontsize\tiny{6}{7}}
 \renewenvironment{abstract}{%
