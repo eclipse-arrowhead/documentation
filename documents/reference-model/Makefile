@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: EPL-2.0
 
 ASSEMBLY_NAME := Eclipse Arrowhead Reference Model v
-NAME          := reference-model
+NAME          := main
 LATEXMK       := latexmk
 CP            := cp
 RM            := rm -f
@@ -27,9 +27,7 @@ figures/%.pdf: figures/%.svg
 
 ifdef ASSEMBLY_PATH
 
-assemble: $(ASSEMBLY_PATH)/$(NAME).pdf
-
-$(ASSEMBLY_PATH)/$(NAME).pdf: $(NAME).pdf
+assemble: $(NAME).pdf
 	$(CP) $< "$(ASSEMBLY_PATH)/$(ASSEMBLY_NAME)$(VERSION).pdf"
 
 .PHONY: assemble
