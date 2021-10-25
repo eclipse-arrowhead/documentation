@@ -23,10 +23,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
-     showgrid="false"
+     showgrid="true"
      inkscape:zoom="1.2455913"
-     inkscape:cx="246.4693"
-     inkscape:cy="201.10931"
+     inkscape:cx="238.44097"
+     inkscape:cy="140.09411"
      inkscape:window-width="1856"
      inkscape:window-height="1035"
      inkscape:window-x="64"
@@ -57,16 +57,17 @@
     </marker>
   </defs>
   <path
-     d="m 67,26.999999 v 7"
+     d="m 67,26.999999 -10e-7,8"
      marker-end="url(#b)"
      id="path9"
-     style="fill:none;stroke:#666666;stroke-width:0.667"
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <path
-     d="M 67.000001,19 V 12"
+     d="m 67.000001,19 -2e-6,-8"
      marker-end="url(#b)"
      id="path19"
-     style="fill:none;stroke:#666666;stroke-width:0.667" />
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="cc" />
   <text
      x="67.014526"
      y="6.3116455"
@@ -104,7 +105,8 @@
      opacity="0.91318"
      stroke="#000000"
      stroke-linejoin="round"
-     stroke-width="0.333" />
+     stroke-width="0.333"
+     style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
   <metadata
      id="metadata44">
     <rdf:RDF>
@@ -151,7 +153,8 @@
      stroke="#000000"
      stroke-linejoin="round"
      stroke-width="0.667"
-     id="rect102" />
+     id="rect102"
+     style="stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
   <g
      id="g6025"
      transform="translate(12.999995,7.3281098)">
@@ -237,12 +240,12 @@
      stroke="#000000"
      stroke-linejoin="round"
      stroke-width="0.333"
-     style="stroke-width:0.333;stroke-miterlimit:4;stroke-dasharray:0.333, 0.333;stroke-dashoffset:0" />
+     style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:0.3,0.3;stroke-dashoffset:0" />
   <path
-     d="m 83.999999,41.999999 v -12"
+     d="m 83.999999,41.999999 -10e-7,-13"
      marker-end="url(#b)"
      id="path8155"
-     style="fill:none;stroke:#666666;stroke-width:0.667"
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <use
      x="0"
@@ -374,12 +377,13 @@
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan15658">Administrative Shell</tspan></text>
+       id="tspan15658"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Administrative Shell</tspan></text>
   <path
-     d="M 36,50.999999 H 24"
+     d="m 36,50.999999 -13,0"
      marker-end="url(#b)"
      id="path16820"
-     style="fill:none;stroke:#666666;stroke-width:0.667"
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <use
      x="0"
@@ -408,7 +412,8 @@
      opacity="0.91318"
      stroke="#000000"
      stroke-linejoin="round"
-     stroke-width="0.333" />
+     stroke-width="0.333"
+     style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
   <text
      x="104.33359"
      y="49.248329"
