@@ -5,7 +5,7 @@
    version="1.1"
    viewBox="0 0 120 51"
    id="svg899"
-   sodipodi:docname="model-implementation-hierarchy.svg"
+   sodipodi:docname="reference-model.svg"
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.4739497"
-     inkscape:cx="215.74685"
-     inkscape:cy="28.155643"
+     inkscape:cx="228.63738"
+     inkscape:cy="112.96179"
      inkscape:window-width="1488"
      inkscape:window-height="1003"
-     inkscape:window-x="61"
+     inkscape:window-x="72"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg899">
@@ -224,7 +224,7 @@
      stroke="#000000"
      stroke-linejoin="round"
      stroke-width="0.333"
-     style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
+     style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;opacity:1" />
   <use
      transform="translate(0,13)"
      width="100%"
@@ -336,5 +336,5 @@
      stroke="#000000"
      stroke-linejoin="round"
      stroke-width="0.333"
-     style="stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
+     style="stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none;opacity:1" />
 </svg>
