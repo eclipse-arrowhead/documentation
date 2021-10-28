@@ -6,7 +6,7 @@
    viewBox="0 0 120 51"
    id="svg899"
    sodipodi:docname="reference-model.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,14 +24,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4739497"
-     inkscape:cx="228.63738"
-     inkscape:cy="112.96179"
-     inkscape:window-width="1488"
-     inkscape:window-height="1003"
+     inkscape:zoom="2.0844797"
+     inkscape:cx="233.63145"
+     inkscape:cy="89.47077"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
      inkscape:window-x="72"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg899">
     <inkscape:grid
        type="xygrid"
@@ -77,6 +77,52 @@
      transform="translate(3.9999994e-6,13.000292)"
      width="100%"
      height="100%" />
+  <path
+     id="d"
+     d="m 32.999996,19.000292 h -9 V 9.0002925 h 7"
+     fill="none"
+     marker-end="url(#e)"
+     stroke="#666666"
+     stroke-width=".667"
+     style="stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="cccc" />
+  <use
+     transform="translate(0,13)"
+     width="100%"
+     height="100%"
+     xlink:href="#d"
+     id="use855"
+     x="0"
+     y="0" />
+  <g
+     id="g1543">
+    <rect
+       id="rect872-3"
+       x="34"
+       y="16"
+       width="54"
+       height="8"
+       rx="1.6"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       id="a"
+       x="33"
+       y="15.000293"
+       width="54"
+       height="8"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;opacity:1;fill:#ffffff;fill-opacity:1" />
+  </g>
   <use
      x="0"
      y="0"
@@ -135,23 +181,6 @@
          text-anchor="end"
          id="tspan888-0">0..</tspan></text>
   </g>
-  <path
-     id="d"
-     d="m 32.999996,19.000292 h -9 V 9.0002925 h 7"
-     fill="none"
-     marker-end="url(#e)"
-     stroke="#666666"
-     stroke-width=".667"
-     style="stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="cccc" />
-  <use
-     transform="translate(0,13)"
-     width="100%"
-     height="100%"
-     xlink:href="#d"
-     id="use855"
-     x="0"
-     y="0" />
   <use
      transform="translate(0,26)"
      width="100%"
@@ -160,6 +189,51 @@
      id="use857"
      x="0"
      y="0" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g1543"
+     id="use1707"
+     transform="translate(0,26)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g1543"
+     id="use1705"
+     transform="translate(0,12.999707)"
+     width="100%"
+     height="100%" />
+  <g
+     id="g1212">
+    <rect
+       id="rect872"
+       x="34"
+       y="3"
+       width="54"
+       height="8"
+       rx="1.6"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       id="rect1253"
+       x="33"
+       y="2"
+       width="54"
+       height="8"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none;opacity:1;fill:#ffffff;fill-opacity:1" />
+  </g>
   <text
      x="60.064255"
      y="7.3116455"
@@ -212,35 +286,6 @@
        text-align="center"
        text-anchor="middle"
        id="tspan841">Implementation</tspan></text>
-  <rect
-     id="a"
-     x="33"
-     y="15.000293"
-     width="54"
-     height="8"
-     rx="1"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;opacity:1" />
-  <use
-     transform="translate(0,13)"
-     width="100%"
-     height="100%"
-     xlink:href="#a"
-     id="use850"
-     x="0"
-     y="0" />
-  <use
-     transform="translate(0,26)"
-     width="100%"
-     height="100%"
-     xlink:href="#a"
-     id="use852"
-     x="0"
-     y="0" />
   <text
      x="21.926422"
      y="28.071657"
@@ -253,7 +298,7 @@
        stroke-width="0.26458"
        text-align="end"
        text-anchor="end"
-       id="tspan859">contextualizes</tspan></text>
+       id="tspan859">concretizes</tspan></text>
   <text
      x="21.926422"
      y="15.246002"
@@ -279,7 +324,7 @@
        stroke-width="0.26458"
        text-align="end"
        text-anchor="end"
-       id="tspan867">realizes</tspan></text>
+       id="tspan867">implements</tspan></text>
   <text
      id="c"
      x="34.329689"
@@ -324,17 +369,4 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <rect
-     id="rect1253"
-     x="33"
-     y="2"
-     width="54"
-     height="8"
-     rx="1"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none;opacity:1" />
 </svg>

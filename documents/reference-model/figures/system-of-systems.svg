@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="158mm"
+   width="104mm"
    height="59mm"
    version="1.1"
-   viewBox="0 0 158 59"
+   viewBox="0 0 104 59"
    id="svg162"
    sodipodi:docname="system-of-systems.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,16 +24,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.3105225"
-     inkscape:cx="311.83423"
-     inkscape:cy="141.31003"
-     inkscape:window-width="1843"
-     inkscape:window-height="1035"
-     inkscape:window-x="73"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:zoom="3.2675723"
+     inkscape:cx="173.06427"
+     inkscape:cy="140.93032"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
-     height="73mm">
+     height="73mm"
+     width="157mm">
     <inkscape:grid
        type="xygrid"
        id="grid987"
@@ -96,29 +97,22 @@
          id="path2-2" />
     </marker>
   </defs>
+  <path
+     d="M 52.000495,31 V 25"
+     marker-end="url(#a)"
+     id="path3155"
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="cc" />
   <use
      x="0"
      y="0"
      xlink:href="#use23646"
-     id="use2317"
-     transform="matrix(0,1,1,0,23.000493,-55.999497)"
-     width="100%"
-     height="100%" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#rect19544"
-     id="use21774"
-     transform="translate(-34)"
+     id="use2313"
+     transform="rotate(-90,29.00049,59.999502)"
      width="100%"
      height="100%" />
   <path
-     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 50,36 v -5 h 56 v 5"
-     id="path16281"
-     sodipodi:nodetypes="cccc" />
-  <path
-     d="m 82.999505,40 h -8"
+     d="m 57.000001,40 h -8"
      marker-end="url(#a)"
      id="use19748"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
@@ -126,11 +120,45 @@
   <use
      x="0"
      y="0"
-     xlink:href="#use8966"
-     id="use1563"
-     transform="translate(56.000495)"
+     xlink:href="#g1951"
+     id="use1953"
+     transform="translate(55.999999)"
      width="100%"
      height="100%" />
+  <rect
+     id="rect1655"
+     x="30.000496"
+     y="16"
+     width="46"
+     height="8"
+     rx="1.6"
+     fill="none"
+     opacity="0.91318"
+     stroke="#000000"
+     stroke-linejoin="round"
+     stroke-width="0.333"
+     style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g1159"
+     id="use1449"
+     transform="translate(-5.9989939,-51)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use23646"
+     id="use2317"
+     transform="matrix(0,1,1,0,-2.9990107,-29.999993)"
+     width="100%"
+     height="100%" />
+  <path
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 24.000496,36 v -5 h 56 v 5"
+     id="path16281"
+     sodipodi:nodetypes="cccc" />
   <metadata
      id="metadata33">
     <rdf:RDF>
@@ -143,7 +171,7 @@
   </metadata>
   <rect
      id="rect45004"
-     x="55.000496"
+     x="29.000992"
      y="14.999999"
      width="46"
      height="8"
@@ -154,35 +182,44 @@
      stroke-linejoin="round"
      stroke-width="0.333"
      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#use23646"
-     id="use2313"
-     transform="rotate(-90,54.999994,59.999502)"
-     width="100%"
-     height="100%" />
-  <rect
-     id="use8966"
-     x="26.999504"
-     y="36"
-     width="46"
-     height="8"
-     rx="1"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="opacity:1;fill:#fefefe;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
+  <g
+     id="g1951"
+     transform="translate(-25.999504)">
+    <rect
+       id="rect1867"
+       x="28"
+       y="37"
+       width="46"
+       height="8"
+       rx="1.6"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       id="use8966"
+       x="26.999504"
+       y="36"
+       width="46"
+       height="8"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#fefefe;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
   <text
-     x="49.91404"
+     x="23.914536"
      y="41.258659"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text8978"><tspan
-       x="49.91404"
+       x="23.914536"
        y="41.258659"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -190,13 +227,13 @@
        text-anchor="middle"
        id="tspan8976">Local Cloud</tspan></text>
   <text
-     x="105.91454"
+     x="79.915039"
      y="41.258659"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text8982"><tspan
-       x="105.91454"
+       x="79.915039"
        y="41.258659"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -204,34 +241,35 @@
        text-anchor="middle"
        id="tspan8980">System-of-Local-Clouds</tspan></text>
   <text
-     x="79.531799"
+     x="52.162636"
      y="29.124289"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use32783"><tspan
-       x="79.531799"
+       x="50.195351"
        y="29.124289"
        stroke-width="0.26458"
-       id="tspan6742">is</tspan></text>
+       id="tspan6742"
+       style="text-align:end;text-anchor:end">is</tspan></text>
   <text
-     x="86.454178"
+     x="60.454674"
      y="38.261185"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use34501"><tspan
-       x="81.582108"
+       x="55.582603"
        y="38.261185"
        stroke-width="0.26458"
        id="tspan6776"
        style="text-align:end;text-anchor:end">has</tspan></text>
   <text
-     x="77.958603"
+     x="51.959099"
      y="20.272333"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text44012"><tspan
-       x="77.958603"
+       x="51.959099"
        y="20.272333"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -239,23 +277,31 @@
        text-anchor="middle"
        id="tspan44010">System-of-Systems</tspan></text>
   <text
-     x="78.049171"
+     x="52.049667"
      y="43.88763"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use15854"><tspan
-       x="78.049171"
+       x="52.049667"
        y="43.88763"
        stroke-width="0.26458"
        id="tspan22947">2..</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g1159"
+     id="use1447"
+     transform="translate(-33.998993)"
+     width="100%"
+     height="100%" />
   <text
-     x="49.91407"
+     x="23.914566"
      y="56.116943"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text18882"><tspan
-       x="49.91407"
+       x="23.914566"
        y="56.116943"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -264,32 +310,49 @@
        id="tspan18880"
        style="font-size:3px;fill:#333333;fill-opacity:1">Cloud</tspan></text>
   <path
-     d="m 70.999497,54.999507 -6.000001,4.96e-4"
+     d="m 44.999993,54.999507 -6.000001,4.96e-4"
      marker-end="url(#a)"
      id="use23646"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:nodetypes="cc" />
-  <rect
-     id="rect19544"
-     x="70.998993"
-     y="52"
-     width="26"
-     height="6.0000005"
-     rx="1"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="opacity:1;fill:#fefefe;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke:#333333;stroke-opacity:1" />
+  <g
+     id="g1159"
+     transform="translate(-25.999504)">
+    <rect
+       id="rect891"
+       x="71.599998"
+       y="52.599998"
+       width="26"
+       height="6.0000005"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect19544"
+       x="70.998993"
+       y="52"
+       width="26"
+       height="6.0000005"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
   <text
-     x="84.035744"
+     x="58.03624"
      y="56.116943"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text19548"><tspan
-       x="84.035744"
+       x="58.03624"
        y="56.116943"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -298,33 +361,25 @@
        id="tspan19546"
        style="font-size:3px;fill:#333333;fill-opacity:1">Virtual Cloud</tspan></text>
   <text
-     x="72.679962"
+     x="53.357956"
      y="13.168316"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text24571"><tspan
-       x="72.679962"
+       x="50.303658"
        y="13.168316"
        stroke-width="0.26458"
        id="tspan24569"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">2..</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#rect19544"
-     id="use1685"
-     transform="translate(-5.9989942,-51)"
-     width="100%"
-     height="100%" />
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
   <text
-     x="78.031494"
-     y="4.8085938"
+     x="52.03199"
+     y="4.8085933"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text11944"><tspan
-       x="78.031494"
-       y="4.8085938"
+       x="52.03199"
+       y="4.8085933"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -332,39 +387,33 @@
        id="tspan11942"
        style="font-size:3px;fill:#333333;fill-opacity:1">System</tspan></text>
   <text
-     x="79.531799"
+     x="53.613266"
      y="13.168316"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text2401"><tspan
-       x="79.531799"
+       x="53.613266"
        y="13.168316"
        stroke-width="0.26458"
        id="tspan2399"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">has</tspan></text>
-  <path
-     d="M 77.999999,31 V 25"
-     marker-end="url(#a)"
-     id="path3155"
-     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="cc" />
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">2..</tspan></text>
   <text
-     x="51.52755"
+     x="24.556396"
      y="47.661701"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text979"><tspan
-       x="51.52755"
+       x="22.720264"
        y="47.661701"
        stroke-width="0.26458"
        id="tspan977"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">is</tspan></text>
   <use
      x="0"
      y="0"
      xlink:href="#text979"
-     id="use1061"
-     transform="translate(15.474208,5.4348072)"
+     id="use10594"
+     transform="translate(20.749538,5.4192438)"
      width="100%"
      height="100%" />
 </svg>

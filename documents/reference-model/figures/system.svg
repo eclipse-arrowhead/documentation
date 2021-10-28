@@ -6,7 +6,7 @@
    viewBox="0 0 168 64"
    id="svg162"
    sodipodi:docname="system.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,14 +24,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.1552612"
-     inkscape:cx="363.12133"
-     inkscape:cy="116.42388"
-     inkscape:window-width="1843"
-     inkscape:window-height="1035"
-     inkscape:window-x="73"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:zoom="0.81689303"
+     inkscape:cx="198.92445"
+     inkscape:cy="48.353944"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
      height="73mm">
     <inkscape:grid
@@ -97,6 +97,33 @@
     </marker>
   </defs>
   <path
+     d="M 97.999999,4 H 155 v 31"
+     marker-end="url(#a)"
+     id="path3142"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="ccc" />
+  <rect
+     id="rect1495"
+     x="69"
+     y="16"
+     width="31.999998"
+     height="8"
+     rx="1.6"
+     fill="none"
+     opacity="0.91318"
+     stroke="#000000"
+     stroke-linejoin="round"
+     stroke-width="0.333"
+     style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g1121"
+     id="use1391"
+     transform="translate(-7.0000048e-7,55.999999)"
+     width="100%"
+     height="100%" />
+  <path
      d="M 84.000009,6.9999928 84,12.999999"
      marker-end="url(#a)"
      id="path6698"
@@ -125,45 +152,59 @@
      stroke-linejoin="round"
      stroke-width="0.333"
      style="opacity:1;fill:#e5e5e5;fill-opacity:1;stroke:#666666;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1" />
-  <rect
-     id="use8966"
-     x="24"
-     y="39"
-     width="32"
-     height="8"
-     rx="1"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="opacity:1;fill:#fefefe;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#use8966"
-     id="use1311"
-     transform="translate(88.000001)"
-     width="100%"
-     height="100%" />
   <path
      d="M 67.999996,43 H 57.999997"
      marker-end="url(#a)"
      id="path1315"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
+  <g
+     id="g1747">
+    <rect
+       id="rect1743"
+       x="25"
+       y="40"
+       width="31.999998"
+       height="8"
+       rx="1.6"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       id="use8966"
+       x="24"
+       y="39"
+       width="32"
+       height="8"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#fefefe;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
   <path
      d="M 99.999996,43 H 110"
      marker-end="url(#a)"
      id="path1317"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
+  <path
+     d="m 83.999999,47 v 7.999999"
+     marker-end="url(#a)"
+     id="path6006"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="cc" />
   <use
      x="0"
      y="0"
-     xlink:href="#use8966"
-     id="use1313"
-     transform="translate(44)"
+     xlink:href="#g1747"
+     id="use1909"
+     transform="translate(43.999999)"
      width="100%"
      height="100%" />
   <text
@@ -194,6 +235,14 @@
        text-align="center"
        text-anchor="middle"
        id="tspan1325">State</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g1747"
+     id="use1911"
+     transform="translate(87.999999)"
+     width="100%"
+     height="100%" />
   <text
      x="127.91455"
      y="44.258659"
@@ -264,9 +313,9 @@
      sodipodi:nodetypes="ccc" />
   <rect
      id="rect1367"
-     x="66.000008"
-     y="15.000007"
-     width="36"
+     x="68"
+     y="15"
+     width="31.999998"
      height="8"
      rx="1"
      fill="none"
@@ -276,42 +325,43 @@
      stroke-width="0.333"
      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
   <text
-     x="85.531326"
+     x="87.326477"
      y="29.12429"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text1371"><tspan
-       x="85.531326"
+       x="82.442688"
        y="29.12429"
        stroke-width="0.26458"
-       id="tspan1369">has</tspan></text>
+       id="tspan1369"
+       style="text-align:end;text-anchor:end">has</tspan></text>
   <text
-     x="78.728752"
+     x="85.564575"
      y="34.632336"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text1375"><tspan
-       x="78.728752"
+       x="85.564575"
        y="34.632336"
        stroke-width="0.26458"
        id="tspan1373">1..</tspan></text>
   <text
-     x="34.574749"
+     x="41.410576"
      y="34.632336"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text1379"><tspan
-       x="34.574749"
+       x="41.410576"
        y="34.632336"
        stroke-width="0.26458"
        id="tspan1377">1..</tspan></text>
   <text
-     x="122.8829"
+     x="129.71875"
      y="34.632336"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text1383"><tspan
-       x="122.8829"
+       x="129.71875"
        y="34.632336"
        stroke-width="0.26458"
        id="tspan1381">1..</tspan></text>
@@ -337,20 +387,37 @@
      transform="matrix(-1,0,0,1,168,1.3939453e-7)"
      width="100%"
      height="100%" />
-  <rect
-     id="use8062"
-     x="70"
-     y="-7"
-     width="28"
-     height="6"
-     rx="1"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     transform="scale(1,-1)" />
+  <g
+     id="g1121">
+    <rect
+       id="rect907"
+       x="70.599998"
+       y="-7.5999999"
+       width="28"
+       height="6"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)" />
+    <rect
+       id="use8062"
+       x="70"
+       y="-7"
+       width="28"
+       height="6"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)" />
+  </g>
   <text
      x="83.914551"
      y="5.0334487"
@@ -376,13 +443,7 @@
        y="10.80946"
        stroke-width="0.26458"
        id="tspan10265"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">has</tspan></text>
-  <path
-     d="M 97.999999,4 H 155 v 31"
-     marker-end="url(#a)"
-     id="path3142"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     sodipodi:nodetypes="ccc" />
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..</tspan></text>
   <text
      x="99.539543"
      y="2.3073523"
@@ -395,24 +456,16 @@
        id="tspan3560"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">facilitates</tspan></text>
   <text
-     x="78.890694"
+     x="85.507729"
      y="10.80946"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text3898"><tspan
-       x="78.890694"
+       x="82.432922"
        y="10.80946"
        stroke-width="0.26458"
        id="tspan3896"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#use8062"
-     id="use5272"
-     width="100%"
-     height="100%"
-     transform="matrix(1,0,0,-1,-7.0000049e-7,63.999999)" />
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
   <text
      x="85.531311"
      y="52.702991"
@@ -423,18 +476,18 @@
        y="52.702991"
        stroke-width="0.26458"
        id="tspan5330"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">triggers</tspan></text>
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..</tspan></text>
   <text
-     x="78.890694"
+     x="85.383408"
      y="52.652405"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text5336"><tspan
-       x="78.890694"
+       x="82.308601"
        y="52.652405"
        stroke-width="0.26458"
        id="tspan5334"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..</tspan></text>
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">triggers</tspan></text>
   <text
      x="83.914551"
      y="61.124268"
@@ -450,10 +503,4 @@
        text-anchor="middle"
        id="tspan5338"
        style="font-size:3px;fill:#333333;fill-opacity:1">Capability</tspan></text>
-  <path
-     d="m 83.999999,47 v 7.999999"
-     marker-end="url(#a)"
-     id="path6006"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     sodipodi:nodetypes="cc" />
 </svg>
