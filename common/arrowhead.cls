@@ -119,7 +119,7 @@
 
 \makeatother
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
 
 \setlength\tabcolsep{1mm}
 \renewcommand\arraystretch{1.3}
