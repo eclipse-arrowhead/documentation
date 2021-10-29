@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="134mm"
-   height="52mm"
+   width="114mm"
+   height="54mm"
    version="1.1"
-   viewBox="0 0 134 52"
+   viewBox="0 0 114 54"
    id="svg162"
    sodipodi:docname="data.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.3105225"
-     inkscape:cx="212.28965"
-     inkscape:cy="28.348567"
-     inkscape:window-width="1851"
-     inkscape:window-height="1035"
-     inkscape:window-x="69"
-     inkscape:window-y="23"
+     inkscape:zoom="1.6337861"
+     inkscape:cx="201.06671"
+     inkscape:cy="59.677335"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
      height="73mm">
@@ -136,26 +136,96 @@
     </marker>
   </defs>
   <path
-     d="m 80.999999,18.999999 h 12"
+     d="M 102,38 V 50 H 70"
+     marker-end="url(#a)"
+     id="path13935"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="ccc" />
+  <g
+     id="g16873"
+     transform="translate(-9.9999994)">
+    <path
+       d="M 66.999999,15 V 8.9999999"
+       marker-end="url(#a)"
+       id="path913"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       sodipodi:nodetypes="cc" />
+    <text
+       x="85.757179"
+       y="13.015553"
+       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+       xml:space="preserve"
+       id="text1206"><tspan
+         x="65.262993"
+         y="13.015553"
+         stroke-width="0.26458"
+         id="tspan1204"
+         style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
+    <text
+       x="68.368629"
+       y="13.015553"
+       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+       xml:space="preserve"
+       id="text1210"><tspan
+         x="68.368629"
+         y="13.015553"
+         stroke-width="0.26458"
+         id="tspan1208"
+         style="font-size:2.8px;fill:#444444;fill-opacity:1">1..</tspan></text>
+  </g>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g16873"
+     id="use16875"
+     transform="translate(3.1e-7,32)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path13935"
+     id="use15582"
+     transform="matrix(-1,0,0,1,114,-3.8e-7)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path12483"
+     id="use7389"
+     transform="matrix(-1,0,0,1,162,16.000001)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path12483"
+     id="use7391"
+     transform="translate(-47.999999,16.000001)"
+     width="100%"
+     height="100%" />
+  <path
+     d="M 71,18.999999 89,19"
      marker-end="url(#a)"
      id="path12483"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <path
-     d="m 98.999999,3.9999996 h -12"
+     d="M 91.000001,3.9999997 H 70"
      marker-end="url(#a)"
      id="path7101"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <path
-     d="m 66.999999,31 3e-6,-6.106581"
+     d="m 57,31 3e-6,-6.106581"
      marker-end="url(#a)"
      id="path6700"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <rect
      id="rect925"
-     x="54"
+     x="44"
      y="16"
      width="28"
      height="8"
@@ -178,7 +248,7 @@
   </metadata>
   <rect
      id="rect45004"
-     x="53"
+     x="43"
      y="15"
      width="28"
      height="8"
@@ -191,7 +261,7 @@
      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
   <g
      id="g6931"
-     transform="translate(46.000433,6.9999994)">
+     transform="translate(36.000434,6.9999991)">
     <rect
        id="rect1183"
        x="7.9995661"
@@ -220,13 +290,13 @@
        style="opacity:1;fill:#fefefe;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
   <text
-     x="66.914993"
+     x="56.914993"
      y="36.258656"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text8978"><tspan
-       x="66.914993"
+       x="56.914993"
        y="36.258656"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -234,34 +304,34 @@
        text-anchor="middle"
        id="tspan8976">Data Type</tspan></text>
   <text
-     x="70.186661"
+     x="60.186661"
      y="29.052269"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use32783"><tspan
-       x="65.302872"
+       x="55.302872"
        y="29.052269"
        stroke-width="0.26458"
        id="tspan6742"
        style="text-align:end;text-anchor:end">constrains</tspan></text>
   <text
-     x="68.741325"
+     x="58.741325"
      y="29.052269"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use6754"><tspan
-       x="68.741325"
+       x="58.741325"
        y="29.052269"
        stroke-width="0.26458"
        id="tspan6768">1</tspan></text>
   <text
-     x="66.958557"
+     x="56.958557"
      y="20.272331"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text44012"><tspan
-       x="66.958557"
+       x="56.958557"
        y="20.272331"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -269,19 +339,19 @@
        text-anchor="middle"
        id="tspan44010">Data</tspan></text>
   <text
-     x="82.770638"
+     x="72.770638"
      y="17.054136"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text16358"><tspan
-       x="82.770638"
+       x="72.770638"
        y="17.054136"
        stroke-width="0.26458"
        id="tspan16356"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">expresses</tspan></text>
   <g
      id="use21933"
-     transform="translate(-2.0000006,-24)">
+     transform="translate(-12,-24)">
     <rect
        id="rect29272"
        x="58.600002"
@@ -314,18 +384,18 @@
      y="0"
      xlink:href="#use21933"
      id="use3684"
-     transform="translate(43)"
+     transform="translate(45)"
      width="100%"
      height="100%" />
   <text
-     x="66.926758"
-     y="5.0788655"
+     x="56.926758"
+     y="5.0788651"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text21937"><tspan
-       x="66.926758"
-       y="5.0788655"
+       x="56.926758"
+       y="5.0788651"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -333,25 +403,25 @@
        id="tspan21935"
        style="font-size:3px;fill:#333333;fill-opacity:1">Datum</tspan></text>
   <text
-     x="117.80794"
-     y="2.1129484"
+     x="109.80794"
+     y="2.1129482"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text25458"><tspan
-       x="97.313766"
-       y="2.1129484"
+       x="89.313766"
+       y="2.1129482"
        stroke-width="0.26458"
        id="tspan25456"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
   <text
-     x="109.92673"
-     y="5.0788655"
+     x="101.92673"
+     y="5.0788651"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text3688"><tspan
-       x="109.92673"
-       y="5.0788655"
+       x="101.92673"
+       y="5.0788651"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -363,17 +433,17 @@
      y="0"
      xlink:href="#use21933"
      id="use5806"
-     transform="translate(43,15)"
+     transform="translate(45,15)"
      width="100%"
      height="100%" />
   <text
-     x="109.92673"
+     x="101.92673"
      y="20.078865"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text5810"><tspan
-       x="109.92673"
+       x="101.92673"
        y="20.078865"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -382,25 +452,160 @@
        id="tspan5808"
        style="font-size:3px;fill:#333333;fill-opacity:1">State</tspan></text>
   <text
-     x="117.80794"
-     y="7.4046149"
+     x="109.80794"
+     y="7.4046144"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text12004"><tspan
-       x="97.313766"
-       y="7.4046149"
+       x="89.313766"
+       y="7.4046144"
        stroke-width="0.26458"
        id="tspan12002"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">1..</tspan></text>
   <text
-     x="82.770638"
+     x="72.770638"
      y="22.50775"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text13190"><tspan
-       x="82.770638"
+       x="72.770638"
        y="22.50775"
        stroke-width="0.26458"
        id="tspan13188"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">1</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use21933"
+     id="use1812"
+     transform="translate(-1.0000004e-8,46)"
+     width="100%"
+     height="100%" />
+  <text
+     x="56.92675"
+     y="51.078865"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text1816"><tspan
+       x="56.92675"
+       y="51.078865"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan1814"
+       style="font-size:3px;fill:#333333;fill-opacity:1">Encoding</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use21933"
+     id="use3122"
+     transform="translate(-45,31)"
+     width="100%"
+     height="100%" />
+  <text
+     x="11.926751"
+     y="36.078865"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text3126"><tspan
+       x="11.926751"
+       y="36.078865"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan3124"
+       style="font-size:3px;fill:#333333;fill-opacity:1">Encoder</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use21933"
+     id="use3128"
+     transform="translate(45,31)"
+     width="100%"
+     height="100%" />
+  <text
+     x="101.92677"
+     y="36.078865"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text3132"><tspan
+       x="101.92677"
+       y="36.078865"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan3130"
+       style="font-size:3px;fill:#333333;fill-opacity:1">Decoder</tspan></text>
+  <text
+     x="100.89504"
+     y="33.100899"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text7395"><tspan
+       x="89.47493"
+       y="33.100899"
+       stroke-width="0.26458"
+       id="tspan7393"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">decodes</tspan></text>
+  <text
+     x="24.702358"
+     y="33.100899"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text12005"><tspan
+       x="24.702358"
+       y="33.100899"
+       stroke-width="0.26458"
+       id="tspan12003"
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">encodes</tspan></text>
+  <text
+     x="111.62569"
+     y="48.083431"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text14228"><tspan
+       x="100.20557"
+       y="48.083431"
+       stroke-width="0.26458"
+       id="tspan14226"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">implements</tspan></text>
+  <text
+     x="103.40604"
+     y="48.083431"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text15580"><tspan
+       x="103.40604"
+       y="48.083431"
+       stroke-width="0.26458"
+       id="tspan15578"
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">1..</tspan></text>
+  <text
+     x="13.66727"
+     y="48.083431"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text15594"><tspan
+       x="13.66727"
+       y="48.083431"
+       stroke-width="0.26458"
+       id="tspan15592"
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">implements</tspan></text>
+  <text
+     x="31.082661"
+     y="48.083431"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text16706"><tspan
+       x="10.588475"
+       y="48.083431"
+       stroke-width="0.26458"
+       id="tspan16704"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">1..</tspan></text>
 </svg>
