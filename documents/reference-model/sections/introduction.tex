@@ -44,7 +44,7 @@ Reference models can be used as vocabularies for defining \GlossaryHyperRef{arch
   \includegraphics{figures/reference-model}
   \caption{
     The steps from reference model to implementation, going from highly abstract to entirely concrete.
-    Reference models define fundamental concepts, reference architectures add abstract design constraints, concrete architectures makes those limits practically realizable, while implementations represent their actual realization.
+    Reference models define fundamental concepts, reference architectures add abstract design constraints rooted in real-world observation or experiences, concrete architectures makes those design constraints practically realizable, while implementations represent their actual realization.
   }
   \label{fig:reference-model}
 \end{figure}
@@ -81,7 +81,7 @@ A box with a name inside it denotes a named \GlossaryHyperRef{entity}{entity}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
 If a named arrow has an associated positive integer or range, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
 A range is denoted by $x..y$, where $x$ and $y$ are positive integers and $x<y$.
-Omitting $y$ when using the range notation (e.g. $1..$) means that the range is infinite from $x$.
+Omitting $y$ when using the range notation (e.g. ``$1..$'') means that the range is infinite from $x$.
 A box with a dotted border represents a group.
 The entities explicitly placed within the box may or may not represent all entities that belong to that group.
 See Figure \ref{fig:reference-model} for an example of this graphical notation being used.
@@ -109,29 +109,34 @@ They do, however, apply to all parts of the document.
 \subsection{Relationships to Other Documents}
 \label{sec:introduction:relationships}
 
-The reference model outlined in this document is based primarily on the following works:
+The reference model outlined in this document was written while considering the following works:
 
 \begin{enumerate}
 \item \textit{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural view of Industry 4.0.
-As RAMI4.0 is a reference \textit{architecture} rather than a reference \textit{model}, we have only been concerned with what concepts it defines and what problems it frames.
-The recommendations it makes regarding how Industry 4.0 systems \textit{should} be designed have not been considered.
+The document may be seen as a predecessor to, or major influence on, the conceptual aspects of the Arrowhead framework.
+In particular, the document describes how to model and design communicating industrial systems such that key Industry 4.0 characteristics can be facilitated, such as high degrees of dynamicity and interoperability.
+However, as RAMI4.0 is a reference \textit{architecture} rather than a reference \textit{model}, we have only been concerned with what concepts it defines and what problems it frames.
 This delimitation excludes its ``architectural layers'', ``life-cycle \& value-stream'' phases and ``hierarchical levels'', as well as the abstract design of its ``asset administrative shell''.
 These excluded aspects are neither condemned nor endorsed by this document.
 They are simply outside its scope.
 
-\item \textit{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of SOA.
-While RAMI4.0 does not include SOA-RM in its reference list, it does mention the standard and requires that all communications adhere to SOA principles, which should mean that the two standards are mostly compatible.
-Even though we have found their concept definitions may be slight different, we have not found any major discrepancies.
+\item \textit{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
+The paradigm was chosen as the primary mode of communication for RAMI4.0, as well as for the Arrowhead framework.
+While RAMI4.0 does not include SOA-RM in its normative reference list, it does mention the standard and requires that all communications adhere to SOA principles, which should mean that the two standards are mostly compatible.
+While reading through the documents ourselves we found no major discrepancies.
 
 \item \textit{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
-While the strictly architectural aspects of IoTA:AF are out of scope, the two chapters contain several definition with a high degree of relevance to this document.
+The book most significantly represents the state of the Arrowhead framework up until it was written.
+Even though the framework has evolved since the book was written, it still represents the most complete view of the framework.
+The chapters we are concerned with are still very much up to date.
+While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance to this document.
 
 \end{enumerate}
 
 You are not assumed to have read any of the above documents prior to reading this.
 Concepts derived from the above sources are reiterated in this document as necessary.
 Only adherence to IoTA:AF is observed strictly, which means that concept definitions presented here may diverge from those of the other two works.
-All significant name differences are noted in the glossary of Section \ref{sec:glossary} under each definition of concern.
+All significant terminology differences are noted in the glossary of Section \ref{sec:glossary} under each definition of concern.
 
 \subsection{Section Overview}
 \label{sec:introduction:sections}
