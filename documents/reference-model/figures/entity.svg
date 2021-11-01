@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="148mm"
+   width="144mm"
    height="47mm"
    version="1.1"
-   viewBox="0 0 148 47"
+   viewBox="0 0 144 47"
    id="svg926"
    sodipodi:docname="entity.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,12 +25,12 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.2455912"
-     inkscape:cx="280.18823"
-     inkscape:cy="113.60067"
+     inkscape:cx="281.39248"
+     inkscape:cy="62.21945"
      inkscape:window-width="1848"
-     inkscape:window-height="1035"
+     inkscape:window-height="1016"
      inkscape:window-x="72"
-     inkscape:window-y="23"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg926">
     <inkscape:grid
@@ -58,9 +58,9 @@
   </defs>
   <rect
      id="rect1309"
-     x="14"
+     x="12.000088"
      y="34"
-     width="133"
+     width="131"
      height="11.999999"
      rx="2.0000014"
      fill="none"
@@ -69,19 +69,8 @@
      stroke-linejoin="round"
      stroke-width="0.333"
      style="fill:#e5e5e5;fill-opacity:1;stroke:#666666;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1" />
-  <text
-     x="133.95099"
-     y="41.078125"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text1335"><tspan
-       x="133.95099"
-       y="41.078125"
-       stroke-width="0.26458"
-       id="tspan1333"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Entities</tspan></text>
   <path
-     d="m 82.999998,3.9999985 h 15"
+     d="m 81.000086,3.9999985 h 15"
      marker-end="url(#b)"
      id="path829"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -96,7 +85,7 @@
      height="100%" />
   <g
      id="g2499"
-     transform="translate(2.9999994)">
+     transform="translate(1.0000875)">
     <rect
        id="rect2153"
        x="98"
@@ -125,7 +114,7 @@
        style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#666666;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <text
-     x="75.860153"
+     x="73.860245"
      y="29.104565"
      font-family="sans-serif"
      font-size="3px"
@@ -133,21 +122,21 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text916"><tspan
-       x="75.860153"
+       x="73.860245"
        y="29.104565"
        stroke-width="0.26458"
        id="tspan914">is</tspan></text>
   <path
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 26,35.999997 v -5.000001 h 23.999998 v 5.000001"
+     d="m 24.000088,35.999997 v -5.000001 h 23.999998 v 5.000001"
      id="path2706" />
   <path
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 49.999999,30.999997 H 98.999998"
+     d="M 48.000087,30.999997 H 97.000086"
      id="use3744"
      sodipodi:nodetypes="cc" />
   <path
-     d="M 83.999999,18.999998 H 96.999997"
+     d="M 82.000087,18.999998 H 95.000085"
      fill="none"
      marker-end="url(#b)"
      stroke="#666666"
@@ -157,7 +146,7 @@
      sodipodi:nodetypes="cc" />
   <rect
      id="rect879-3"
-     x="65"
+     x="63.000088"
      y="15.999998"
      width="20"
      height="8"
@@ -209,24 +198,24 @@
      width="100%"
      height="100%" />
   <path
-     d="m 73.999999,35.999997 v -11"
+     d="m 72.000087,35.999997 v -11"
      marker-end="url(#b)"
      id="path831"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <path
-     d="M 73.999999,14.999998 V 8.9999984"
+     d="M 72.000087,14.999998 V 8.9999984"
      marker-end="url(#b)"
      id="path841"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:nodetypes="cc" />
   <text
-     x="74.014526"
+     x="72.014618"
      y="5.1242666"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text847"><tspan
-       x="74.014526"
+       x="72.014618"
        y="5.1242666"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -235,12 +224,12 @@
        id="tspan845"
        style="font-size:3px;fill:#333333;fill-opacity:1">Artifact</tspan></text>
   <text
-     x="109.01453"
+     x="107.01462"
      y="5.1242666"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.26458"
      xml:space="preserve"
      id="text851"><tspan
-       x="109.01453"
+       x="107.01462"
        y="5.1242666"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -249,7 +238,7 @@
        id="tspan849"
        style="font-size:3px;fill:#333333;fill-opacity:1">Resource</tspan></text>
   <rect
-     x="64"
+     x="62.000088"
      y="14.999998"
      width="20"
      height="8"
@@ -262,12 +251,12 @@
      id="rect924"
      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
   <text
-     x="73.865845"
+     x="71.865936"
      y="20.262085"
      style="font-size:3.5px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text855"><tspan
-       x="73.865845"
+       x="71.865936"
        y="20.262085"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -276,7 +265,7 @@
        id="tspan853">Entity</tspan></text>
   <g
      id="g1309"
-     transform="translate(2.9999994)">
+     transform="translate(1.0000875)">
     <rect
        id="rect879"
        x="97"
@@ -315,40 +304,40 @@
     </rdf:RDF>
   </metadata>
   <text
-     x="75.860153"
+     x="73.860245"
      y="13.142666"
      font-size="3px"
      stroke-width="0.26458"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif"
      xml:space="preserve"
      id="text870"><tspan
-       x="75.860153"
+       x="73.860245"
        y="13.142666"
        stroke-width="0.26458"
        id="tspan868"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
   <text
-     x="84.510071"
+     x="82.510162"
      y="2.3417783"
      font-size="3px"
      stroke-width="0.26458"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif"
      xml:space="preserve"
      id="text874"><tspan
-       x="84.510071"
+       x="82.510162"
        y="2.3417783"
        stroke-width="0.26458"
        id="tspan872"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">may be</tspan></text>
   <text
-     x="109.01453"
+     x="107.01462"
      y="20.249268"
      font-size="3.5px"
      stroke-width="0.26458"
      style="line-height:1.25;font-family:sans-serif"
      xml:space="preserve"
      id="text878"><tspan
-       x="109.01453"
+       x="107.01462"
        y="20.249268"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -356,7 +345,7 @@
        text-anchor="middle"
        id="tspan876">Identity</tspan></text>
   <text
-     x="85.616302"
+     x="83.616394"
      y="17.42491"
      font-family="sans-serif"
      font-size="3px"
@@ -364,12 +353,12 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text886"><tspan
-       x="85.616302"
+       x="83.616394"
        y="17.42491"
        stroke-width="0.26458"
        id="tspan884">has</tspan></text>
   <text
-     x="49.914543"
+     x="47.914631"
      y="41.258667"
      font-family="sans-serif"
      font-size="3.5px"
@@ -377,7 +366,7 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text892"><tspan
-       x="49.914543"
+       x="47.914631"
        y="41.258667"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -385,7 +374,7 @@
        text-anchor="middle"
        id="tspan890">System</tspan></text>
   <text
-     x="97.914543"
+     x="95.914635"
      y="41.258667"
      font-family="sans-serif"
      font-size="3.5px"
@@ -393,7 +382,7 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text898"><tspan
-       x="97.914543"
+       x="95.914635"
        y="41.258667"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -401,7 +390,7 @@
        text-anchor="middle"
        id="tspan896">Network</tspan></text>
   <text
-     x="121.91458"
+     x="119.91467"
      y="41.258667"
      font-family="sans-serif"
      font-size="3.5px"
@@ -409,7 +398,7 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text904"><tspan
-       x="121.91458"
+       x="119.91467"
        y="41.258667"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -417,7 +406,7 @@
        text-anchor="middle"
        id="tspan902">Interface</tspan></text>
   <text
-     x="25.914545"
+     x="23.914633"
      y="41.258667"
      font-family="sans-serif"
      font-size="3.5px"
@@ -425,7 +414,7 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text910"><tspan
-       x="25.914545"
+       x="23.914633"
        y="41.258667"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -433,7 +422,7 @@
        text-anchor="middle"
        id="tspan908">Device</tspan></text>
   <text
-     x="85.616302"
+     x="83.616394"
      y="22.716576"
      font-family="sans-serif"
      font-size="3px"
@@ -441,12 +430,12 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text922"><tspan
-       x="85.616302"
+       x="83.616394"
        y="22.716576"
        stroke-width="0.26458"
        id="tspan920">1..</tspan></text>
   <text
-     x="73.914543"
+     x="71.914635"
      y="41.258667"
      font-family="sans-serif"
      font-size="3.5px"
@@ -454,7 +443,7 @@
      style="line-height:1.25"
      xml:space="preserve"
      id="text1965"><tspan
-       x="73.914543"
+       x="71.914635"
        y="41.258667"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -469,4 +458,26 @@
      transform="translate(73)"
      width="100%"
      height="100%" />
+  <text
+     x="131.95108"
+     y="39.266323"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text1335"><tspan
+       x="131.95108"
+       y="39.266323"
+       stroke-width="0.26458"
+       id="tspan1333"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Entity</tspan></text>
+  <text
+     x="131.95108"
+     y="42.970493"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text3366"><tspan
+       x="131.95108"
+       y="42.970493"
+       stroke-width="0.26458"
+       id="tspan3364"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Types</tspan></text>
 </svg>

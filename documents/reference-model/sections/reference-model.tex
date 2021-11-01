@@ -34,9 +34,9 @@ Each of its subsections \GlossaryHyperRef{description}{describes} a primary Arro
 \subsection{Stakeholder}
 \label{sec:reference-model:stakeholder}
 
-A \GlossaryHyperRef{stakeholder}{stakeholder} is a person or \GlossaryHyperRef{organization}{organization} with stake in an \GlossaryHyperRef{entity}{entity} or undertaking with relevance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
-In this context, we understand \GlossaryHyperRef{stake}{\textit{stake}} to refer to any type of engagement or commitment.
-The concept is illustrated in Figure \ref{fig:stakeholder}, which also lists five reasons why a given person or organization is to be considered a stakeholder.
+A \GlossaryHyperRef{stakeholder}{stakeholder} is a person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in an \GlossaryHyperRef{entity}{entity} or undertaking with relevance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
+In this context, we understand \textit{stake} to refer to any type of engagement or commitment.
+The concept is illustrated in Figure \ref{fig:stakeholder}, which also lists five reasons why a given person or organization could be considered to be a stakeholder.
 We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}.
 
 \begin{figure}[ht!]
@@ -67,23 +67,25 @@ As depicted in Figure \ref{fig:entity}, this means that an entity always has an 
   \includegraphics{figures/entity}
   \caption{
     The entity as an artifact with an identity.
-    An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be of value to a \GlossaryHyperRef{stakeholder}{stakeholder}
+    An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be of value to a \GlossaryHyperRef{stakeholder}{stakeholder}.
     The group of entity types is not exhaustive.
+    Other examples are \GlossaryHyperRef{cloud-local}{local clouds}, certain \GlossaryHyperRef{data}{data}, \GlossaryHyperRef{policy}{policies}, \GlossaryHyperRef{protocol}{protocols} and \GlossaryHyperRef{profile}{profiles}.
   }
   \label{fig:entity}
 \end{figure}
 
-Having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is any type of \GlossaryHyperRef{data}{data} name associated with the entity in question.
+Having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is data, of any conceivable \GlossaryHyperRef{type-data}{type}, naming the entity in question.
 As long as some form of \GlossaryHyperRef{description}{description} can be produced that unambiguously refers to the artifact in question, it has an identity.
 That being said, certain \GlossaryHyperRef{identification}{identification} requirements, perhaps related to security, performance or discoverability, may make it practically unfeasible not to use identifiers.
 
 \subsection{Device}
 \label{sec:reference-model:device}
 
-A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} that is able to automatically exercise at least one \GlossaryHyperRef{capability}{capability}, which is some form of automation routine that can be performed if triggered by its \GlossaryHyperRef{software}{software}.
-Examples of capabilities include moving robotic arms, reading from sensors, starting software procedures, hosting systems and sending \GlossaryHyperRef{message}{messages}. 
-Every device consists of \GlossaryHyperRef{components-hardware}{hardware components}, which are what concrete facilitate its capabilities.
-Of especial relevance to the Arrowhead framework are the devices that have (1) memory, (2) compute and (3) interfacing components, as shown in Figure \ref{fig:device}.
+A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} that is able to automatically exercise at least one \GlossaryHyperRef{capability}{capability}.
+A capability is some form of automation routine that can be performed if triggered by the \GlossaryHyperRef{software}{software} of the device.
+Examples of capabilities include moving robotic arms, reading from sensors, starting software procedures, hosting \GlossaryHyperRef{system}{systems} and sending \GlossaryHyperRef{message}{messages}. 
+Every device consists of \GlossaryHyperRef{components-hardware}{hardware components}, which are what concretely facilitate its capabilities.
+While there are not limits to what components can make up a device, they must always have (1) \GlossaryHyperRef{memory}{memory}, (2) \GlossaryHyperRef{computer}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components, as shown in Figure \ref{fig:device}.
 
 \begin{figure}[ht!]
   \centering
@@ -91,29 +93,37 @@ Of especial relevance to the Arrowhead framework are the devices that have (1) m
   \caption{
     The device as an entity with hardware components, together facilitating one or more capabilities.
     The group of hardware components is not exhaustive.
+    Other examples of such components could be sensors, actuators, compute accelerators, or batteries.
   }
   \label{fig:device}
 \end{figure}
 
-The devices with the three named components may be able to host \GlossaryHyperRef{system}{systems}, in which case they are referred to as \GlossaryHyperRef{device-system}{system devices}.
-In the context of Arrowhead it is, however, rarely relevant to consider any other devices than those able to host systems.
-If the the context makes it clear that no other type of device is referred to, the word may be used without the qualifier.
-
-\newpage
+Devices may be able to host systems, in which case they may be referred to as \GlossaryHyperRef{device-system}{system devices}.
+However, as it is rarely relevant to consider any other devices than those able to host systems, the ``system'' qualifier should be omitted if the context makes it clear that no other type of device is being referred to.
+Devices that cannot host systems should be referred to with a leading qualifier that indicates why that is the case.
+Examples of such qualifier could be ``constrained'', ``legacy'' or ``application-specific''.
 
 \subsection{System}
 \label{sec:reference-model:system}
+
+A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{entity}{entity} facilitated by \GlossaryHyperRef{software}{software} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}.
+As shown in Figure \ref{fig:system}, a system consists of at least three \GlossaryHyperRef{component-software}{software components}, which are (1) \GlossaryHyperRef{state-software}{state}, (2) \GlossaryHyperRef{procedure-software}{procedures} and (3) \GlossaryHyperRef{interface-system}{system interfaces}, out of which the last two are required.
+These components correspond to and are facilitated by the (1) \GlossaryHyperRef{memory}{memory}, (2) \GlossaryHyperRef{computer}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components of the hosting device.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics{figures/system}
   \caption{
-    X
+    The system as a collection of related software components, able to trigger zero or more capabilities of its hosting device.
+    The group of software components is not exhaustive.
+    Other examples of such components could be operating systems, file systems, software libraries, programming language runtimes, databases or virtual machines.
   }
   \label{fig:system}
 \end{figure}
 
-The system has its own identity. A single software artifact can host multiple systems, given that each system is distinct from all others.
+Each system must have its own \GlossaryHyperRef{identity}{identity} and should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}.
+There is no particular way in which a system must be facilitated.
+They are not required to run in their own operating system processes, use any particular programming languages, virtual machines or databases, and so on.
 
 \subsection{Service}
 \label{sec:reference-model:service}
