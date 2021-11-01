@@ -6,18 +6,56 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-\subsection{Stakeholders}
+This section is what constitutes the \GlossaryHyperRef{model-reference}{reference model} of this document.
+Each of its subsections \GlossaryHyperRef{description}{describes} a primary Arrowhead concept, which are as follows:
+
+\vspace*{0.25cm}
+\begin{itemize}[leftmargin=1.2cm,rightmargin=0pt,labelwidth=1cm,labelsep=0pt,itemindent=0pt,parsep=0pt,topsep=0pt,align=left]
+\item[\ref{sec:reference-model:stakeholder}] \textbf{\nameref{sec:reference-model:stakeholder}}
+\item[\ref{sec:reference-model:entity}] \textbf{\nameref{sec:reference-model:entity}}
+\item[\ref{sec:reference-model:device}] \textbf{\nameref{sec:reference-model:device}}
+\item[\ref{sec:reference-model:system}] \textbf{\nameref{sec:reference-model:system}}
+\item[\ref{sec:reference-model:service}] \textbf{\nameref{sec:reference-model:service}}
+\item[\ref{sec:reference-model:system-of-systems}] \textbf{\nameref{sec:reference-model:system-of-systems}}
+\vspace*{0.1cm}
+\begin{itemize}[leftmargin=1cm,rightmargin=0pt,labelwidth=1cm,labelsep=0pt,itemindent=0pt,parsep=0.05cm,topsep=0.05cm,align=left]
+  \item[\ref{sec:reference-model:system-of-systems:local-cloud}] \textbf{\nameref{sec:reference-model:system-of-systems:local-cloud}}
+  \item[\ref{sec:reference-model:system-of-systems:system-of-local-clouds}] \textbf{\nameref{sec:reference-model:system-of-systems:system-of-local-clouds}}
+\end{itemize}
+\vspace*{0.1cm}
+\item[\ref{sec:reference-model:network}] \textbf{\nameref{sec:reference-model:network}}
+\item[\ref{sec:reference-model:interface}] \textbf{\nameref{sec:reference-model:interface}}
+\item[\ref{sec:reference-model:policy}] \textbf{\nameref{sec:reference-model:policy}}
+\item[\ref{sec:reference-model:protocol}] \textbf{\nameref{sec:reference-model:protocol}}
+\item[\ref{sec:reference-model:data}] \textbf{\nameref{sec:reference-model:data}}
+\end{itemize}
+\vspace*{0.25cm}
+
+\subsection{Stakeholder}
+\label{sec:reference-model:stakeholder}
+
+A \GlossaryHyperRef{stakeholder}{stakeholder} is a person or \GlossaryHyperRef{organization}{organization} with stake in an \GlossaryHyperRef{entity}{entity} or undertaking with relevance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
+In this context, we understand \GlossaryHyperRef{stake}{\textit{stake}} to refer to any type of engagement or commitment.
+The concept is illustrated in Figure \ref{fig:stakeholder}, which also lists five reasons why a given person or organization is to be considered a stakeholder.
+We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics{figures/stakeholder}
   \caption{
-    X
+    The stakeholder as either a person or organization, where each such stakeholder takes on one ore more distinct roles.
+    \GlossaryHyperRef{hid}{HID} is an abbreviation for \GlossaryHyperRef{device-human-interface}{Human Interface Device}.
   }
   \label{fig:stakeholder}
 \end{figure}
 
-\subsection{Entities}
+The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of that interaction.
+In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{designer}{designer}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant.
+Use of the listed names is preferred over any synonyms when referring to these particular roles.
+Refer to the \hyperref[sec:glossary]{glossary} for their definitions.
+
+\subsection{Entity}
+\label{sec:reference-model:entity}
 
 \begin{figure}[ht!]
   \centering
@@ -28,7 +66,8 @@
   \label{fig:entity}
 \end{figure}
 
-\subsection{Devices}
+\subsection{Device}
+\label{sec:reference-model:device}
 
 \begin{figure}[ht!]
   \centering
@@ -39,7 +78,8 @@
   \label{fig:device}
 \end{figure}
 
-\subsection{Systems}
+\subsection{System}
+\label{sec:reference-model:system}
 
 \begin{figure}[ht!]
   \centering
@@ -52,7 +92,8 @@
 
 The system has its own identity. A single software artifact can host multiple systems, given that each system is distinct from all others.
 
-\subsection{Services}
+\subsection{Service}
+\label{sec:reference-model:service}
 
 \begin{figure}[ht!]
   \centering
@@ -66,6 +107,7 @@ The system has its own identity. A single software artifact can host multiple sy
 TODO: Explain function invocation. Separate diagram?
 
 \subsection{System-of-Systems}
+\label{sec:reference-model:system-of-systems}
 
 \begin{figure}[ht!]
   \centering
@@ -76,7 +118,8 @@ TODO: Explain function invocation. Separate diagram?
   \label{fig:system-of-systems}
 \end{figure}
 
-\subsubsection{Local Clouds}
+\subsubsection{Local Cloud}
+\label{sec:reference-model:system-of-systems:local-cloud}
 
 \begin{figure}[ht!]
   \centering
@@ -88,10 +131,12 @@ TODO: Explain function invocation. Separate diagram?
 \end{figure}
 
 \subsubsection{System-of-Local-Clouds}
+\label{sec:reference-model:system-of-systems:system-of-local-clouds}
 
 X
 
-\subsection{Networks}
+\subsection{Network}
+\label{sec:reference-model:network}
 
 \begin{figure}[ht!]
   \centering
@@ -102,7 +147,8 @@ X
   \label{fig:network}
 \end{figure}
 
-\subsection{Interfaces}
+\subsection{Interface}
+\label{sec:reference-model:interface}
 
 \begin{figure}[ht!]
   \centering
@@ -115,7 +161,8 @@ X
 
 TODO: Discussion about difference between interface and service?
 
-\subsection{Policies}
+\subsection{Policy}
+\label{sec:reference-model:policy}
 
 \begin{figure}[ht!]
   \centering
@@ -126,7 +173,8 @@ TODO: Discussion about difference between interface and service?
   \label{fig:policy}
 \end{figure}
 
-\subsection{Protocols}
+\subsection{Protocol}
+\label{sec:reference-model:protocol}
 
 \begin{figure}[ht!]
   \centering
@@ -139,6 +187,7 @@ TODO: Discussion about difference between interface and service?
 
 
 \subsection{Data}
+\label{sec:reference-model:data}
 
 \begin{figure}[ht!]
   \centering
