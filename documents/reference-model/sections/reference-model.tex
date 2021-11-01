@@ -44,6 +44,7 @@ We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}
   \includegraphics{figures/stakeholder}
   \caption{
     The stakeholder as either a person or organization, where each such stakeholder takes on one ore more distinct roles.
+    The depicted roles is not an exhaustive list.
     \GlossaryHyperRef{hid}{HID} is an abbreviation for \GlossaryHyperRef{device-human-interface}{Human Interface Device}.
   }
   \label{fig:stakeholder}
@@ -51,32 +52,54 @@ We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}
 
 The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of that interaction.
 In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{designer}{designer}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant.
-Use of the listed names is preferred over any synonyms when referring to these particular roles.
+Use of the listed five names is preferred over any synonyms when referring to these particular roles.
 Refer to the \hyperref[sec:glossary]{glossary} for their definitions.
 
 \subsection{Entity}
 \label{sec:reference-model:entity}
 
+An \GlossaryHyperRef{entity}{entity} is an \GlossaryHyperRef{artifact}{artifact} that can be distinguished from all other artifacts.
+We use the word \textit{artifact} to refer to any object or thing, physical or intangible.
+As depicted in Figure \ref{fig:entity}, this means that an entity always has an \GlossaryHyperRef{identity}{identity}.
+
 \begin{figure}[ht!]
   \centering
   \includegraphics{figures/entity}
   \caption{
-    X
+    The entity as an artifact with an identity.
+    An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be of value to a \GlossaryHyperRef{stakeholder}{stakeholder}
+    The group of entity types is not exhaustive.
   }
   \label{fig:entity}
 \end{figure}
 
+Having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is any type of \GlossaryHyperRef{data}{data} name associated with the entity in question.
+As long as some form of \GlossaryHyperRef{description}{description} can be produced that unambiguously refers to the artifact in question, it has an identity.
+That being said, certain \GlossaryHyperRef{identification}{identification} requirements, perhaps related to security, performance or discoverability, may make it practically unfeasible not to use identifiers.
+
 \subsection{Device}
 \label{sec:reference-model:device}
+
+A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} that is able to automatically exercise at least one \GlossaryHyperRef{capability}{capability}, which is some form of automation routine that can be performed if triggered by its \GlossaryHyperRef{software}{software}.
+Examples of capabilities include moving robotic arms, reading from sensors, starting software procedures, hosting systems and sending \GlossaryHyperRef{message}{messages}. 
+Every device consists of \GlossaryHyperRef{components-hardware}{hardware components}, which are what concrete facilitate its capabilities.
+Of especial relevance to the Arrowhead framework are the devices that have (1) memory, (2) compute and (3) interfacing components, as shown in Figure \ref{fig:device}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics{figures/device}
   \caption{
-    X
+    The device as an entity with hardware components, together facilitating one or more capabilities.
+    The group of hardware components is not exhaustive.
   }
   \label{fig:device}
 \end{figure}
+
+The devices with the three named components may be able to host \GlossaryHyperRef{system}{systems}, in which case they are referred to as \GlossaryHyperRef{device-system}{system devices}.
+In the context of Arrowhead it is, however, rarely relevant to consider any other devices than those able to host systems.
+If the the context makes it clear that no other type of device is referred to, the word may be used without the qualifier.
+
+\newpage
 
 \subsection{System}
 \label{sec:reference-model:system}

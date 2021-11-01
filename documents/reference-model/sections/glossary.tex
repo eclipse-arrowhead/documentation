@@ -75,17 +75,21 @@ An \GlossaryHyperRef{artifact}{artifact} that is of value to a person or \Glossa
 	}
 
 \GlossaryEntry{capability}{Capability}
-A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-service}{service provider}.
+A task, of any nature, that can be performed by a \GlossaryHyperRef{device}{device}.
 
 	\GlossaryNote{Note 1}{
 		The term must be interpreted as being very general.
-		It includes the abilities of consuming and providing services, reading from sensors, triggering actuators, among many other possible examples.
+		It includes the abilities of hosting \GlossaryHyperRef{system}{systems}, reading from sensors, triggering actuators, among many other possible examples.
 	}
 
 	\GlossaryNote{SOA-RM}{
 		defines a capability as ``a real-world effect that a service provider is able to provide to a service consumer''.
-		Our definition should be interpreted as being equivalent.
+		To leave room for devices to be described as doing other things that \GlossaryHyperRef{provider-service}{providing} or \GlossaryHyperRef{consumer-service}{consuming} services, we made our definition more general.
+		See \GlossaryNameRef{capability-system} for a definition we consider equivalent.
 	}
+
+\GlossaryEntry{capability-system}{Capability, System}
+A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-service}{service provider}.
 
 \GlossaryEntry{cloud}{Cloud}
 A \GlossaryHyperRef{system-of-systems}{system-of-systems} able independently execute given tasks through the use of pools of owned resources.
@@ -138,7 +142,7 @@ See also \GlossaryHyperRef{decode}{decode} and \GlossaryHyperRef{encode}{encode}
 Synonymous to \GlossaryNameRef{encoding}.
 
 \GlossaryEntry{component}{Component}
-An \GlossaryHyperRef{entity}{entity} being part of a \GlossaryHyperRef{system}{system}, contributing to it facilitating its \GlossaryHyperRef{capability}{capabilities}.
+An \GlossaryHyperRef{entity}{entity} being part of a \GlossaryHyperRef{system}{system}, contributing to it facilitating its \GlossaryHyperRef{capability-system}{capabilities}.
 Compare with \GlossaryNameRef{subsystem}.
 
 	\GlossaryNote{Note 1}{
@@ -168,7 +172,7 @@ See \GlossaryNameRef{model-concrete}.
 Making an \GlossaryHyperRef{model-abstract}{abstract model} less abstract by specifying details required to realize it.
 
 \GlossaryEntry{configuration}{Configuration}
-A set of changeable \GlossaryHyperRef{property}{properties} that directly influence the \GlossaryHyperRef{capability}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider}.
+A set of changeable \GlossaryHyperRef{property}{properties} that directly influence the \GlossaryHyperRef{capability-system}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider}.
 
 \GlossaryEntry{configure}{Configure}
 To change a \GlossaryHyperRef{configuration}{configuration}.
@@ -189,7 +193,7 @@ A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-funct
 
 	\GlossaryNote{SOA-RM}{
 		defines a service consumer as ``an entity which seeks to satisfy a particular need through the use [of] capabilities offered by means of a service''.
-		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} rather than just any \GlossaryHyperRef{entity}{entity}, as well as (2) that the \GlossaryHyperRef{capability}{capabilities} of the consumed service be exercised by invoking a function.
+		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} rather than just any \GlossaryHyperRef{entity}{entity}, as well as (2) that the \GlossaryHyperRef{capability-system}{capabilities} of the consumed service be exercised by invoking a function.
 	}
 
 \GlossaryEntry{data}{Data}
@@ -367,7 +371,7 @@ An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHype
 	}
 
 \GlossaryEntry{invocation-function}{Invocation, Function}
-The attempt to exercise the \GlossaryHyperRef{capability}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
+The attempt to exercise the \GlossaryHyperRef{capability-system}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
 
 \GlossaryEntry[(noun)]{message}{Message}
 \GlossaryHyperRef{data}{Data} sent or received via a \GlossaryHyperRef{interface-service}{service interface}.
@@ -538,7 +542,7 @@ A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{pr
 
 	\GlossaryNote{SOA-RM}{
 		defines a service as ``the means by which the needs of a consumer are brought together with the capabilities of a provider''.
-		Our definition is more specific about how the \GlossaryHyperRef{capability}{capabilities} of a service are made available.
+		Our definition is more specific about how the \GlossaryHyperRef{capability-system}{capabilities} of a service are made available.
 	}
 
 	\GlossaryNote{IoTA:AF}{
@@ -606,7 +610,7 @@ A \GlossaryHyperRef{protocol}{protocol} that is \GlossaryHyperRef{protocol-exten
 An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-service}{providing services}, \GlossaryHyperRef{consumer-service}{consuming services}, or both.
 
 	\GlossaryNote{Note 1}{
-		The word ``system'' is more generally understood to be very inclusive, expressing the larger idea of connected \GlossaryHyperRef{component}{components} facilitating one or more \GlossaryHyperRef{capability}{capabilities}.
+		The word ``system'' is more generally understood to be very inclusive, expressing the larger idea of connected \GlossaryHyperRef{component}{components} facilitating one or more \GlossaryHyperRef{capability-system}{capabilities}.
 		From the perspective of Arrowhead, however, capabilities can only be \GlossaryHyperRef{invocation-function}{invoked} through \GlossaryHyperRef{service}{services}, which means that a system unable to provide or consume services can only be described as a component of another system.
 	}
 
@@ -622,10 +626,10 @@ An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-servi
 	}
 
 \GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
-A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
+A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
 
 \GlossaryEntry{system-of-systems}{System-of-Systems (SoS)}
-A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability}{capability} none of the constituent systems could \GlossaryHyperRef{provider-service}{provide} on its own.
+A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent systems could \GlossaryHyperRef{provider-service}{provide} on its own.
 
 	\GlossaryNote{IoTA:AF}{
 		defines a system-of-systems as ``a set of system, which [...] exchange information by means of services''.
