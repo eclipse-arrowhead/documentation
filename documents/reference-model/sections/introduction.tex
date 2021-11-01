@@ -6,53 +6,17 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-We, the Eclipse Arrowhead project, here present and authoritative set of Arrowhead concept definitions, meant to serve as the foundational language for discussions about and the modeling of Arrowhead-based designs.
-This document exists to help mitigate compatibility and consistency issues in software, tooling, models, documentation and all other things of relevance to the Arrowhead framework.
-
-\subsection{The Arrowhead Framework and Industry 4.0}
-\label{sec:introduction:arrowhead}
-
-The Arrowhead framework is two things.
-Firstly, it is a set of assumptions, concepts, values and practices that frame the problem domain of \textit{designing service-oriented Industry 4.0 systems}.
-Secondly, it is a set of software specifications, implementations and other artifacts meant to help address that problem domain.
-As have already been established, this document is concerned primarily with essential concepts of the Arrowhead framework.
-
-What is Industry 4.0 and how does Arrowhead relate to it?
-We understand Industry 4.0 to be the expectation that factory automation will keep becoming increasingly computerized, digitized and interconnected.
-More aspects of and surrounding manufacturing is handled by computers, more information is being made available to computers and, finally, comparatively more computers are given the opportunity to collect, communicate and act on that information.
+We expect industrial automation to keep becoming increasingly computerized, digitized and interconnected.
+This means that more aspects of and surrounding manufacturing is handled by computers, more information is being made available to those computers and, finally, comparatively more computers are given the opportunity to collect, communicate and act on that information.
 This development is leading to increased industrial efficiency and flexibility, as machines become able to perform more of the work traditionally assigned to humans.
-However, it also leads to new magnitudes of complexity, something currently prevailing automation systems are unable to manage.
+However, it also leads to new magnitudes of complexity, something we believe the currently prevailing automation systems will remain unable to manage \cite{delsing2017iot}.
 
-The Arrowhead framework is a means to address this explosion of industrial complexity.
-It provides a foundation for service-oriented communication between Industry 4.0 systems, such that interoperability, security, safety and other major concerns can be addressed efficiently and effectively.
-It allows for system capabilities to be described, shared and exploited dynamically by communicating machines.
-In this document, we establish the language necessary to be able to describe solutions produced in the context of the framework.
+The \GlossaryHyperRef{framework-arrowhead}{\textit{Arrowhead framework}} is a means to address this explosion of industrial complexity.
+It provides a foundation for \GlossaryHyperRef{communication-service-oriented}{\textit{service-oriented communication}} \cite{mackenzie2006reference} between automation systems, such that interoperability, security, safety and other major concerns can be addressed efficiently and effectively.
+It notably allows for \GlossaryHyperRef{system}{system} \GlossaryHyperRef{capability}{capabilities} to be \GlossaryHyperRef{describe}{described}, shared and exploited dynamically by communicating \GlossaryHyperRef{device}{devices}.
 
-\subsection{Scope}
-\label{sec:introduction:scope}
-
-In this document, we outline a \GlossaryHyperRef{model-reference}{\textit{reference model}}.
-We understand such to be a set of definitions for technical concepts of fundamental importance to a specific problem domain.
-Such a document does not specify how its definitions should be used to design systems, either abstract or concrete.
-Neither does it build upon or endorse any particular modeling tools or languages.
-
-Reference models can be used as vocabularies for defining \GlossaryHyperRef{architecture-reference}{reference architectures}, which in turn can be used to derive \GlossaryHyperRef{architecture}{concrete architectures} and, finally, \GlossaryHyperRef{implementation-software}{software implementations}, as illustrated in Figure \ref{fig:reference-model}.
-
-\vspace*{\fill}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics{figures/reference-model}
-  \caption{
-    The steps from reference model to implementation, going from highly abstract to entirely concrete.
-    Reference models define fundamental concepts, reference architectures add abstract design constraints rooted in real-world observation or experiences, concrete architectures makes those design constraints practically realizable, while implementations represent their actual realization.
-  }
-  \label{fig:reference-model}
-\end{figure}
-
-\vspace*{\fill}
-
-\newpage
+In this document, we, the Eclipse Arrowhead project, present and authoritative set of concept definitions, meant to serve as the fundamental language for discussions about and the modeling of Arrowhead-based \GlossaryHyperRef{design}{designs}.
+These definitions exist to help mitigate compatibility and consistency issues in \GlossaryHyperRef{software}{software}, tooling, \GlossaryHyperRef{model}{models}, documentation and all other things of relevance to the Arrowhead framework.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
@@ -65,10 +29,25 @@ This document is being written and maintained with the following primary audienc
 \item \textit{Decision makers, users and other stakeholders} that need to understand fundamental Arrowhead concepts.
 \end{itemize}
 
-Those seeking a less technically rigorous description of Arrowhead may want to focus their reading on Section \ref{sec:arrowhead}.
-Others are advised to read all sections carefully, in the order they are presented, except for Section \ref{sec:glossary}.
-That section contains a glossary of significant terms and abbreviations and is meant to be used as a reference for modeling and documentation efforts.
-Some may, however, find it rewarding to read it from beginning to end.
+Those seeking a less detailed description of Arrowhead may want to focus their reading on Section \ref{sec:arrowhead}.
+
+\subsection{Scope}
+\label{sec:introduction:scope}
+
+The concepts described in this document make up a so-called \GlossaryHyperRef{model-reference}{\textit{reference model}}, which we understand to be a set of definitions for technical concepts of fundamental importance to a specific problem domain.
+Such a document does not specify how its definitions should be used to design systems, either abstract or concrete.
+
+Reference models can be used as vocabularies for defining \GlossaryHyperRef{architecture-reference}{reference architectures}, which in turn can be used to derive \GlossaryHyperRef{architecture}{concrete architectures} and, finally, \GlossaryHyperRef{implementation-software}{software implementations}, as illustrated in Figure \ref{fig:reference-model}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics{figures/reference-model}
+  \caption{
+    The steps from reference model to implementation, going from highly abstract to entirely concrete.
+    Reference models define fundamental concepts, reference architectures add abstract design constraints rooted in real-world observation or experiences, concrete architectures makes those design constraints practically realizable, while implementations represent their actual realization.
+  }
+  \label{fig:reference-model}
+\end{figure}
 
 \subsection{Notational Conventions}
 \label{sec:introduction:conventions}
@@ -110,10 +89,10 @@ They do, however, apply to all parts of the document.
 \subsection{Relationships to Other Documents}
 \label{sec:introduction:relationships}
 
-The reference model outlined in this document was written while considering the following works:
+When this \GlossaryHyperRef{model-reference}{reference model} was produced, care was taken to reuse or build upon the concepts presented in the following works:
 
 \begin{enumerate}
-\item \textit{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural view of Industry 4.0.
+\item \textbf{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural view of \GlossaryHyperRef{industry40}{\textit{Industry 4.0}}.
 The document may be seen as a predecessor to, or major influence on, the conceptual aspects of the Arrowhead framework.
 In particular, the document describes how to model and design communicating industrial systems such that key Industry 4.0 characteristics can be facilitated, such as high degrees of dynamicity and interoperability.
 However, as RAMI4.0 is a reference \textit{architecture} rather than a reference \textit{model}, we have only been concerned with what concepts it defines and what problems it frames.
@@ -121,23 +100,18 @@ This delimitation excludes its ``architectural layers'', ``life-cycle \& value-s
 These excluded aspects are neither condemned nor endorsed by this document.
 They are simply outside its scope.
 
-\item \textit{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
-The paradigm was chosen as the primary mode of communication for RAMI4.0, as well as for the Arrowhead framework.
-While RAMI4.0 does not include SOA-RM in its normative reference list, it does mention the standard and requires that all communications adhere to SOA principles, which should mean that the two standards are mostly compatible.
-While reading through the documents ourselves we found no major discrepancies.
+\item \textbf{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
+As communication between \GlossaryHyperRef{system}{systems} of the Arrowhead framework is understood to follow this paradigm, it becomes particularly relevant to consider.
 
-\item \textit{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
+\item \textbf{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
 The book most significantly represents the state of the Arrowhead framework up until it was written.
 Even though the framework has evolved since the book was written, it still represents the most complete view of the framework.
-The chapters we are concerned with are still very much up to date.
 While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance to this document.
 
 \end{enumerate}
 
-You are not assumed to have read any of the above documents prior to reading this.
-Concepts derived from the above sources are reiterated in this document as necessary.
-Only adherence to IoTA:AF is observed strictly, which means that concept definitions presented here may diverge from those of the other two works.
-All significant terminology differences are noted in the glossary of Section \ref{sec:glossary} under each definition of concern.
+Only conformity with IoTA:AF is observed strictly, which means that concept definitions presented here may diverge from those of the other two works.
+All significant terminology differences are noted in the glossary of Section \ref{sec:glossary}, which briefly defines all concepts of relevance to this document.
 
 \subsection{Section Overview}
 \label{sec:introduction:sections}
