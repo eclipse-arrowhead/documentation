@@ -41,7 +41,7 @@ We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/stakeholder}
+  \includegraphics[scale=0.9]{figures/stakeholder}
   \caption{
     The stakeholder as either a person or organization, where each such stakeholder takes on one ore more distinct roles.
     The depicted roles is not an exhaustive list.
@@ -52,7 +52,7 @@ We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}
 
 The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of that interaction.
 In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{designer}{designer}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant.
-Use of the listed five names is preferred over any synonyms when referring to these particular roles.
+The listed five names should be used rather than any synonyms when referring to these particular roles.
 Refer to the \hyperref[sec:glossary]{glossary} for their definitions.
 
 \subsection{Entity}
@@ -64,7 +64,7 @@ As depicted in Figure \ref{fig:entity}, this means that an entity always has an 
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/entity}
+  \includegraphics[scale=0.9]{figures/entity}
   \caption{
     The entity as an artifact with an identity.
     An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be of value to a \GlossaryHyperRef{stakeholder}{stakeholder}.
@@ -73,6 +73,8 @@ As depicted in Figure \ref{fig:entity}, this means that an entity always has an 
   }
   \label{fig:entity}
 \end{figure}
+
+\vspace*{1mm}
 
 Having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is data, of any conceivable \GlossaryHyperRef{type-data}{type}, naming the entity in question.
 As long as some form of \GlossaryHyperRef{description}{description} can be produced that unambiguously refers to the artifact in question, it has an identity.
@@ -89,7 +91,7 @@ While there are not limits to what components can make up a device, they must al
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/device}
+  \includegraphics[scale=0.9]{figures/device}
   \caption{
     The device as an entity with hardware components, together facilitating one or more capabilities.
     The group of hardware components is not exhaustive.
@@ -97,6 +99,8 @@ While there are not limits to what components can make up a device, they must al
   }
   \label{fig:device}
 \end{figure}
+
+\vspace*{2mm}
 
 Devices may be able to host systems, in which case they may be referred to as \GlossaryHyperRef{device-system}{system devices}.
 However, as it is rarely relevant to consider any other devices than those able to host systems, the ``system'' qualifier should be omitted if the context makes it clear that no other type of device is being referred to.
@@ -106,13 +110,14 @@ Examples of such qualifier could be ``constrained'', ``legacy'' or ``application
 \subsection{System}
 \label{sec:reference-model:system}
 
-A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{entity}{entity} facilitated by \GlossaryHyperRef{software}{software} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}.
-As shown in Figure \ref{fig:system}, a system consists of at least three \GlossaryHyperRef{component-software}{software components}, which are (1) \GlossaryHyperRef{state-software}{state}, (2) \GlossaryHyperRef{procedure-software}{procedures} and (3) \GlossaryHyperRef{interface-system}{system interfaces}, out of which the last two are required.
-These components correspond to and are facilitated by the (1) \GlossaryHyperRef{memory}{memory}, (2) \GlossaryHyperRef{computer}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components of the hosting device.
+A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}.
+As shown in Figure \ref{fig:system}, systems consists of \GlossaryHyperRef{component-software}{software components}.
+Some significant such components are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{procedure-software}{procedures} and (3) \GlossaryHyperRef{interface-system}{system interfaces}, which are facilitated by the (1) \GlossaryHyperRef{memory}{memory}, (2) \GlossaryHyperRef{computer}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components of a device.
+A system with these components should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}.
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/system}
+  \includegraphics[scale=0.9]{figures/system}
   \caption{
     The system as a collection of related software components, able to trigger zero or more capabilities of its hosting device.
     The group of software components is not exhaustive.
@@ -121,30 +126,42 @@ These components correspond to and are facilitated by the (1) \GlossaryHyperRef{
   \label{fig:system}
 \end{figure}
 
-Each system must have its own \GlossaryHyperRef{identity}{identity} and should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}.
-There is no particular way in which a system must be facilitated.
-They are not required to run in their own operating system processes, use any particular programming languages, virtual machines or databases, and so on.
+This rather open-ended definition of ``system'' makes it possible for such to be realized in many ways.
+A system may or may not run in its own operating system process, use a certain virtual machine, and so on.
 
 \subsection{Service}
 \label{sec:reference-model:service}
 
+A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{function}{functions} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, allowing for other systems to trigger its \GlossaryHyperRef{capability-system}{capabilities} by sending \GlossaryHyperRef{message}{messages} to those functions.
+The act of sending a message to a certain service function is referred to as \GlossaryHyperRef{consumer-service}{\textit{consuming}} that service.
+As depicted in Figure \ref{fig:service}, every service consists of at least three \GlossaryHyperRef{component-software}{software components} owned or facilitated by its provider.
+These are (1) \GlossaryHyperRef{state-software}{states}, (2) functions and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
+
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/service}
+  \includegraphics[scale=0.9]{figures/service}
   \caption{
-    X
+    The service as means for a consuming system to trigger capabilities of a providing system.
+    The group of software components is not exhaustive.
+    See the caption of Figure \ref{fig:system} for a list of possible examples.
   }
   \label{fig:service}
 \end{figure}
 
-TODO: Explain function invocation. Separate diagram?
+Services receive messages via their interfaces, which must \GlossaryHyperRef{routing-message}{route} them to the functions they target.
+A function receiving a message must guarantee that it adheres to its \GlossaryHyperRef{protocol-function}{protocol} and satisfies all of its \GlossaryHyperRef{policy}{policies}, after which it must concretely handle the request described in the message.
+The function protocol dictates what \GlossaryHyperRef{data}{data} must be in the message, among other things, while the function policies may require that certain authorization tokens can be presented, that a future time slot in a real-time network has been allocated, and so on.
+
+Please refer to Section \ref{sec:reference-model:interface} for more details about how a service receives messages via its interfaces, to Section \ref{sec:reference-model:policy} for more information about different kinds of policies, and to Section \ref{sec:reference-model:protocol} for more details about what protocols are and how functions implement them.
+
+\newpage
 
 \subsection{System-of-Systems}
 \label{sec:reference-model:system-of-systems}
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/system-of-systems}
+  \includegraphics[scale=0.9]{figures/system-of-systems}
   \caption{
     X
   }
@@ -156,7 +173,7 @@ TODO: Explain function invocation. Separate diagram?
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/local-cloud}
+  \includegraphics[scale=0.9]{figures/local-cloud}
   \caption{
     X
   }
@@ -173,7 +190,7 @@ X
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/network}
+  \includegraphics[scale=0.9]{figures/network}
   \caption{
     X
   }
@@ -185,7 +202,7 @@ X
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/interface}
+  \includegraphics[scale=0.9]{figures/interface}
   \caption{
     X
   }
@@ -199,7 +216,7 @@ TODO: Discussion about difference between interface and service?
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/policy}
+  \includegraphics[scale=0.9]{figures/policy}
   \caption{
     X
   }
@@ -211,7 +228,7 @@ TODO: Discussion about difference between interface and service?
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/protocol}
+  \includegraphics[scale=0.9]{figures/protocol}
   \caption{
     X
   }
@@ -224,7 +241,7 @@ TODO: Discussion about difference between interface and service?
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics{figures/data}
+  \includegraphics[scale=0.9]{figures/data}
   \caption{
     X
   }
