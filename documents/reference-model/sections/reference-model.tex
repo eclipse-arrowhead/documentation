@@ -157,11 +157,15 @@ If it becomes relevant to distinguish the functions of programming languages wit
 \subsection{System-of-Systems}
 \label{sec:reference-model:system-of-systems}
 
+A \GlossaryHyperRef{system-of-systems}{system-of-systems} is an \GlossaryHyperRef{identification}{identifiable} set of at least two \GlossaryHyperRef{system}{systems}, together facilitating one or more \GlossaryHyperRef{capability-system}{capabilities} none of the constituent systems could have on its own.
+In other words, if a system \GlossaryHyperRef{consumer-service}{consumes} a \GlossaryHyperRef{service}{service} of another system, those two form a system-of-systems.
+As illustrated in Figure \ref{fig:system-of-systems}, there are two types of systems-of-systems of particular relevance to the Arrowhead framework, (1) the \GlossaryHyperRef{cloud-local}{local cloud} and (2) the \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds}, which are described in the following two sections.
+
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/system-of-systems}
   \caption{
-    X
+    The system-of-system as a group of two or more systems, together facilitating new capabilities.
   }
   \label{fig:system-of-systems}
 \end{figure}
@@ -169,19 +173,33 @@ If it becomes relevant to distinguish the functions of programming languages wit
 \subsubsection{Local Cloud}
 \label{sec:reference-model:system-of-systems:local-cloud}
 
+A \GlossaryHyperRef{cloud-local}{local cloud} is a \GlossaryHyperRef{boundary-cloud}{bounded} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
+As depicted in Figure \ref{fig:local-cloud}, the local cloud is distinct from other types of \GlossaryHyperRef{cloud}{clouds} by having at least one local boundary and one local resource, which means that it is physically tied to a concrete location.
+A local cloud could be engaged in manufacturing, repairs, heating, electricity distribution, workspace monitoring, drone fleet control, among many other possible kinds of physical activities.
+A local cloud may be stationary or mobile.
+A cloud that has no resources or boundaries tied to any particular physical locations should be referred to as a \GlossaryHyperRef{cloud-virtual}{\textit{virtual cloud}}.
+
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/local-cloud}
   \caption{
-    X
+    The local cloud as a regular cloud with at least one local boundary and one local resource.
   }
   \label{fig:local-cloud}
 \end{figure}
 
+That a local cloud has a boundary means that a distinction is being made between \GlossaryHyperRef{system}{systems} inside and outside the cloud.
+A boundary being local means that the distinction is being made by a physical \GlossaryHyperRef{property}{property}, such as device location, type of hosting device, or device \GlossaryHyperRef{owner}{owner}.
+Boundaries may be protected, which means that certain measures are in place to guarantee security, safety, real-time characteristics, or other local cloud properties.
+The resources of a local cloud may be of any type, from virtual compute resources to physical drills or pumps.
+A system \GlossaryHyperRef{management}{managing} a resource may be referred to as a \GlossaryHyperRef{system-supervisory}{\textit{supervisory system}}.
+
 \subsubsection{System-of-Local-Clouds}
 \label{sec:reference-model:system-of-systems:system-of-local-clouds}
 
-X
+A \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds} is two or more \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} to facilitate new \GlossaryHyperRef{capability-system}{capabilities}.
+It is similar to the local cloud, with the exception of its \GlossaryHyperRef{subsystem}{subsystems} are \GlossaryHyperRef{cloud-local}{local clouds} instead of plain \GlossaryHyperRef{system}{systems}.
+It has at least one common \GlossaryHyperRef{boundary-cloud}{boundary}, but no resources beyond those of its constituent clouds.
 
 \subsection{Network}
 \label{sec:reference-model:network}
