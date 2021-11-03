@@ -9,6 +9,8 @@
 This section is what constitutes the \GlossaryHyperRef{model-reference}{reference model} of this document.
 Each of its subsections \GlossaryHyperRef{description}{describes} a primary Arrowhead concept, which are as follows:
 
+\vspace*{0.5cm}
+
 \noindent\begin{tabularx}{\textwidth}{@{} p{0.9cm} p{4.3cm} X @{}}
 
 \ref{sec:reference-model:stakeholder}                              & \textbf{\nameref{sec:reference-model:stakeholder}}                              & A person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in an \GlossaryHyperRef{entity}{entity} or undertaking. \\
@@ -17,12 +19,12 @@ Each of its subsections \GlossaryHyperRef{description}{describes} a primary Arro
 \ref{sec:reference-model:system}                                   & \textbf{\nameref{sec:reference-model:system}}                                   & A \GlossaryHyperRef{instance-software}{software instance} able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}. \\
 \ref{sec:reference-model:service}                                  & \textbf{\nameref{sec:reference-model:service}}                                  & A set of \GlossaryHyperRef{function}{functions} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system} for other systems to \GlossaryHyperRef{consumer-service}{consume}. \\
 \ref{sec:reference-model:system-of-systems}                        & \textbf{\nameref{sec:reference-model:system-of-systems}}                        & A set of \GlossaryHyperRef{system}{systems} together facilitating new \GlossaryHyperRef{capability-system}{capabilities}. \\
-\ref{sec:reference-model:system-of-systems:local-cloud}            & \textbf{\nameref{sec:reference-model:system-of-systems:local-cloud}}            & A \GlossaryHyperRef{boundary-cloud}{bounded} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.\\
-\ref{sec:reference-model:system-of-systems:system-of-local-clouds} & \textbf{\nameref{sec:reference-model:system-of-systems:system-of-local-clouds}} & A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} to facilitate new \GlossaryHyperRef{capability-system}{capabilities}.\\
-\ref{sec:reference-model:network}                                  & \textbf{\nameref{sec:reference-model:network}}                                  & A set \GlossaryHyperRef{device}{devices}, connected such that any \GlossaryHyperRef{system}{systems} they host are can \GlossaryHyperRef{communication}{communicate}.\\
-\ref{sec:reference-model:interface}                                & \textbf{\nameref{sec:reference-model:interface}}                                & A point where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between two \GlossaryHyperRef{entity}{entities}, or between an entity and a person.\\
-\ref{sec:reference-model:policy}                                   & \textbf{\nameref{sec:reference-model:policy}}                                   & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for a certain activity to be permitted.\\
-\ref{sec:reference-model:protocol}                                 & \textbf{\nameref{sec:reference-model:protocol}}                                 & A \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{system}{systems} as dictated by certain \GlossaryHyperRef{state-protocol}{states}.\\
+\ref{sec:reference-model:system-of-systems:local-cloud}            & \textbf{\nameref{sec:reference-model:system-of-systems:local-cloud}}            & A \GlossaryHyperRef{cloud}{cloud} with a local \GlossaryHyperRef{boundary-cloud}{boundary} and local \GlossaryHyperRef{resource}{resources}.\\
+\ref{sec:reference-model:system-of-systems:system-of-local-clouds} & \textbf{\nameref{sec:reference-model:system-of-systems:system-of-local-clouds}} & A set of \GlossaryHyperRef{cloud-local}{local clouds} that jointly facilitate new \GlossaryHyperRef{capability-system}{capabilities}.\\
+\ref{sec:reference-model:network}                                  & \textbf{\nameref{sec:reference-model:network}}                                  & A set of \GlossaryHyperRef{device}{devices} whose \GlossaryHyperRef{system}{systems} can \GlossaryHyperRef{communication}{communicate}.\\
+\ref{sec:reference-model:interface}                                & \textbf{\nameref{sec:reference-model:interface}}                                & A point where \GlossaryHyperRef{message}{messages} pass between \GlossaryHyperRef{entity}{entities}, or an entity and a person.\\
+\ref{sec:reference-model:policy}                                   & \textbf{\nameref{sec:reference-model:policy}}                                   & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for an activity to be permitted.\\
+\ref{sec:reference-model:protocol}                                 & \textbf{\nameref{sec:reference-model:protocol}}                                 & A \GlossaryHyperRef{description}{description} of how \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities}.\\
 
 \end{tabularx}
 
@@ -34,6 +36,8 @@ In this context, we understand \textit{stake} to refer to any type of engagement
 The concept is illustrated in Figure \ref{fig:stakeholder}, which also lists five reasons why a given person or organization could be considered to be a stakeholder.
 We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}.
 
+\vspace*{0.3cm}
+
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/stakeholder}
@@ -44,6 +48,8 @@ We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}
   }
   \label{fig:stakeholder}
 \end{figure}
+
+\vspace*{0.1cm}
 
 The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of that interaction.
 In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{designer}{designer}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant.
@@ -267,7 +273,7 @@ Failing to satisfy a policy should mean that the consumer in question is notifie
 \subsection{Protocol}
 \label{sec:reference-model:protocol}
 
-A \GlossaryHyperRef{protocol}{protocol} is a \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{system}{systems} as dictated by zero or more \GlossaryHyperRef{state-protocol}{states}.
+A \GlossaryHyperRef{protocol}{protocol} is a \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities} as dictated by zero or more \GlossaryHyperRef{state-protocol}{states}.
 Received messages may be rejected by violating a current state, or cause a state to be updated.
 States may also be updated by other events. 
 As illustrated in Figure \ref{fig:protocol}, a protocol may be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, may be constrained by \GlossaryHyperRef{profile-protocol}{profiles}, and defines its messages in terms of at least one \GlossaryHyperRef{encoding}{encoding}.
@@ -284,4 +290,4 @@ As illustrated in Figure \ref{fig:protocol}, a protocol may be defined as an \Gl
 A profile narrows down what a particular protocol is permitted to express, for example by requiring that authorization tokens be included in requests, or that a certain message payload semantics be observed.
 Adding a profile to a protocol not already conforming to it produces a new protocol.
 An encoding introduces a type system in which message payloads can be expressed.
-If a protocol defines its messages without referring to an encoding, it is considered to have an \textit{implicit} encoding.
+If a protocol defines its messages without referring to an encoding, it is considered to have a \textit{custom} encoding.
