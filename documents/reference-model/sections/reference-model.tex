@@ -9,27 +9,22 @@
 This section is what constitutes the \GlossaryHyperRef{model-reference}{reference model} of this document.
 Each of its subsections \GlossaryHyperRef{description}{describes} a primary Arrowhead concept, which are as follows:
 
-\vspace*{0.25cm}
-\begin{itemize}[leftmargin=1.2cm,rightmargin=0pt,labelwidth=1cm,labelsep=0pt,itemindent=0pt,parsep=0pt,topsep=0pt,align=left]
-\item[\ref{sec:reference-model:stakeholder}] \textbf{\nameref{sec:reference-model:stakeholder}}
-\item[\ref{sec:reference-model:entity}] \textbf{\nameref{sec:reference-model:entity}}
-\item[\ref{sec:reference-model:device}] \textbf{\nameref{sec:reference-model:device}}
-\item[\ref{sec:reference-model:system}] \textbf{\nameref{sec:reference-model:system}}
-\item[\ref{sec:reference-model:service}] \textbf{\nameref{sec:reference-model:service}}
-\item[\ref{sec:reference-model:system-of-systems}] \textbf{\nameref{sec:reference-model:system-of-systems}}
-\vspace*{0.1cm}
-\begin{itemize}[leftmargin=1cm,rightmargin=0pt,labelwidth=1cm,labelsep=0pt,itemindent=0pt,parsep=0.05cm,topsep=0.05cm,align=left]
-  \item[\ref{sec:reference-model:system-of-systems:local-cloud}] \textbf{\nameref{sec:reference-model:system-of-systems:local-cloud}}
-  \item[\ref{sec:reference-model:system-of-systems:system-of-local-clouds}] \textbf{\nameref{sec:reference-model:system-of-systems:system-of-local-clouds}}
-\end{itemize}
-\vspace*{0.1cm}
-\item[\ref{sec:reference-model:network}] \textbf{\nameref{sec:reference-model:network}}
-\item[\ref{sec:reference-model:interface}] \textbf{\nameref{sec:reference-model:interface}}
-\item[\ref{sec:reference-model:policy}] \textbf{\nameref{sec:reference-model:policy}}
-\item[\ref{sec:reference-model:protocol}] \textbf{\nameref{sec:reference-model:protocol}}
-\item[\ref{sec:reference-model:data}] \textbf{\nameref{sec:reference-model:data}}
-\end{itemize}
-\vspace*{0.25cm}
+\noindent\begin{tabularx}{\textwidth}{@{} p{0.9cm} p{4.3cm} X @{}}
+
+\ref{sec:reference-model:stakeholder}                              & \textbf{\nameref{sec:reference-model:stakeholder}}                              & A person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in an \GlossaryHyperRef{entity}{entity} or undertaking. \\
+\ref{sec:reference-model:entity}                                   & \textbf{\nameref{sec:reference-model:entity}}                                   & An \GlossaryHyperRef{artifact}{artifact} that can be distinguished from all other artifacts. \\
+\ref{sec:reference-model:device}                                   & \textbf{\nameref{sec:reference-model:device}}                                   & A physical \GlossaryHyperRef{entity}{entity} able to automatically exercise at least one \GlossaryHyperRef{capability}{capability}. \\
+\ref{sec:reference-model:system}                                   & \textbf{\nameref{sec:reference-model:system}}                                   & A \GlossaryHyperRef{instance-software}{software instance} able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}. \\
+\ref{sec:reference-model:service}                                  & \textbf{\nameref{sec:reference-model:service}}                                  & A set of \GlossaryHyperRef{function}{functions} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system} for other systems to \GlossaryHyperRef{consumer-service}{consume}. \\
+\ref{sec:reference-model:system-of-systems}                        & \textbf{\nameref{sec:reference-model:system-of-systems}}                        & A set of \GlossaryHyperRef{system}{systems} together facilitating new \GlossaryHyperRef{capability-system}{capabilities}. \\
+\ref{sec:reference-model:system-of-systems:local-cloud}            & \textbf{\nameref{sec:reference-model:system-of-systems:local-cloud}}            & A \GlossaryHyperRef{boundary-cloud}{bounded} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.\\
+\ref{sec:reference-model:system-of-systems:system-of-local-clouds} & \textbf{\nameref{sec:reference-model:system-of-systems:system-of-local-clouds}} & A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} to facilitate new \GlossaryHyperRef{capability-system}{capabilities}.\\
+\ref{sec:reference-model:network}                                  & \textbf{\nameref{sec:reference-model:network}}                                  & A set \GlossaryHyperRef{device}{devices}, connected such that any \GlossaryHyperRef{system}{systems} they host are can \GlossaryHyperRef{communication}{communicate}.\\
+\ref{sec:reference-model:interface}                                & \textbf{\nameref{sec:reference-model:interface}}                                & A point where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between two \GlossaryHyperRef{entity}{entities}, or between an entity and a person.\\
+\ref{sec:reference-model:policy}                                   & \textbf{\nameref{sec:reference-model:policy}}                                   & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for a certain activity to be permitted.\\
+\ref{sec:reference-model:protocol}                                 & \textbf{\nameref{sec:reference-model:protocol}}                                 & A \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{system}{systems} as dictated by certain \GlossaryHyperRef{state-protocol}{states}.\\
+
+\end{tabularx}
 
 \subsection{Stakeholder}
 \label{sec:reference-model:stakeholder}
@@ -251,37 +246,42 @@ The protocol stack of the system in the previous example would be Ethernet, IP, 
 \subsection{Policy}
 \label{sec:reference-model:policy}
 
+A \GlossaryHyperRef{policy}{policy} is a set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied for a certain activity to be permitted.
+Policies may be concerned with authorization, contracts, economic goals, and so on.
+As depicted in Figure \ref{fig:policy}, there are two categories of policies of particular relevance, (1) \GlossaryHyperRef{policy-service}{service policies} and (2) \GlossaryHyperRef{policy-function}{function policies}.
+
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/policy}
   \caption{
-    X
+    The two categories of policies of highest relevance to this reference model, service and function policies, as well as some examples of possible function policies.
+    The group of policy types is not exhaustive.
   }
   \label{fig:policy}
 \end{figure}
 
+A function policy must be satisfied for a system to be allowed to \GlossaryHyperRef{consumer-service}{consume} a particular \GlossaryHyperRef{function-service}{service function}.
+A service policy, on the other hand, is a policy that applies to all \GlossaryHyperRef{function-service}{functions} of a given \GlossaryHyperRef{service}{service}.
+Failing to satisfy a policy should mean that the consumer in question is notified about the specific policy or policies being violated.
+
 \subsection{Protocol}
 \label{sec:reference-model:protocol}
+
+A \GlossaryHyperRef{protocol}{protocol} is a \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{system}{systems} as dictated by zero or more \GlossaryHyperRef{state-protocol}{states}.
+Received messages may be rejected by violating a current state, or cause a state to be updated.
+States may also be updated by other events. 
+As illustrated in Figure \ref{fig:protocol}, a protocol may be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, may be constrained by \GlossaryHyperRef{profile-protocol}{profiles}, and defines its messages in terms of at least one \GlossaryHyperRef{encoding}{encoding}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/protocol}
   \caption{
-    X
+    The protocol as set of state and message types, constrained by profiles and encodings.
   }
   \label{fig:protocol}
 \end{figure}
 
-\newpage
-
-\subsection{Data}
-\label{sec:reference-model:data}
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.9]{figures/data}
-  \caption{
-    X
-  }
-  \label{fig:data}
-\end{figure}
+A profile narrows down what a particular protocol is permitted to express, for example by requiring that authorization tokens be included in requests, or that a certain message payload semantics be observed.
+Adding a profile to a protocol not already conforming to it produces a new protocol.
+An encoding introduces a type system in which message payloads can be expressed.
+If a protocol defines its messages without referring to an encoding, it is considered to have an \textit{implicit} encoding.
