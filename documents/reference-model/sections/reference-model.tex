@@ -204,28 +204,49 @@ It has at least one common \GlossaryHyperRef{boundary-cloud}{boundary}, but no r
 \subsection{Network}
 \label{sec:reference-model:network}
 
+A \GlossaryHyperRef{network}{network} is a set of two or more \GlossaryHyperRef{device-end}{end devices}, connected in such a manner that any \GlossaryHyperRef{system}{systems} they host are able to \GlossaryHyperRef{communication}{communicate}.
+As shown in Figure \ref{fig:network}, end devices may be interconnected via \GlossaryHyperRef{device-intermediary}{intermediary devices}.
+
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/network}
   \caption{
-    X
+    The network as a set of connected end devices, potentially interconnected by intermediary devices.
   }
   \label{fig:network}
 \end{figure}
 
+Both end devices and intermediary devices are regular \GlossaryHyperRef{device}{devices}, which means that they have \GlossaryHyperRef{interface-device}{device interfaces} through which they can send and receive \GlossaryHyperRef{message}{messages}.
+Only \GlossaryHyperRef{device-connected}{\textit{connected} devices} can pass messages between their interfaces, however.
+Intermediary devices pass on messages to other devices instead of handling them by themselves.
+Examples of intermediary devices are routers, switches, and firewalls.
+The interfaces of an intermediary device used for passing on messages are referred to as \GlossaryHyperRef{interface-network}{network interfaces}.
+Use of the term ``end device'' is only recommended when a distinction needs to be made between end and intermediary devices.
+
 \subsection{Interface}
 \label{sec:reference-model:interface}
+
+An \GlossaryHyperRef{interface}{interface} is a point where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between two \GlossaryHyperRef{entity}{entities}, or between an entity and a person.
+As outlined in Figure \ref{fig:interface}, there are three types of interfaces of particular relevance in the context of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, (1) the \GlossaryHyperRef{interface-device}{device interface}, (2) the \GlossaryHyperRef{interface-system}{system interface}, and (3) the \GlossaryHyperRef{interface-service}{service interface}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/interface}
   \caption{
-    X
+    The interface as the point where messages pass between two entities, or between an entity and a person.
   }
   \label{fig:interface}
 \end{figure}
 
-TODO: Discussion about difference between interface and service?
+Device interfaces connect \GlossaryHyperRef{device}{devices}, system interfaces connect \GlossaryHyperRef{system}{systems}, and service interfaces connect \GlossaryHyperRef{consumer-service}{service consumers} with \GlossaryHyperRef{provider-service}{service providers}.
+Each of these interface levels depend on the layer below it, with the exception of the device interface at the bottom.
+As each interface supports its own set of protocols, each interface layer must support a protocol that extends that of the below layer.
+A device interface may, for example, support the IP \cite{deering2017internet} protocol via Ethernet \cite{iso202188023}, a system interface the HTTP \cite{fielding2014hypertext} protocol via TCP \cite{postel1981transmission}, and a service interface a custom HTTP extension enabling it to \GlossaryHyperRef{router-message}{route} messages to the \GlossaryHyperRef{function-service}{functions} of its \GlossaryHyperRef{service}{service}.
+Note that the protocol at each layers may consist of multiple protocols extending each other, as in this example.
+A particular chain of protocols supported by a device, system or service is referred to as a \GlossaryHyperRef{stack-protocol}{\textit{protocol stack}}.
+The protocol stack of the system in the previous example would be Ethernet, IP, TCP and HTTP, from the bottom and up.
+
+\newpage
 
 \subsection{Policy}
 \label{sec:reference-model:policy}
@@ -251,6 +272,7 @@ TODO: Discussion about difference between interface and service?
   \label{fig:protocol}
 \end{figure}
 
+\newpage
 
 \subsection{Data}
 \label{sec:reference-model:data}
