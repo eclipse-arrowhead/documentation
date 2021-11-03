@@ -53,7 +53,7 @@ We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}
 The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of that interaction.
 In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{designer}{designer}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant.
 The listed five names should be used rather than any synonyms when referring to these particular roles.
-Refer to the \hyperref[sec:glossary]{glossary} for their definitions.
+Please refer to the \hyperref[sec:glossary]{glossary} for their definitions.
 
 \subsection{Entity}
 \label{sec:reference-model:entity}
@@ -74,10 +74,10 @@ As depicted in Figure \ref{fig:entity}, this means that an entity always has an 
   \label{fig:entity}
 \end{figure}
 
-\vspace*{1mm}
+\vspace*{0.9mm}
 
-Having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is data, of any conceivable \GlossaryHyperRef{type-data}{type}, naming the entity in question.
-As long as some form of \GlossaryHyperRef{description}{description} can be produced that unambiguously refers to the artifact in question, it has an identity.
+Note that having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is a name, number or other value referring to the entity in question.
+It is enough that such an identifier could be produced for an artifact to count as an entity.
 That being said, certain \GlossaryHyperRef{identification}{identification} requirements, perhaps related to security, performance or discoverability, may make it practically unfeasible not to use identifiers.
 
 \subsection{Device}
@@ -100,12 +100,12 @@ While there are not limits to what components can make up a device, they must al
   \label{fig:device}
 \end{figure}
 
-\vspace*{2mm}
+\vspace*{1.8mm}
 
 Devices may be able to host systems, in which case they may be referred to as \GlossaryHyperRef{device-system}{system devices}.
 However, as it is rarely relevant to consider any other devices than those able to host systems, the ``system'' qualifier should be omitted if the context makes it clear that no other type of device is being referred to.
 Devices that cannot host systems should be referred to with a leading qualifier that indicates why that is the case.
-Examples of such qualifier could be ``constrained'', ``legacy'' or ``application-specific''.
+Examples of such qualifiers could be ``constrained'', ``legacy'' or ``application-specific''.
 
 \subsection{System}
 \label{sec:reference-model:system}
@@ -113,7 +113,7 @@ Examples of such qualifier could be ``constrained'', ``legacy'' or ``application
 A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}.
 As shown in Figure \ref{fig:system}, systems consists of \GlossaryHyperRef{component-software}{software components}.
 Some significant such components are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{procedure-software}{procedures} and (3) \GlossaryHyperRef{interface-system}{system interfaces}, which are facilitated by the (1) \GlossaryHyperRef{memory}{memory}, (2) \GlossaryHyperRef{computer}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components of a device.
-A system with these components should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}.
+A system with these components should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}, or it should be referred to as a \GlossaryHyperRef{system-detached}{\textit{detached system}}.
 
 \begin{figure}[ht!]
   \centering
@@ -152,9 +152,7 @@ Services receive messages via their interfaces, which must \GlossaryHyperRef{rou
 A function receiving a message must guarantee that it adheres to its \GlossaryHyperRef{protocol-function}{protocol} and satisfies all of its \GlossaryHyperRef{policy}{policies}, after which it must concretely handle the request described in the message.
 The function protocol dictates what \GlossaryHyperRef{data}{data} must be in the message, among other things, while the function policies may require that certain authorization tokens can be presented, that a future time slot in a real-time network has been allocated, and so on.
 
-Please refer to Section \ref{sec:reference-model:interface} for more details about how a service receives messages via its interfaces, to Section \ref{sec:reference-model:policy} for more information about different kinds of policies, and to Section \ref{sec:reference-model:protocol} for more details about what protocols are and how functions implement them.
-
-\newpage
+If it becomes relevant to distinguish the functions of programming languages with those introduced here, they should be referred to as \GlossaryHyperRef{function-program}{\textit{program functions}} and \GlossaryHyperRef{function-service}{\textit{service functions}}, respectively
 
 \subsection{System-of-Systems}
 \label{sec:reference-model:system-of-systems}
