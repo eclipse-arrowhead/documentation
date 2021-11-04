@@ -8,7 +8,7 @@
 
 This section provides an alphabetically sorted list of all significant terms introduced or named in this document.
 Each term consisting of more than one word is sorted by its final, or qualified, word.
-This means that the definition of \GlossaryHyperRef{description-service}{service description}, for example, is found at \GlossaryNameRef{description-service}.
+This means that the definition of \GlossaryHyperRef{protocol-service}{service protocol}, for example, is found at \GlossaryNameRef{protocol-service}.
 
 Many of the definitions are amended with notes and references to RAMI4.0 \cite{adolphs2016reference}, SOA-RM \cite{mackenzie2006reference} and IoTA:AF \cite{delsing2017iot}, which are always listed after the definition they amend.
 Regular notes are numbered, while those making a comment on a definition in RAMI4.0, SOA-RM or IoTA:AF are introduced with the three abbreviations just listed.
@@ -23,7 +23,7 @@ See \GlossaryNameRef{model-abstract}.
 
 \GlossaryEntry{architecture}{Architecture}
 A \GlossaryHyperRef{model-concrete}{concrete model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{model-reference}{reference models}, \GlossaryHyperRef{architecture-reference}{reference architectures} and other concrete architectures.
-See also Section \ref{sec:introduction:scope}.
+See Section \ref{sec:introduction:scope}.
 
 	\GlossaryNote{RAMI4.0}{
 	    defines architecture as the ``combination of elements of a model based on principles and rules for constructing, refining and using it''.
@@ -39,7 +39,7 @@ See also Section \ref{sec:introduction:scope}.
 
 \GlossaryEntry{architecture-reference}{Architecture, Reference}
 A significantly useful \GlossaryHyperRef{model-abstract}{abstract model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of certain \GlossaryHyperRef{model-reference}{reference models} and other reference architectures.
-See also Section \ref{sec:introduction:scope}.
+See Section \ref{sec:introduction:scope}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines reference architecture as a ``model for an architecture description (for I[ndustry ]4.0) which is generally used and recognized as being suitable (has reference character)''.
@@ -126,6 +126,7 @@ A \GlossaryHyperRef{boundary}{bounded} \GlossaryHyperRef{system-of-systems}{syst
 
 \GlossaryEntry{cloud-local}{Cloud, Local}
 A \GlossaryHyperRef{cloud}{cloud} \GlossaryHyperRef{boundary-local}{bound to a physical location} due to its acting on or producing \GlossaryHyperRef{resource-local}{local resources}.
+See Section \ref{sec:reference-model:system-of-systems:local-cloud}.
 
 	\GlossaryNote{IoTA:AF}{
 		provides an introduction to the local cloud concept in its second chapter, as well as an architectural definition in its third chapter.
@@ -200,6 +201,9 @@ A set of changeable \GlossaryHyperRef{property}{properties} that directly influe
 \GlossaryEntry{configure}{Configure}
 To update a \GlossaryHyperRef{configuration}{configuration}.
 
+\GlossaryEntry{connection}{Connection}
+An active medium through which attached \GlossaryHyperRef{interface}{interfaces} can \GlossaryHyperRef{communication}{communicate}.
+
 \GlossaryEntry{constraint}{Constraint}
 A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{relationship}{relationship}.
 
@@ -213,6 +217,10 @@ A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on 
 
 \GlossaryEntry{consumer-service}{Consumer, Service}
 A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-function}{invoking} a \GlossaryHyperRef{function-service}{function} \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{service}{service}.
+
+	\GlossaryNote{Note 1}{
+		If the term is used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, it must be interpreted as if that stakeholder owns or manages systems engaged in service consumption.
+	}
 
 	\GlossaryNote{SOA-RM}{
 		defines a service consumer as ``an entity which seeks to satisfy a particular need through the use [of] capabilities offered by means of a service''.
@@ -275,21 +283,24 @@ A \GlossaryHyperRef{developer}{developer} involved exclusively in the developmen
 A \GlossaryHyperRef{developer}{developer} involved exclusively in the development of the \GlossaryHyperRef{component-software}{software components} of \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{device}{Device}
-A physical \GlossaryHyperRef{entity}{entity}, made from \GlossaryHyperRef{component-hardware}{hardware components}, able to automatically exercise at least one \GlossaryHyperRef{capability}{capability}.
+A physical \GlossaryHyperRef{entity}{entity} made from \GlossaryHyperRef{component-hardware}{hardware components} with the significant \GlossaryHyperRef{capability}{capability} of being able to host \GlossaryHyperRef{system}{systems}.
 
 	\GlossaryNote{IoTA:AF}{
-		provides the following architectural definition of device in its third chapter:
-		\begin{quote}
-		An Arrowhead compliant device is a piece of equipment, machine, hardware, etc. with computational, memory and communication capabilities which hosts one or several Arrowhead Framework systems and can be bootstrapped in an Arrowhead local cloud [...] Any other device, equipment, machine, hardware component etc. is non-Arrowhead compliant.
-		\end{quote}
-		The definition provided here should be interpreted as being equivalent. TODO
+		defines device as ``a piece of equipment, machine, hardware, etc. with computational, memory and communication capabilities which hosts one or several Arrowhead Framework systems and can be bootstrapped in an Arrowhead local cloud''.
+		The definition provided here should be interpreted as being equivalent.
 	}
+
+\GlossaryEntry{device-connected}{Device, Connected}
+A \GlossaryHyperRef{device}{device} that is physically attached to at least one other device via their \GlossaryHyperRef{interface-device}{interfaces}, enabling them to \GlossaryHyperRef{communication}{communicate}.
+
+\GlossaryEntry{device-end}{Device, End}
+A \GlossaryHyperRef{device-connected}{connected device} being the intended recipient of a \GlossaryHyperRef{message}{message}.
 
 \GlossaryEntry{device-human-interface}{Device, Human Interface (HID)}
 A \GlossaryHyperRef{device}{device} that provides sensors and actuators that together make up an \GlossaryHyperRef{interface}{interface} through which a human can exchange messages with one or more \GlossaryHyperRef{system}{systems}.
 
-\GlossaryEntry{device-system}{Device, System}
-TODO
+\GlossaryEntry{device-intermediary}{Device, Intermediary}
+A \GlossaryHyperRef{device-connected}{connected device} that receives and forwards \GlossaryHyperRef{message}{messages} toward \GlossaryHyperRef{device-end}{end devices}.
 
 \GlossaryEntry{encode}{Encode}
 The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{encoding}{encoding} suitable for interpretation to another encoding suitable for transmission or storage.
@@ -327,9 +338,6 @@ An \GlossaryHyperRef{artifact}{artifact} that is uniquely \GlossaryHyperRef{iden
 \GlossaryEntry{entity-class-of}{Entity, Class of}
 A set of \GlossaryHyperRef{entity}{entities} that share a common \GlossaryHyperRef{property}{property}.
 
-\GlossaryEntry{entity-systemic}{Entity, Systemic}
-TODO: An \GlossaryHyperRef{entity}{entity} being either a \GlossaryHyperRef{component}{component}, a \GlossaryHyperRef{system}{system} or any kind of \GlossaryHyperRef{system-of-systems}{system-of-systems}.
-
 \GlossaryEntry{framework}{Framework}
 A set of assumptions, concepts, values and practices that frame a certain problem domain.
 
@@ -345,20 +353,29 @@ Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \Glossary
 A set of software specifications, \GlossaryHyperRef{implementation-software}{implementations} and other \GlossaryHyperRef{artifact}{artifacts} meant to help address the problem domain of a certain \GlossaryHyperRef{framework}{framework}.
 
 \GlossaryEntry{function}{Function}
-TODO: The realization of the \GlossaryHyperRef{protocol}{protocol} established by a certain \GlossaryHyperRef{policy-function}{function policy}.
+Typically synonymous to \GlossaryNameRef{function-service}.
+See Section \ref{sec:reference-model:service}.
 
 	\GlossaryNote{Note 1}{
-		TODO: How is a function different from a procedure.
+		The term may be used to refer to both \GlossaryHyperRef{function-program}{program} and \GlossaryHyperRef{function-service}{service} functions, if the context makes it clear that both kinds of functions are relevant.
 	}
+
+\GlossaryEntry{function-program}{Function, Program}
+Synonymous to \GlossaryNameRef{procedure-software}.
+
+\GlossaryEntry{function-service}{Function, Service}
+A \GlossaryHyperRef{procedure-software}{software procedure} that handles \GlossaryHyperRef{message}{messages} it receives from a \GlossaryHyperRef{interface-service}{service interface}.
+See Section \ref{sec:reference-model:service}.
 
 \GlossaryEntry{hid}{HID}
 See \GlossaryNameRef{device-human-interface}.
 
 \GlossaryEntry{industry40}{Industry 4.0}
 The fourth industrial paradigm, primarily characterized by high degrees of computerization, digitization and interconnectivity.
+See also \cite{adolphs2016reference}.
 
 \GlossaryEntry{identification}{Identification}
-The process through which an \GlossaryHyperRef{entity}{entity} collects and verifies the \GlossaryHyperRef{identity}{identity} of another entity. 
+The process through which an \GlossaryHyperRef{entity}{entity} verifies the \GlossaryHyperRef{identity}{identity} of another entity. 
 
 \GlossaryEntry{identifier}{Identifier}
 \GlossaryHyperRef{data}{Data} associated with an \GlossaryHyperRef{entity}{entity} that allows for it to be \GlossaryHyperRef{identification}{identified}.
@@ -370,27 +387,50 @@ The aspect or aspects, such as \GlossaryHyperRef{identifier}{identifiers}, that 
 The realization of a \GlossaryHyperRef{design}{design} as a set of \GlossaryHyperRef{artifact}{artifacts}.
 
 \GlossaryEntry{implementation-software}{Implementation, Software}
-An \GlossaryHyperRef{implementation}{implementation} comprised of executable software \GlossaryHyperRef{artifact}{artifacts}.
+An \GlossaryHyperRef{implementation}{implementation} comprised of executable \GlossaryHyperRef{software}{software} \GlossaryHyperRef{artifact}{artifacts}.
+
+\GlossaryEntry{instance-software}{Instance, Software}
+A \GlossaryHyperRef{software}{software artifact} currently being executed by a \GlossaryHyperRef{unit-compute}{compute unit}.
+
+\GlossaryEntry{interconnection}{Interconnection}
+A \GlossaryHyperRef{connection}{connection} that passes through one or more \GlossaryHyperRef{device-intermediary}{intermediary devices}.
 
 \GlossaryEntry{interface}{Interface}
-TODO: An \GlossaryHyperRef{entity}{entity} able to mediate communications that satisfy a certain set of \GlossaryHyperRef{constraint}{constraints}.
+A \GlossaryHyperRef{boundary}{boundary} where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between a \GlossaryHyperRef{connection}{connection} and an \GlossaryHyperRef{entity}{entity}, between two entities, or between an entity and a person.
+See Section \ref{sec:reference-model:interface}.
 
-	\GlossaryNote{Note 1}{
-		The are many possible constraints, or prerequisites, to communication via an interface.
-		Physical links may have to exist and be online, certain \GlossaryHyperRef{protocol}{protocols} may have to used, the receiver of a communication may have to be ready, and so on.
-	}
+\GlossaryEntry{interface-device}{Interface, Device}
+An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{device}{device} may send and/or receive \GlossaryHyperRef{message}{messages} to/from a \GlossaryHyperRef{connection}{connection}.
+
+\GlossaryEntry{interface-human}{Interface, Human}
+An \GlossaryHyperRef{interface}{interface} through which a person may send and/or receive \GlossaryHyperRef{message}{messages} to/from an \GlossaryHyperRef{entity}{entity}.
+
+\GlossaryEntry{interface-network}{interface, Network}
+An \GlossaryHyperRef{interface}{interface} of an \GlossaryHyperRef{device-intermediary}{intermediary device}, primarily intended to be used for passing on \GlossaryHyperRef{message}{messages} toward their intended \GlossaryHyperRef{device-end}{end devices}.
 
 \GlossaryEntry{interface-service}{Interface, Service}
 An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
+
+	\GlossaryNote{Note 1}{
+		Consuming a service requires that \GlossaryHyperRef{message}{messages} be passed from its \GlossaryHyperRef{device}{device} to its \GlossaryHyperRef{system}{system}, and then from its system to the service itself.
+		As the \GlossaryHyperRef{software}{software} making up the service is owned by the system, it is the system that is understood to produce any responses.
+		Those are passed on via its device.
+	}
 
 	\GlossaryNote{SOA-RM}{
 		defines service interface as ``the means by which the underlying capabilities of a service are accessed''.
 		Our definition should be interpreted as being equivalent.
 	}
 
+\GlossaryEntry{interface-system}{Interface, System}
+An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{system}{system} may send and/or receive \GlossaryHyperRef{message}{messages} to/from its hosting \GlossaryHyperRef{device}{device}.
+
+	\GlossaryNote{Note 1}{
+		The device may either send or respond to messages by its own accord, or pass on messages it receives to and/or from any of its \GlossaryHyperRef{interface-device}{device interfaces}.
+	}
+
 \GlossaryEntry{invocation-function}{Invocation, Function}
-The attempt to exercise the \GlossaryHyperRef{capability-system}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
-TODO: Replace with ``service function consumption''?
+The attempt to exercise the \GlossaryHyperRef{capability-system}{capabilities} of a \GlossaryHyperRef{system}{system} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
 
 \GlossaryEntry[(noun)]{message}{Message}
 \GlossaryHyperRef{data}{Data} sent or received via a \GlossaryHyperRef{interface-service}{service interface}.
@@ -452,14 +492,23 @@ See also Section \ref{sec:introduction:scope}.
 		Our definition should be interpreted as being equivalent.
 	}
 
+\GlossaryEntry{network}{Network}
+A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} in such a manner that any \GlossaryHyperRef{system}{systems} they host are able to \GlossaryHyperRef{communication}{communicate}.
+See Section \ref{sec:reference-model:network}.
+
 \GlossaryEntry{operator}{Operator}
-TODO: A person or \GlossaryHyperRef{entity}{entity} tasked with the \GlossaryHyperRef{management-system}{management} of a set of \GlossaryHyperRef{system}{systems}.
+A \GlossaryHyperRef{stakeholder}{stakeholder} responsible for the \GlossaryHyperRef{configure}{configuration} and oversight of \GlossaryHyperRef{system}{systems} and the \GlossaryHyperRef{resource}{resources} those systems manage.
+See Section \ref{sec:reference-model:stakeholder}.
+
+\GlossaryEntry{owner}{Owner}
+A \GlossaryHyperRef{stakeholder}{stakeholder} that owns significant \GlossaryHyperRef{resource}{resources} and/or other \GlossaryHyperRef{artifact}{artifacts}.
+See Section \ref{sec:reference-model:stakeholder}.
 
 \GlossaryEntry{organization}{Organization}
-A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of other stakeholders.
+A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of other stakeholders and/or other persons.
 
 \GlossaryEntry{policy}{Policy}
-A set of obligations, \GlossaryHyperRef{constraint}{constraints} and/or other conditions under which some activity is permitted.
+A set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied for a certain activity to be permitted.
 
 	\GlossaryNote{SOA-RM}{
 		defines policy as ``a statement of obligations, constraints or other conditions of use of an owned entity as defined by a participant''.
@@ -467,14 +516,16 @@ A set of obligations, \GlossaryHyperRef{constraint}{constraints} and/or other co
 	}
 
 \GlossaryEntry{policy-function}{Policy, Function}
-A \GlossaryHyperRef{model}{model} specifying the \GlossaryHyperRef{type-data}{type} of the \GlossaryHyperRef{message}{message} a given \GlossaryHyperRef{function}{function} accepts when \GlossaryHyperRef{invocation-function}{invoked}, as well as the types of any messages it could return in response.
+A \GlossaryHyperRef{policy}{policy} that must be satisfied to be permitted to \GlossaryHyperRef{invocation-function}{invoke} a certain \GlossaryHyperRef{function}{function}.
 
-	\GlossaryNote{Note 1}{
-		This means that a function policy establishes a \GlossaryHyperRef{protocol}{protocol} for a certain \GlossaryHyperRef{service}{service} function.
-	}
+\GlossaryEntry{policy-service}{Policy, Service}
+A \GlossaryHyperRef{policy}{policy} that must be satisfied to be permitted to \GlossaryHyperRef{invocation-function}{invoke} any \GlossaryHyperRef{function-service}{function} part of a certain \GlossaryHyperRef{service}{service}.
 
-\GlossaryEntry{policy-service-consumption}{Policy, Service Consumption}
-TODO: The \GlossaryHyperRef{policy}{policy} under which a \GlossaryHyperRef{provider-service}{provided service} is permitted to be \GlossaryHyperRef{consumer-service}{consumed}.
+\GlossaryEntry{procedure}{Procedure}
+See \GlossaryNameRef{procedure-software}.
+
+\GlossaryEntry{procedure-software}{Procedure, Software}
+A segment of instructions, part of a \GlossaryHyperRef{software}{software artifact}, that perform some activity if executed.
 
 \GlossaryEntry{profile}{Profile}
 See \GlossaryNameRef{profile-protocol}.
@@ -501,7 +552,7 @@ A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \G
 
 \GlossaryEntry{protocol}{Protocol}
 A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{state}{states} and \GlossaryHyperRef{message}{messages}.
-See also \GlossaryNameRef{protocol-extensible}.
+See Section \ref{sec:reference-model:protocol}.
 
 	\GlossaryNote{Note 1}{
 		The states, if any, dictate the outcomes of sending certain messages.
@@ -509,6 +560,9 @@ See also \GlossaryNameRef{protocol-extensible}.
 		If the former state would be the active when a certain message is received, the designated response could be an error message.
 		If, however, the \texttt{READY} state would have been active, the state could be transitioned to the \texttt{BUSY} value and a success response be provided to the sender.
 	}
+
+\GlossaryEntry{protocol-device}{Protocol, Device}
+A \GlossaryHyperRef{protocol}{protocol} implemented by a \GlossaryHyperRef{device}{device}.
 
 \GlossaryEntry{protocol-extensible}{Protocol, Extensible}
 A \GlossaryHyperRef{protocol}{protocol} allowing for \GlossaryHyperRef{subprotocol}{subprotocols} to be formulated in terms of its \GlossaryHyperRef{message}{messages}.
@@ -528,8 +582,36 @@ See also \GlossaryNameRef{stack-protocol}.
 		This means that even protocols not designed to be extended can, in some context, be meaningfully used to define subprotocols.
 	}
 
+\GlossaryEntry{protocol-function}{Protocol, Function}
+A \GlossaryHyperRef{protocol}{protocol} implemented by a \GlossaryHyperRef{function-service}{service function}.
+
+	\GlossaryNote{Note 1}{
+		A function protocol is always an \GlossaryHyperRef{protocol-extensible}{extension} of a \GlossaryHyperRef{protocol-service}{service protocol}.
+		See Section \ref{sec:reference-model:protocol} for more details.
+	}
+
+\GlossaryEntry{protocol-service}{Protocol, Service}
+A \GlossaryHyperRef{protocol}{protocol} implemented by a \GlossaryHyperRef{service}{service}.
+
+	\GlossaryNote{Note 1}{
+		A service protocol is always an \GlossaryHyperRef{protocol-extensible}{extension} of a \GlossaryHyperRef{protocol-system}{system protocol}.
+		See Section \ref{sec:reference-model:protocol} for more details.
+	}
+
+\GlossaryEntry{protocol-system}{Protocol, System}
+A \GlossaryHyperRef{protocol}{protocol} implemented by a \GlossaryHyperRef{system}{system}.
+
+	\GlossaryNote{Note 1}{
+		A system protocol is always an \GlossaryHyperRef{protocol-extensible}{extension} of a \GlossaryHyperRef{protocol-device}{device protocol}.
+		See Section \ref{sec:reference-model:protocol} for more details.
+	}
+
 \GlossaryEntry{provider-service}{Provider, Service}
-A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumer-service}{consumption} by any systems able to satisfy its \GlossaryHyperRef{policy-service-consumption}{consumption policies}.
+A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumer-service}{consumption} to other systems.
+
+	\GlossaryNote{Note 1}{
+		If the term is used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, it must be interpreted as if that stakeholder owns or manages systems providing services.
+	}
 
 	\GlossaryNote{SOA-RM}{
 		defines a service provider as ``an entity (person or organization) that offers the use of capabilities by means of a service''.
@@ -568,10 +650,16 @@ A \GlossaryHyperRef{resource}{resource} whose value is not derived from any phys
 	}
 
 \GlossaryEntry{role}{Role}
-See \GlossaryHyperRef{role-stakeholder}.
+See \GlossaryNameRef{role-stakeholder}.
+
+\GlossaryEntry{router}{Router}
+See \GlossaryNameRef{router-message}.
+
+\GlossaryEntry{router-message}{Router, Message}
+A \GlossaryHyperRef{component-hardware}{hardware component} or \GlossaryHyperRef{procedure-software}{software procedure} that receives and passes on \GlossaryHyperRef{message}{messages} toward their intended end \GlossaryHyperRef{entity}{entities}.
 
 \GlossaryEntry{role-stakeholder}{Role, Stakeholder}
-TODO
+An assignment, objective, or other responsibility, that makes a person or organization into a \GlossaryHyperRef{stakeholder}{stakeholder}. 
 
 \GlossaryEntry{routing-message}{Routing, Message}
 The act of forwarding a \GlossaryHyperRef{message}{message} towards the \GlossaryHyperRef{function}{function} it is meant to \GlossaryHyperRef{invocation-function}{invoke}.
@@ -608,7 +696,7 @@ The degree of performance at which a given \GlossaryHyperRef{service}{service} i
 See \GlossaryNameRef{architecture-service-oriented}.
 
 \GlossaryEntry{software}{Software}
-See \GlossaryNameRef{implementation-software}.
+A set of sequences of instructions that can be executed by a \GlossaryHyperRef{unit-compute}{compute unit}.
 
 \GlossaryEntry{solc}{SoLC}
 See \GlossaryNameRef{system-of-local-clouds}.
@@ -632,14 +720,17 @@ A stack with an \GlossaryHyperRef{protocol-extensible}{extensible protocol} as b
 		HTTP is an \GlossaryHyperRef{stack-extensible-protocol}{extensible protocol stack}, which allows for an engineer to define an application-specific protocol on top of its stack.
 	}
 
+\GlossaryEntry{stake}{Stake}
+Any type of engagement or commitment.
+
 \GlossaryEntry{stakeholder}{Stakeholder}
-A person or \GlossaryHyperRef{organization}{organization} involved in or affected by certain \GlossaryHyperRef{entity}{entities} or enterprises.
+A person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in certain \GlossaryHyperRef{entity}{entities} or enterprises.
 
 \GlossaryEntry[(noun)]{state}{State}
 One out of all possible sequences of values that could be expressed by the \GlossaryHyperRef{datum}{datums} of some \GlossaryHyperRef{data}{data}.
 
 	\GlossaryNote{Note 1}{
-		If the data would consist of a sequence bits, which can only have the values 0 and 1, a state becomes a pattern of zeroes and ones those bits can record.
+		If the data would consist of a sequence of bits, each of which can only have the values 0 and 1, a state becomes a pattern of zeroes and ones those bits can record.
 		Given four bits, possible states could, for example, be \texttt{0010} or \texttt{1001}. 
 	}
 
@@ -647,11 +738,18 @@ One out of all possible sequences of values that could be expressed by the \Glos
 		The term is often used as a wildcard for any kind of storage construct, including bit flags, state machines and graph databases.
 	}
 
+\GlossaryEntry{state-protocol}{State, Protocol}
+The \GlossaryHyperRef{state}{state} of a \GlossaryHyperRef{protocol}{protocol} in active use, determining what \GlossaryHyperRef{message}{messages} it currently deems valid.
+See Section \ref{sec:reference-model:protocol}.
+
+\GlossaryEntry{state-software}{State, Software}
+The \GlossaryHyperRef{state}{state} of a \GlossaryHyperRef{instance-software}{software instance}, determining its current activities and its reactions to any future \GlossaryHyperRef{procedure-software}{procedure} calls.
+
 \GlossaryEntry{subprotocol}{Subprotocol}
 A \GlossaryHyperRef{protocol}{protocol} that is realized as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol.
 
 \GlossaryEntry{subsystem}{Subsystem}
-An \GlossaryHyperRef{entity-systemic}{systemic entity} being a part of than another such. Compare with \GlossaryNameRef{component}.
+A \GlossaryHyperRef{system}{system} or \GlossaryHyperRef{system-of-systems}{system-of-systems} being a constituent of a larger system-of-systems.
 
 \GlossaryEntry{superprotocol}{Superprotocol}
 A \GlossaryHyperRef{protocol}{protocol} that is \GlossaryHyperRef{protocol-extensible}{extended} by another protocol.
@@ -674,6 +772,21 @@ An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-servi
 		It further adds that ``a system can be the service provider of one or more services and at the same time the service consumer of one or more services''.
 		The definition presented here should be interpreted as equivalent.
 	}
+
+\GlossaryEntry{system-isolated}{System, Isolated}
+A \GlossaryHyperRef{system}{system} that is unable to either \GlossaryHyperRef{provider-service}{provide} or \GlossaryHyperRef{consumer-service}{consume} \GlossaryHyperRef{service}{services}.
+
+\GlossaryEntry{system-supervisory}{System, Supervisory}
+A \GlossaryHyperRef{system}{system} that is tasked with managing one or more \GlossaryHyperRef{resource}{resources} beyond its direct control.
+
+	\GlossaryNote{Note 1}{
+		All systems are managing the resources provided to them by their hosting \GlossaryHyperRef{device}{devices}, such as primary memory, compute time, and so on.
+		This term is meant to capture the systems that are engaged in overseeing and/or managing resources beyond those directly provided.
+		Examples of such scenarios could be a single system being responsible for provisioning other devices, or a system using its robot device to collect and handle raw materials.
+	}
+
+\GlossaryEntry{system-type}{System, Type}
+A set of \GlossaryHyperRef{type-data}{data types} that can be used together, often in the context of an \GlossaryHyperRef{encoding}{encoding} or programming language.
 
 \GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
 A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
