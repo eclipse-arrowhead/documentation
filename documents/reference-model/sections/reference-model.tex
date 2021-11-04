@@ -87,8 +87,8 @@ That being said, certain \GlossaryHyperRef{identification}{identification} requi
 A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} that is able to automatically exercise at least one \GlossaryHyperRef{capability}{capability}.
 A capability is some form of automation routine that can be performed if triggered by the \GlossaryHyperRef{software}{software} of the device.
 Examples of capabilities include moving robotic arms, reading from sensors, starting software procedures, hosting \GlossaryHyperRef{system}{systems} and sending \GlossaryHyperRef{message}{messages}. 
-Every device consists of \GlossaryHyperRef{components-hardware}{hardware components}, which are what concretely facilitate its capabilities.
-While there are not limits to what components can make up a device, they must always have (1) \GlossaryHyperRef{memory}{memory}, (2) \GlossaryHyperRef{computer}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components, as shown in Figure \ref{fig:device}.
+Every device consists of \GlossaryHyperRef{component-hardware}{hardware components}, which are what concretely facilitate its capabilities.
+While there are not limits to what components can make up a device, they must always have (1) \GlossaryHyperRef{unit-memory}{memory}, (2) \GlossaryHyperRef{unit-compute}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components, as shown in Figure \ref{fig:device}.
 
 \begin{figure}[ht!]
   \centering
@@ -174,8 +174,8 @@ As illustrated in Figure \ref{fig:system-of-systems}, there are two types of sys
 \subsubsection{Local Cloud}
 \label{sec:reference-model:system-of-systems:local-cloud}
 
-A \GlossaryHyperRef{cloud-local}{local cloud} is a \GlossaryHyperRef{boundary-cloud}{bounded} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
-As depicted in Figure \ref{fig:local-cloud}, the local cloud is distinct from other types of \GlossaryHyperRef{cloud}{clouds} by having at least one local boundary and one local resource, which means that it is physically tied to a concrete location.
+A \GlossaryHyperRef{cloud-local}{local cloud} is a \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
+As depicted in Figure \ref{fig:local-cloud}, the local cloud is distinct from other types of \GlossaryHyperRef{cloud}{clouds} by having at least one \GlossaryHyperRef{boundary-local}{local boundary} and one \GlossaryHyperRef{resource-local}{local resource}, which means that it is physically tied to a concrete location.
 A local cloud could be engaged in manufacturing, repairs, heating, electricity distribution, workspace monitoring, drone fleet control, among many other possible kinds of physical activities.
 A local cloud may be stationary or mobile.
 A cloud that has no resources or boundaries tied to any particular physical locations should be referred to as a \GlossaryHyperRef{cloud-virtual}{\textit{virtual cloud}}.
@@ -261,13 +261,15 @@ As depicted in Figure \ref{fig:policy}, there are two categories of policies of 
   \includegraphics[scale=0.9]{figures/policy}
   \caption{
     The two categories of policies of highest relevance to this reference model, service and function policies, as well as some examples of possible function policies.
+    \GlossaryHyperRef{qos}{QoS} is an abbreviation for \GlossaryHyperRef{service-quality-of}{quality of service}.
     The group of policy types is not exhaustive.
+    Other examples could be real-time, pollution or certificate policies.
   }
   \label{fig:policy}
 \end{figure}
 
 A function policy must be satisfied for a system to be allowed to \GlossaryHyperRef{consumer-service}{consume} a particular \GlossaryHyperRef{function-service}{service function}.
-A service policy, on the other hand, is a policy that applies to all \GlossaryHyperRef{function-service}{functions} of a given \GlossaryHyperRef{service}{service}.
+A service policy, or a \textit{service-level} policy, applies to all \GlossaryHyperRef{function-service}{functions} of a given \GlossaryHyperRef{service}{service}.
 Failing to satisfy a policy should mean that the consumer in question is notified about the specific policy or policies being violated.
 
 \subsection{Protocol}
@@ -289,5 +291,5 @@ As illustrated in Figure \ref{fig:protocol}, a protocol may be defined as an \Gl
 
 A profile narrows down what a particular protocol is permitted to express, for example by requiring that authorization tokens be included in requests, or that a certain message payload semantics be observed.
 Adding a profile to a protocol not already conforming to it produces a new protocol.
-An encoding introduces a type system in which message payloads can be expressed.
+An encoding introduces a \GlossaryHyperRef{system-type}{type system} in which message payloads can be expressed.
 If a protocol defines its messages without referring to an encoding, it is considered to have a \textit{custom} encoding.

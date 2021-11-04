@@ -67,32 +67,56 @@ See \GlossaryNameRef{framework-arrowhead}.
 A thing or object, tangible or intangible.
 
 \GlossaryEntry{asset}{Asset}
-An \GlossaryHyperRef{artifact}{artifact} that is of value to a person or \GlossaryHyperRef{organization}{organization}.
+Synonymous to \GlossaryNameRef{resource}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines asset as an ``object which has a value for an organization''.
-		Our definition should be interpreted as being equivalent.
+		See \GlossaryNameRef{resource} for a comparable term.
+	}
+
+\GlossaryEntry{boundary}{Boundary}
+A point or border where either two or more \GlossaryHyperRef{artifact}{artifacts} meet or one artifact ends.
+
+\GlossaryEntry{boundary-cloud}{Boundary, Cloud}
+A \GlossaryHyperRef{boundary}{boundary} separating the \GlossaryHyperRef{artifact}{artifacts} belonging to a \GlossaryHyperRef{cloud}{cloud} from those not belonging to it.
+
+	\GlossaryNote{Note 1}{
+		A cloud boundary can be \GlossaryHyperRef{boundary-local}{local} or \GlossaryHyperRef{boundary-virtual}{virtual}, depending on if the boundary is formed by physical or virtual \GlossaryHyperRef{property}{properties}.
+	} 
+
+\GlossaryEntry{boundary-local}{Boundary, Local}
+A \GlossaryHyperRef{boundary}{boundary} that exists in the physical world.
+
+	\GlossaryNote{Note 1}{
+		Local boundaries can be facilitated by walls, locations of operation, attachment to certain vehicles or power sources, and so on.
+	}
+
+\GlossaryEntry{boundary-virtual}{Boundary, Virtual}
+A \GlossaryHyperRef{boundary}{boundary} that exists only virtually.
+
+	\GlossaryNote{Note 1}{
+		Virtual boundaries can be facilitated by cryptographic secrets, identifiers, ownership statements, contracts, and so on.
 	}
 
 \GlossaryEntry{capability}{Capability}
 A task, of any nature, that can be performed by a \GlossaryHyperRef{device}{device}.
 
 	\GlossaryNote{Note 1}{
-		The term must be interpreted as being very general.
+		The term must be understood in the most general sense possible.
 		It includes the abilities of hosting \GlossaryHyperRef{system}{systems}, reading from sensors, triggering actuators, among many other possible examples.
 	}
 
 	\GlossaryNote{SOA-RM}{
 		defines a capability as ``a real-world effect that a service provider is able to provide to a service consumer''.
 		To leave room for devices to be described as doing other things that \GlossaryHyperRef{provider-service}{providing} or \GlossaryHyperRef{consumer-service}{consuming} services, we made our definition more general.
-		See \GlossaryNameRef{capability-system} for a definition we consider equivalent.
+		See also \GlossaryNameRef{capability-system}.
 	}
 
 \GlossaryEntry{capability-system}{Capability, System}
-A task, of any nature, that can be performed by a \GlossaryHyperRef{provider-service}{service provider}.
+A \GlossaryHyperRef{capability}{capability} a \GlossaryHyperRef{system}{system} can trigger via its hosting \GlossaryHyperRef{device}{device}.
 
 \GlossaryEntry{cloud}{Cloud}
-A \GlossaryHyperRef{system-of-systems}{system-of-systems} able independently execute given tasks through the use of pools of owned resources.
+A \GlossaryHyperRef{boundary}{bounded} \GlossaryHyperRef{system-of-systems}{system-of-systems} able independently execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
 
 	\GlossaryNote{Note 1}{
 		When the term ``cloud'' is used elsewhere, it often refers to clouds with only virtual resources, such as compute, storage and software-defined network utilities.
@@ -101,7 +125,7 @@ A \GlossaryHyperRef{system-of-systems}{system-of-systems} able independently exe
 	}
 
 \GlossaryEntry{cloud-local}{Cloud, Local}
-A \GlossaryHyperRef{cloud}{cloud} bound to a physical location due to its acting on or producing physical \GlossaryHyperRef{artifact}{artifacts}.
+A \GlossaryHyperRef{cloud}{cloud} \GlossaryHyperRef{boundary-local}{bound to a physical location} due to its acting on or producing \GlossaryHyperRef{resource-local}{local resources}.
 
 	\GlossaryNote{IoTA:AF}{
 		provides an introduction to the local cloud concept in its second chapter, as well as an architectural definition in its third chapter.
@@ -117,9 +141,8 @@ A \GlossaryHyperRef{cloud}{cloud} bound to a physical location due to its acting
 		In the Arrowhead Framework context a local cloud is defined as a self-contained network with the three mandatory core systems deployed and at least one application system deployed [...]
 		\end{quote}
 		Both of these descriptions are practical, in the sense that they emphasize engineering aspects.
-		However, as this document is a reference model, engineering aspects are out of scope.
-		To be able to use the above descriptions, we look for indications of what a local cloud is, rather than what requirements such should fulfill.
-		The terms ``geographically local'', ``room'' and ``boundary'' clearly highlight the physicality of the local cloud itself, while the depiction of ``devices'' performing ``automation tasks'' makes it apparent that some kind of physical activity is involved, such as manufacturing.
+		As this document is a reference model, engineering aspects are out of scope.
+		The more general terms ``geographically local'', ``room'' and ``boundary'' clearly highlight the physicality of the local cloud itself, while the depiction of ``devices'' performing ``automation tasks'' makes it apparent that some kind of physical activity is involved, such as manufacturing.
 		Finally, the local cloud being ``encapsulated'', ``protected'' and ``self-contained'' indicates that it is understood to exhibit a degree of independence with respect to the tasks it is given, which we expect all kinds of clouds to exhibit.
 		Our definition should be interpreted as a summation of these characteristics.
 	}
@@ -128,11 +151,7 @@ A \GlossaryHyperRef{cloud}{cloud} bound to a physical location due to its acting
 See \GlossaryNameRef{cloud-local}.
 
 \GlossaryEntry{cloud-virtual}{Cloud, Virtual}
-A \GlossaryHyperRef{cloud}{cloud} unbound by physical location by only acting on or producing virtual \GlossaryHyperRef{artifact}{artifacts}.
-
-	\GlossaryNote{Note 1}{
-		Examples of virtual resources could be compute, storage and software-defined network utilities.
-	}
+A \GlossaryHyperRef{cloud}{cloud} \GlossaryHyperRef{boundary-virtual}{unbound by physical location} by only acting on or producing \GlossaryHyperRef{resource-virtual}{virtual resources}.
 
 \GlossaryEntry[(verb)]{code}{Code}
 Transforming \GlossaryHyperRef{data}{data} from being expressed in one \GlossaryHyperRef{encoding}{encoding} into another.
@@ -142,16 +161,12 @@ See also \GlossaryHyperRef{decode}{decode} and \GlossaryHyperRef{encode}{encode}
 Synonymous to \GlossaryNameRef{encoding}.
 
 \GlossaryEntry{component}{Component}
-An \GlossaryHyperRef{entity}{entity} being part of a \GlossaryHyperRef{system}{system}, contributing to it facilitating its \GlossaryHyperRef{capability-system}{capabilities}.
-Compare with \GlossaryNameRef{subsystem}.
+An \GlossaryHyperRef{entity}{entity} that can be part of a \GlossaryHyperRef{device}{device} or \GlossaryHyperRef{system}{system} and contribute to it facilitating its \GlossaryHyperRef{capability}{capabilities}.
 
 	\GlossaryNote{Note 1}{
-		While ``component'' generally is a rather open-ended term, in the context of Arrowhead it gains the rather specific meaning of being a constituent of a system.
-		If referring to a system being a constituent of a \GlossaryHyperRef{system-of-systems}{system-of-systems}, prefer use of the words ``system'' and ``subsystem''.
-	}
-
-	\GlossaryNote{Note 2}{
-		A component is practically distinct from a system by being unable to \GlossaryHyperRef{provider-service}{provide} or \GlossaryHyperRef{consumer-service}{consume} \GlossaryHyperRef{service}{services} independently.
+		The word ``component'' should only be used to refer to the constituents of devices and systems.
+		It should never be used to refer to a system being a constituent of a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
+		Such a system should be referred to as being a \GlossaryHyperRef{subsystem}{subsystem}.
 	}
 
 	\GlossaryNote{RAMI4.0}{
@@ -159,8 +174,16 @@ Compare with \GlossaryNameRef{subsystem}.
 		See \GlossaryNameRef{system} for more details.
 	}
 
+\GlossaryEntry{component-hardware}{Component, Hardware}
+A physical \GlossaryHyperRef{component}{component} that can only be part of a \GlossaryHyperRef{device}{device}.
+See Section \ref{sec:reference-model:device}.
+
+\GlossaryEntry{component-software}{Component, Software}
+A virtual \GlossaryHyperRef{component}{component} that can only be part of a \GlossaryHyperRef{system}{system}.
+See Section \ref{sec:reference-model:system}.
+
 \GlossaryEntry{communication}{Communication}
-The activity of sending or receiving \GlossaryHyperRef{message}{messages}.
+The activity of sending and/or receiving \GlossaryHyperRef{message}{messages}.
 
 \GlossaryEntry{communication-service-oriented}{Communication, Service-Oriented}
 \GlossaryHyperRef{communication}{Communication} \GlossaryHyperRef{description}{described} in terms of the \GlossaryHyperRef{provider-service}{provision} and \GlossaryHyperRef{consumer-service}{consumption} of \GlossaryHyperRef{service}{services}.
@@ -169,13 +192,13 @@ The activity of sending or receiving \GlossaryHyperRef{message}{messages}.
 See \GlossaryNameRef{model-concrete}.
 
 \GlossaryEntry{concretization}{Concretization}
-Making an \GlossaryHyperRef{model-abstract}{abstract model} less abstract by specifying details required to realize it.
+Making an \GlossaryHyperRef{model-abstract}{abstract model} less abstract by specifying some or all details required to realize it.
 
 \GlossaryEntry{configuration}{Configuration}
-A set of changeable \GlossaryHyperRef{property}{properties} that directly influence the \GlossaryHyperRef{capability-system}{capabilities} of a \GlossaryHyperRef{provider-service}{service provider}.
+A set of changeable \GlossaryHyperRef{property}{properties} that directly influence how a \GlossaryHyperRef{system}{system} exercises its \GlossaryHyperRef{capability-system}{capabilities}.
 
 \GlossaryEntry{configure}{Configure}
-To change a \GlossaryHyperRef{configuration}{configuration}.
+To update a \GlossaryHyperRef{configuration}{configuration}.
 
 \GlossaryEntry{constraint}{Constraint}
 A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{relationship}{relationship}.
@@ -189,7 +212,7 @@ A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on 
 	}
 
 \GlossaryEntry{consumer-service}{Consumer, Service}
-A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-function}{invoking} a \GlossaryHyperRef{function}{function} \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{service}{service}.
+A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-function}{invoking} a \GlossaryHyperRef{function-service}{function} \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{service}{service}.
 
 	\GlossaryNote{SOA-RM}{
 		defines a service consumer as ``an entity which seeks to satisfy a particular need through the use [of] capabilities offered by means of a service''.
@@ -234,47 +257,39 @@ The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a 
 \GlossaryEntry{description}{Description}
 Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
 
-\GlossaryEntry{description-design}{Description, Design}
-A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{design}{design}. TODO
-
-	\GlossaryNote{Note 1}{
-		Since a design also is a form of description, a design description becomes a kind of \GlossaryHyperRef{metadata}{metadata}.
-	}
-
-\GlossaryEntry{description-interface-design}{Description, Interface Design}
-A \GlossaryHyperRef{description-design}{design description} of an \GlossaryHyperRef{interface}{interface}.
-
-	\GlossaryNote{Note 1}{
-		In the context of Arrowhead, the term is only used to refer to design descriptions of \GlossaryHyperRef{interface-service}{interfaces}.
-	}
-
-\GlossaryEntry{description-service}{Description, Service}
-A \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{service}{service}, especially in terms of its utility and its \GlossaryHyperRef{interface-service}{interfaces}.
-
-	\GlossaryNote{SOA-RM}{
-		defines service description as ``the information needed in order to use, or consider using, a service''.
-		Our definition should be interpreted as being equivalent.
-	}
-
 \GlossaryEntry[(noun)]{design}{Design}
-Every document, \GlossaryHyperRef{model}{model} and other record \GlossaryHyperRef{description}{describing} how a certain \GlossaryHyperRef{artifact}{artifact} can be \GlossaryHyperRef{implementation}{implemented} or realized.
+Every document, \GlossaryHyperRef{model}{model} and other record \GlossaryHyperRef{description}{describing} how a certain \GlossaryHyperRef{artifact}{artifact} can be \GlossaryHyperRef{implementation}{implemented}.
 
-\GlossaryEntry{design-interface}{Design, Interface}
-The \GlossaryHyperRef{design}{design} of an \GlossaryHyperRef{interface}{interface}, which must specify how it enables communication and under what conditions.
+\GlossaryEntry{designer}{Designer}
+A \GlossaryHyperRef{stakeholder}{stakeholder} involved in the \GlossaryHyperRef{design}{design} of \GlossaryHyperRef{artifact}{artifacts}.
+See Section \ref{sec:reference-model:stakeholder}.
+
+\GlossaryEntry{developer}{Developer}
+A \GlossaryHyperRef{stakeholder}{stakeholder} developing the \GlossaryHyperRef{component}{components} that make up \GlossaryHyperRef{device}{devices} and/or \GlossaryHyperRef{system}{systems}.
+See Section \ref{sec:reference-model:stakeholder}.
+
+\GlossaryEntry{developer-hardware}{Developer, Hardware}
+A \GlossaryHyperRef{developer}{developer} involved exclusively in the development of the \GlossaryHyperRef{component-hardware}{hardware components} of \GlossaryHyperRef{device}{devices}.
+
+\GlossaryEntry{developer-software}{Developer, Software}
+A \GlossaryHyperRef{developer}{developer} involved exclusively in the development of the \GlossaryHyperRef{component-software}{software components} of \GlossaryHyperRef{system}{systems}.
 
 \GlossaryEntry{device}{Device}
-TODO: (Hardware components) A physical \GlossaryHyperRef{entity}{entity} capable of hosting \GlossaryHyperRef{system}{systems}.
+A physical \GlossaryHyperRef{entity}{entity}, made from \GlossaryHyperRef{component-hardware}{hardware components}, able to automatically exercise at least one \GlossaryHyperRef{capability}{capability}.
 
 	\GlossaryNote{IoTA:AF}{
 		provides the following architectural definition of device in its third chapter:
 		\begin{quote}
 		An Arrowhead compliant device is a piece of equipment, machine, hardware, etc. with computational, memory and communication capabilities which hosts one or several Arrowhead Framework systems and can be bootstrapped in an Arrowhead local cloud [...] Any other device, equipment, machine, hardware component etc. is non-Arrowhead compliant.
 		\end{quote}
-		The definition provided here should be interpreted as being equivalent.
+		The definition provided here should be interpreted as being equivalent. TODO
 	}
 
 \GlossaryEntry{device-human-interface}{Device, Human Interface (HID)}
 A \GlossaryHyperRef{device}{device} that provides sensors and actuators that together make up an \GlossaryHyperRef{interface}{interface} through which a human can exchange messages with one or more \GlossaryHyperRef{system}{systems}.
+
+\GlossaryEntry{device-system}{Device, System}
+TODO
 
 \GlossaryEntry{encode}{Encode}
 The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{encoding}{encoding} suitable for interpretation to another encoding suitable for transmission or storage.
@@ -340,8 +355,7 @@ TODO: The realization of the \GlossaryHyperRef{protocol}{protocol} established b
 See \GlossaryNameRef{device-human-interface}.
 
 \GlossaryEntry{industry40}{Industry 4.0}
-The fourth industrial paradigm, primarily characterized by high degrees of computerization, digitalization and interconnectivity.
-See also Section \ref{sec:arrowhead:industry40}.
+The fourth industrial paradigm, primarily characterized by high degrees of computerization, digitization and interconnectivity.
 
 \GlossaryEntry{identification}{Identification}
 The process through which an \GlossaryHyperRef{entity}{entity} collects and verifies the \GlossaryHyperRef{identity}{identity} of another entity. 
@@ -528,6 +542,37 @@ See \GlossaryNameRef{service-quality-of}.
 \GlossaryEntry{relationship}{Relationship}
 A uni-directional association of two \GlossaryHyperRef{entity}{entities}, possibly with an associated \GlossaryHyperRef{data}{data} name.
 
+\GlossaryEntry{resource}{Resource}
+An \GlossaryHyperRef{artifact}{artifact} that is of value to a \GlossaryHyperRef{stakeholder}{stakeholder}.
+
+	\GlossaryNote{Note 1}{
+		Any type of artifact can be a resource, which includes everything from \GlossaryHyperRef{resource-local}{local resources}, such as raw materials on \GlossaryHyperRef{device}{devices}, to \GlossaryHyperRef{resource-virtual}{virtual resources}, such as \GlossaryHyperRef{system}{systems} or \GlossaryHyperRef{data}.
+	}
+
+	\GlossaryNote{Note 2}{
+		An artifact stops be a resource when it is perceived as having no value, at which point it may be destroyed, recycled or sold to someone that does perceive it as a resource, for example.
+	}
+
+\GlossaryEntry{resource-local}{Resource, Local}
+A \GlossaryHyperRef{resource}{resource} whose value is inextricably tied to a physical \GlossaryHyperRef{property}{property}.
+
+	\GlossaryNote{Note 1}{
+		Examples of local resources could be raw materials, drills, pumps, power stations, or drones.
+	}
+
+\GlossaryEntry{resource-virtual}{Resource, Virtual}
+A \GlossaryHyperRef{resource}{resource} whose value is not derived from any physical \GlossaryHyperRef{property}{property}.
+
+	\GlossaryNote{Note 1}{
+		Examples of virtual resources could be compute, storage, or software-defined network utilities.
+	}
+
+\GlossaryEntry{role}{Role}
+See \GlossaryHyperRef{role-stakeholder}.
+
+\GlossaryEntry{role-stakeholder}{Role, Stakeholder}
+TODO
+
 \GlossaryEntry{routing-message}{Routing, Message}
 The act of forwarding a \GlossaryHyperRef{message}{message} towards the \GlossaryHyperRef{function}{function} it is meant to \GlossaryHyperRef{invocation-function}{invoke}.
 
@@ -658,6 +703,12 @@ See also \GlossaryNameRef{data}.
 		For example, a data type may specify a \texttt{name}, but it will not indicate when or why that name is useful.
 		That information would have to be provided via documentation or some other means.
 	}
+
+\GlossaryEntry{unit-compute}{Unit, Compute}
+A \GlossaryHyperRef{component-hardware}{hardware component} able to execute \GlossaryHyperRef{software}{software} adhering to its instruction set.
+
+\GlossaryEntry{unit-memory}{Unit, Memory}
+A \GlossaryHyperRef{component-hardware}{hardware component} maintaining a set of changeable \GlossaryHyperRef{datum}{datums}.
 
 \GlossaryEntry{user}{User}
 A \GlossaryHyperRef{stakeholder}{stakeholder} associated with the usage of a certain \GlossaryHyperRef{entity}{entity}.
