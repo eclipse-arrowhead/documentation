@@ -219,7 +219,7 @@ A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on 
 A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{invocation-function}{invoking} a \GlossaryHyperRef{function-service}{function} \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{service}{service}.
 
 	\GlossaryNote{Note 1}{
-		If the term is used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, it must be interpreted as if that stakeholder owns or manages systems engaged in service consumption.
+		If used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, the term must be interpreted as if that stakeholder consumes services via systems.
 	}
 
 	\GlossaryNote{SOA-RM}{
@@ -268,22 +268,20 @@ Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-cla
 \GlossaryEntry[(noun)]{design}{Design}
 Every document, \GlossaryHyperRef{model}{model} and other record \GlossaryHyperRef{description}{describing} how a certain \GlossaryHyperRef{artifact}{artifact} can be \GlossaryHyperRef{implementation}{implemented}.
 
+\GlossaryEntry[(verb)]{design-verb}{Design}
+The activity of producing \GlossaryHyperRef{design}{designs}.
+
 \GlossaryEntry{designer}{Designer}
-A \GlossaryHyperRef{stakeholder}{stakeholder} involved in the \GlossaryHyperRef{design}{design} of \GlossaryHyperRef{artifact}{artifacts}.
+A \GlossaryHyperRef{stakeholder}{stakeholder} involved in the \GlossaryHyperRef{design-verb}{design} of \GlossaryHyperRef{artifact}{artifacts}.
 See Section \ref{sec:reference-model:stakeholder}.
 
 \GlossaryEntry{developer}{Developer}
 A \GlossaryHyperRef{stakeholder}{stakeholder} developing the \GlossaryHyperRef{component}{components} that make up \GlossaryHyperRef{device}{devices} and/or \GlossaryHyperRef{system}{systems}.
 See Section \ref{sec:reference-model:stakeholder}.
 
-\GlossaryEntry{developer-hardware}{Developer, Hardware}
-A \GlossaryHyperRef{developer}{developer} involved exclusively in the development of the \GlossaryHyperRef{component-hardware}{hardware components} of \GlossaryHyperRef{device}{devices}.
-
-\GlossaryEntry{developer-software}{Developer, Software}
-A \GlossaryHyperRef{developer}{developer} involved exclusively in the development of the \GlossaryHyperRef{component-software}{software components} of \GlossaryHyperRef{system}{systems}.
-
 \GlossaryEntry{device}{Device}
 A physical \GlossaryHyperRef{entity}{entity} made from \GlossaryHyperRef{component-hardware}{hardware components} with the significant \GlossaryHyperRef{capability}{capability} of being able to host \GlossaryHyperRef{system}{systems}.
+See Section \ref{sec:reference-model:device}.
 
 	\GlossaryNote{IoTA:AF}{
 		defines device as ``a piece of equipment, machine, hardware, etc. with computational, memory and communication capabilities which hosts one or several Arrowhead Framework systems and can be bootstrapped in an Arrowhead local cloud''.
@@ -317,11 +315,12 @@ The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a 
 A \GlossaryHyperRef{model-concrete}{concrete} \GlossaryHyperRef{type-data}{data type} used to structure \GlossaryHyperRef{data}{data} for transmission, storage and/or interpretation.
 
 \GlossaryEntry{entity}{Entity}
-An \GlossaryHyperRef{artifact}{artifact} that is uniquely \GlossaryHyperRef{identity}{identifiable}.
+An \GlossaryHyperRef{artifact}{artifact} with an \GlossaryHyperRef{identity}{identity}, allowing for it to be distinguished from all other artifacts.
+See Section \ref{sec:reference-model:entity}.
 
 	\GlossaryNote{Note 1}{
 		An entity being uniquely identifiable does not necessarily mean that it is associated with a certificate or \GlossaryHyperRef{identifier}{identifier}.
-		It only means that a \GlossaryHyperRef{description}{description} can be rendered that unambigously refers to the entity in question.
+		It only means that a \GlossaryHyperRef{description}{description} can be rendered that unambiguously refers to the entity in question.
 	}
 
 	\GlossaryNote{RAMI4.0}{
@@ -509,6 +508,7 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of 
 
 \GlossaryEntry{policy}{Policy}
 A set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied for a certain activity to be permitted.
+See Section \ref{sec:reference-model:policy}.
 
 	\GlossaryNote{SOA-RM}{
 		defines policy as ``a statement of obligations, constraints or other conditions of use of an owned entity as defined by a participant''.
@@ -610,7 +610,7 @@ A \GlossaryHyperRef{protocol}{protocol} implemented by a \GlossaryHyperRef{syste
 A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumer-service}{consumption} to other systems.
 
 	\GlossaryNote{Note 1}{
-		If the term is used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, it must be interpreted as if that stakeholder owns or manages systems providing services.
+		If used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, the term must be interpreted as if that stakeholder provides services via systems.
 	}
 
 	\GlossaryNote{SOA-RM}{
@@ -665,17 +665,12 @@ An assignment, objective, or other responsibility, that makes a person or organi
 The act of forwarding a \GlossaryHyperRef{message}{message} towards the \GlossaryHyperRef{function}{function} it is meant to \GlossaryHyperRef{invocation-function}{invoke}.
 
 \GlossaryEntry{service}{Service}
-A set of \GlossaryHyperRef{function}{functions} that can be \GlossaryHyperRef{provider-service}{provided} via a \GlossaryHyperRef{interface-service}{service interface}.
-
-	\GlossaryNote{Note 1}{
-		As each function of a service represents its own \GlossaryHyperRef{protocol}{protocol}, the service itself becomes the union of all those protocols.
-		This introduces the need to be able to determine how to forward \GlossaryHyperRef{message}{messages} received by the service to its functions.
-		This is accomplished through \GlossaryHyperRef{routing-message}{message routing}.
-	}
+A set of \GlossaryHyperRef{function-service}{functions} that can be \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system} via one or more \GlossaryHyperRef{interface-service}{service interfaces}.
+See Section \ref{sec:reference-model:service}.
 
 	\GlossaryNote{RAMI4.0}{
 		defines a service as ``separate scope of functions offered by an entity or organization via interfaces''.
-		Our definition implicitly restricts service provision to systems, as only \GlossaryHyperRef{system}{systems} can provide services.
+		Our definition restricts service provision to systems.
 	}
 
 	\GlossaryNote{SOA-RM}{
@@ -725,6 +720,7 @@ Any type of engagement or commitment.
 
 \GlossaryEntry{stakeholder}{Stakeholder}
 A person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in certain \GlossaryHyperRef{entity}{entities} or enterprises.
+See Section \ref{sec:reference-model:stakeholder}.
 
 \GlossaryEntry[(noun)]{state}{State}
 One out of all possible sequences of values that could be expressed by the \GlossaryHyperRef{datum}{datums} of some \GlossaryHyperRef{data}{data}.
@@ -790,9 +786,11 @@ A set of \GlossaryHyperRef{type-data}{data types} that can be used together, oft
 
 \GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
 A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
+See Section \ref{sec:reference-model:system-of-systems:system-of-local-clouds}.
 
 \GlossaryEntry{system-of-systems}{System-of-Systems (SoS)}
 A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent systems could \GlossaryHyperRef{provider-service}{provide} on its own.
+See Section \ref{sec:reference-model:system-of-systems}.
 
 	\GlossaryNote{IoTA:AF}{
 		defines a system-of-systems as ``a set of system, which [...] exchange information by means of services''.
@@ -824,7 +822,13 @@ A \GlossaryHyperRef{component-hardware}{hardware component} able to execute \Glo
 A \GlossaryHyperRef{component-hardware}{hardware component} maintaining a set of changeable \GlossaryHyperRef{datum}{datums}.
 
 \GlossaryEntry{user}{User}
-A \GlossaryHyperRef{stakeholder}{stakeholder} associated with the usage of a certain \GlossaryHyperRef{entity}{entity}.
+A \GlossaryHyperRef{stakeholder}{stakeholder} involved in the usage of certain \GlossaryHyperRef{entity}{entities}.
+See Section \ref{sec:reference-model:stakeholder}.
+
+	\GlossaryNote{Note 1}{
+		The activity of \textit{using} an entity is not related to its coming into existence, maintenance, decommissioning, or any other peripheral activity.
+		When a user engages in an entity it produces whatever value it was designed to produce.
+	}
 
 \GlossaryEntry{validation}{Validation}
 The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies a \GlossaryHyperRef{constraint}{constraint}.

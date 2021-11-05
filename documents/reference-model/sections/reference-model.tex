@@ -84,10 +84,10 @@ That being said, certain \GlossaryHyperRef{identification}{identification} requi
 \subsection{Device}
 \label{sec:reference-model:device}
 
-A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} with certain \GlossaryHyperRef{capability}{capabilities} that can be exercised by the \GlossaryHyperRef{system}{systems} it hosts.
-Examples of capabilities include moving robotic arms, reading from sensors, running \GlossaryHyperRef{procedure-software}{software procedures}, hosting additional given systems, and sending \GlossaryHyperRef{message}{messages}. 
-Every device consists of \GlossaryHyperRef{component-hardware}{hardware components}, which are what concretely facilitate its capabilities.
-While there are not limits to what components can make up a device, they must always have (1) \GlossaryHyperRef{unit-memory}{memory}, (2) \GlossaryHyperRef{unit-compute}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components, as shown in Figure \ref{fig:device}.
+A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} with the significant \GlossaryHyperRef{capability}{capability} of being able to host at least one \GlossaryHyperRef{system}{system}, each of which may be given the opportunity to exercise the capabilities of that device.
+Examples of capabilities include moving robotic arms, reading from sensors, running \GlossaryHyperRef{procedure-software}{software procedures}, and sending \GlossaryHyperRef{message}{messages}. 
+Every device consists of \GlossaryHyperRef{component-hardware}{hardware components}.
+While there are no limits to what components can make up a device, each device must always have (1) \GlossaryHyperRef{unit-memory}{memory}, (2) \GlossaryHyperRef{unit-compute}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components, as shown in Figure \ref{fig:device}.
 
 \begin{figure}[ht!]
   \centering
@@ -103,7 +103,7 @@ While there are not limits to what components can make up a device, they must al
 
 \vspace*{1.8mm}
 
-Devices must be able to host systems, or they must be considered as \GlossaryHyperRef{component-hardware}{hardware components}.
+Devices must be able to host systems, or they must be considered as hardware components.
 While it may seem unintuitive to consider certain machines as components, such as large pumping complexes or vehicles with only manual controls, the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is meant to facilitate automation through the use of interconnected devices with compute capabilities.
 If a machine cannot run \GlossaryHyperRef{software}{software}, making it able to host systems, that capability must be added before it can play a meaningful role in an Arrowhead context.
 Consequently, machines without system hosting capabilities must either be considered as components or not be considered from the perspective of Arrowhead at all.
@@ -114,7 +114,7 @@ Consequently, machines without system hosting capabilities must either be consid
 A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}.
 As shown in Figure \ref{fig:system}, systems consists of \GlossaryHyperRef{component-software}{software components}.
 Some significant such components are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{procedure-software}{procedures} and (3) \GlossaryHyperRef{interface-system}{system interfaces}, which are facilitated by the (1) \GlossaryHyperRef{unit-memory}{memory}, (2) \GlossaryHyperRef{unit-compute}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components of a device.
-A system with these components should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}, or it must be referred to as a \GlossaryHyperRef{system-isolated}{\textit{isolated system}}.
+A system with these components should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}, or it must be referred to as an \GlossaryHyperRef{system-isolated}{\textit{isolated system}}.
 
 \begin{figure}[ht!]
   \centering
@@ -133,10 +133,10 @@ A system may or may not run in its own operating system process, use a certain v
 \subsection{Service}
 \label{sec:reference-model:service}
 
-A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{function}{functions} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, allowing for other systems to trigger its \GlossaryHyperRef{capability-system}{capabilities} by sending \GlossaryHyperRef{message}{messages} to, or \GlossaryHyperRef{invocation-function}{\textit{invoking}}, those functions.
+A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{function-service}{functions} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, allowing for other systems to trigger its \GlossaryHyperRef{capability-system}{capabilities} by sending \GlossaryHyperRef{message}{messages} to, or \GlossaryHyperRef{invocation-function}{\textit{invoking}}, those functions.
 The act of sending a message to a certain function is referred to as \GlossaryHyperRef{consumer-service}{\textit{consuming}} its service.
 As depicted in Figure \ref{fig:service}, every service consists of at least three \GlossaryHyperRef{component-software}{software components}.
-These are (1) \GlossaryHyperRef{state-software}{states}, (2) functions and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
+These are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{function-service}{functions} and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
 
 \begin{figure}[ht!]
   \centering
@@ -160,8 +160,10 @@ Otherwise the unqualified use of the word \textit{function} must be understood t
 \label{sec:reference-model:system-of-systems}
 
 A \GlossaryHyperRef{system-of-systems}{system-of-systems} is an \GlossaryHyperRef{identification}{identifiable} set of at least two \GlossaryHyperRef{system}{systems}, together facilitating one or more \GlossaryHyperRef{capability-system}{capabilities} none of the constituent systems could have on its own.
-In other words, if a system \GlossaryHyperRef{consumer-service}{consumes} a \GlossaryHyperRef{service}{service} of another system, those two form a system-of-systems.
-As illustrated in Figure \ref{fig:system-of-systems}, there are two types of systems-of-systems of particular relevance to the Arrowhead framework, (1) the \GlossaryHyperRef{cloud-local}{local cloud} and (2) the \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds}, which are described in the following two sections.
+While this definition may initially seem rather strict, it is enough for a system to \GlossaryHyperRef{consumer-service}{consume} a \GlossaryHyperRef{service}{service} of another system for a system-of-systems to emerge.
+This as service consumption can only be motivated by the desire to facilitate new capabilities.
+
+As illustrated in Figure \ref{fig:system-of-systems}, there are two types of systems-of-systems of particular relevance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, (1) the \GlossaryHyperRef{cloud-local}{local cloud} and (2) the \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds}, which we describe in the following sections.
 
 \begin{figure}[ht!]
   \centering
@@ -170,6 +172,7 @@ As illustrated in Figure \ref{fig:system-of-systems}, there are two types of sys
     The system-of-system as a group of two or more systems, together facilitating new capabilities.
   }
   \label{fig:system-of-systems}
+  \vspace*{-3mm}
 \end{figure}
 
 \subsubsection{Local Cloud}
@@ -191,8 +194,8 @@ A cloud that has no resources or boundaries tied to any particular physical loca
 \end{figure}
 
 That a local cloud has a boundary means that a distinction is being made between \GlossaryHyperRef{system}{systems} inside and outside the cloud.
-A boundary being local means that the distinction is being made by a physical \GlossaryHyperRef{property}{property}, such as device location, type of device, or physical connection.
-Boundaries may be protected, which means that certain measures are in place to guarantee security, safety, real-time characteristics, or other local cloud properties.
+A boundary being local means that the distinction is being made by a physical \GlossaryHyperRef{property}{property}, such as device location, type of device, or physical attachment to a certain \GlossaryHyperRef{entity}{entity}.
+Boundaries may be protected, which means that measures are in place to guarantee security, safety, real-time characteristics, or other local cloud properties.
 The resources of a local cloud may be of any type, from virtual compute resources to physical drills or pumps.
 A system managing a resource may be referred to as a \GlossaryHyperRef{system-supervisory}{\textit{supervisory system}}.
 
