@@ -1,0 +1,28 @@
+% Copyright (c) 2021 Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{artifact}{artifact}, to be considered as conformant to the \GlossaryHyperRef{model-reference}{reference model} recorded in this document, the following must be observed by that \textit{derived work}:
+
+\begin{enumerate}
+\item At least one of the concepts defined in this reference model must be part of that derived work.
+\item The derived work must make it explicit what concepts are taken from this reference model.
+	\begin{enumerate}
+	\item How this is done most suitably depends on the type of derived work. A document may include a normative reference to this document, while a model may want to give all relevant entities and relations a property with the identity of this document, for example.
+	\end{enumerate}
+\item Every concept taken from this reference model must be represented by the name it is given here.
+	\begin{enumerate}
+	\item If important to be able to distinguish an Arrowhead concept from other such of relevance, concepts from this reference model may be qualified by the leading word ``Arrowhead'', as in, for example, ``Arrowhead system`` or ``Arrowhead service function''.
+	\item Note that some concepts defined here are given more than one name. For example, \GlossaryHyperRef{function-program}{program function} and \GlossaryHyperRef{procedure-software}{software procedure} are declared to be synonyms in the glossary. When synonyms exist, only one of their entries in the glossary will have a definition. The name of that definition should be the name being used.
+	\end{enumerate}
+\item Concepts taken from this reference model may be \textit{specialized} or \textit{simplified}, but must never be \textit{contradicted}.
+	\begin{enumerate}
+	\item \textit{Specialization} means that more \GlossaryHyperRef{constraint}{constraints} are applied to it than are presented here. For example, a certain derived work may require that all devices have \GlossaryHyperRef{unit-compute}{compute units} supporting a certain instruction set, or that every \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{provides} a specific monitoring \GlossaryHyperRef{service}{service}, and so on.
+	\item \textit{Simplification} means that \GlossaryHyperRef{entity}{entities}, \GlossaryHyperRef{relationship}{relationships} or \GlossaryHyperRef{property}{properties} introduced here are omitted due to being outside the scope of the derived work. For example, a technical document may not be concerned with \GlossaryHyperRef{role-stakeholder}{stakeholder roles}, while a model of certain types of local clouds may not be concerned with whether or not artifacts are \GlossaryHyperRef{resource}{resources} or not, and so on.
+	\item \textit{Contradiction} means that a property or other constraint is introduced that makes it impossible to reconcile the concepts presented here with those in the derived work. A derived work must not, for example, demand that no devices ever host systems, or that services be provided directly by devices without any services, and so on.
+	\end{enumerate}
+\end{enumerate}
