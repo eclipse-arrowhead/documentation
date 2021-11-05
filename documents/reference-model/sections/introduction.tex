@@ -63,9 +63,13 @@ A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relation
 If a named arrow has an associated positive integer or range, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
 A range is denoted by $x..y$, where $x$ and $y$ are positive integers and $x<y$.
 Omitting $y$ when using the range notation (e.g. ``$1..$'') means that the range is infinite from $x$.
+Names, integers and ranges are \GlossaryHyperRef{property}{\textit{properties}}.
+If two or more arrows are combined such that their source or target end is shared, a difference is made if a property is closest to a shared or non-shared arrow part.
+If it is closest to a shared part, the property must be understood to apply to all combined arrows.
+If it is closes to a non-shared part, the property be understood to only apply to that arrow.
 A box with a dotted border represents a group.
 The entities explicitly placed within the box may or may not represent all entities that belong to that group.
-See Figure \ref{fig:reference-model} for an example of this graphical notation being used.
+See Figure \ref{fig:reference-model} for an example of this notation being used.
 
 Note that this document does \textit{not} define an Arrowhead profile for SysML \cite{omg2019sysml}, or any other modeling language.
 As we cover later in Section \ref{sec:conformance}, however, we do expect all models based on this document not to contradict any of its definitions.
@@ -83,9 +87,6 @@ These are displayed as regular text rendered with blue color.
 
 Use of the words \textbf{must}, \textbf{must not}, \textbf{required}, \textbf{should}, \textbf{should not}, \textbf{recommended}, \textbf{may}, and \textbf{optional} are to be interpreted as follows when used in this document: \textbf{must} and \textbf{required} denote absolute requirements that must be adhered to for a described entity to be considered as compliant to this reference model; \textbf{must not} denotes an absolute prohibition; \textbf{should}, \textbf{should not} and \textbf{recommended} denote recommendations that should be deviated from only if special circumstances make it relevant; and, finally, \textbf{may} and \textbf{optional} denote something being truly optional.
 These word definitions are derived from and are meant to capture what is outlined in RFC 2119 \cite{bradner1997keywords}.
-
-These word definitions have particular bearing on Section \ref{sec:conformance}, which is concerned with what documents and models can be considered conformant to or compliant with this document.
-They do, however, apply to all parts of the document.
 
 \subsection{Relationships to Other Documents}
 \label{sec:introduction:relationships}
