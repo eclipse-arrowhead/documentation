@@ -14,7 +14,7 @@ While \textit{assumptions} and \textit{values} may be possible derive from this 
 
 \paragraph{Stakeholders and artifacts.}
 The are two kinds of citizens in the world of Arrowhead, (1) \GlossaryHyperRef{stakeholder}{stakeholders} and (2) \GlossaryHyperRef{artifact}{artifacts}.
-The former denotes a person or organization with \GlossaryHyperRef{stake}{stake} in an Arrowhead enterprise, while the latter is any thing or object, tangible or intangible, that could be relevant to consider as part of such an enterprise.
+The former denotes a person or organization engaged in an Arrowhead enterprise, while the latter is any thing or object, tangible or intangible, that could be relevant to consider as part of such an enterprise.
 Stakeholders \GlossaryHyperRef{owner}{own}, \GlossaryHyperRef{designer}{design}, \GlossaryHyperRef{developer}{develop}, \GlossaryHyperRef{operator}{operate}, and \GlossaryHyperRef{user}{use} artifacts, among many other possible activities.
 It is their business needs and ambitions that dictate what and how Arrowhead artifacts will be employed.
 
@@ -22,16 +22,29 @@ It is their business needs and ambitions that dictate what and how Arrowhead art
 The most essential types of Arrowhead artifacts are (1) \GlossaryHyperRef{device}{devices}, (2) \GlossaryHyperRef{system}{systems} and (3) \GlossaryHyperRef{service}{services}.
 \textit{Devices} constitute the physical machines that make up the industrial complexes, vehicles, tools, and other things that could be made operational via Arrowhead.
 Each device hosts one or more \textit{systems}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances} that make their devices work toward whatever goals are set for them.
-Finally, a \textit{service} is a set of related tasks that a system can make its device do for a person or another system.
-Each task is concretely represented by a \GlossaryHyperRef{function-service}{function}.
-Services can be concerned with vehicle repairs, information backups, analysis, manufacturing, or any other activity a system can perform via its device.
-The service is the means whereby systems coordinate to fulfill their assignments.
+Finally, a \textit{service} is a set of related \GlossaryHyperRef{function-service}{functions} that a system can make its device perform for a person or another system.
+Services can be concerned with vehicle repairs, information backups, analysis, manufacturing, or any other physical or virtual activity.
+The service is the primary means whereby systems coordinate to fulfill their assignments.
 
 \paragraph{Service provision and consumption.}
 Communication between systems is formulated in terms of the \GlossaryHyperRef{provider-service}{provision} and \GlossaryHyperRef{consumer-service}{consumption} of services.
-When a system \textit{provides} a service, it makes it available to other systems through certain \GlossaryHyperRef{interface-service}{service interfaces}.
-Other systems can \textit{consume} the services of other systems by sending \GlossaryHyperRef{message}{messages} to the service interfaces of those services.
-
+When a system \textit{provides} a service, it makes it available to other systems through \GlossaryHyperRef{interface-service}{service interfaces}.
+Other systems can \textit{consume} its services by sending \GlossaryHyperRef{message}{messages} to the interfaces of those services.
+When a service interface receives a message, it \GlossaryHyperRef{routing-message}{routes} it to the specific function it targets.
+That functions must ensure that the message conforms to its \GlossaryHyperRef{protocol-function}{protocol} and \GlossaryHyperRef{policy-function}{policies} before handling it.
+Function protocols establish what messages must contain and when they may be sent in relation to other messages, while policies establish what other conditions must be satisfied for the \GlossaryHyperRef{invocation-function}{function invocation} to be permitted.
+In other words, a message satisfying a function protocol guarantees that the message is understood by its receiving function, while a message satisfying certain policies guarantees that the activity it would trigger is occurring under desirable conditions.
+A policy may require that certain \GlossaryHyperRef{quality-of-service}{quality-of-service} guarantees can be met, or that the sender is properly authorized, among many other possible examples.
 
 \paragraph{System-of-systems.}
-
+When certain systems consume each other's services, those systems form a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
+That system-of-systems becomes able to perform activities none of its constituent \GlossaryHyperRef{subsystem}{subsystems} could perform on its own.
+While there are many ways it could be relevant to structure systems in relation to each other, two are of particular significance in the context of the Arrowhead framework.
+These are (1) the \GlossaryHyperRef{cloud-local}{local cloud}, and (2) the \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds}.
+A \textit{local cloud} is a pool of \GlossaryHyperRef{resource}{resources}, managed by systems, where at least one pooled resource is \GlossaryHyperRef{resource-local}{local}.
+A \textit{local resource} derives its value from its physical \GlossaryHyperRef{property}{properties}.
+Furthermore, all local clouds have at least one \GlossaryHyperRef{boundary-local}{\textit{local boundary}}, which is a physical property that distinguished artifacts inside the cloud from those outside it.
+A local cloud may also have \GlossaryHyperRef{resource-virtual}{virtual resources} and \GlossaryHyperRef{boundary-virtual}{virtual boundaries}.
+Raw materials, drones, and other systems are a few examples of resources.
+Boundaries may be formed by physical location, electronic certificate issuance, among many other possible examples.
+A system-of-local-clouds emerges when distinct local clouds consume each other's services to perform new activities neither of the local clouds could perform on its own.
