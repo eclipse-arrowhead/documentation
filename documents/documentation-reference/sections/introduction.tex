@@ -6,7 +6,8 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-X \cite{palm2021reference}
+In this document, we, the Eclipse Arrowhead project, outline the Arrowhead framework document structure, describe how to format print, interactive and semantic documentation, as well as presenting guidelines regarding document conformance and ratification.
+We believe the documentation structure we relate here will facilitate effective and efficient distribution of knowledge within the Arrowhead community, serving to speed up decision-making, integration, decommissioning, and other relevant activities.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
@@ -23,43 +24,21 @@ We understand this to include the following groups:
 \subsection{Scope}
 \label{sec:introduction:scope}
 
-This document make up a so-called \textit{reference architecture}, which we understand to be a set of TODO.
+This document describes a so-called \textit{reference architecture}, which provides abstract building blocks for more concrete documents or models to build upon.
+The abstract building blocks are meant to capture practices we have come to understand as effectively addressing real-world problems, but without mentioning any concrete tools or other technologies.
+In contrast to a \textit{reference model}, a reference architecture \textit{does} concern itself with how systems must or should be designed.
+In this instance, that concern, or scope, is limited to the documentation of the Arrowhead framework.
 
 \subsection{Notational Conventions}
 \label{sec:introduction:conventions}
 
-The following conventions regarding diagrams, references and requirements are adhered to throughout this document.
-All three of them were selected by virtue of being deemed unsurprising to our primary audiences.
-
-\subsubsection{Diagrams}
-
-A box with a name inside it denotes a named entity.
-A named arrow between boxes denotes the relationship implied by the name.
-If a named arrow has an associated positive integer or range, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
-A range is denoted by $x..y$, where $x$ and $y$ are positive integers and $x<y$.
-Omitting $y$ when using the range notation (e.g. ``$1..$'') means that the range is infinite from $x$.
-Names, integers and ranges are \textit{properties}.
-If two or more arrows are combined such that their source or target end is shared, a difference is made if a property is closest to a shared or non-shared arrow part.
-If it is closest to a shared part, the property must be understood to apply to all combined arrows.
-If it is closes to a non-shared part, the property be understood to only apply to that arrow.
-A box with a dotted border represents a group.
-The entities explicitly placed within the box may or may not represent all entities that belong to that group.
-See Figure TODO for an example of this notation being used.
-
-\subsubsection{References}
-
-Square brackets around numbers (e.g. \cite{palm2021reference}) are references to the reference list in Section \ref{sec:references}.
-The number within the brackets of any given reference corresponds to the entry with the same number in the reference list.
-
-\subsubsection{Requirements}
-
-Use of the words \textbf{must}, \textbf{must not}, \textbf{required}, \textbf{should}, \textbf{should not}, \textbf{recommended}, \textbf{may}, and \textbf{optional} are to be interpreted as follows when used in this document: \textbf{must} and \textbf{required} denote absolute requirements that must be adhered to for a described entity to be considered as compliant to this reference model; \textbf{must not} denotes an absolute prohibition; \textbf{should}, \textbf{should not} and \textbf{recommended} denote recommendations that should be deviated from only if special circumstances make it relevant; and, finally, \textbf{may} and \textbf{optional} denote something being truly optional.
-These word definitions are derived from and are meant to capture what is outlined in RFC 2119 \cite{bradner1997keywords}.
+This document inherits its notational conventions form \textit{Eclipse Arrowhead Reference Model} \cite{palm2021reference}, which outlines how diagrams, references and requirements are presented in this document.
 
 \subsection{Relationships to Other Documents}
 \label{sec:introduction:relationships}
 
-TODO
+This document is an extension of the \textit{Eclipse Arrowhead Reference Model} \cite{palm2021reference}, which outlines all Arrowhead concepts not defined here.
+You are, as a reader, assumed to be familiar with the concepts introduced by it, such as \textit{system}, \textit{service}, \textit{interface} and \textit{protocol}.
 
 \subsection{Section Overview}
 \label{sec:introduction:sections}
