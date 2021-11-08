@@ -19,9 +19,9 @@
 \begin{document}
 
 %% Arrowhead Document Properties
-\ArrowheadTitle{Eclipse Arrowhead Documentation Reference}
-\ArrowheadType{Framework Design Description}
-\ArrowheadTypeShort{FDD}
+\ArrowheadTitle{Eclipse Arrowhead Core Documentation Reference}
+\ArrowheadType{Reference Architecture}
+\ArrowheadTypeShort{RA}
 \ArrowheadVersion{0.1}
 \ArrowheadDate{\today}
 \ArrowheadAuthor{Emanuel Palm}
@@ -47,7 +47,8 @@
   \vspace*{\fill}
 
   \begin{abstract}
-    TODO
+    This document establishes how to read and write the documentation for entities of the \textit{Eclipse Arrowhead}, a framework designed to help create highly dynamic industrial systems.
+    It also provides guidelines regarding the production of \textit{conformant} documentation, as well as describing how significant documentation can be ratified.
   \end{abstract}
 
   \vspace*{1cm}
@@ -66,27 +67,35 @@
 
 \section{Overview}
 \label{sec:overview}
+\input{sections/overview}
 
 \section{Formats}
 \label{sec:formats}
+\input{sections/formats}
 
 \section{Framework Descriptions}
 \label{sec:framework}
+\input{sections/framework}
 
 \section{Black Box Descriptions}
 \label{sec:blackbox}
+\input{sections/blackbox}
 
 \section{White Box Descriptions}
 \label{sec:whitebox}
+\input{sections/whitebox}
 
 \section{Profile Descriptions}
 \label{sec:profile}
+\input{sections/profile}
 
 \section{Conformance Guidelines}
 \label{sec:conformance}
+\input{sections/conformance}
 
 \section{Ratification Guidelines}
 \label{sec:ratification}
+\input{sections/ratification}
 
 \renewcommand{\bibsection}{\section{References}\label{sec:references}}
 \bibliographystyle{arrowhead}
