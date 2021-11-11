@@ -6,7 +6,7 @@
 #
 # SPDX-License-Identifier: EPL-2.0
 
-ASSEMBLY_NAME := Eclipse Arrowhead Core Reference Model v
+ASSEMBLY_NAME := Eclipse Arrowhead Reference Model v
 NAME          := main
 LATEXMK       := latexmk
 CP            := cp

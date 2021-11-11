@@ -6,8 +6,8 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-\def\fileversion{1.5}
-\def\filedate{2021/10/21}
+\def\fileversion{1.6}
+\def\filedate{2021/11/11}
 \NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{arrowhead}[\filedate\space Version \fileversion\space]
@@ -26,6 +26,7 @@
 \RequirePackage{lastpage}
 \RequirePackage{listings}
 \RequirePackage{microtype}
+\RequirePackage{ragged2e}
 \RequirePackage{tabularx}
 \RequirePackage{xstring}
 \RequirePackage{xparse}
@@ -111,10 +112,12 @@
 \renewcommand\tiny{\@setfontsize\tiny{6}{7}}
 \renewenvironment{abstract}{%
   \begin{flushleft}
-    {\large \textbf{\abstractname}}\\
+    \large\textbf{\abstractname}
+  \end{flushleft}
+  \begin{justify}
     \normalsize
 }{%
-  \end{flushleft}
+  \end{justify}
 }
 
 \makeatother
