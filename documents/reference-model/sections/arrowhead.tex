@@ -12,6 +12,8 @@ Secondly, it is a set of software specifications, \GlossaryHyperRef{implementati
 In this section, we provide an overview of the primary \textit{concepts} of the Arrowhead framework.
 While \textit{assumptions} and \textit{values} may be possible derive from this overview, neither of these, nor the other parts of the framework, are considered directly.
 
+\vspace*{1mm}
+
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/framework}
@@ -21,12 +23,16 @@ While \textit{assumptions} and \textit{values} may be possible derive from this 
   \label{fig:framework}
 \end{figure}
 
+\vspace*{-3mm}
+
 \subsection{Stakeholders and Artifacts}
 
 There are two kinds of citizens in the world of Arrowhead, (1) \GlossaryHyperRef{stakeholder}{stakeholders} and (2) \GlossaryHyperRef{artifact}{artifacts}, as depicted in Figure \ref{fig:world}.
 The former denotes a person or organization engaged in an Arrowhead enterprise, while the latter is any thing or object, tangible or intangible, that could be relevant to consider as part of such an enterprise.
 Stakeholders \GlossaryHyperRef{owner}{own}, \GlossaryHyperRef{designer}{design}, \GlossaryHyperRef{developer}{develop}, \GlossaryHyperRef{operator}{operate}, and \GlossaryHyperRef{user}{use} artifacts, among many other possible activities.
 It is their business needs and ambitions that dictate what and how Arrowhead artifacts will be employed.
+
+\vspace*{1mm}
 
 \begin{figure}[ht!]
   \centering
@@ -37,14 +43,18 @@ It is their business needs and ambitions that dictate what and how Arrowhead art
   \label{fig:world}
 \end{figure}
 
+\vspace*{-3mm}
+
 \subsection{Devices, Systems and Services}
 
 The most essential types of Arrowhead artifacts are (1) \GlossaryHyperRef{device}{devices}, (2) \GlossaryHyperRef{system}{systems} and (3) \GlossaryHyperRef{service}{services}, as shown in Figure \ref{fig:device-system-service}.
 \textit{Devices} constitute the physical machines that make up the industrial complexes, vehicles, tools, and other things that could be made operational via Arrowhead.
 Each device hosts one or more \textit{systems}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances} that make their devices work toward whatever goals are set for them.
 Finally, a \textit{service} is a set of related \GlossaryHyperRef{function-service}{functions} that a system can make its device perform for a person or another system.
-%Services can be concerned with vehicle repairs, information backups, analysis, manufacturing, or any other physical or virtual activity.
-%The service is the primary means whereby systems coordinate to fulfill their assignments.
+Services can be concerned with manufacturing, repair, analysis, or any other physical or virtual activity.
+The service is the primary means whereby systems coordinate to fulfill their assignments.
+
+\vspace*{1mm}
 
 \begin{figure}[ht!]
   \centering
@@ -55,6 +65,8 @@ Finally, a \textit{service} is a set of related \GlossaryHyperRef{function-servi
   }
   \label{fig:device-system-service}
 \end{figure}
+
+  \vspace*{-3mm}
 
 \subsection{Service Provision and Consumption}
 
@@ -76,7 +88,7 @@ A policy may require that certain \GlossaryHyperRef{service-quality-of}{quality-
   \label{fig:service-consumption}
 \end{figure}
 
-\subsection{System-of-Systems}
+\subsection{System Composition}
 
 When certain systems consume each other's services, those systems form a \GlossaryHyperRef{system-of-systems}{system-of-systems}, as illustrated in Figure \ref{fig:system-of-systems-small}.
 That system-of-systems becomes able to perform activities none of its constituent \GlossaryHyperRef{subsystem}{subsystems} could perform on its own.
