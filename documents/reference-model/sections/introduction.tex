@@ -25,9 +25,9 @@ These definitions exist to help mitigate compatibility and consistency issues in
 This document is being written and maintained for all who may require a precise and rigorous understanding of the Arrowhead framework, which we understand is likely to include the following groups:
 
 \begin{itemize}
-\item \textit{System designers, integrators, operators and developers} of Arrowhead systems.
-\item \textit{Standardization engineers and researchers} concerned with Arrowhead.
-\item \textit{Technical decision makers and advanced users} of the Arrowhead framework.
+\item System \GlossaryHyperRef{designer}{designers}, \GlossaryHyperRef{engineer-standardization}{standardization engineers}, \GlossaryHyperRef{developer}{developers}, \GlossaryHyperRef{integrator}{integrators} and \GlossaryHyperRef{operator}{operators}.
+\item \GlossaryHyperRef{researcher}{Researchers}.
+\item Technical \GlossaryHyperRef{manager}{managers} and advanced \GlossaryHyperRef{user}{users}.
 \end{itemize}
 
 \subsection{Scope}
@@ -42,7 +42,7 @@ Reference models can be used as vocabularies for defining \GlossaryHyperRef{arch
   \includegraphics{figures/reference-model}
   \caption{
     The steps from reference model to implementation, going from highly abstract to entirely concrete.
-    Reference models define fundamental concepts, reference architectures add abstract design constraints rooted in real-world observation or experiences, concrete architectures makes those design constraints practically realizable, while implementations represent their actual realization.
+    Reference models define fundamental concepts, reference architectures add abstract and/or concrete design constraints rooted in real-world observations or experiences, concrete architectures makes those design constraints practically realizable as one or more \GlossaryHyperRef{artifact}{artifacts}, while implementations represent their actual realization.
   }
   \label{fig:reference-model}
 \end{figure}
@@ -55,15 +55,14 @@ All three of them were selected by virtue of being deemed unsurprising to our pr
 
 \subsubsection{Diagrams}
 
-A box with a name inside it denotes a named \GlossaryHyperRef{entity}{entity}.
+A box with a name inside it denotes a named \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{stakeholder}{stakeholder}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
-If a named arrow has an associated positive integer or range, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
+If a named arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
 A range is denoted by $x..y$, where $x$ and $y$ are positive integers and $x<y$.
 Omitting $y$ when using the range notation (e.g. ``$1..$'') means that the range is infinite from $x$.
-Names, integers and ranges are \GlossaryHyperRef{property}{\textit{properties}}.
-If two or more arrows are combined such that their source or target end is shared, a difference is made if a property is closest to a shared or non-shared arrow part.
-If it is closest to a shared part, the property must be understood to apply to all combined arrows.
-If it is closes to a non-shared part, the property be understood to only apply to that arrow.
+If two or more arrows are combined such that their source or target end is shared, a difference is made if a quantifier is closest to a shared or non-shared arrow part.
+If it is closest to a shared part, the quantity must be understood to apply to every arrow part of the combination.
+If it is closest to a non-shared part, the quantifier must be understood to only apply to that arrow.
 A box with a dotted border represents a group.
 The entities explicitly placed within the box may or may not represent all entities that belong to that group.
 See Figure \ref{fig:reference-model} for an example of this notation being used.
