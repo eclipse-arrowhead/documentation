@@ -6,46 +6,43 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-We expect industrial automation to keep becoming increasingly computerized, digitized and interconnected.
-This means that more aspects of and surrounding manufacturing is handled by computers, more information is being made available to those computers and, finally, comparatively more computers are given the opportunity to collect, communicate and act on that information.
-This development is leading to increased industrial efficiency and flexibility, as machines become able to perform more of the work traditionally assigned to humans.
-However, it also leads to new magnitudes of complexity, not the least because of the renewed incentive to introduce more of these machines in industrial settings.
-This development is something we believe the currently prevailing automation systems will remain unable to manage \cite{delsing2017iot}.
+We expect the automation system of today to keep becoming more and more computerized, digitized and interconnected.
+By this we mean that more aspects of and surrounding machines will be handled by computers, more information will be made available to those computers and, finally, comparatively more computers will be given the opportunity to collect, communicate and act on that information.
+Manufacturing, transportation, energy distribution, medicine, recycling, and all other industrial sectors concerned with automation will be affected by this development.
+It will lead to increased efficiency and flexibility, as machines become able to perform more of the work traditionally assigned to humans.
+However, it will also lead to new magnitudes of complexity, not the least because of the renewed incentive to use more and more of these highly communicative machines.
 
-The \GlossaryHyperRef{framework-arrowhead}{\textit{Arrowhead framework}} is a means to address this explosion of industrial complexity.
-It provides a foundation for \GlossaryHyperRef{communication-service-oriented}{\textit{service-oriented communication}} \cite{mackenzie2006reference} between automation systems, such that interoperability, security, safety and other major concerns can be addressed efficiently and effectively.
+The \GlossaryHyperRef{framework-arrowhead}{\textit{Arrowhead framework}} is designed to address this explosion of complexity.
+It provides a foundation for \GlossaryHyperRef{communication-service-oriented}{\textit{service-oriented communication}} \cite{mackenzie2006reference} between automation systems, such that interoperability, security, safety, performance, and other major concerns can be addressed efficiently and effectively.
 It notably allows for \GlossaryHyperRef{system}{system} \GlossaryHyperRef{capability}{capabilities} to be \GlossaryHyperRef{description}{described}, shared and exploited dynamically by communicating \GlossaryHyperRef{device}{devices}.
 
-In this document, we, the Eclipse Arrowhead project, present and authoritative set of concept definitions, meant to serve as the fundamental language for discussions about and the modeling of Arrowhead-based \GlossaryHyperRef{design}{designs}.
+In this document, we, the Eclipse Arrowhead project, present an authoritative set of concept definitions, meant to serve as the fundamental language for discussions about and the modeling of Arrowhead-based \GlossaryHyperRef{design}{designs}.
 These definitions exist to help mitigate compatibility and consistency issues in \GlossaryHyperRef{software}{software}, tooling, \GlossaryHyperRef{model}{models}, documentation and all other things of relevance to the Arrowhead framework.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
 
-This document is being written and maintained with the following primary audiences in mind:
+This document is being written and maintained for all who may require a precise and rigorous understanding of the Arrowhead framework, which we understand is likely to include the following groups:
 
 \begin{itemize}
-\item \textit{System architects, integrators and developers} designing, integrating or developing Arrowhead systems.
-\item \textit{Standardization engineers and researchers} seeking to extend, analyze or improve upon Arrowhead.
-\item \textit{Decision makers, users and other stakeholders} that need to understand fundamental Arrowhead concepts.
+\item System \GlossaryHyperRef{designer}{designers}, \GlossaryHyperRef{engineer-standardization}{standardization engineers}, \GlossaryHyperRef{developer}{developers}, \GlossaryHyperRef{integrator}{integrators} and \GlossaryHyperRef{operator}{operators}.
+\item \GlossaryHyperRef{researcher}{Researchers}.
+\item Technical \GlossaryHyperRef{manager}{managers} and advanced \GlossaryHyperRef{user}{users}.
 \end{itemize}
-
-Those seeking a less detailed description of Arrowhead may want to focus their reading on Section \ref{sec:arrowhead}.
 
 \subsection{Scope}
 \label{sec:introduction:scope}
 
 The concepts described in this document make up a so-called \GlossaryHyperRef{model-reference}{\textit{reference model}}, which we understand to be a set of definitions for technical concepts of fundamental importance to a specific problem domain.
 Such a document does not specify how its definitions should be used to design systems, either abstract or concrete.
-
 Reference models can be used as vocabularies for defining \GlossaryHyperRef{architecture-reference}{reference architectures}, which in turn can be used to derive \GlossaryHyperRef{architecture}{concrete architectures} and, finally, \GlossaryHyperRef{implementation-software}{software implementations}, as illustrated in Figure \ref{fig:reference-model}.
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
   \centering
-  \includegraphics{figures/reference-model}
+  \includegraphics[scale=0.9]{figures/reference-model}
   \caption{
     The steps from reference model to implementation, going from highly abstract to entirely concrete.
-    Reference models define fundamental concepts, reference architectures add abstract design constraints rooted in real-world observation or experiences, concrete architectures makes those design constraints practically realizable, while implementations represent their actual realization.
+    Reference models define fundamental concepts, reference architectures add abstract and/or concrete design constraints rooted in real-world observations or experiences, concrete architectures makes those design constraints practically realizable as one or more \GlossaryHyperRef{artifact}{artifacts}, while implementations represent their actual realization.
   }
   \label{fig:reference-model}
 \end{figure}
@@ -58,15 +55,14 @@ All three of them were selected by virtue of being deemed unsurprising to our pr
 
 \subsubsection{Diagrams}
 
-A box with a name inside it denotes a named \GlossaryHyperRef{entity}{entity}.
+A box with a name inside it denotes a named \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{stakeholder}{stakeholder}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
-If a named arrow has an associated positive integer or range, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
+If a named arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
 A range is denoted by $x..y$, where $x$ and $y$ are positive integers and $x<y$.
 Omitting $y$ when using the range notation (e.g. ``$1..$'') means that the range is infinite from $x$.
-Names, integers and ranges are \GlossaryHyperRef{property}{\textit{properties}}.
-If two or more arrows are combined such that their source or target end is shared, a difference is made if a property is closest to a shared or non-shared arrow part.
-If it is closest to a shared part, the property must be understood to apply to all combined arrows.
-If it is closes to a non-shared part, the property be understood to only apply to that arrow.
+If two or more arrows are combined such that their source or target end is shared, a difference is made if a quantifier is closest to a shared or non-shared arrow part.
+If it is closest to a shared part, the quantity must be understood to apply to every arrow part of the combination.
+If it is closest to a non-shared part, the quantifier must be understood to only apply to that arrow.
 A box with a dotted border represents a group.
 The entities explicitly placed within the box may or may not represent all entities that belong to that group.
 See Figure \ref{fig:reference-model} for an example of this notation being used.
@@ -107,8 +103,8 @@ As communication between \GlossaryHyperRef{system}{systems} of the Arrowhead fra
 
 \item \textbf{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
 The book most significantly represents the state of the Arrowhead framework up until it was written.
-Even though the framework has evolved since the book was written, it still represents the most complete view of the framework.
-While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance to this document.
+Even though the framework has evolved since then, it still represents the most comprehensive view of the framework.
+While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance.
 
 \end{enumerate}
 
