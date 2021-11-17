@@ -7,9 +7,9 @@
 % SPDX-License-Identifier: EPL-2.0
 
 We expect the automation system of today to keep becoming more and more computerized, digitized and interconnected.
-By this we mean that more aspects of and surrounding machines will be handled by computers, more information will be made available to those computers and, finally, comparatively more computers will be given the opportunity to collect, communicate and act on that information.
-Manufacturing, transportation, energy distribution, medicine, recycling, and all other industrial sectors concerned with automation will be affected by this development.
-It will lead to increased efficiency and flexibility, as machines become able to perform more of the work traditionally assigned to humans.
+By this we mean that more aspects of and surrounding automation machines will be handled by computers, more information will be made available to those computers and, finally, comparatively more such computers will be given the opportunity to collect, communicate and act on that information.
+We believe that manufacturing, transportation, energy distribution, medicine, recycling, and all other industrial sectors concerned with automation will be affected by this development to some degree.
+It will lead to increased automation efficiency and flexibility, as machines become able to perform more of the work traditionally assigned to humans.
 However, it will also lead to new magnitudes of complexity, not the least because of the renewed incentive to use more and more of these highly communicative machines.
 
 The \GlossaryHyperRef{framework-arrowhead}{\textit{Arrowhead framework}} is designed to address this explosion of complexity.
@@ -27,7 +27,7 @@ This document is being written and maintained for all who need precise and rigor
 \begin{itemize}
 \item \GlossaryHyperRef{acquirer}{Acquirers}, \GlossaryHyperRef{owner}{owners} and \GlossaryHyperRef{supplier}{suppliers} of Arrowhead systems.
 \item \GlossaryHyperRef{builder}{Builders}, \GlossaryHyperRef{developer}{developers}, \GlossaryHyperRef{maintainer}{maintainers} and \GlossaryHyperRef{operator}{operators} of Arrowhead systems.
-\item \GlossaryHyperRef{researcher}{Researchers} concerned with analyzing or refining the Arrowhead framework and/or Arrowhead systems.
+\item \GlossaryHyperRef{researcher}{Researchers} concerned with analyzing or refining the Arrowhead framework or Arrowhead systems.
 \item Advanced \GlossaryHyperRef{user}{users} of Arrowhead systems.
 \end{itemize}
 
@@ -43,25 +43,43 @@ They may give examples of how certain words may be used, but they do not require
 The concepts presented here are meant to be useful as a resource for advanced Arrowhead framework learners, as well as to serve as foundation for other documentation and modeling efforts.
 For those interested in using this document for architectural purposes, a description of how it can be used as a \GlossaryHyperRef{model-meta}{meta model} in the context of an ISO/IEC/IEEE 42010 \GlossaryHyperRef{viewpoint-architectural}{architectural viewpoint} is described in Section \ref{sec:conformance:iso42010}.
 
+\newpage
+
 \subsection{Notational Conventions}
 \label{sec:introduction:conventions}
 
-The following conventions regarding diagrams, references and requirements are adhered to throughout this document.
+The following conventions regarding diagrams depicting graphs, references and requirements are adhered to throughout this document.
 All three of them were selected by virtue of being deemed unsurprising to our primary audiences.
 
-\subsubsection{Diagrams}
+\subsubsection{Graph Diagrams}
 
-A box with a name inside it denotes a named \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{stakeholder}{stakeholder}.
+A box with a solid border and a name inside it denotes a named \GlossaryHyperRef{entity}{entity}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
+Relationship names should be defined, or have their definitions referred to, in relation to the figures they are used in.
+Exceptions are acceptable if the implications of a given name can be considered obvious.
+The following five relationship names must be understood to always be defined:
+
+\begin{enumerate}
+\item \textit{refers to}, which means that the origin entity knows of or names the target entity (this relationship is implied if an arrow lacks an associated name);
+\item \textit{conforms to}, which means that the origin entity \textit{refers to} the target entity and satisfies all \GlossaryHyperRef{constraint}{constraints} implicitly and/or explicitly associated with that target entity;
+\item \textit{extends}, which means that the origin entity \textit{conforms to} the target entity and inherits all of its relationships;
+\item \textit{is}, which means that the origin entity \textit{extends} the target entity and is member of a group named after that target entity; and, finally,
+\item \textit{has}, which means that the origin entity \textit{refers to} and owns the target entity, where ownership entails access to and control over the owned entity.
+\end{enumerate}
+
 If a named arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
-A range is denoted by $x..y$, where $x$ and $y$ are positive integers and $x<y$.
-Omitting $y$ when using the range notation (e.g. ``$1..$'') means that the range is infinite from $x$.
+A range is denoted by $x..y$, where $x$ and $y$ are integers and $0 \leq x < y$.
+If $y$ is substituted by $*$, the range must be understood to extend infinitely from $x$ (e.g. ``$1..*$'').
+
 If two or more arrows are combined such that their source or target end is shared, a difference is made if a quantifier is closest to a shared or non-shared arrow part.
-If it is closest to a shared part, the quantity must be understood to apply to every arrow part of the combination.
-If it is closest to a non-shared part, the quantifier must be understood to only apply to that arrow.
+If it is closest to a shared part, the quantity must be understood to apply to all arrows part of the combination.
+For example, if an arrow extends to or from an entity to three other entities and the quantifier is ``$0..1$'', the relationship extends to only zero or one of the three entities.
+If a quantifier is closest to a non-shared part, the quantifier must be understood to only apply to that arrow.
+Combined arrows may have quantifiers both at their shared and non-shared parts.
+
 A box with a dotted border represents a group.
 The entities explicitly placed within the box may or may not represent all entities that belong to that group.
-See Figure \ref{fig:reference-model} for an example of this notation being used.
+If a relationship extends to or from a group, rather to any entity inside that group, the relationship must be understood to extend to or from all entities inside that group.
 
 Note that this document does \textit{not} define an Arrowhead profile for SysML \cite{omg2019sysml}, or any other modeling language.
 As we cover later in Section \ref{sec:conformance}, however, we do expect all models based on this document not to contradict any of its definitions.
@@ -83,9 +101,21 @@ These word definitions are derived from and are meant to capture what is outline
 \subsection{Relationships to Other Documents}
 \label{sec:introduction:relationships}
 
-When this \GlossaryHyperRef{model-reference}{reference model} was produced, care was taken to reuse or build upon the concepts presented in the following works:
+When this \GlossaryHyperRef{model-reference}{reference model} was produced, care was taken to reuse or build upon the concepts presented in the following works, in order of precedence:
 
 \begin{enumerate}
+
+\item \textbf{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
+The book most significantly represents the state of the Arrowhead framework up until it was written.
+Even though the framework has evolved since then, it still represents the most comprehensive view of the framework.
+While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance.
+
+\item \textbf{ISO/IEC/IEEE 42010 Systems and software engineering — Architecture description} (ISO42010) \cite{iso42010}, which outlines a standardized approach to structuring architectural documents and models.
+The standard is adhered to in the sense that the definitions of this document are meant to be useful as a meta model part of a so-called architectural viewpoint, as defined by the standard.
+
+\item \textbf{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
+As communication between \GlossaryHyperRef{system}{systems} of the Arrowhead framework is understood to follow this paradigm, it becomes particularly relevant to consider.
+
 \item \textbf{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural view of \GlossaryHyperRef{industry40}{\textit{Industry 4.0}}.
 The document may be seen as a predecessor to, or major influence on, the conceptual aspects of the Arrowhead framework.
 In particular, the document describes how to model and design communicating industrial systems such that key Industry 4.0 characteristics can be facilitated, such as high degrees of dynamicity and interoperability.
@@ -94,17 +124,9 @@ This delimitation excludes its ``architectural layers'', ``life-cycle \& value-s
 These excluded aspects are neither condemned nor endorsed by this document.
 They are simply outside its scope.
 
-\item \textbf{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
-As communication between \GlossaryHyperRef{system}{systems} of the Arrowhead framework is understood to follow this paradigm, it becomes particularly relevant to consider.
-
-\item \textbf{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
-The book most significantly represents the state of the Arrowhead framework up until it was written.
-Even though the framework has evolved since then, it still represents the most comprehensive view of the framework.
-While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance.
-
 \end{enumerate}
 
-Only conformity with IoTA:AF is observed strictly, which means that concept definitions presented here may diverge from those of the other two works.
+Only conformity with IoTA:AF and ISO42010 is observed strictly, which means that concept definitions presented here may diverge from those of the other two works.
 All significant terminology differences are noted in the glossary of Section \ref{sec:glossary}, which briefly defines all concepts of relevance to this document.
 
 \subsection{Section Overview}
