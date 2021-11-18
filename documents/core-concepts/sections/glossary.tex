@@ -74,6 +74,13 @@ Synonymous to \GlossaryNameRef{resource}.
 		See \GlossaryNameRef{resource} for a comparable term.
 	}
 
+\GlossaryEntry{attribute}{Attribute}
+A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \GlossaryHyperRef{entity}{entity} or a \GlossaryHyperRef{relationship}{relationship}.
+
+	\GlossaryNote{Note 1}{
+		A attribute is a form of \GlossaryHyperRef{metadata}{metadata}.
+	}
+
 \GlossaryEntry{boundary}{Boundary}
 A point or border where either two or more \GlossaryHyperRef{artifact}{artifacts} meet or one artifact ends.
 
@@ -81,7 +88,7 @@ A point or border where either two or more \GlossaryHyperRef{artifact}{artifacts
 A \GlossaryHyperRef{boundary}{boundary} separating the \GlossaryHyperRef{artifact}{artifacts} belonging to a \GlossaryHyperRef{cloud}{cloud} from those not belonging to it.
 
 	\GlossaryNote{Note 1}{
-		A cloud boundary can be \GlossaryHyperRef{boundary-local}{local} or \GlossaryHyperRef{boundary-virtual}{virtual}, depending on if the boundary is formed by physical or virtual \GlossaryHyperRef{property}{properties}.
+		A cloud boundary can be \GlossaryHyperRef{boundary-local}{local} or \GlossaryHyperRef{boundary-virtual}{virtual}, depending on if the boundary is formed by physical or virtual \GlossaryHyperRef{attribute}{attributes}.
 	} 
 
 \GlossaryEntry{boundary-local}{Boundary, Local}
@@ -196,7 +203,7 @@ See \GlossaryNameRef{model-concrete}.
 Making an \GlossaryHyperRef{model-abstract}{abstract model} less abstract by specifying some or all details required to realize it.
 
 \GlossaryEntry{configuration}{Configuration}
-A set of changeable \GlossaryHyperRef{property}{properties} that directly influence how a \GlossaryHyperRef{system}{system} exercises its \GlossaryHyperRef{capability-system}{capabilities}.
+A set of changeable \GlossaryHyperRef{attribute}{attributes} that directly influence how a \GlossaryHyperRef{system}{system} exercises its \GlossaryHyperRef{capability-system}{capabilities}.
 
 \GlossaryEntry{configure}{Configure}
 To update a \GlossaryHyperRef{configuration}{configuration}.
@@ -205,7 +212,7 @@ To update a \GlossaryHyperRef{configuration}{configuration}.
 An active medium through which attached \GlossaryHyperRef{interface}{interfaces} can \GlossaryHyperRef{communication}{communicate}.
 
 \GlossaryEntry{constraint}{Constraint}
-A \GlossaryHyperRef{property}{property} that imposes constraints, or limits, on an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{relationship}{relationship}.
+A \GlossaryHyperRef{attribute}{attribute} that imposes constraints, or limits, on an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{relationship}{relationship}.
 
 	\GlossaryNote{Note 1}{
 		The presence of constraints enable \GlossaryHyperRef{validation}{validation}.
@@ -339,7 +346,7 @@ See Section \ref{sec:reference-model:entity}.
 	}
 
 \GlossaryEntry{entity-class-of}{Entity, Class of}
-A set of \GlossaryHyperRef{entity}{entities} that share a common \GlossaryHyperRef{property}{property}.
+A set of \GlossaryHyperRef{entity}{entities} that share a common \GlossaryHyperRef{attribute}{attribute}.
 
 \GlossaryEntry{framework}{Framework}
 A set of assumptions, concepts, values and practices that frame a certain problem domain.
@@ -456,7 +463,7 @@ See Section \ref{sec:reference-model:stakeholder}.
 \GlossaryHyperRef{data}{Data} \GlossaryHyperRef{description}{describing} other data.
 
 \GlossaryEntry{model}{Model}
-A representation of facts in the form of a graph, consisting of \GlossaryHyperRef{entity}{entities}, \GlossaryHyperRef{relationship}{relationships} and \GlossaryHyperRef{property}{properties}.
+A representation of facts in the form of a graph, consisting of \GlossaryHyperRef{entity}{entities}, \GlossaryHyperRef{relationship}{relationships} and \GlossaryHyperRef{attribute}{attributes}.
 
 	\GlossaryNote{Note 1}{
 		Models can be expressed or recorded in many ways, including as visual diagrams, spoken words, text and binary data.
@@ -557,13 +564,6 @@ A set of \GlossaryHyperRef{constraint}{constraints} superimposed on a \GlossaryH
 		It could demand that a certain protocol be extended, or that a particular kind of \GlossaryHyperRef{encoding}{encoding} be used for message bodies, and so on.
 	}
 
-\GlossaryEntry{property}{Property}
-A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \GlossaryHyperRef{entity}{entity} or a \GlossaryHyperRef{relationship}{relationship}.
-
-	\GlossaryNote{Note 1}{
-		A property is a form of \GlossaryHyperRef{metadata}{metadata}.
-	}
-
 \GlossaryEntry{protocol}{Protocol}
 A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{state}{states} and \GlossaryHyperRef{message}{messages}.
 See Section \ref{sec:reference-model:protocol}.
@@ -639,7 +639,7 @@ See \GlossaryNameRef{service-quality-of}.
 A uni-directional association of two \GlossaryHyperRef{entity}{entities}, possibly with an associated \GlossaryHyperRef{data}{data} name.
 
 \GlossaryEntry{researcher}{Researcher}
-A \GlossaryHyperRef{stakeholder}{stakeholder} involved in the analysis or development of significant \GlossaryHyperRef{entity}{entities}, particularly with the ambition of facilitating \GlossaryHyperRef{property}{properties} or use cases that cannot be realized without refining, extending or replacing those entities.
+A \GlossaryHyperRef{stakeholder}{stakeholder} involved in the analysis or development of significant \GlossaryHyperRef{entity}{entities}, particularly with the ambition of facilitating \GlossaryHyperRef{attribute}{attributes} or use cases that cannot be realized without refining, extending or replacing those entities.
 See Section \ref{sec:reference-model:stakeholder}.
 
 \GlossaryEntry{resource}{Resource}
@@ -654,14 +654,14 @@ An \GlossaryHyperRef{artifact}{artifact} that is of value to a \GlossaryHyperRef
 	}
 
 \GlossaryEntry{resource-local}{Resource, Local}
-A \GlossaryHyperRef{resource}{resource} whose value is inextricably tied to a physical \GlossaryHyperRef{property}{property}.
+A \GlossaryHyperRef{resource}{resource} whose value is inextricably tied to a physical \GlossaryHyperRef{attribute}{attribute}.
 
 	\GlossaryNote{Note 1}{
 		Examples of local resources could be raw materials, drills, pumps, power stations, or drones.
 	}
 
 \GlossaryEntry{resource-virtual}{Resource, Virtual}
-A \GlossaryHyperRef{resource}{resource} whose value is not derived from any physical \GlossaryHyperRef{property}{property}.
+A \GlossaryHyperRef{resource}{resource} whose value is not derived from any physical \GlossaryHyperRef{attribute}{attribute}.
 
 	\GlossaryNote{Note 1}{
 		Examples of virtual resources could be compute, storage, or software-defined network utilities.
