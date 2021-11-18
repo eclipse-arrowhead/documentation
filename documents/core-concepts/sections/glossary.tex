@@ -440,16 +440,17 @@ An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{sys
 \GlossaryEntry{invocation-function}{Invocation, Function}
 The attempt to exercise the \GlossaryHyperRef{capability-system}{capabilities} of a \GlossaryHyperRef{system}{system} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{function}{functions}.
 
-\GlossaryEntry[(noun)]{message}{Message}
-\GlossaryHyperRef{data}{Data} sent or received via a \GlossaryHyperRef{interface-service}{service interface}.
-
-	\GlossaryNote{Note 1}{
-		In the context of Arrowhead, messages are only sent to \GlossaryHyperRef{invocation-function}{invoke} the \GlossaryHyperRef{function}{functions} of \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by \GlossaryHyperRef{system}{systems}.
-	}
-
 \GlossaryEntry{manager}{Manager}
 A \GlossaryHyperRef{stakeholder}{stakeholder} with strategic, operational or other key responsibility over other \GlossaryHyperRef{stakeholder}{stakeholders} and/or significant \GlossaryHyperRef{entity}{entities}.
 See Section \ref{sec:reference-model:stakeholder}.
+
+\GlossaryEntry[(noun)]{message}{Message}
+\GlossaryHyperRef{data}{Data} sent or received via an \GlossaryHyperRef{interface}{interface}.
+
+	\GlossaryNote{Note 1}{
+		In the context of Arrowhead, messages are primarily sent to \GlossaryHyperRef{invocation-function}{invoke} the \GlossaryHyperRef{function}{functions} of \GlossaryHyperRef{service}{services} \GlossaryHyperRef{provider-service}{provided} by \GlossaryHyperRef{system}{systems}.
+		However, sending a message to a function requires it to pass through \GlossaryHyperRef{connection}{connections} and various types of interfaces first, which means that it may be relevant to consider these other entities in relation to messages.
+	}
 
 \GlossaryEntry{metadata}{Metadata}
 \GlossaryHyperRef{data}{Data} \GlossaryHyperRef{description}{describing} other data.
@@ -775,11 +776,6 @@ An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{provider-servi
 		From the perspective of Arrowhead, however, capabilities can only be \GlossaryHyperRef{invocation-function}{invoked} through \GlossaryHyperRef{service}{services}, which means that a system unable to provide or consume services can only be described as a component of another system.
 	}
 
-	\GlossaryNote{Note 2}{
-		A system is practically distinct from a \GlossaryHyperRef{system-of-systems}{system-of-systems} by being represented only by a single \GlossaryHyperRef{identity}{identity}.
-		In contrast, a system-of-systems does either not have its own identity, or has both its own identity and another identity for each of its \GlossaryHyperRef{subsystem}{subsystems}.
-	}
-
 	\GlossaryNote{IoTA:AF}{
 		defines a system as ``what is providing and/or consuming services''.
 		It further adds that ``a system can be the service provider of one or more services and at the same time the service consumer of one or more services''.
@@ -831,6 +827,9 @@ See also \GlossaryNameRef{data}.
 		For example, a data type may specify a \texttt{name}, but it will not indicate when or why that name is useful.
 		That information would have to be provided via documentation or some other means.
 	}
+
+\GlossaryEntry{type-message}{Type, Message}
+The \GlossaryHyperRef{type-data}{data type} dictating the structure of the \GlossaryHyperRef{data}{data} in a \GlossaryHyperRef{message}{message}.
 
 \GlossaryEntry{unit-compute}{Unit, Compute}
 A \GlossaryHyperRef{component-hardware}{hardware component} able to execute \GlossaryHyperRef{software}{software} adhering to its instruction set.

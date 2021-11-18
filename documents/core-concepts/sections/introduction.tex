@@ -82,11 +82,10 @@ If a relationship extends to or from a group, rather to any entity inside that g
 
 \paragraph{Combined Arrows}
 If two or more arrows are combined such that their source or target end is shared, a difference is made if a quantifier is closest to a shared or non-shared arrow part.
-If it is closest to a shared part, the quantity must be understood to apply to the arrows the combination collectively.
-For example, if an arrow extends to or from an entity to three other entities and the quantifier is ``$0..1$'' at the shared part, the relationship extends to only zero or one of the three entities.
+If it is closest to a shared part, the quantity must be understood to apply to the arrows of the combination collectively.
+For example, if an arrow extends from one entity to three other entities and the quantifier is ``$0..1$'' at the shared part, the relationship extends to only zero or one of the three entities.
 If a quantifier is closest to a non-shared part, the quantifier must be understood to only apply to the relationship of that arrow only.
-Combined arrows may have quantifiers both at their shared and non-shared parts.
-Shared and non-shared arrow parts are implicitly associated with the quantifiers $0..*$ and $1$, respectively, if not explicitly specified.
+Combined arrows may have quantifiers both at their shared and non-shared parts, which are associated with the quantifiers $0..*$ and $1$, respectively, if not explicitly specified.
 If an arrow extends to or from a group, that arrow must be considered as a shared part of a set of combined arrows.
 
 \subsubsection{References}
