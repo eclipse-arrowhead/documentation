@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.4479384"
-     inkscape:cx="324.25413"
-     inkscape:cy="14.158061"
-     inkscape:window-width="1851"
+     inkscape:cx="396.4257"
+     inkscape:cy="179.22033"
+     inkscape:window-width="1856"
      inkscape:window-height="1035"
-     inkscape:window-x="69"
+     inkscape:window-x="64"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -315,7 +315,7 @@
        x="85.634079"
        y="18.632336"
        stroke-width="0.26458"
-       id="tspan6750">1..</tspan></text>
+       id="tspan6750">1..*</tspan></text>
   <text
      x="41.48008"
      y="18.632336"
@@ -325,7 +325,7 @@
        x="41.48008"
        y="18.632336"
        stroke-width="0.26458"
-       id="tspan6768">1..</tspan></text>
+       id="tspan6768">1..*</tspan></text>
   <text
      x="129.78822"
      y="18.632336"
@@ -335,17 +335,18 @@
        x="129.78822"
        y="18.632336"
        stroke-width="0.26458"
-       id="tspan6772">1..</tspan></text>
+       id="tspan6772">1..*</tspan></text>
   <text
-     x="59.922108"
+     x="73.090401"
      y="25.261187"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use34501"><tspan
-       x="59.922108"
+       x="66.659744"
        y="25.261187"
        stroke-width="0.26458"
-       id="tspan6776">uses</tspan></text>
+       id="tspan6776"
+       style="text-align:end;text-anchor:end">uses</tspan></text>
   <text
      x="101.22517"
      y="25.261187"
@@ -399,7 +400,7 @@
        x="85.531319"
        y="36.654549"
        stroke-width="0.26458"
-       id="tspan1622">1..</tspan></text>
+       id="tspan1622">1..*</tspan></text>
   <text
      x="85.504143"
      y="36.654549"
@@ -411,4 +412,25 @@
        stroke-width="0.26458"
        id="tspan2028"
        style="text-align:end;text-anchor:end">facilitate</tspan></text>
+  <text
+     x="73.090401"
+     y="30.488253"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text4420"><tspan
+       x="66.659744"
+       y="30.488253"
+       stroke-width="0.26458"
+       id="tspan4418"
+       style="text-align:end;text-anchor:end">1..*</tspan></text>
+  <text
+     x="101.22517"
+     y="30.488253"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text5516"><tspan
+       x="101.22517"
+       y="30.488253"
+       stroke-width="0.26458"
+       id="tspan5514">1..*</tspan></text>
 </svg>

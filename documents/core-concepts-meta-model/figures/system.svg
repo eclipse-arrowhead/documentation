@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="315.01606"
-     inkscape:cy="118.44038"
-     inkscape:window-width="1851"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="406.49999"
+     inkscape:cy="61.749998"
+     inkscape:window-width="1856"
      inkscape:window-height="1035"
-     inkscape:window-x="69"
+     inkscape:window-x="64"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -281,15 +281,16 @@
        id="tspan1337"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Components</tspan></text>
   <text
-     x="61.922108"
+     x="75.287338"
      y="25.261185"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text1343"><tspan
-       x="61.922108"
+       x="68.856674"
        y="25.261185"
        stroke-width="0.26458"
-       id="tspan1341">uses</tspan></text>
+       id="tspan1341"
+       style="text-align:end;text-anchor:end">uses</tspan></text>
   <text
      x="103.22517"
      y="25.261185"
@@ -345,7 +346,7 @@
        x="87.564575"
        y="18.632336"
        stroke-width="0.26458"
-       id="tspan1373">1..</tspan></text>
+       id="tspan1373">1..*</tspan></text>
   <text
      x="43.410576"
      y="18.632336"
@@ -355,7 +356,7 @@
        x="43.410576"
        y="18.632336"
        stroke-width="0.26458"
-       id="tspan1377">1..</tspan></text>
+       id="tspan1377">1..*</tspan></text>
   <text
      x="131.71875"
      y="18.632336"
@@ -365,7 +366,7 @@
        x="131.71875"
        y="18.632336"
        stroke-width="0.26458"
-       id="tspan1381">1..</tspan></text>
+       id="tspan1381">1..*</tspan></text>
   <text
      x="85.958122"
      y="6.2723465"
@@ -445,7 +446,7 @@
        y="8.5469723"
        stroke-width="0.26458"
        id="tspan10265"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..</tspan></text>
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..*</tspan></text>
   <text
      x="168.50072"
      y="14.271765"
@@ -478,7 +479,7 @@
        y="36.702991"
        stroke-width="0.26458"
        id="tspan5330"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..</tspan></text>
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
   <text
      x="87.383408"
      y="36.652405"
@@ -505,4 +506,25 @@
        text-anchor="middle"
        id="tspan5338"
        style="font-size:3px;fill:#333333;fill-opacity:1">Capability</tspan></text>
+  <text
+     x="103.22517"
+     y="30.73703"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text8545"><tspan
+       x="103.22517"
+       y="30.73703"
+       stroke-width="0.26458"
+       id="tspan8543">1..*</tspan></text>
+  <text
+     x="74.204819"
+     y="30.73703"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text8549"><tspan
+       x="68.856674"
+       y="30.73703"
+       stroke-width="0.26458"
+       id="tspan8547"
+       style="text-align:end;text-anchor:end">1..*</tspan></text>
 </svg>

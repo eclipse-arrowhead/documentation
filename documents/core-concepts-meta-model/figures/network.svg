@@ -6,7 +6,7 @@
    viewBox="0 0 138 49"
    id="svg162"
    sodipodi:docname="network.svg"
-   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.3105225"
-     inkscape:cx="383.67945"
-     inkscape:cy="130.05716"
-     inkscape:window-width="1848"
-     inkscape:window-height="1016"
-     inkscape:window-x="72"
-     inkscape:window-y="27"
+     inkscape:zoom="1.6337861"
+     inkscape:cx="290.12365"
+     inkscape:cy="93.341471"
+     inkscape:window-width="1856"
+     inkscape:window-height="1035"
+     inkscape:window-x="64"
+     inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
      height="73mm">
@@ -330,7 +330,7 @@
        x="22.602142"
        y="19.900112"
        stroke-width="0.26458"
-       id="tspan6768">2..</tspan></text>
+       id="tspan6768">2..*</tspan></text>
   <text
      x="118.91049"
      y="19.900112"
@@ -340,7 +340,7 @@
        x="118.91049"
        y="19.900112"
        stroke-width="0.26458"
-       id="tspan6772">0..</tspan></text>
+       id="tspan6772">0..*</tspan></text>
   <text
      x="68.958115"
      y="6.2723336"
@@ -355,17 +355,6 @@
        text-align="center"
        text-anchor="middle"
        id="tspan44010">Network</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="67.292664"
-     y="34.541946"
-     id="text8921"><tspan
-       sodipodi:role="line"
-       id="tspan8919"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1;stroke-width:0.264583"
-       x="67.292664"
-       y="34.541946">has</tspan></text>
   <g
      id="g7355">
     <rect
@@ -490,29 +479,48 @@
        text-anchor="end"
        id="tspan882-3"
        style="font-size:2.8px;fill:#44444f;fill-opacity:1">connects</tspan></text>
+  <g
+     id="g5619">
+    <text
+       xml:space="preserve"
+       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="67.292664"
+       y="34.541946"
+       id="text8921"><tspan
+         sodipodi:role="line"
+         id="tspan8919"
+         style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1;stroke-width:0.264583"
+         x="67.292664"
+         y="34.541946">has</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="70.707581"
+       y="34.541946"
+       id="text12586"><tspan
+         sodipodi:role="line"
+         id="tspan12584"
+         style="font-size:2.8px;fill:#444444;fill-opacity:1;stroke-width:0.264583"
+         x="70.707581"
+         y="34.541946">1</tspan></text>
+  </g>
   <text
-     x="54.36591"
+     x="45.744171"
      y="43.980171"
-     style="font-size:2.8px;line-height:1.25"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
-     id="text890-9"><tspan
-       x="49.561359"
+     id="text3353"><tspan
+       x="45.744171"
        y="43.980171"
-       font-size="2.9px"
        stroke-width="0.26458"
-       text-align="end"
-       text-anchor="end"
-       id="tspan888-0"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="118.65645"
-     y="35.541946"
-     id="text12586"><tspan
-       sodipodi:role="line"
-       id="tspan12584"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1;stroke-width:0.264583"
-       x="118.65645"
-       y="35.541946">has</tspan></text>
+       id="tspan3351"
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g5619"
+     id="use5621"
+     transform="translate(47.911253,0.93402895)"
+     width="100%"
+     height="100%" />
 </svg>

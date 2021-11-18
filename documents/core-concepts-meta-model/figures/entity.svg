@@ -6,7 +6,7 @@
    viewBox="0 0 144 47"
    id="svg926"
    sodipodi:docname="entity.svg"
-   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,12 +25,12 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.2455912"
-     inkscape:cx="281.39248"
-     inkscape:cy="62.21945"
-     inkscape:window-width="1848"
-     inkscape:window-height="1016"
-     inkscape:window-x="72"
-     inkscape:window-y="27"
+     inkscape:cx="258.51178"
+     inkscape:cy="116.812"
+     inkscape:window-width="1856"
+     inkscape:window-height="1035"
+     inkscape:window-x="64"
+     inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg926">
     <inkscape:grid
@@ -328,7 +328,7 @@
        y="2.3417783"
        stroke-width="0.26458"
        id="tspan872"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">may be</tspan></text>
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
   <text
      x="107.01462"
      y="20.249268"
@@ -433,7 +433,7 @@
        x="83.616394"
        y="22.716576"
        stroke-width="0.26458"
-       id="tspan920">1..</tspan></text>
+       id="tspan920">1..*</tspan></text>
   <text
      x="71.914635"
      y="41.258667"
@@ -480,4 +480,17 @@
        stroke-width="0.26458"
        id="tspan3364"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Types</tspan></text>
+  <text
+     x="82.510162"
+     y="7.1793785"
+     font-size="3px"
+     stroke-width="0.26458"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif"
+     xml:space="preserve"
+     id="text2279"><tspan
+       x="82.510162"
+       y="7.1793785"
+       stroke-width="0.26458"
+       id="tspan2277"
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..1</tspan></text>
 </svg>

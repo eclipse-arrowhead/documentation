@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.0844797"
-     inkscape:cx="120.65361"
-     inkscape:cy="73.639479"
-     inkscape:window-width="1851"
+     inkscape:cx="143.44107"
+     inkscape:cy="68.842119"
+     inkscape:window-width="1856"
      inkscape:window-height="1035"
-     inkscape:window-x="69"
+     inkscape:window-x="64"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg899">
@@ -210,49 +210,17 @@
        id="tspan859">provides</tspan></text>
   <text
      x="20.926422"
-     y="26.77166"
+     y="27.079712"
      style="font-size:2.9px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text869"><tspan
        x="20.926422"
-       y="26.77166"
+       y="27.079712"
        font-size="2.9px"
        stroke-width="0.26458"
        text-align="end"
        text-anchor="end"
        id="tspan867">has</tspan></text>
-  <text
-     id="use874"
-     x="33.329689"
-     y="14.068844"
-     font-family="sans-serif"
-     font-size="2.9px"
-     stroke-width="0.26458"
-     style="line-height:1.25"
-     xml:space="preserve"><tspan
-       x="28.525152"
-       y="14.068844"
-       font-size="2.9px"
-       stroke-width="0.26458"
-       text-align="end"
-       text-anchor="end"
-       id="tspan1083">0..</tspan></text>
-  <text
-     id="use876"
-     x="33.329689"
-     y="26.768845"
-     font-family="sans-serif"
-     font-size="2.9px"
-     stroke-width="0.26458"
-     style="line-height:1.25"
-     xml:space="preserve"><tspan
-       x="28.525152"
-       y="26.768845"
-       font-size="2.9px"
-       stroke-width="0.26458"
-       text-align="end"
-       text-anchor="end"
-       id="tspan1087">0..</tspan></text>
   <metadata
      id="metadata880">
     <rdf:RDF>
@@ -320,4 +288,23 @@
        stroke-width="0.26458"
        id="tspan872"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.9px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="24.571636"
+     y="27.079712"
+     id="text2669"><tspan
+       sodipodi:role="line"
+       id="tspan2667"
+       style="font-size:2.9px;stroke-width:0.264583"
+       x="24.571636"
+       y="27.079712">0..*</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#text2669"
+     id="use4981"
+     transform="translate(0,-13.010868)"
+     width="100%"
+     height="100%" />
 </svg>

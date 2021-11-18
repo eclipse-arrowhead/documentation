@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.6337861"
-     inkscape:cx="270.53725"
-     inkscape:cy="210.85992"
-     inkscape:window-width="1848"
+     inkscape:cx="313.99459"
+     inkscape:cy="128.22976"
+     inkscape:window-width="1856"
      inkscape:window-height="1035"
-     inkscape:window-x="72"
+     inkscape:window-x="64"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -376,7 +376,7 @@
        x="60.741318"
        y="24.900112"
        stroke-width="0.26458"
-       id="tspan6768">0..</tspan></text>
+       id="tspan6768">0..*</tspan></text>
   <text
      x="92.629776"
      y="24.900112"
@@ -386,7 +386,7 @@
        x="92.629776"
        y="24.900112"
        stroke-width="0.26458"
-       id="tspan6772">1..</tspan></text>
+       id="tspan6772">1..*</tspan></text>
   <text
      x="74.958549"
      y="11.272332"
@@ -538,7 +538,7 @@
        y="8.0520601"
        stroke-width="0.26458"
        id="tspan24964"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..</tspan></text>
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
   <text
      x="114.34592"
      y="19.833578"
@@ -549,7 +549,7 @@
        y="19.833578"
        stroke-width="0.26458"
        id="tspan24968"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">1..</tspan></text>
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
   <g
      id="g36422"
      transform="translate(-104.07464,10.954945)">
@@ -586,7 +586,7 @@
        y="8.0520601"
        stroke-width="0.26458"
        id="tspan30108"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">constrained by</tspan></text>
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">conforms to</tspan></text>
   <g
      id="g34481"
      transform="translate(61.999999,14)">

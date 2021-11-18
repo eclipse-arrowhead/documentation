@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.7419576"
-     inkscape:cx="158.44243"
-     inkscape:cy="99.026521"
-     inkscape:window-width="1854"
+     inkscape:zoom="2.4635001"
+     inkscape:cx="212.70549"
+     inkscape:cy="73.269736"
+     inkscape:window-width="1856"
      inkscape:window-height="1035"
-     inkscape:window-x="66"
+     inkscape:window-x="64"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -374,4 +374,37 @@
        style="stroke-width:0.264583"
        x="32.73642"
        y="17.050898">governs</tspan></text>
+  <text
+     x="39.026825"
+     y="10.599151"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text1023"><tspan
+       x="34.143036"
+       y="10.599151"
+       stroke-width="0.26458"
+       id="tspan1021"
+       style="text-align:end;text-anchor:end">0..*</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="63.797615"
+     y="10.599151"
+     id="text1447"><tspan
+       sodipodi:role="line"
+       id="tspan1445"
+       style="stroke-width:0.264583"
+       x="63.797615"
+       y="10.599151">0..*</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="32.73642"
+     y="22.871731"
+     id="text2609"><tspan
+       sodipodi:role="line"
+       id="tspan2607"
+       style="stroke-width:0.264583"
+       x="32.73642"
+       y="22.871731">0..*</tspan></text>
 </svg>
