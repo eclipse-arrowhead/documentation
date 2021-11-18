@@ -10,7 +10,7 @@ The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is two things, a
 Firstly, it is a framework of assumptions, concepts, values and practices that frame the problem domain of \textit{dynamic device coordination in the context of automation}.
 Secondly, it is a set of software specifications, \GlossaryHyperRef{implementation-software}{implementations} and other \GlossaryHyperRef{artifact}{artifacts} meant to help address that problem domain.
 In this section, we provide an overview of the primary \textit{concepts} of the Arrowhead framework.
-While \textit{assumptions} and \textit{values} may be possible derive from this overview, neither of these, nor the other parts of the framework, are considered directly.
+While \textit{assumptions} and \textit{values} may be possible derive from this overview, neither of these, nor the other parts of the framework, are considered directly in this document.
 
 \vspace*{1mm}
 
@@ -27,10 +27,10 @@ While \textit{assumptions} and \textit{values} may be possible derive from this 
 
 \subsection{Stakeholders and Artifacts}
 
-There are two kinds of citizens in the world of Arrowhead, (1) \GlossaryHyperRef{stakeholder}{stakeholders} and (2) \GlossaryHyperRef{artifact}{artifacts}, as depicted in Figure \ref{fig:world}.
+There are two kinds of members of the world of Arrowhead, (1) \GlossaryHyperRef{stakeholder}{stakeholders} and (2) \GlossaryHyperRef{artifact}{artifacts}, as depicted in Figure \ref{fig:world}.
 The former denotes a person or organization engaged in an Arrowhead enterprise, while the latter is any thing or object, tangible or intangible, that could be relevant to consider as part of such an enterprise.
-Stakeholders \GlossaryHyperRef{owner}{own}, \GlossaryHyperRef{designer}{design}, \GlossaryHyperRef{developer}{develop}, \GlossaryHyperRef{operator}{operate}, and \GlossaryHyperRef{user}{use} artifacts, among many other possible activities.
-It is their business needs and ambitions that dictate what and how Arrowhead artifacts will be employed.
+Stakeholders \GlossaryHyperRef{owner}{own}, \GlossaryHyperRef{maintainer}{maintain}, \GlossaryHyperRef{developer}{develop}, \GlossaryHyperRef{operator}{operate}, and \GlossaryHyperRef{user}{use} artifacts, among many other possible activities.
+It is their business needs and ambitions that govern what and how Arrowhead artifacts will be employed.
 
 \vspace*{1mm}
 
@@ -38,7 +38,7 @@ It is their business needs and ambitions that dictate what and how Arrowhead art
   \centering
   \includegraphics[scale=0.9]{figures/world}
   \caption{
-    The two kinds of citizens of the Arrowhead world: stakeholders and artifacts.
+    The two kinds of members of the Arrowhead world: stakeholders and artifacts.
   }
   \label{fig:world}
 \end{figure}
@@ -74,7 +74,7 @@ Communication between systems is formulated in terms of the \GlossaryHyperRef{pr
 When a system \textit{provides} a service, it makes it available to other systems through \GlossaryHyperRef{interface-service}{service interfaces}.
 Other systems can \textit{consume} its services by sending \GlossaryHyperRef{message}{messages} to the interfaces of those services.
 When a service interface receives a message, it \GlossaryHyperRef{routing-message}{routes} it to the specific function it targets.
-That functions must ensure that the message conforms to its \GlossaryHyperRef{protocol-function}{protocol} and \GlossaryHyperRef{policy-function}{policies} before concretely handling it.
+That function must ensure that the message conforms to its \GlossaryHyperRef{protocol-function}{protocol} and \GlossaryHyperRef{policy-function}{policies} before concretely handling it.
 Function protocols establish what messages must contain and when they may be sent in relation to other messages, while policies establish what other conditions must be satisfied for the \GlossaryHyperRef{invocation-function}{function invocation} to be permitted.
 In other words, a message satisfying a function protocol guarantees that the message is understood by its receiving function, while a message satisfying certain policies guarantees that the activity it would trigger is occurring under desirable conditions.
 A policy may require that certain \GlossaryHyperRef{service-quality-of}{quality-of-service} guarantees can be met, or that the sender is properly authorized, among many other possible examples.
@@ -83,7 +83,7 @@ A policy may require that certain \GlossaryHyperRef{service-quality-of}{quality-
   \centering
   \includegraphics[scale=0.9]{figures/service-consumption}
   \caption{
-    A system consumes a service by sending a message to its interface, which routes it to a function.
+    System consume services by sending message to their interface, which routes them to functions.
   }
   \label{fig:service-consumption}
 \end{figure}
