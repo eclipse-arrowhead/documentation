@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.3105225"
-     inkscape:cx="241.07101"
+     inkscape:cx="240.85461"
      inkscape:cy="57.346336"
-     inkscape:window-width="1856"
+     inkscape:window-width="1859"
      inkscape:window-height="1035"
-     inkscape:window-x="64"
+     inkscape:window-x="61"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -122,19 +122,6 @@
      transform="translate(57.999503)"
      width="100%"
      height="100%" />
-  <rect
-     id="rect1655"
-     x="38.999504"
-     y="2.000001"
-     width="46"
-     height="8"
-     rx="1.6"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
   <g
      id="use1449"
      transform="translate(24.000013,-49.999999)">
@@ -181,19 +168,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <rect
-     id="rect45004"
-     x="38"
-     y="1"
-     width="46"
-     height="8"
-     rx="1"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
   <g
      id="g1951"
      transform="translate(-18.000497,-13.999999)">
@@ -274,6 +248,14 @@
        stroke-width="0.26458"
        id="tspan6776"
        style="text-align:end;text-anchor:end">has</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g1951"
+     id="use972"
+     transform="translate(29.000497,-21.000001)"
+     width="100%"
+     height="100%" />
   <text
      x="60.958107"
      y="6.2723341"

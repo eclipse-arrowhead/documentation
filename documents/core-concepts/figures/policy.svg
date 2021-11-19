@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.0476941"
-     inkscape:cx="234.89836"
-     inkscape:cy="67.637055"
-     inkscape:window-width="1856"
+     inkscape:cx="237.09596"
+     inkscape:cy="148.2155"
+     inkscape:window-width="1859"
      inkscape:window-height="1035"
-     inkscape:window-x="64"
+     inkscape:window-x="61"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -135,19 +135,6 @@
      stroke-linejoin="round"
      stroke-width="0.333"
      style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
-  <rect
-     id="use19292"
-     x="52"
-     y="38"
-     width="71"
-     height="13.999999"
-     rx="2.0000014"
-     fill="none"
-     opacity="0.91318"
-     stroke="#000000"
-     stroke-linejoin="round"
-     stroke-width="0.333"
-     style="opacity:1;fill:#e5e5e5;fill-opacity:1;stroke:#666666;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:0.3, 0.3;stroke-dashoffset:0;stroke-opacity:1" />
   <path
      d="m 57.999998,26 h 6"
      marker-end="url(#a)"
@@ -242,29 +229,7 @@
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan8980">Function Policy</tspan></text>
-  <text
-     x="112.10895"
-     y="44.110298"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text25087"><tspan
-       x="112.10895"
-       y="44.110298"
-       stroke-width="0.26458"
-       id="tspan25085"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Policy</tspan></text>
-  <text
-     x="112.10895"
-     y="47.814468"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text25665"><tspan
-       x="112.10895"
-       y="47.814468"
-       stroke-width="0.26458"
-       id="tspan25663"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Types</tspan></text>
+       id="tspan8980">Operation Policy</tspan></text>
   <text
      x="65.240105"
      y="15.124289"
@@ -301,7 +266,7 @@
        text-anchor="middle"
        id="tspan44010">Policy</tspan></text>
   <path
-     d="M 81.999999,38 V 32"
+     d="m 81.999999,42 0,-10"
      marker-end="url(#a-0)"
      id="path12483"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
@@ -319,7 +284,7 @@
        y="36.098866">is</tspan></text>
   <g
      id="g7355"
-     transform="translate(-7.0000009,15.000002)">
+     transform="translate(-7.0000005,17.000001)">
     <rect
        id="rect7015"
        x="61.600002"
@@ -357,7 +322,7 @@
      height="100%" />
   <g
      id="g12679"
-     transform="translate(-46,5.0000015)">
+     transform="translate(-46,7.000001)">
     <text
        x="107.91457"
        y="39.078857"
@@ -391,7 +356,7 @@
   </g>
   <g
      id="g12689"
-     transform="translate(-26.000001,5.000001)">
+     transform="translate(-26.000001,7.0000005)">
     <text
        x="107.91457"
        y="39.078857"
@@ -433,7 +398,7 @@
      height="100%" />
   <g
      id="g12701"
-     transform="translate(-5.9999999,5.0000015)">
+     transform="translate(-5.9999995,7.000001)">
     <text
        x="107.91457"
        y="39.078857"
@@ -465,4 +430,9 @@
          id="tspan12697"
          style="font-size:3px;fill:#333333;fill-opacity:1">Policy</tspan></text>
   </g>
+  <path
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 61.999998,42 1e-6,-4 H 102 l 0,4"
+     id="path1076"
+     sodipodi:nodetypes="cccc" />
 </svg>
