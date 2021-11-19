@@ -8,7 +8,7 @@
 
 We expect the automation systems of today to keep becoming more and more computerized, digitized and interconnected.
 By this we mean that more aspects of and surrounding automation machines will be handled by computers, more information will be made available to those computers and, finally, comparatively more such computers will be given the opportunity to collect, communicate and act on that information.
-Manufacturing, transportation, energy distribution, medicine, recycling, as well as all other industrial sectors concerned with automation we believe will be affected by this development.
+Manufacturing, transportation, energy distribution, medicine, recycling, as well as all other industrial sectors concerned with automation will be affected by this development.
 It will lead to increased automation efficiency and flexibility, as machines become able to perform more of the work traditionally assigned to humans.
 However, it will also lead to new magnitudes of complexity, not the least because of the renewed incentive to use more and more of these highly communicative machines.
 
@@ -16,8 +16,8 @@ The \GlossaryHyperRef{framework-arrowhead}{\textit{Arrowhead framework}} is desi
 It provides a foundation for \GlossaryHyperRef{communication-service-oriented}{\textit{service-oriented communication}} \cite{mackenzie2006reference} between automation systems and other computers, such that interoperability, security, safety, performance, and other major concerns can be addressed efficiently and effectively.
 It notably allows for \GlossaryHyperRef{system}{system} \GlossaryHyperRef{capability}{capabilities} to be \GlossaryHyperRef{description}{described}, shared and exploited dynamically by communicating \GlossaryHyperRef{device}{devices}.
 
-In this document, we, the Eclipse Arrowhead project, present an authoritative set of concept definitions, meant to serve as the fundamental language for discussions about and the modeling of Arrowhead-based system \GlossaryHyperRef{design}{designs}.
-These definitions exist to help mitigate compatibility and consistency issues in \GlossaryHyperRef{software}{software}, tooling, \GlossaryHyperRef{model}{models}, documentation and all other things of relevance to the Arrowhead framework.
+In this document, we, the Eclipse Arrowhead project, present an authoritative set of concept definitions, meant to serve as the fundamental language for describing Arrowhead-based system \GlossaryHyperRef{design}{designs}.
+It exist to help mitigate compatibility and consistency issues in \GlossaryHyperRef{software}{software}, tooling, \GlossaryHyperRef{model}{models}, documentation and all other things of relevance to the Arrowhead framework.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
@@ -25,11 +25,11 @@ These definitions exist to help mitigate compatibility and consistency issues in
 This document is being written and maintained for all who need precise and rigorous definitions of important Arrowhead concepts, which we understand to likely include the following groups:
 
 \begin{itemize}
-\item \GlossaryHyperRef{developer}{Developers} of Arrowhead systems.
-\item \GlossaryHyperRef{researcher}{Researchers} concerned with analyzing or refining the Arrowhead framework or Arrowhead systems.
-\item \GlossaryHyperRef{builder}{Builders}, \GlossaryHyperRef{maintainer}{maintainers} and \GlossaryHyperRef{operator}{operators} of Arrowhead systems.
-\item \GlossaryHyperRef{acquirer}{Acquirers}, \GlossaryHyperRef{owner}{owners} and \GlossaryHyperRef{supplier}{suppliers} of Arrowhead systems.
 \item Advanced \GlossaryHyperRef{user}{users} of Arrowhead systems.
+\item \GlossaryHyperRef{architect}{Architects} contributing to or extending the Arrowhead framework.
+\item \GlossaryHyperRef{developer}{Developers} of Arrowhead systems, or of devices that are expected to host Arrowhead systems.
+\item \GlossaryHyperRef{operator}{Operators} of Arrowhead systems.
+\item \GlossaryHyperRef{researcher}{Researchers} concerned with analyzing or refining the Arrowhead framework or Arrowhead systems.
 \end{itemize}
 
 \subsection{Scope}
@@ -55,30 +55,27 @@ The following conventions regarding diagrams depicting graphs, references and re
 
 \subsubsection{Graph Diagrams}
 
-A box with a solid border and a name inside it denotes a named \GlossaryHyperRef{entity}{entity}, useful for representing any Arrowhead \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
+A box with a solid border and a name inside it denotes a named \GlossaryHyperRef{entity}{entity} and may represent any Arrowhead \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
-Relationship names should be defined, or have their definitions referred to, in relation to the figures they are used in.
-Exceptions are acceptable if the implications of a given name can be considered obvious.
-The following five relationship names must be understood to always be defined:
+Relationship names are defined either here or in relation to the figures they are used in, unless their significance is considered obvious.
+The following relationship names are defined here only:
 
 \begin{enumerate}
-\item \textit{refers to}, which means that the origin entity knows of or names the target entity;
-\item \textit{conforms to}, which means that the origin entity \textit{refers to} the target entity and satisfies all \GlossaryHyperRef{constraint}{constraints} implicitly and/or explicitly associated with that target entity;
-\item \textit{extends}, which means that the origin entity \textit{conforms to} the target entity and inherits all of its relationships;
+\item \textit{conforms to}, which means that the origin entity satisfies all \GlossaryHyperRef{constraint}{constraints} implicitly and/or explicitly associated with the target entity;
+\item \textit{extends}, which means that the origin entity \textit{conforms to} the target entity and inherits all of its \GlossaryHyperRef{attribute}{attributes} and relationships;
 \item \textit{is}, which means that the origin entity \textit{extends} the target entity and is member of a group named after that target entity; and, finally,
-\item \textit{has}, which means that the origin entity \textit{refers to} and owns the target entity, where ownership entails exclusive access to and control over the owned entity.
+\item \textit{has}, which means that the origin entity owns, or controls, the target entity.
 \end{enumerate}
 
 \paragraph{Quantifiers}
-If a named arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relation is to be considered as extending to the number of distinct entities indicated by that integer or range.
+If a named arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relationship is to be considered as extending to the number of distinct entities indicated by that quantifier.
 No quantifier being present implies a quantity of 1.
 A range is denoted by $x..y$, where $x$ and $y$ are integers and $0 \leq x < y$.
 If $y$ is substituted by $*$, the range must be understood to extend infinitely from $x$ (e.g. ``$1..*$'').
 
 \paragraph{Groups}
 A box with a dotted border represents a \textit{group}.
-The entities explicitly placed within the box may or may not represent all entities of that group.
-If a relationship extends to or from a group, rather to any entity inside that group, the relationship must be understood to extend to or from all entities inside that group.
+Groups have no other significance than to improve clarity, unless something else is indicated by text in its figure or the text adjacent to the figure.
 
 \paragraph{Combined Arrows}
 If two or more arrows are combined such that their source or target end is shared, a difference is made if a quantifier is closest to a shared or non-shared arrow part.
@@ -86,7 +83,6 @@ If it is closest to a shared part, the quantity must be understood to apply to t
 For example, if an arrow extends from one entity to three other entities and the quantifier is ``$0..1$'' at the shared part, the relationship extends to only zero or one of the three entities.
 If a quantifier is closest to a non-shared part, the quantifier must be understood to only apply to the relationship of that arrow only.
 Combined arrows may have quantifiers both at their shared and non-shared parts, which are associated with the quantifiers $0..*$ and $1$, respectively, if not explicitly specified.
-If an arrow extends to or from a group, that arrow must be considered as a shared part of a set of combined arrows.
 
 \subsubsection{References}
 
@@ -104,7 +100,7 @@ Use of the terms \textbf{must}, \textbf{must not}, \textbf{should}, \textbf{shou
 \subsection{Relationships to Other Documents}
 \label{sec:introduction:relationships}
 
-When this \GlossaryHyperRef{model-reference}{reference model} was produced, care was taken to reuse or build upon the concepts presented in the following works, in order of precedence:
+This document reuses or builds upon the concepts presented in the following works:
 
 \begin{enumerate}
 
@@ -116,9 +112,10 @@ While the strictly architectural aspects of IoTA:AF are outside the scope of thi
 \item \textbf{ISO/IEC/IEEE 42010 Systems and software engineering — Architecture description} (ISO42010) \cite{iso42010}, which outlines a standardized approach to structuring architectural documents and models.
 The standard is adhered to in the sense that the definitions of this document are meant to be useful as a metamodel part of a so-called \GlossaryHyperRef{kind-model}{\textit{model kind}}, as defined by the standard.
 No claim of conformance to the standard is made for this document on its own.
+Please refer to Section \ref{sec:conformance:iso42010} for more details.
 
 \item \textbf{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
-As communication between \GlossaryHyperRef{system}{systems} of the Arrowhead framework is understood to follow this paradigm, it becomes particularly relevant to consider.
+Communications between Arrowhead \GlossaryHyperRef{system}{systems} are expected to adhere to this paradigm.
 
 \item \textbf{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural view of \GlossaryHyperRef{industry40}{\textit{Industry 4.0}}.
 The document may be seen as a predecessor to, or major influence on, the conceptual aspects of the Arrowhead framework.
@@ -144,12 +141,12 @@ The remaining sections of this document are organized as follows:
 This section.
 
 \item[Section \ref{sec:overview}]
-A formal overview of Arrowhead, describing how its core concepts relate to each other.
+A brief and formal overview of Arrowhead, describing how its core concepts relate to each other.
 The section also serves to provide a workable summary of the framework and to prepare readers for better understanding Section \ref{sec:concepts}.
 
 \item[Section \ref{sec:concepts}]
-A formal description of the primary concepts of Arrowhead.
-Each of its subsections is concerned with primary concept, ranging from entities to systems-of-local-clouds.
+A formal description of the most significant concepts of Arrowhead.
+Each of its subsections is concerned with one primary concept, ranging from entities to systems-of-local-clouds.
 
 \item[Section \ref{sec:conformance}]
 A list of requirements, meant to help determine if a document or model referring to the concepts of this document can be considered conformant.
