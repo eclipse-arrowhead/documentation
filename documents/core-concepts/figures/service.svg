@@ -30,7 +30,7 @@
      inkscape:window-width="1848"
      inkscape:window-height="855"
      inkscape:window-x="66"
-     inkscape:window-y="49"
+     inkscape:window-y="27"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm">
@@ -426,7 +426,7 @@
        y="39.652405"
        stroke-width="0.26458"
        id="tspan5334"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">conforms to</tspan></text>
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">enforces</tspan></text>
   <text
      x="83.914551"
      y="48.124268"
@@ -534,7 +534,7 @@
        y="39.652405"
        stroke-width="0.26458"
        id="tspan1018"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">conforms to</tspan></text>
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">implements</tspan></text>
   <text
      x="117.91453"
      y="48.124268"
