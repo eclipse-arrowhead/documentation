@@ -41,6 +41,7 @@ This makes its purpose analogous to that of a dictionary.
 Dictionaries define words.
 They may give examples of how certain words may be used, but they do not require that those words be used for any particular purposes.
 This document provides an Arrowhead vocabulary other documents or models may use to express software-centric automation system designs.
+It does not recommend any particular methodologies or technologies.
 
 The concepts presented here are meant to be useful as a resource for advanced Arrowhead framework learners, as well as to serve as foundation for other documentation and modeling efforts.
 This document does \textit{not} define an Arrowhead profile for SysML \cite{omg2019sysml}, or any other modeling language.
@@ -57,7 +58,7 @@ The following conventions regarding diagrams depicting graphs, references and re
 
 A box with a solid border and a name inside it denotes a named \GlossaryHyperRef{entity}{entity} and may represent any Arrowhead \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
-Relationship names are defined either here or in relation to the figures they are used in, unless their significance is considered obvious.
+Relationship names are defined either here or in relation to the figures they are used in, unless their significance can be considered obvious.
 The following relationship names are defined here only:
 
 \begin{enumerate}
@@ -82,12 +83,14 @@ If two or more arrows are combined such that their source or target end is share
 If it is closest to a shared part, the quantity must be understood to apply to the arrows of the combination collectively.
 For example, if an arrow extends from one entity to three other entities and the quantifier is ``$0..1$'' at the shared part, the relationship extends to only zero or one of the three entities.
 If a quantifier is closest to a non-shared part, the quantifier must be understood to only apply to the relationship of that arrow only.
-Combined arrows may have quantifiers both at their shared and non-shared parts, which are associated with the quantifiers $0..*$ and $1$, respectively, if not explicitly specified.
+Combined arrows may have quantifiers both at their shared and non-shared parts, which creates room for creating logical relationship conditions.
+If, for example, a shared part has the quantifier $1$ and each non-shared part the quantifier $0..1$, as in Figure \ref{fig:stakeholder}, then the origin entity must have a relationship to exactly one end entity.
+The shared and non-shared parts are associated with the quantifiers $0..*$ and $1$, respectively, if not explicitly specified.
 
 \subsubsection{References}
 
-Square brackets around numbers (e.g. \cite{delsing2017iot}) are references to the reference list in Section \ref{sec:references}.
-The number within the brackets of any given reference corresponds to the entry with the same number in the reference list.
+Square brackets around integers (e.g. \cite{delsing2017iot}) are references to the reference list in Section \ref{sec:references}.
+The integer within the brackets of any given reference corresponds to the entry with the same integer in the reference list.
 
 References within this document are hyperlinked, which means that those reading it electronically can click the references and immediately be taken to their targets.
 Special treatment is given to references targeting Section \ref{sec:glossary}, the \nameref{sec:glossary}.
@@ -107,7 +110,7 @@ This document reuses or builds upon the concepts presented in the following work
 \item \textbf{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
 The book most significantly represents the state of the Arrowhead framework up until it was written.
 Even though the framework has evolved since then, it still represents the most comprehensive view of the framework.
-While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance.
+While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance here.
 
 \item \textbf{ISO/IEC/IEEE 42010 Systems and software engineering — Architecture description} (ISO42010) \cite{iso42010}, which outlines a standardized approach to structuring architectural documents and models.
 The standard is adhered to in the sense that the definitions of this document are meant to be useful as a metamodel part of a so-called \GlossaryHyperRef{kind-model}{\textit{model kind}}, as defined by the standard.
@@ -115,7 +118,7 @@ No claim of conformance to the standard is made for this document on its own.
 Please refer to Section \ref{sec:conformance:iso42010} for more details.
 
 \item \textbf{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
-Communications between Arrowhead \GlossaryHyperRef{system}{systems} are expected to adhere to this paradigm.
+Communications between Arrowhead \GlossaryHyperRef{system}{systems} are expected to adhere to this paradigm, which is what makes the standard relevant here.
 
 \item \textbf{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural view of \GlossaryHyperRef{industry40}{\textit{Industry 4.0}}.
 The document may be seen as a predecessor to, or major influence on, the conceptual aspects of the Arrowhead framework.
@@ -128,7 +131,7 @@ They are simply outside its scope.
 \end{enumerate}
 
 Only conformity with IoTA:AF and ISO42010 is observed strictly, which means that concept definitions presented here may diverge from those of the other two works.
-All significant terminology differences are noted in the glossary of Section \ref{sec:glossary}, which briefly defines all concepts of relevance to this document.
+All significant terminology differences are noted in the glossary of Section \ref{sec:glossary}, which provides a brief definition of each concept of relevance to this document.
 
 \subsection{Section Overview}
 \label{sec:introduction:sections}
