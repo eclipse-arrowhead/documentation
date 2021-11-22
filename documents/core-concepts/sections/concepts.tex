@@ -6,27 +6,29 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-Here, we present the core concepts of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
-Each subsection \GlossaryHyperRef{description}{describes} one primary concept, which are as follows:
+Here, we present the most significant concepts of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
+Each subsection \GlossaryHyperRef{description}{describes} one of these concepts, which are as follows:
 
-\vspace*{0.5cm}
+\vspace*{0.54cm}
 
 \noindent\begin{tabularx}{\textwidth}{@{} p{0.9cm} p{4.3cm} X @{}}
 
-\ref{sec:concepts:stakeholder} & \textbf{\nameref{sec:concepts:stakeholder}} & A person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in an \GlossaryHyperRef{entity}{entity} or undertaking. \\
+\ref{sec:concepts:stakeholder} & \textbf{\nameref{sec:concepts:stakeholder}} & A person or \GlossaryHyperRef{organization}{organization} engaged in an \GlossaryHyperRef{entity}{entity} or undertaking. \\
 \ref{sec:concepts:entity}      & \textbf{\nameref{sec:concepts:entity}}      & An \GlossaryHyperRef{artifact}{artifact} that can be distinguished from all other artifacts. \\
-\ref{sec:concepts:device}      & \textbf{\nameref{sec:concepts:device}}      & A physical \GlossaryHyperRef{entity}{entity} that should have the \GlossaryHyperRef{capability}{capability} of hosting \GlossaryHyperRef{system}{systems}. \\
+\ref{sec:concepts:device}      & \textbf{\nameref{sec:concepts:device}}      & A physical \GlossaryHyperRef{entity}{entity} with the \GlossaryHyperRef{capability}{capability} of hosting \GlossaryHyperRef{system}{systems}. \\
 \ref{sec:concepts:system}      & \textbf{\nameref{sec:concepts:system}}      & A \GlossaryHyperRef{instance-software}{software instance} able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}. \\
-\ref{sec:concepts:service}     & \textbf{\nameref{sec:concepts:service}}     & A set of \GlossaryHyperRef{function}{functions} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system} for other systems to \GlossaryHyperRef{consumer-service}{consume}. \\
-\ref{sec:concepts:sos}         & \textbf{\nameref{sec:concepts:sos}}         & A set of \GlossaryHyperRef{system}{systems} that jointly facilitating new \GlossaryHyperRef{capability-system}{capabilities}. \\
+\ref{sec:concepts:service}     & \textbf{\nameref{sec:concepts:service}}     & A set of \GlossaryHyperRef{operation}{operations} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system} for other systems to \GlossaryHyperRef{consumer-service}{consume}. \\
+\ref{sec:concepts:sos}         & \textbf{\nameref{sec:concepts:sos}}         & A set of \GlossaryHyperRef{system}{systems} that jointly facilitate new \GlossaryHyperRef{capability-system}{capabilities}. \\
 \ref{sec:concepts:local-cloud} & \textbf{\nameref{sec:concepts:local-cloud}} & A \GlossaryHyperRef{cloud}{cloud} with a \GlossaryHyperRef{boundary-local}{local boundary} and \GlossaryHyperRef{resource-local}{local resources}.\\
 \ref{sec:concepts:solc}        & \textbf{\nameref{sec:concepts:solc}}        & A set of \GlossaryHyperRef{cloud-local}{local clouds} that jointly facilitate new \GlossaryHyperRef{capability-system}{capabilities}.\\
 \ref{sec:concepts:network}     & \textbf{\nameref{sec:concepts:network}}     & A set of \GlossaryHyperRef{device}{devices} whose \GlossaryHyperRef{system}{systems} can \GlossaryHyperRef{communication}{communicate}.\\
-\ref{sec:concepts:interface}   & \textbf{\nameref{sec:concepts:interface}}   & A \GlossaryHyperRef{boundary}{boundary} that can be crossed by \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols}.\\
+\ref{sec:concepts:interface}   & \textbf{\nameref{sec:concepts:interface}}   & A \GlossaryHyperRef{boundary}{boundary} that can be crossed by the \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols}.\\
 \ref{sec:concepts:policy}      & \textbf{\nameref{sec:concepts:policy}}      & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for an activity to be permitted.\\
 \ref{sec:concepts:protocol}    & \textbf{\nameref{sec:concepts:protocol}}    & A \GlossaryHyperRef{description}{description} of how \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities}.\\
 
 \end{tabularx}
+
+\vspace*{0.09cm}
 
 \subsection{Stakeholder}
 \label{sec:concepts:stakeholder}
@@ -36,7 +38,7 @@ In this context, we understand \textit{stake} to refer to any type of engagement
 The concept is illustrated in Figure \ref{fig:stakeholder}, which also lists five reasons why a given person or organization could be considered to be a stakeholder.
 We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}.
 
-\vspace*{0.3cm}
+\vspace*{0.09cm}
 
 \begin{figure}[ht!]
   \centering
@@ -49,12 +51,11 @@ We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}
   \label{fig:stakeholder}
 \end{figure}
 
-\vspace*{0.1cm}
-
 The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of those interaction.
-In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{supplier}{supplier}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant, such as (6) \GlossaryHyperRef{acquirer}{acquirer} and (7) \GlossaryHyperRef{maintainer}{maintainer}, (8) \GlossaryHyperRef{researcher}{researcher}, (9) \GlossaryHyperRef{builder}{builder}, and (10) \GlossaryHyperRef{manager}{manager}.
+In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{supplier}{supplier}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant, such as (6) \GlossaryHyperRef{acquirer}{acquirer} and (7) \GlossaryHyperRef{maintainer}{maintainer}, (8) \GlossaryHyperRef{builder}{builder}, (9) \GlossaryHyperRef{researcher}{researcher} and (10) \GlossaryHyperRef{architect}{architect}.
 The listed ten names should be used rather than any synonyms when referring to these particular roles.
 Please refer to the \hyperref[sec:glossary]{glossary} for their definitions.
+If this document is read electronically, each role name can be clicked to be taken to its definition.
 
 \subsection{Entity}
 \label{sec:concepts:entity}
@@ -70,15 +71,14 @@ As depicted in Figure \ref{fig:entity}, this means that an entity always has an 
     The entity as an artifact with an identity.
     An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be of value to a \GlossaryHyperRef{stakeholder}{stakeholder}.
     The group of entity types is not exhaustive.
-    Other examples are \GlossaryHyperRef{cloud-local}{local clouds}, certain \GlossaryHyperRef{data}{data}, \GlossaryHyperRef{policy}{policies}, \GlossaryHyperRef{protocol}{protocols} and \GlossaryHyperRef{profile}{profiles}.
+    Other examples are \GlossaryHyperRef{cloud-local}{local clouds}, certain \GlossaryHyperRef{data}{data}, \GlossaryHyperRef{policy}{policies} and \GlossaryHyperRef{profile}{profiles}.
   }
   \label{fig:entity}
 \end{figure}
 
-\vspace*{0.9mm}
 
-Note that having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is a name, number or other value referring to the entity in question.
-It is enough that such an identifier could be produced for an artifact to count as an entity.
+Note that having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is a name, number or other value referring to an entity.
+It is enough that any such identifier is possible to produce for an artifact to count as an entity.
 That being said, certain \GlossaryHyperRef{identification}{identification} requirements, perhaps related to security, performance or discoverability, may make it practically unfeasible not to use identifiers.
 
 \subsection{Device}
@@ -95,14 +95,12 @@ While there are no limits to what components can make up a device, each device m
   \caption{
     The device as an entity with hardware components, together facilitating one or more capabilities.
     Devices must be able to host systems, even if not made explicit by this figure.
-    The group of hardware components is not exhaustive.
-    Other examples of such components could be sensors, actuators, compute accelerators, or batteries.
+    Other examples of hardware components part of a device could be sensors, actuators, compute accelerators, or batteries.
   }
   \label{fig:device}
 \end{figure}
 
-\vspace*{1.8mm}
-
+A device \GlossaryHyperRef{hosting-system}{\textit{hosts}} a system by executing the software of that system in one or more of its compute units, which may use the other components of the device.
 Devices must be able to host systems, or they must be considered as hardware components.
 While it may seem unintuitive to consider certain machines as components, such as large pumping complexes or vehicles with only manual controls, the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is meant to facilitate automation through the use of interconnected devices with compute capabilities.
 If a machine cannot run \GlossaryHyperRef{software}{software}, making it able to host systems, that capability must be added before it can play a meaningful role in an Arrowhead context.
@@ -111,7 +109,7 @@ Consequently, machines without system hosting capabilities must either be consid
 \subsection{System}
 \label{sec:concepts:system}
 
-A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}.
+A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its \GlossaryHyperRef{hosting-system}{hosting} \GlossaryHyperRef{device}{device}.
 As shown in Figure \ref{fig:system}, systems consists of \GlossaryHyperRef{component-software}{software components}.
 Some significant such components are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{procedure-software}{procedures} and (3) \GlossaryHyperRef{interface-system}{system interfaces}, which are facilitated by the (1) \GlossaryHyperRef{unit-memory}{memory}, (2) \GlossaryHyperRef{unit-compute}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components of a device.
 A system with these components should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}, or it must be referred to as an \GlossaryHyperRef{system-isolated}{\textit{isolated system}}.
@@ -120,9 +118,8 @@ A system with these components should be able to \GlossaryHyperRef{consumer-serv
   \centering
   \includegraphics[scale=0.9]{figures/system}
   \caption{
-    The system as a collection of related software components, able to trigger zero or more capabilities of its hosting device.
-    The group of software components is not exhaustive.
-    Other examples of such components could be operating systems, file systems, software libraries, programming language runtimes, databases or virtual machines.
+    The system as a collection of related software components, able to use zero or more capabilities of its hosting device and facilitate new capabilities.
+    Other examples of software components could be operating systems, file systems, software libraries, programming language runtimes, databases or virtual machines.
   }
   \label{fig:system}
 \end{figure}
@@ -133,10 +130,10 @@ A system may or may not run in its own operating system process, use a certain v
 \subsection{Service}
 \label{sec:concepts:service}
 
-A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{function-service}{functions} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, allowing for other systems to trigger its \GlossaryHyperRef{capability-system}{capabilities} by sending \GlossaryHyperRef{message}{messages} to, or \GlossaryHyperRef{invocation-function}{\textit{invoking}}, those functions.
-The act of sending a message to a certain function is referred to as \GlossaryHyperRef{consumer-service}{\textit{consuming}} its service.
+A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{operation-service}{operations} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, allowing for other systems to trigger its \GlossaryHyperRef{capability-system}{capabilities} by sending \GlossaryHyperRef{message}{messages} to, or \GlossaryHyperRef{invocation-operation}{\textit{invoking}}, those operations.
+The act of sending a message to a certain operation is referred to as \GlossaryHyperRef{consumer-service}{\textit{consuming}} its service.
 As depicted in Figure \ref{fig:service}, every service consists of at least three \GlossaryHyperRef{component-software}{software components}.
-These are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{function-service}{functions} and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
+These are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{operation-service}{operations} and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
 
 \begin{figure}[ht!]
   \centering
@@ -149,12 +146,12 @@ These are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{f
   \label{fig:service}
 \end{figure}
 
-Services receive messages via their interfaces, which must \GlossaryHyperRef{routing-message}{route} them to the functions they target.
-A function receiving a message must guarantee that it adheres to its \GlossaryHyperRef{protocol-function}{protocol} and satisfies all of its \GlossaryHyperRef{policy-function}{policies}, after which it must concretely handle the request described in the message.
-The function protocol dictates what \GlossaryHyperRef{data}{data} must be in the message, among other things, while the function policies may require that certain authorization tokens can be presented, that a future time slot in a real-time network has been allocated, and so on.
+Services receive messages via their interfaces, which must \GlossaryHyperRef{routing-message}{route} them to the operations they target.
+A operation receiving a message must guarantee that it adheres to its \GlossaryHyperRef{protocol-operation}{protocol} and satisfies all of its \GlossaryHyperRef{policy-operation}{policies}, after which it must concretely handle the request described in the message.
+The operation protocol dictates what \GlossaryHyperRef{data}{data} must be in the message, among other things, while the operation policies may require that certain authorization tokens can be presented, that a future time slot in a real-time network has been allocated, and so on.
 
-If it becomes relevant to distinguish the functions of programming languages with those introduced here, they should be referred to as \GlossaryHyperRef{function-program}{\textit{program functions}} and \GlossaryHyperRef{function-service}{\textit{service functions}}, respectively.
-Otherwise the unqualified use of the word \textit{function} must be understood to refer to service functions.
+If it becomes relevant to distinguish the operations of programming languages with those introduced here, they should be referred to as \GlossaryHyperRef{operation-program}{\textit{program operations}} and \GlossaryHyperRef{operation-service}{\textit{service operations}}, respectively.
+Otherwise the unqualified use of the word \textit{operation} must be understood to refer to service operations.
 
 \subsection{System-of-Systems}
 \label{sec:concepts:sos}
@@ -234,7 +231,7 @@ As outlined in Figure \ref{fig:interface}, there are three types of interfaces o
 Device interfaces connect \GlossaryHyperRef{device}{devices}, system interfaces connect \GlossaryHyperRef{system}{systems}, and service interfaces connect \GlossaryHyperRef{consumer-service}{service consumers} with \GlossaryHyperRef{provider-service}{service providers}.
 Each of these interface levels depend on the layer below it, with the exception of the device interface at the bottom.
 As each interface supports its own set of protocols, each interface layer must support a protocol that extends that of the below layer.
-A device interface may, for example, support the IP \cite{deering2017internet} protocol via Ethernet \cite{iso202188023}, a system interface the HTTP \cite{fielding2014hypertext} protocol via TCP \cite{postel1981transmission}, and a service interface a custom HTTP extension enabling it to \GlossaryHyperRef{router-message}{route} messages to the \GlossaryHyperRef{function-service}{functions} of its \GlossaryHyperRef{service}{service}.
+A device interface may, for example, support the IP \cite{deering2017internet} protocol via Ethernet \cite{iso202188023}, a system interface the HTTP \cite{fielding2014hypertext} protocol via TCP \cite{postel1981transmission}, and a service interface a custom HTTP extension enabling it to \GlossaryHyperRef{router-message}{route} messages to the \GlossaryHyperRef{operation-service}{operations} of its \GlossaryHyperRef{service}{service}.
 Note that the protocol at each layers may consist of multiple protocols extending each other, as in this example.
 A particular chain of protocols supported by a device, system or service is referred to as a \GlossaryHyperRef{stack-protocol}{\textit{protocol stack}}.
 The protocol stack of the system in the previous example would be Ethernet, IP, TCP and HTTP, from the bottom and up.
@@ -246,13 +243,13 @@ The protocol stack of the system in the previous example would be Ethernet, IP, 
 
 A \GlossaryHyperRef{policy}{policy} is a set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied for a certain activity to be permitted.
 Policies may be concerned with authorization, contracts, economic goals, and so on.
-As depicted in Figure \ref{fig:policy}, there are two categories of policies of particular relevance, (1) \GlossaryHyperRef{policy-service}{service policies} and (2) \GlossaryHyperRef{policy-function}{function policies}.
+As depicted in Figure \ref{fig:policy}, there are two categories of policies of particular relevance, (1) \GlossaryHyperRef{policy-service}{service policies} and (2) \GlossaryHyperRef{policy-operation}{operation policies}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/policy}
   \caption{
-    The two categories of policies of highest relevance to this reference model, service and function policies, as well as some examples of possible function policies.
+    The two categories of policies of highest relevance to this reference model, service and operation policies, as well as some examples of possible operation policies.
     \GlossaryHyperRef{qos}{QoS} is an abbreviation for \GlossaryHyperRef{service-quality-of}{quality of service}.
     The group of policy types is not exhaustive.
     Other examples could be real-time, pollution or certificate policies.
@@ -260,8 +257,8 @@ As depicted in Figure \ref{fig:policy}, there are two categories of policies of 
   \label{fig:policy}
 \end{figure}
 
-A function policy must be satisfied for a system to be allowed to \GlossaryHyperRef{consumer-service}{consume} a particular \GlossaryHyperRef{function-service}{service function}.
-A service policy, or a \textit{service-level} policy, applies to all \GlossaryHyperRef{function-service}{functions} of a given \GlossaryHyperRef{service}{service}.
+A operation policy must be satisfied for a system to be allowed to \GlossaryHyperRef{consumer-service}{consume} a particular \GlossaryHyperRef{operation-service}{service operation}.
+A service policy, or a \textit{service-level} policy, applies to all \GlossaryHyperRef{operation-service}{operations} of a given \GlossaryHyperRef{service}{service}.
 Failing to satisfy a policy should mean that the consumer in question is notified about the specific policy or policies being violated.
 
 \subsection{Protocol}
