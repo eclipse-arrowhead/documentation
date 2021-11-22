@@ -132,26 +132,23 @@ A system may or may not run in its own operating system process, use a certain v
 
 A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{operation-service}{operations} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, allowing for other systems to trigger its \GlossaryHyperRef{capability-system}{capabilities} by sending \GlossaryHyperRef{message}{messages} to, or \GlossaryHyperRef{invocation-operation}{\textit{invoking}}, those operations.
 The act of sending a message to a certain operation is referred to as \GlossaryHyperRef{consumer-service}{\textit{consuming}} its service.
-As depicted in Figure \ref{fig:service}, every service consists of at least three \GlossaryHyperRef{component-software}{software components}.
-These are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{operation-service}{operations} and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
+As depicted in Figure \ref{fig:service}, services have three significant types of \GlossaryHyperRef{component-software}{software components}.
+These are (1) \GlossaryHyperRef{policy}{policies}, (2) \GlossaryHyperRef{operation-service}{operations} and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/service}
   \caption{
-    The service as a means for a consuming system to trigger capabilities of a providing system.
-    The group of software components is not exhaustive.
-    See the caption of Figure \ref{fig:system} for additional examples.
+    The service as a set of policies, operations and service interfaces, making it possible for a providing system to offer use of its capabilities to other systems.
+    While not made explicit by this figure, operations are facilitated by the \GlossaryHyperRef{state-software}{states} and \GlossaryHyperRef{procedure-software}{procedures} of the systems that provide them.
   }
   \label{fig:service}
 \end{figure}
 
-Services receive messages via their interfaces, which must \GlossaryHyperRef{routing-message}{route} them to the operations they target.
-A operation receiving a message must guarantee that it adheres to its \GlossaryHyperRef{protocol-operation}{protocol} and satisfies all of its \GlossaryHyperRef{policy-operation}{policies}, after which it must concretely handle the request described in the message.
+Services receive messages via their interfaces, which \GlossaryHyperRef{routing-message}{route} them to the operations they target.
+See Section \ref{sec:concepts:interface} for more details about interfaces.
+An operation receiving a message must guarantee that it adheres to its \GlossaryHyperRef{protocol-operation}{protocol} and satisfies all of its \GlossaryHyperRef{policy-operation}{policies}, after which it must concretely handle the request described in the message.
 The operation protocol dictates what \GlossaryHyperRef{data}{data} must be in the message, among other things, while the operation policies may require that certain authorization tokens can be presented, that a future time slot in a real-time network has been allocated, and so on.
-
-If it becomes relevant to distinguish the operations of programming languages with those introduced here, they should be referred to as \GlossaryHyperRef{operation-program}{\textit{program operations}} and \GlossaryHyperRef{operation-service}{\textit{service operations}}, respectively.
-Otherwise the unqualified use of the word \textit{operation} must be understood to refer to service operations.
 
 \subsection{System-of-Systems}
 \label{sec:concepts:sos}
