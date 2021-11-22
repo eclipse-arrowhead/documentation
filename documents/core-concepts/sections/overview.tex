@@ -71,8 +71,8 @@ The service is the primary means whereby systems coordinate to fulfill their ass
 \subsection{Service Provision and Consumption}
 
 Communication between systems is formulated in terms of the \GlossaryHyperRef{provider-service}{provision} and \GlossaryHyperRef{consumer-service}{consumption} of services, as depicted in Figure \ref{fig:service-consumption}.
-When a system \textit{provides} a service, it makes it available to other systems through \GlossaryHyperRef{interface-service}{service interfaces}.
-Other systems can \textit{consume} its services by sending \GlossaryHyperRef{message}{messages} to the interfaces of those services.
+When a system \textit{provides} a service, it makes it available to other systems through \GlossaryHyperRef{interface-provider}{provider interfaces}.
+Other systems can \textit{consume} its services by sending \GlossaryHyperRef{message}{messages} to those interfaces.
 When a service interface receives a message, it \GlossaryHyperRef{routing-message}{routes} it to the specific operation it targets.
 That operation must ensure that the message conforms to its \GlossaryHyperRef{protocol-operation}{protocol} and \GlossaryHyperRef{policy-operation}{policies} before concretely handling it.
 Operation protocols establish what messages must contain and when they may be sent in relation to other messages, while policies establish what other conditions must be satisfied for the \GlossaryHyperRef{invocation-operation}{operation invocation} to be permitted.
@@ -83,7 +83,9 @@ A policy may require that certain \GlossaryHyperRef{service-quality-of}{quality-
   \centering
   \includegraphics[scale=0.9]{figures/service-consumption}
   \caption{
-    System consume services by sending message to their interface, which routes them to operations.
+    System consume services by sending message to their interfaces, which route them to operations.
+    While not made explicit by this figure, systems provide services.
+    Also, the sending and receiving of messages entails them passing through more interfaces than just the provider interface, as explained in Section \ref{sec:concepts:interface}.
   }
   \label{fig:service-consumption}
 \end{figure}

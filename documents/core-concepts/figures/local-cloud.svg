@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4843284"
-     inkscape:cx="292.38812"
-     inkscape:cy="124.97234"
-     inkscape:window-width="1856"
+     inkscape:zoom="2.0991574"
+     inkscape:cx="266.05914"
+     inkscape:cy="186.97979"
+     inkscape:window-width="1851"
      inkscape:window-height="1035"
-     inkscape:window-x="64"
+     inkscape:window-x="69"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -522,13 +522,7 @@
      id="g25336"
      transform="translate(-9.999999)">
     <path
-       d="M 82.999999,15 H 65 v 6"
-       marker-end="url(#a)"
-       id="path21818"
-       style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
-       sodipodi:nodetypes="ccc" />
-    <path
-       d="M 65,15 H 29 v 6"
+       d="M 82.999998,15 29,15 v 6"
        marker-end="url(#a)"
        id="path25081"
        style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
@@ -563,26 +557,6 @@
        y="18.554853"
        stroke-width="0.26458"
        id="tspan27234">1..*</tspan></text>
-  <text
-     x="58.495918"
-     y="18.554853"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text27694"><tspan
-       x="56.486153"
-       y="18.554853"
-       stroke-width="0.26458"
-       id="tspan27692">2..*</tspan></text>
-  <text
-     x="94.393761"
-     y="18.554853"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text28108"><tspan
-       x="92.383987"
-       y="18.554853"
-       stroke-width="0.26458"
-       id="tspan28106">1..*</tspan></text>
   <text
      x="130.44279"
      y="18.554853"
@@ -677,42 +651,6 @@
        y="57.090481"
        stroke-width="0.26458"
        id="tspan19896"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
-  <path
-     d="m 37,15 v 21 l -7,6"
-     marker-end="url(#a-0)"
-     id="path1038"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
-     sodipodi:nodetypes="ccc" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path1038"
-     id="use1367"
-     transform="matrix(-1,0,0,1,146,-1.5e-7)"
-     width="100%"
-     height="100%" />
-  <text
-     x="40.477394"
-     y="18.481905"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text1371"><tspan
-       x="38.467628"
-       y="18.481905"
-       stroke-width="0.26458"
-       id="tspan1369"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
-  <text
-     x="112.28909"
-     y="18.481905"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text1375"><tspan
-       x="110.2793"
-       y="18.481905"
-       stroke-width="0.26458"
-       id="tspan1373"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
   <use
      x="0"
