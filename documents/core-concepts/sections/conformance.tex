@@ -6,7 +6,7 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{artifact}{artifact}, to be considered as conformant to this document, the following must be observed by that \textit{derived work}:
+For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{artifact}{artifact}, to be allowed to claim conformance to this document, the following must be observed by that \textit{derived work}:
 
 \begin{enumerate}
 \item At least one of the concepts defined in this work must be part of that derived work.
@@ -23,7 +23,11 @@ For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{arti
 	\begin{enumerate}
 	\item \textit{Specialization} means that more \GlossaryHyperRef{constraint}{constraints} are applied to it than are presented here. For example, a certain derived work may require that all devices have \GlossaryHyperRef{unit-compute}{compute units} supporting a certain instruction set, or that every \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{provides} a specific monitoring \GlossaryHyperRef{service}{service}, and so on.
 	\item \textit{Simplification} means that entities, relationships or attributes introduced here are omitted due to being outside the scope of the derived work. For example, a technical document may not be concerned with \GlossaryHyperRef{role-stakeholder}{stakeholder roles}, while a model of certain types of local clouds may not be concerned with whether or not artifacts are \GlossaryHyperRef{resource}{resources} or not, and so on.
-	\item \textit{Contradiction} means that a attribute or other constraint is introduced that makes it impossible to reconcile the concepts presented here with those in the derived work. A derived work must not, for example, demand that no devices ever host systems, or that services be provided directly by devices without them hosting systems, and so on.
+	\item \textit{Contradiction} means that an attribute or other constraint is introduced that makes it impossible to reconcile the concepts presented here with those in the derived work. A derived work must not, for example, demand that no devices ever host systems. Contradictions generally only occur when some relationship or attribute is both demanded to exist and not to exist at the same time.
+	\end{enumerate}
+\item If a different graph notation is used than the one described in Section \ref{sec:introduction:conventions:graphs}, the derived work must either describe how its notation maps to the notation here, or refer to a work making such a description.
+	\begin{enumerate}
+	\item Only text documents claiming to adhere to the graph diagram notation of Section \ref{sec:introduction:conventions:graphs} are exempt from having to describe or refer to such a notational mapping.
 	\end{enumerate}
 \end{enumerate}
 
@@ -31,7 +35,7 @@ For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{arti
 \label{sec:conformance:iso42010}
 
 The ISO42010 \cite{iso42010} standard provides a uniform way for system architects to produce architectural \GlossaryHyperRef{description}{descriptions}, \GlossaryHyperRef{viewpoint-architecture}{viewpoints}, \GlossaryHyperRef{framework-architecture}{frameworks} and \GlossaryHyperRef{language-architecture-description}{description languages}.
-In the context of ISO42010, this work can be used as a \GlossaryHyperRef{modelmeta}{\textit{metamodel}} part of an architectural viewpoint, as illustrated in Figure \ref{fig:iso42010}.
+In the context of ISO42010, this work can be used as a \GlossaryHyperRef{metamodel}{\textit{metamodel}} part of an architectural viewpoint, as illustrated in Figure \ref{fig:iso42010}.
 
 \begin{figure}[ht!]
   \centering
