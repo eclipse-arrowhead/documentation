@@ -48,7 +48,7 @@ It is their business needs and ambitions that govern what and how Arrowhead arti
 \subsection{Devices, Systems and Services}
 
 The most essential types of Arrowhead artifacts are (1) \GlossaryHyperRef{device}{devices}, (2) \GlossaryHyperRef{system}{systems} and (3) \GlossaryHyperRef{service}{services}, as shown in Figure \ref{fig:device-system-service}.
-\textit{Devices} constitute the physical computerized machines that make up the industrial complexes, vehicles, tools, and other things that could be made operational via Arrowhead.
+\textit{Devices} are physical machines with compute capabilities, making up the servers, robots, vehicles, tools, and other things part of the Arrowhead enterprise at hand.
 Each device hosts, or runs, one or more \textit{systems}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances} that make their devices work toward whatever goals are set for them.
 Finally, a \textit{service} is a set of related \GlossaryHyperRef{operation-service}{operations} that a system can make its device perform for a person or another system.
 Services can be concerned with manufacturing, repair, analysis, or any other physical or virtual activity.
@@ -70,32 +70,29 @@ The service is the primary means whereby systems coordinate to fulfill their ass
 
 \subsection{Service Provision and Consumption}
 
-Communication between systems is formulated in terms of the \GlossaryHyperRef{provider-service}{provision} and \GlossaryHyperRef{consumer-service}{consumption} of services, as depicted in Figure \ref{fig:service-consumption}.
-When a system \textit{provides} a service, it makes it available to other systems through \GlossaryHyperRef{interface-provider}{provider interfaces}.
-Other systems can \textit{consume} its services by sending \GlossaryHyperRef{message}{messages} to those interfaces.
-When a service interface receives a message, it \GlossaryHyperRef{routing-message}{routes} it to the specific operation it targets.
-That operation must ensure that the message conforms to its \GlossaryHyperRef{protocol-operation}{protocol} and \GlossaryHyperRef{policy-operation}{policies} before concretely handling it.
-Operation protocols establish what messages must contain and when they may be sent in relation to other messages, while policies establish what other conditions must be satisfied for the \GlossaryHyperRef{invocation-operation}{operation invocation} to be permitted.
-In other words, a message satisfying an operation protocol guarantees that the message is understood by its receiving operation, while a message satisfying certain policies guarantees that the activity it would trigger is occurring under desirable conditions.
-A policy may require that certain \GlossaryHyperRef{service-quality-of}{quality-of-service} guarantees can be met, or that the sender is properly authorized, among many other possible examples.
+Communication between systems is formulated in terms of the \GlossaryHyperRef{provider-service}{provision} and \GlossaryHyperRef{consumer-service}{consumption} of services.
+Systems may provide services, which other systems can consume by sending messages, as depicted in Figure \ref{fig:service-consumption}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/service-consumption}
   \caption{
-    System consume services by sending message to their interfaces, which route them to operations.
-    While not made explicit by this figure, systems provide services.
-    Also, the sending and receiving of messages entails them passing through more interfaces than just the provider interface, as explained in Section \ref{sec:concepts:interface}.
+    System consume services by sending message to them, which route them to the operations that concretely handle them.
+    While not made explicit by this figure, sent and received messages move between systems and services by passing through \GlossaryHyperRef{interface}{interfaces}, as explained in Section \ref{sec:concepts:interface}.
   }
   \label{fig:service-consumption}
 \end{figure}
+
+When a service receives a message from a consumer, it \GlossaryHyperRef{routing-message}{routes} it to the specific operation it targets.
+The operation will then handle the message by performing whatever activity it describes, as long as the message is valid.
+This handling may entail sending additional messages to other services, starting or stopping various kinds of automation routines, among many other possible examples.
 
 \subsection{System Composition}
 
 When certain systems consume each other's services, they form a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
 Such a system-of-systems is able to perform activities none of its constituent \GlossaryHyperRef{subsystem}{subsystems} could perform on its own.
 Two kinds of system-of-systems have particular significance in the context of the Arrowhead framework.
-These are (1) the \GlossaryHyperRef{cloud-local}{local cloud}, and (2) the \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds}, both part of Figure \ref{fig:system-of-systems}.
+These are (1) the \GlossaryHyperRef{cloud-local}{local cloud}, and (2) the \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds}, both depicted in Figure \ref{fig:system-of-systems}.
 
 \begin{figure}[ht!]
   \centering
@@ -106,14 +103,12 @@ These are (1) the \GlossaryHyperRef{cloud-local}{local cloud}, and (2) the \Glos
   \label{fig:system-of-systems}
 \end{figure}
 
-A \textit{local cloud} is a pool of \GlossaryHyperRef{resource}{resources}, managed by \GlossaryHyperRef{system-supervisory}{supervisory systems}, where at least one pooled resource is \GlossaryHyperRef{resource-local}{local}.
-A \textit{local resource} derives its value from its physical \GlossaryHyperRef{attribute}{attributes}.
-Furthermore, all local clouds have at least one \GlossaryHyperRef{boundary-local}{\textit{local boundary}}, which is a physical attribute that distinguishes artifacts inside the cloud from those outside it.
-A local cloud may also have \GlossaryHyperRef{resource-virtual}{virtual resources} and \GlossaryHyperRef{boundary-virtual}{virtual boundaries}.
-Raw materials, drones, and other systems are a few examples of resources the systems of a local cloud could manage.
-Boundaries may be formed by physical location, electronic certificate issuance, among many other possible examples.
-Please refer to Section \ref{sec:concepts:local-cloud} for more details.
+A \textit{local cloud} is a set of systems engaged in some form of physical activity that makes those systems physically bound to a particular location.
+Local clouds come in many shapes and forms.
+They may be completely stationary, completely mobile, or consist of both stationary and mobile devices.
+Smelting stations, drone command centers, assembly lines, power distribution centers and satellite systems are a few examples of possible local clouds.
 
-A \textit{system-of-local-clouds} emerges when systems belonging to different local clouds consume each other's services.
-They become important to consider when local clouds, perhaps separated by security or organizational boundaries, need to rely on each other to accomplish their tasks.
-Please refer to Section \ref{sec:concepts:solc} for more details.
+A \textit{system-of-local-clouds} is a set of local clouds, each kept distinct from the other local clouds by some form of boundary.
+Boundaries may be organizational, physical, security-related, and so on.
+Every system-of-local-clouds contains at least one local cloud that depends on another local cloud to perform some activity of relevance.
+A systems-of-local-clouds could be formed by a set of weather stations, the robots of some collaborating parties at a mining site, the various departments of a manufacturing plant, and so on.
