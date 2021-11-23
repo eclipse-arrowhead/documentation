@@ -5,7 +5,7 @@
    version="1.1"
    viewBox="0 0 150 54"
    id="svg162"
-   sodipodi:docname="service2.svg"
+   sodipodi:docname="service.svg"
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,10 +23,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="1.0474225"
-     inkscape:cx="299.30617"
-     inkscape:cy="205.74316"
+     showgrid="true"
+     inkscape:zoom="1.4812791"
+     inkscape:cx="278.47554"
+     inkscape:cy="136.03108"
      inkscape:window-width="1851"
      inkscape:window-height="1035"
      inkscape:window-x="69"
@@ -136,33 +136,11 @@
     </marker>
   </defs>
   <path
-     d="M 55.999999,19 H 37.000002"
+     d="M 132,22 V 33 H 95.999999"
      marker-end="url(#a)"
-     id="path31572"
+     id="path1046"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="cc" />
-  <text
-     x="60.665306"
-     y="17.04785"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text31576"><tspan
-       x="54.234653"
-       y="17.04785"
-       stroke-width="0.26458"
-       id="tspan31574"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">sends via</tspan></text>
-  <text
-     x="59.419022"
-     y="22.797161"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text31580"><tspan
-       x="54.234653"
-       y="22.797161"
-       stroke-width="0.26458"
-       id="tspan31578"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..*</tspan></text>
+     sodipodi:nodetypes="ccc" />
   <path
      d="M 74.999999,38.999999 V 45"
      marker-end="url(#a-0)"
@@ -189,12 +167,6 @@
      id="path19139"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="ccc" />
-  <path
-     d="M 115,19 95.999997,19"
-     marker-end="url(#a)"
-     id="path7495"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="cc" />
   <use
      x="0"
      y="0"
@@ -298,7 +270,7 @@
        y="26.588438"
        stroke-width="0.26458"
        id="tspan1369"
-       style="text-align:end;text-anchor:end">routes to</tspan></text>
+       style="text-align:end;text-anchor:end">has</tspan></text>
   <text
      x="76.435997"
      y="26.588438"
@@ -431,17 +403,6 @@
        stroke-width="0.26458"
        id="tspan1174"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">provides</tspan></text>
-  <text
-     x="119.66528"
-     y="17.04785"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text3503"><tspan
-       x="113.23463"
-       y="17.04785"
-       stroke-width="0.26458"
-       id="tspan3501"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">routes to</tspan></text>
   <text
      x="67.837303"
      y="2.2823253"
@@ -583,7 +544,7 @@
        text-align="center"
        text-anchor="middle"
        id="tspan15049"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Policy</tspan></text>
+       style="font-size:3px;fill:#333333;fill-opacity:1">Operation Policy</tspan></text>
   <use
      x="0"
      y="0"
@@ -674,14 +635,25 @@
        id="tspan29254"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
   <text
-     x="118.41899"
-     y="22.797161"
+     x="136.76875"
+     y="31.091343"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
-     id="text30292"><tspan
-       x="113.23463"
-       y="22.797161"
+     id="text1301"><tspan
+       x="130.33807"
+       y="31.091343"
        stroke-width="0.26458"
-       id="tspan30290"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..*</tspan></text>
+       id="tspan1299"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">routes to</tspan></text>
+  <text
+     x="133.57104"
+     y="31.091343"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text1305"><tspan
+       x="133.57104"
+       y="31.091343"
+       stroke-width="0.26458"
+       id="tspan1303"
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
 </svg>

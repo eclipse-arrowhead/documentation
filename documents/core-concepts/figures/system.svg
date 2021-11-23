@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4479384"
-     inkscape:cx="373.28936"
-     inkscape:cy="138.47274"
-     inkscape:window-width="1859"
+     inkscape:zoom="2.0476941"
+     inkscape:cx="332.81338"
+     inkscape:cy="89.124639"
+     inkscape:window-width="1851"
      inkscape:window-height="1035"
-     inkscape:window-x="61"
+     inkscape:window-x="69"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -148,20 +148,18 @@
          id="path2-0" />
     </marker>
   </defs>
+  <path
+     d="m 102,21 h 21"
+     marker-end="url(#a)"
+     id="use8791"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="cc" />
   <use
      x="0"
      y="0"
      xlink:href="#use1449"
      id="use8873"
      transform="translate(102,16)"
-     width="100%"
-     height="100%" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path1521"
-     id="use8791"
-     transform="matrix(1,0,0,-1,-1.0100002e-6,42)"
      width="100%"
      height="100%" />
   <path
@@ -256,12 +254,6 @@
      id="path27305"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:nodetypes="cc" />
-  <path
-     d="m 101,18 2,-2 17,0 3,3"
-     marker-end="url(#a)"
-     id="path1521"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="cccc" />
   <g
      id="g8176"
      transform="translate(33.999999,-8.0000002)">
@@ -381,13 +373,13 @@
        text-anchor="middle"
        id="tspan44010">System</tspan></text>
   <text
-     x="104.82247"
-     y="29.418583"
+     x="103.59497"
+     y="24.508589"
      style="font-size:2.80001px;line-height:1.25;font-family:sans-serif;stroke-width:0.264581"
      xml:space="preserve"
      id="text1624"><tspan
-       x="104.82247"
-       y="29.418583"
+       x="103.59497"
+       y="24.508589"
        stroke-width="0.264581"
        id="tspan1622"
        style="font-size:2.80001px;fill:#444444;fill-opacity:1">0..*</tspan></text>
@@ -687,13 +679,13 @@
        id="tspan1174"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">hosts</tspan></text>
   <text
-     x="104.82247"
-     y="24.277122"
+     x="103.59497"
+     y="19.237917"
      style="font-size:2.80001px;line-height:1.25;font-family:sans-serif;stroke-width:0.264581"
      xml:space="preserve"
      id="text3014"><tspan
-       x="104.82247"
-       y="24.277122"
+       x="103.59497"
+       y="19.237917"
        stroke-width="0.264581"
        id="tspan3012"
        style="font-size:2.80001px;fill:#444444;fill-opacity:1">facilitates</tspan></text>
@@ -711,26 +703,4 @@
        text-anchor="middle"
        id="tspan4005"
        style="font-size:3px;fill:#333333;fill-opacity:1">Capability</tspan></text>
-  <text
-     x="104.82294"
-     y="19.591675"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text6895"><tspan
-       x="104.82294"
-       y="19.591675"
-       stroke-width="0.26458"
-       id="tspan6893"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
-  <text
-     x="104.82294"
-     y="14.268531"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text6899"><tspan
-       x="104.82294"
-       y="14.268531"
-       stroke-width="0.26458"
-       id="tspan6897"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">uses</tspan></text>
 </svg>
