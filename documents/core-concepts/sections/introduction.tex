@@ -59,6 +59,7 @@ The following conventions regarding diagrams depicting graphs, references and re
 
 A box with a solid border and a name inside it denotes a named \GlossaryHyperRef{entity}{entity} and may represent any Arrowhead \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
+A relationship name is a form of attribute.
 Relationship names are defined either here or in relation to the figures they are used in, unless their significance can be considered obvious.
 The following relationship names are defined here only:
 
@@ -70,23 +71,28 @@ The following relationship names are defined here only:
 \end{enumerate}
 
 \paragraph{Quantifiers}
-If a named arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relationship is to be considered as extending to the number of distinct entities indicated by that quantifier.
-No quantifier being present implies a quantity of 1.
+If an arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relationship is to be considered as extending to the number of distinct entities indicated by that quantifier.
+A relationship quantifier is a form of attribute.
+No quantifier being associated with a certain relationship implies that it has a quantity of 1.
 A range is denoted by $x..y$, where $x$ and $y$ are integers and $0 \leq x < y$.
-If $y$ is substituted by $*$, the range must be understood to extend infinitely from $x$ (e.g. ``$1..*$'').
+If $y$ is substituted by $*$, the range is to be understood to extend infinitely from $x$ (e.g. ``$1..*$'').
 
-\paragraph{Groups}
-A box with a dotted border represents a \textit{group}.
-Groups have no other significance than to improve clarity, unless something else is indicated by text in its figure or the text adjacent to the figure.
+\paragraph{Grouped Relationships}
+To save space or improve clarity, arrows are sometimes grouped such that either their target or source ends are shared, as in Figure \ref{fig:graph-diagram}.
+Such a group of arrows always have any relationship name closest to its shared part, and any relationship quantifiers closest to each of its non-shared parts.
+The name must be understood to apply to each of the grouped arrows, as if they were not grouped at all.
 
-\paragraph{Combined Arrows}
-If two or more arrows are combined such that their source or target end is shared, a difference is made if a quantifier is closest to a shared or non-shared arrow part.
-If it is closest to a shared part, the quantity must be understood to apply to the arrows of the combination collectively.
-For example, if an arrow extends from one entity to three other entities and the quantifier is ``$0..1$'' at the shared part, the relationship extends to only zero or one of the three entities.
-If a quantifier is closest to a non-shared part, the quantifier must be understood to only apply to the relationship of that arrow only.
-Combined arrows may have quantifiers both at their shared and non-shared parts, which creates room for creating logical relationship conditions.
-If, for example, a shared part has the quantifier $1$ and each non-shared part the quantifier $0..1$, as in Figure \ref{fig:stakeholder}, then the origin entity must have a relationship to exactly one end entity.
-The shared and non-shared parts are associated with the quantifiers $0..*$ and $1$, respectively, if not explicitly specified.
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/graph-diagram}
+  \caption{
+    An example graph diagram.
+    \textbf{A} \textit{conforms to} 1 \textbf{B}, as no quantifier is associated with the arrow from \textbf{A} to \textbf{B} and 1 is the default quantity.
+    \textbf{A} also \textit{conforms to} 2 \textbf{C}s, as well as \textit{uses} 1 or more \textbf{C}s.
+    Both \textbf{B} and \textbf{C} \textit{has} 2 \textbf{D}s.
+  }
+  \label{fig:graph-diagram}
+\end{figure}
 
 \subsubsection{References}
 

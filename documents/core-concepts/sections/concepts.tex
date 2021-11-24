@@ -23,18 +23,16 @@ Each subsection of this section \GlossaryHyperRef{description}{describes} one of
 \ref{sec:concepts:solc}        & \textbf{\nameref{sec:concepts:solc}}        & A set of \GlossaryHyperRef{cloud-local}{local clouds} that jointly facilitate new \GlossaryHyperRef{capability-system}{capabilities}.\\
 \ref{sec:concepts:network}     & \textbf{\nameref{sec:concepts:network}}     & A set of \GlossaryHyperRef{device}{devices} whose \GlossaryHyperRef{system}{systems} can \GlossaryHyperRef{communication}{communicate}.\\
 \ref{sec:concepts:interface}   & \textbf{\nameref{sec:concepts:interface}}   & A \GlossaryHyperRef{boundary}{boundary} that can be crossed by the \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols}.\\
-\ref{sec:concepts:policy}      & \textbf{\nameref{sec:concepts:policy}}      & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for an activity to be permitted.\\
 \ref{sec:concepts:protocol}    & \textbf{\nameref{sec:concepts:protocol}}    & A \GlossaryHyperRef{description}{description} of how \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities}.\\
+\ref{sec:concepts:policy}      & \textbf{\nameref{sec:concepts:policy}}      & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for an activity to be permitted.\\
 
 \end{tabularx}
 
 \subsection{Stakeholder}
 \label{sec:concepts:stakeholder}
 
-A \GlossaryHyperRef{stakeholder}{stakeholder} is a person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in an \GlossaryHyperRef{entity}{entity} or undertaking with relevance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
-In this context, we understand \textit{stake} to refer to any type of engagement or commitment.
-The concept is illustrated in Figure \ref{fig:stakeholder}, which also lists five reasons why a given person or organization could be considered to be a stakeholder.
-We refer to these reasons as \GlossaryHyperRef{role-stakeholder}{\textit{roles}}.
+A \GlossaryHyperRef{stakeholder}{stakeholder} is a person or \GlossaryHyperRef{organization}{organization} with \GlossaryHyperRef{stake}{stake} in an \GlossaryHyperRef{entity}{entity} or undertaking with relevance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, where \textit{stake} is any form of engagement or commitment.
+Stake may be concretely expressed by a stakeholder being associated with one or more \GlossaryHyperRef{role-stakeholder}{\textit{roles}}, as illustrated in Figure \ref{fig:stakeholder}.
 
 \vfill
 
@@ -133,10 +131,9 @@ A system may or may not run in its own operating system process, use a certain v
 \subsection{Service}
 \label{sec:concepts:service}
 
-A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{operation-service}{operations} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}.
+A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{operation-service}{operations} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, as depicted in Figure \ref{fig:service}.
 Other systems may consume such a service by sending a \GlossaryHyperRef{message}{message} to, or \GlossaryHyperRef{invocation-operation}{\textit{invoking}}, an operation part of that service.
-If the sent message is valid, the providing system may use its \GlossaryHyperRef{capability}{capabilities} to satisfy the request of the sending system.
-As depicted in Figure \ref{fig:service}, operations receive messages via \GlossaryHyperRef{interface-provider}{provider interfaces} and send their own messages via \GlossaryHyperRef{interface-consumer}{consumer interfaces}.
+If the sent message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}, the providing system should use its \GlossaryHyperRef{capability}{capabilities} to perform whatever request is described by that message.
 
 \vfill
 
@@ -146,14 +143,16 @@ As depicted in Figure \ref{fig:service}, operations receive messages via \Glossa
   \caption{
     The service as a set of operations made available via a provider interface, making it possible for a providing system to offer use of its capabilities to consuming systems.
     Every entity depicted in this figure, except for the \textit{System} and the \textit{Capability}, may be a \GlossaryHyperRef{component-software}{\textit{Software Component}}.
+    Each \GlossaryHyperRef{protocol-operation}{\textit{Operation Protocol}} extends a \GlossaryHyperRef{protocol-service}{\textit{Service Protocol}}, even if not explicitly denoted in this graph diagram.
   }
   \label{fig:service}
 \end{figure}
 
+A \textit{valid} message is such that conforms to the \GlossaryHyperRef{protocol-operation}{protocol} of an operation, while a \textit{permitted} message is such that conforms to all of its \GlossaryHyperRef{policy-operation}{policies}.
+Protocols and policies are described further in Sections \ref{sec:concepts:protocol} and \ref{sec:concepts:policy}, respectively.
+Operations receive messages via \GlossaryHyperRef{interface-provider}{provider interfaces} and send their own messages via \GlossaryHyperRef{interface-consumer}{consumer interfaces}.
+There is no limits on how many messages an invoked operation may send, when they are sent, or who or what is intended to receive them.
 When a provider interface receives a message, as described in Section \ref{sec:concepts:interface}, it must \GlossaryHyperRef{routing-message}{route} it to the operation it targets.
-The operation must then ensure that the message adheres to its \GlossaryHyperRef{protocol-operation}{protocol} and satisfies all of its \GlossaryHyperRef{policy-operation}{policies}, after which it must handle the request described by the message.
-As described further in Sections \ref{sec:concepts:policy} and \ref{sec:concepts:protocol}, the policies ensure that the message is handled under desirable conditions, while the protocol ensures that it can be interpreted by the operation.
-For example, a policy could demand that a valid authorization token is included in the message, while a protocol could depend on the message \GlossaryHyperRef{encode}{encoding} a certain \GlossaryHyperRef{type-data}{data type}.
 
 \subsection{System-of-Systems}
 \label{sec:concepts:sos}
@@ -232,6 +231,10 @@ The term ``end device'' should only be used when a distinction needs to be made 
 
 An \GlossaryHyperRef{interface}{interface} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{boundary}{boundary} where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between a \GlossaryHyperRef{connection}{connection} and an \GlossaryHyperRef{entity}{entity}, between entities, or between an entity and a person.
 As outlined in Figure \ref{fig:interface}, there are three types of interfaces of particular relevance, (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \GlossaryHyperRef{interface-system}{system interfaces}, and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
+These three types of interfaces form three levels.
+At each level, if a received message satisfies its protocol, it is routed towards its designated recipient.
+If the message does not satisfy its protocol, it is ignored, replied to with an error message, or some other action is performed.
+As depicted in Figure \ref{fig:service}, provider interfaces route messages to \GlossaryHyperRef{operation-service}{service operations}, which may handle them by sending new messages via consumer interfaces.
 
 \vfill
 
@@ -245,11 +248,6 @@ As outlined in Figure \ref{fig:interface}, there are three types of interfaces o
   \label{fig:interface}
 \end{figure}
 
-These three types of interfaces form three levels.
-At each level, if a received message satisfies its protocol, it is routed towards its designated recipient.
-If the message does not satisfy its protocol, it is ignored, replied to with an error message, or some other action is performed.
-As depicted in Figure \ref{fig:service}, provider interfaces route messages to \GlossaryHyperRef{operation-service}{service operations}, which may handle them by sending new messages via consumer interfaces.
-
 Each of these interface levels depend on the layer below it, with the exception of the device interface at the bottom.
 As each interface supports its own set of protocols, each interface layer must support a protocol that extends that of the below layer.
 A device interface may, for example, support the IP \cite{deering2017internet} protocol via Ethernet \cite{iso202188023}, a system interface the HTTP \cite{fielding2014hypertext} protocol via TCP \cite{postel1981transmission}, and a service interface a custom HTTP extension allowing for a target service operation to be specified.
@@ -257,36 +255,12 @@ Note that the protocol at each layer may consist of multiple protocols extending
 A particular chain of protocols supported by a device, system or service is referred to as a \GlossaryHyperRef{stack-protocol}{\textit{protocol stack}}.
 The protocol stack of the system in the previous example would be Ethernet, IP, TCP and HTTP, from the bottom and up.
 
-%\newpage
-
-\subsection{Policy}
-\label{sec:concepts:policy}
-
-A \GlossaryHyperRef{policy}{policy} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for a certain activity to be permitted.
-Policies may be concerned with authorization, contracts, economic goals, and so on.
-As depicted in Figure \ref{fig:policy}, the type of policy of highest relevance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is the one enforced by \GlossaryHyperRef{operation-service}{service operations}.
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.9]{figures/policy}
-  \caption{
-    The policy as a set of constraints.
-    The types of constraints depicted are to be considered as examples of possible constraints.
-    \GlossaryHyperRef{qos}{QoS} is an abbreviation for \GlossaryHyperRef{service-quality-of}{quality of service}.
-  }
-  \label{fig:policy}
-\end{figure}
-
-An operation policy must be satisfied for a system to be allowed to \GlossaryHyperRef{consumer-service}{consume} a particular \GlossaryHyperRef{operation-service}{service operation}.
-Failing to satisfy a policy should mean that the consumer in question is notified about the specific policy or policies being violated.
-Policies may be associated with any \GlossaryHyperRef{entity}{entities} that receive \GlossaryHyperRef{message}{messages}, such as \GlossaryHyperRef{interface}{interfaces}.
-
 \subsection{Protocol}
 \label{sec:concepts:protocol}
 
 A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities} as dictated by zero or more \GlossaryHyperRef{state-protocol}{states}.
 Received messages may be rejected for violating a current state, or cause a state to be updated.
-States may also be updated by events not related to messages. 
+States may also be updated by temporal events, such as timeouts.
 As shown in Figure \ref{fig:protocol}, a protocol may be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, as well as be constrained by certain \GlossaryHyperRef{profile-protocol}{profiles} and \GlossaryHyperRef{encoding}{encodings}.
 
 \begin{figure}[ht!]
@@ -298,7 +272,35 @@ As shown in Figure \ref{fig:protocol}, a protocol may be defined as an \Glossary
   \label{fig:protocol}
 \end{figure}
 
-A profile narrows down what a particular protocol is permitted to express, for example by requiring that authorization tokens be included in requests, or that a certain message payload semantics be observed.
+Just as a \GlossaryHyperRef{policy}{policy}, a \textit{profile} is a set of constraints.
+Unlike the former, however, a profile is limited to only constraining the state types and message types of a protocol.
+Profiles can be used to specify how authorization tokens are to be included in messages, or demand that a certain message semantics be observed.
 Adding a profile to a protocol not already conforming to it produces a new protocol.
-An encoding introduces a \GlossaryHyperRef{system-type}{type system} in which message payloads can be expressed.
+
+Encodings introduce \GlossaryHyperRef{system-type}{type systems} in which message payloads can be expressed.
 If a protocol defines its messages without referring to an encoding, it is considered to have a \textit{custom} encoding.
+
+\subsection{Policy}
+\label{sec:concepts:policy}
+
+A \GlossaryHyperRef{policy}{policy} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{constraint}{constraints}, useful for determining if given \GlossaryHyperRef{message}{messages} are acceptable or not, as depicted in Figure \ref{fig:policy}.
+As messages are always meant to \GlossaryHyperRef{invocation-operation}{invoke operations}
+
+that must be satisfied by a \GlossaryHyperRef{message}{message} for the activity associated with a certain \GlossaryHyperRef{operation-service}{service operation} to be permitted, 
+A policy may use any of the \GlossaryHyperRef{capability-system}{capabilities}, or other provisions, of its system to determine if a given message is permitted.
+Policies may be concerned with authorization, contracts, economic goals, and so on.
+If a \GlossaryHyperRef{message}{message} \GlossaryHyperRef{invocation-operation}{invoking} a particular service operation fails to satisfy one or more of its policies, the sender of that message should be notified about what policies are being violated.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/policy}
+  \caption{
+    The policy as a set of constraints.
+    The types of constraints depicted are to be considered only as a limited set of possible examples.
+    \GlossaryHyperRef{qos}{QoS} is an abbreviation for \GlossaryHyperRef{service-quality-of}{quality of service}.
+  }
+  \label{fig:policy}
+\end{figure}
+
+While policies are only explicitly associated with operations in this document, a derived work may choose to associate policies also with services, systems, system-of-systems and/or devices.
+Such policies must be understood to apply to every operation made available by any such entity.

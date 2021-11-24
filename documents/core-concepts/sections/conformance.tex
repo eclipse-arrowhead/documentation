@@ -19,7 +19,7 @@ For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{arti
 	\item If important to be able to distinguish an Arrowhead concept from other such of relevance, concepts from this work may be qualified by the leading word ``Arrowhead'', as in, for example, ``Arrowhead system`` or ``Arrowhead service function''.
 	\item Note that some concepts defined here are given more than one name. For example, \GlossaryHyperRef{function-program}{program function} and \GlossaryHyperRef{procedure-software}{software procedure} are declared to be synonyms in the glossary. When synonyms exist, only one of their entries in the glossary will have a definition. The name of that definition should be the name being used.
 	\end{enumerate}
-\item Concepts taken from this work may be \textit{specialized} or \textit{simplified}, but must never be \textit{contradicted}.
+\item Concepts taken from this work may be \textit{specialized} and/or \textit{simplified}, but must never be \textit{contradicted}.
 	\begin{enumerate}
 	\item \textit{Specialization} means that more \GlossaryHyperRef{constraint}{constraints} are applied to it than are presented here. For example, a certain derived work may require that all devices have \GlossaryHyperRef{unit-compute}{compute units} supporting a certain instruction set, or that every \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{provides} a specific monitoring \GlossaryHyperRef{service}{service}, and so on.
 	\item \textit{Simplification} means that entities, relationships or attributes introduced here are omitted due to being outside the scope of the derived work. For example, a technical document may not be concerned with \GlossaryHyperRef{role-stakeholder}{stakeholder roles}, while a model of certain types of local clouds may not be concerned with whether or not artifacts are \GlossaryHyperRef{resource}{resources} or not, and so on.
@@ -27,7 +27,17 @@ For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{arti
 	\end{enumerate}
 \item If a different graph notation is used than the one described in Section \ref{sec:introduction:conventions:graphs}, the derived work must either describe how its notation maps to the notation here, or refer to a work making such a description.
 	\begin{enumerate}
-	\item Only text documents claiming to adhere to the graph diagram notation of Section \ref{sec:introduction:conventions:graphs} are exempt from having to describe or refer to such a notational mapping.
+	\item The graph constructs that have to be mapped are as follows:
+		\begin{enumerate}
+		\item \textit{entities}, which are the boxes with solid lines and names inside them;
+		\item \textit{relationships}, which are the unidirectional arrows denoting relationships;
+		\item \textit{attributes}, which are the \textit{names} and \textit{quantifiers} associated with graph relationships;
+		\item \textit{groups}, which are the boxed dashed lines that encapsulate entities and other groups;
+		\item \textit{combined relationships}, which are relationships with a shared target or source end; and
+		\item \textit{custom attributes}, which are special attributes expressed in text only.
+		\end{enumerate}
+		Mapping to the latter three constructs must be specified only if they are used by concepts of relevance to the derived work. Most uses of combined relationships in this work can be substituted for many regular relationships without loss of information. If only such combined relationships are of relevance to a derived work, that work may choose to not include a mapping to the combined relationship construct. Each relevant type custom attribute of this work must receive its own individual mapping.
+	\item In practice, only text documents claiming to adhere to the graph diagram notation of Section \ref{sec:introduction:conventions:graphs} are exempt from having to describe or refer to such a notational mapping. As mappings to this document will be hard to produce rigorously without text, we expect all such mappings to be described in text documents.
 	\end{enumerate}
 \end{enumerate}
 

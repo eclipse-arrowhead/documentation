@@ -6,19 +6,19 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} itself consists of two categories of \GlossaryHyperRef{artifact}{artifacts}, as depicted in Figure \ref{fig:framework}.
-The first category constitute a framework of assumptions, concepts, values and practices that frame the problem domain of \textit{dynamic device coordination in the context of automation}.
-The second category it is a set of software specifications and \GlossaryHyperRef{implementation-software}{implementations} meant to address that problem domain.
+The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} can be divided into a framework of ideas and a framework of software, as shown in Figure \ref{fig:framework}.
+The former division concerns the assumptions, concepts, values and practices that frame the problem domain of \textit{coordinating dynamic automation systems}.
+The latter division concerns the software specifications and \GlossaryHyperRef{implementation-software}{implementations} meant to address that problem domain.
 In this section, we provide an overview of the primary \textit{concepts} of the Arrowhead framework.
 While \textit{assumptions} and \textit{values} may be possible derive from this overview, no other framework artifacts are considered here or in the rest of this document.
 
-\vspace*{1mm}
+\vfill
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/framework}
   \caption{
-    The two main categories of artifacts of the arrowhead framework: ideas and software.
+    The two main components of the Arrowhead framework: ideas and software.
   }
   \label{fig:framework}
 \end{figure}
@@ -49,10 +49,10 @@ It is their business needs and ambitions that govern what and how Arrowhead arti
 
 The most essential types of Arrowhead artifacts are (1) \GlossaryHyperRef{device}{devices}, (2) \GlossaryHyperRef{system}{systems} and (3) \GlossaryHyperRef{service}{services}, as shown in Figure \ref{fig:device-system-service}.
 \textit{Devices} are physical machines with compute capabilities, making up the servers, robots, vehicles, tools, and other things part of the Arrowhead enterprise at hand.
-Each device hosts, or runs, one or more \textit{systems}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances} that make their devices work toward whatever goals are set for them.
-Finally, a \textit{service} is a set of related \GlossaryHyperRef{operation-service}{operations} that a system can make its device perform for a person or another system.
-Services can be concerned with manufacturing, repair, analysis, or any other physical or virtual activity.
-The service is the primary means whereby systems coordinate to fulfill their assignments.
+Each device hosts, or runs, one or more \textit{systems}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances} that make their devices work toward fulfilling their purposes.
+Finally, systems \GlossaryHyperRef{provider-service}{provide} \textit{services}, which are sets of related \GlossaryHyperRef{operation-service}{operations} that a system can make its device perform for a person or another system.
+Services may be concerned with manufacturing, repair, analysis, or any other physical or virtual activity.
+The service is the primary means whereby systems coordinate their work.
 
 \vfill
 
@@ -60,7 +60,7 @@ The service is the primary means whereby systems coordinate to fulfill their ass
   \centering
   \includegraphics[scale=0.9]{figures/device-system-service}
   \caption{
-    Hardware devices have, or \textit{host}, software systems, which \GlossaryHyperRef{provider-service}{provide} services.
+    Hardware devices \textit{host} software systems, which \textit{provide} services.
     Each of these is an artifact.
   }
   \label{fig:device-system-service}
@@ -77,14 +77,14 @@ Systems may provide services, which other systems can consume by sending message
   \centering
   \includegraphics[scale=0.9]{figures/service-consumption}
   \caption{
-    System consume services by sending message to them, which route them to the operations that concretely handle them.
+    System consume services by sending messages to the systems hosting them, which then must pass them on, or \GlossaryHyperRef{routing-message}{\textit{route}} them, to the service operations meant to handle them.
     While not made explicit by this figure, sent and received messages move between systems and services by passing through \GlossaryHyperRef{interface}{interfaces}, as explained in Section \ref{sec:concepts:interface}.
   }
   \label{fig:service-consumption}
 \end{figure}
 
-When a service receives a message from a consumer, it \GlossaryHyperRef{routing-message}{routes} it to the specific operation it targets.
-The operation will then handle the message by performing whatever activity it describes, as long as the message is valid.
+When a providing system receives a message from a consuming system, it routes it to the service operation specified in the message.
+The operation receiving the message will then handle it by performing whatever action described in that message, given that the message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}.
 This handling may entail sending additional messages to other services, starting or stopping various kinds of automation routines, among many other possible examples.
 
 \subsection{System Composition}
@@ -108,7 +108,7 @@ Local clouds come in many shapes and forms.
 They may be completely stationary, completely mobile, or consist of both stationary and mobile devices.
 Smelting stations, drone command centers, assembly lines, power distribution centers and satellite systems are a few examples of possible local clouds.
 
-A \textit{system-of-local-clouds} is a set of local clouds, each kept distinct from the other local clouds by some form of boundary.
+A \textit{system-of-local-clouds} is a set of cooperating local clouds, each kept distinct from the other local clouds by some form of boundary.
 Boundaries may be organizational, physical, security-related, and so on.
 Every system-of-local-clouds contains at least one local cloud that depends on another local cloud to perform some activity of relevance.
 A systems-of-local-clouds could be formed by a set of weather stations, the robots of some collaborating parties at a mining site, the various departments of a manufacturing plant, and so on.
