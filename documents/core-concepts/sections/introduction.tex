@@ -6,27 +6,27 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-We expect the automation systems of today to keep becoming more and more computerized, digitized and interconnected.
+We expect the \GlossaryHyperRef{system-automation}{automation systems} of today to keep becoming more and more computerized, digitized and interconnected.
 By this we mean that more aspects of and surrounding automation machines will be handled by computers, more information will be made available to those computers and, finally, comparatively more such computers will be given the opportunity to collect, communicate and act on that information.
-Manufacturing, transportation, energy distribution, medicine, recycling, as well as all other industrial sectors concerned with automation will be affected by this development.
+Manufacturing, transportation, energy distribution, medicine, recycling, as well as all other industrial sectors concerned with \GlossaryHyperRef{automation}{automation} will be affected by this development.
 It will lead to increased automation efficiency and flexibility, as machines become able to perform more of the work traditionally assigned to humans.
 However, it will also lead to new magnitudes of complexity, not the least because of the renewed incentive to use more and more of these highly communicative machines.
 
 The \GlossaryHyperRef{framework-arrowhead}{\textit{Arrowhead framework}} is designed to address this explosion of complexity.
 It provides a foundation for \GlossaryHyperRef{communication-service-oriented}{\textit{service-oriented communication}} \cite{mackenzie2006reference} between automation systems and other computers, such that interoperability, security, safety, performance, and other major concerns can be addressed efficiently and effectively.
-It notably allows for \GlossaryHyperRef{system}{system} \GlossaryHyperRef{capability}{capabilities} to be \GlossaryHyperRef{description}{described}, shared and exploited dynamically by communicating \GlossaryHyperRef{device}{devices}.
+It notably allows for \GlossaryHyperRef{system}{system} \GlossaryHyperRef{capability}{capabilities} to be \GlossaryHyperRef{description}{described}, shared and exploited dynamically by \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{device}{devices}.
 
-In this document, we, the Eclipse Arrowhead project, present an authoritative set of concept definitions, meant to serve as the fundamental language for describing Arrowhead-based system \GlossaryHyperRef{design}{designs}.
+In this document, we, the \GlossaryHyperRef{project-eclipse-arrowhead}{Eclipse Arrowhead project}, present an authoritative set of concept definitions, meant to serve as the fundamental language for describing \GlossaryHyperRef{arrowhead}{Arrowhead}-based system \GlossaryHyperRef{design}{designs}.
 It exist to help mitigate compatibility and consistency issues in \GlossaryHyperRef{software}{software}, tooling, \GlossaryHyperRef{model}{models}, documentation and all other things of relevance to the Arrowhead framework.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
 
-This document is being written and maintained for all who need precise and rigorous definitions of important Arrowhead concepts, which we understand to likely include the following groups:
+This document is being written and maintained for all who need precise and rigorous definitions of important \GlossaryHyperRef{arrowhead}{Arrowhead} concepts, which we understand to likely include the following groups:
 
 \begin{itemize}
-\item Advanced \GlossaryHyperRef{user}{users} of Arrowhead systems.
-\item \GlossaryHyperRef{architect}{Architects} contributing to or extending the Arrowhead framework.
+\item Advanced \GlossaryHyperRef{user}{users} of Arrowhead \GlossaryHyperRef{system}{systems}.
+\item \GlossaryHyperRef{architect}{Architects} contributing to or extending the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
 \item \GlossaryHyperRef{developer}{Developers} of Arrowhead systems, or of devices that are expected to host Arrowhead systems.
 \item \GlossaryHyperRef{operator}{Operators} of Arrowhead systems.
 \item \GlossaryHyperRef{researcher}{Researchers} concerned with analyzing or refining the Arrowhead framework or Arrowhead systems.
@@ -35,8 +35,8 @@ This document is being written and maintained for all who need precise and rigor
 \subsection{Scope}
 \label{sec:introduction:scope}
 
-This document is intended to clearly define all technical concepts of fundamental importance to the Arrowhead framework.
-It does not specify how Arrowhead-based automation systems ought to be designed.
+This document is intended to clearly define all technical concepts of fundamental importance to the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
+It does not specify how \GlossaryHyperRef{arrowhead}{Arrowhead}-based \GlossaryHyperRef{system-automation}{automation systems} ought to be \GlossaryHyperRef{design}{designed}.
 This makes its purpose analogous to that of a dictionary.
 Dictionaries define words.
 They may give examples of how certain words may be used, but they do not require that those words be used for any particular purposes.
@@ -114,20 +114,20 @@ This document reuses or builds upon the concepts presented in the following work
 
 \begin{enumerate}
 
-\item \textbf{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \textit{local automation cloud} concept in its second chapter, as well as the \textit{Arrowhead framework architecture} in its third chapter.
+\item \textbf{IoT Automation: Arrowhead Framework} (IoTA:AF) \cite{delsing2017iot}, which significantly includes an overview of the \GlossaryHyperRef{cloud-local-automation}{\textit{local automation cloud}} concept in its second chapter, as well as the \textit{\GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} \GlossaryHyperRef{architecture}{architecture}} in its third chapter.
 The book most significantly represents the state of the Arrowhead framework up until it was written.
-Even though the framework has evolved since then, it still represents the most comprehensive view of the framework.
+Even though the \GlossaryHyperRef{framework}{framework} has evolved since then, it still represents the most comprehensive description of the framework.
 While the strictly architectural aspects of IoTA:AF are outside the scope of this document, the two mentioned chapters contain several definition with a high degree of relevance here.
 
-\item \textbf{ISO/IEC/IEEE 42010 Systems and software engineering — Architecture description} (ISO42010) \cite{iso42010}, which outlines a standardized approach to structuring architectural documents and models.
+\item \textbf{ISO/IEC/IEEE 42010 Systems and software engineering — Architecture description} (ISO42010) \cite{iso42010}, which outlines a standardized approach to structuring architectural documents and \GlossaryHyperRef{model}{models}.
 The standard is adhered to in the sense that the definitions of this document are meant to be useful as a metamodel part of a so-called \GlossaryHyperRef{kind-model}{\textit{model kind}}, as defined by the standard.
 No claim of conformance to the standard is made for this document on its own.
 Please refer to Section \ref{sec:conformance:iso42010} for more details.
 
 \item \textbf{Reference Model for Service Oriented Architecture} (SOA-RM) \cite{mackenzie2006reference}, which provides a standardized definition of Service-Oriented Architecture (SOA).
-Communications between Arrowhead \GlossaryHyperRef{system}{systems} are expected to adhere to this paradigm, which is what makes the standard relevant here.
+\GlossaryHyperRef{communication}{Communications} between \GlossaryHyperRef{arrowhead}{Arrowhead} \GlossaryHyperRef{system}{systems} are expected to adhere to this paradigm, which is what makes the standard relevant here.
 
-\item \textbf{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural view of \GlossaryHyperRef{industry40}{\textit{Industry 4.0}}.
+\item \textbf{Reference Architecture Model Industrie 4.0} (RAMI4.0) \cite{adolphs2016reference}, which outlines an ontological and architectural description of \GlossaryHyperRef{industry40}{\textit{Industry 4.0}}.
 The document may be seen as a predecessor to, or major influence on, the conceptual aspects of the Arrowhead framework.
 In particular, the document describes how to model and design communicating industrial systems such that key Industry 4.0 characteristics can be facilitated, such as high degrees of dynamicity and interoperability.
 However, as RAMI4.0 is a reference \textit{architecture} rather than a reference \textit{model}, we have only been concerned with what concepts it defines and what problems it frames.
@@ -151,15 +151,15 @@ The remaining sections of this document are organized as follows:
 This section.
 
 \item[Section \ref{sec:overview}]
-A brief and formal overview of Arrowhead, describing how its core concepts relate to each other.
-The section also serves to provide a workable summary of the framework and to prepare readers for better understanding Section \ref{sec:concepts}.
+A brief and formal overview of \GlossaryHyperRef{arrowhead}{Arrowhead}, describing how its core concepts relate to each other.
+The section also serves to provide a workable summary of the \GlossaryHyperRef{framework}{framework} and to prepare readers for better understanding Section \ref{sec:concepts}.
 
 \item[Section \ref{sec:concepts}]
 A formal description of the most significant concepts of Arrowhead.
-Each of its subsections is concerned with one primary concept, ranging from entities to systems-of-local-clouds.
+Each of its subsections is concerned with one primary concept, ranging from \GlossaryHyperRef{entity}{entities} to \GlossaryHyperRef{system-of-local-clouds}{systems-of-local-clouds}.
 
 \item[Section \ref{sec:conformance}]
-A list of requirements, meant to help determine if a document or model referring to the concepts of this document can be considered conformant.
+A list of requirements, meant to help determine if a document or \GlossaryHyperRef{model}{model} referring to the concepts of this document can be considered conformant.
 A special subsection on ISO/IEC/IEEE 42010 conformance is also provided.
 
 \item[Section \ref{sec:glossary}]
@@ -169,6 +169,6 @@ Lists all significant terms and abbreviations presented in this document in alph
 Lists references to publications referred to in this document.
 
 \item[Section \ref{sec:revision}]
-Records the history of changes made to this document.
+Records the history of officially ratified changes made to this document.
 
 \end{itemize}
