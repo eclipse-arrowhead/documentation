@@ -67,7 +67,7 @@ As depicted in Figure \ref{fig:entity}, this means that an entity always has an 
   \includegraphics[scale=0.9]{figures/entity}
   \caption{
     The entity as an artifact with an identity.
-    An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be of value to a \GlossaryHyperRef{stakeholder}{stakeholder}.
+    An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be valuable or useful from the perspective of a \GlossaryHyperRef{stakeholder}{stakeholder}.
     The group of entity types is not exhaustive.
     Other examples are \GlossaryHyperRef{cloud-local}{local clouds}, certain \GlossaryHyperRef{data}{data}, \GlossaryHyperRef{policy}{policies} and \GlossaryHyperRef{profile}{profiles}.
   }
@@ -103,7 +103,7 @@ While there are no limits to what components can make up a device, each device m
 A device \GlossaryHyperRef{hosting-system}{\textit{hosts}} a system by executing the \GlossaryHyperRef{software}{software} of that system in one or more of its compute units.
 Devices must be able to host systems, or they must be considered as hardware components.
 While it may seem unintuitive to consider certain machines as components, such as large pumping complexes or vehicles with only manual controls, the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is meant to facilitate automation through the use of interconnected devices with compute capabilities.
-If a machine cannot run software, making it able to host systems, that capability must be added before it can play a meaningful role in an Arrowhead context.
+If a machine cannot run software, making it able to host systems, that capability must be added before it can play a meaningful role in an \GlossaryHyperRef{arrowhead}{Arrowhead} context.
 Consequently, machines without system hosting capabilities must either be considered as components or not be considered from the perspective of Arrowhead at all.
 
 \subsection{System}
@@ -131,9 +131,13 @@ A system may or may not run in its own operating system process, use a certain v
 \subsection{Service}
 \label{sec:concepts:service}
 
-A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{operation-service}{operations} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system}, as depicted in Figure \ref{fig:service}.
-Other systems may consume such a service by sending a \GlossaryHyperRef{message}{message} to, or \GlossaryHyperRef{invocation-operation}{\textit{invoking}}, an operation part of that service.
-If the sent message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}, the providing system should use its \GlossaryHyperRef{capability}{capabilities} to perform whatever request is described by that message.
+A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{operation-service}{operations}, where each operation represents a significant set of activities the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{providing} the service can perform.
+Operations are \GlossaryHyperRef{procedure-software}{software procedures} that can be executed by sending \GlossaryHyperRef{message}{messages} to them via their \GlossaryHyperRef{interface-operation}{interfaces}.
+The sender of such a message is referred to as a \GlossaryHyperRef{consumer-service}{service consumer}.
+As depicted in Figure \ref{fig:service}, an operation may use the \GlossaryHyperRef{capability-system}{capabilities} of its providing system to perform its activities and must ensure certain \GlossaryHyperRef{policy}{policies} are enforced before handling any received messages.
+
+%Other systems may consume such a service by sending a \GlossaryHyperRef{message}{message} via the interface of an operation part of that service.
+%If the sent message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}, the providing system should use its \GlossaryHyperRef{capability}{capabilities} to perform whatever request is described by that message.
 
 \vfill
 
@@ -141,9 +145,9 @@ If the sent message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHype
   \centering
   \includegraphics[scale=0.9]{figures/service}
   \caption{
-    The service as a set of operations made available via a provider interface, making it possible for a providing system to offer use of its capabilities to consuming systems.
+    The service as a set of operations made available via a provider interface, making it possible for a providing system to offer the use of its capabilities to consuming systems.
     Every entity depicted in this figure, except for the \textit{System} and the \textit{Capability}, may be a \GlossaryHyperRef{component-software}{\textit{Software Component}}.
-    Each \GlossaryHyperRef{protocol-operation}{\textit{Operation Protocol}} extends a \GlossaryHyperRef{protocol-service}{\textit{Service Protocol}}, even if not explicitly denoted in this graph diagram.
+    Each \GlossaryHyperRef{protocol-operation}{\textit{Operation Protocol}} extends $0..1$ \GlossaryHyperRef{protocol-service}{\textit{Service Protocol}}, even if not explicitly denoted in this graph diagram.
   }
   \label{fig:service}
 \end{figure}
@@ -157,7 +161,7 @@ When a provider interface receives a message, as described in Section \ref{sec:c
 \subsection{System-of-Systems}
 \label{sec:concepts:sos}
 
-A \GlossaryHyperRef{system-of-systems}{system-of-systems} is an \GlossaryHyperRef{identification}{identifiable} set of at least two \GlossaryHyperRef{system}{systems}, together facilitating one or more \GlossaryHyperRef{capability-system}{capabilities} none of the constituent systems could have on its own.
+A \GlossaryHyperRef{system-of-systems}{system-of-systems} is a set of at least two \GlossaryHyperRef{system}{systems}, together facilitating one or more \GlossaryHyperRef{capability-system}{capabilities} none of the constituent systems could have on its own.
 The facilitation of new capabilities is accomplished by the systems providing services and/or consuming each other's services.
 
 While it may seem as if consuming services would hardly be enough for new capabilities to always emerge, it actually is the case.
@@ -169,7 +173,7 @@ As a new system now may control that particular light, a new capability has emer
 \subsection{Local Cloud}
 \label{sec:concepts:local-cloud}
 
-A \GlossaryHyperRef{cloud-local}{local cloud} is a \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
+A \GlossaryHyperRef{cloud-local}{local cloud} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
 The resource pool of a local cloud could contain 3D-printers, autonomous unmanned vehicles, conventional servers, or anything else producing a value on demand.
 As depicted in Figure \ref{fig:local-cloud}, the local cloud is distinct from other types of \GlossaryHyperRef{cloud}{clouds} by having at least one \GlossaryHyperRef{boundary-local}{local boundary} and one \GlossaryHyperRef{resource-local}{local resource}, which means that it is physically tied to a concrete location.
 A local cloud could be engaged in manufacturing, repairs, heating, electricity distribution, workspace monitoring, drone fleet control, among many other possible kinds of physical activities.
@@ -229,12 +233,9 @@ The term ``end device'' should only be used when a distinction needs to be made 
 \subsection{Interface}
 \label{sec:concepts:interface}
 
-An \GlossaryHyperRef{interface}{interface} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{boundary}{boundary} where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between a \GlossaryHyperRef{connection}{connection} and an \GlossaryHyperRef{entity}{entity}, between entities, or between an entity and a person.
-As outlined in Figure \ref{fig:interface}, there are three types of interfaces of particular relevance, (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \GlossaryHyperRef{interface-system}{system interfaces}, and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
-These three types of interfaces form three levels.
-At each level, if a received message satisfies its protocol, it is routed towards its designated recipient.
-If the message does not satisfy its protocol, it is ignored, replied to with an error message, or some other action is performed.
-As depicted in Figure \ref{fig:service}, provider interfaces route messages to \GlossaryHyperRef{operation-service}{service operations}, which may handle them by sending new messages via consumer interfaces.
+An \GlossaryHyperRef{interface}{interface} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{boundary}{boundary} over which \GlossaryHyperRef{message}{messages} of certain supported \GlossaryHyperRef{protocol}{protocols} may cross.
+An interface may pass messages between \GlossaryHyperRef{connection}{connections} and \GlossaryHyperRef{entity}{entities}, between entities, or between entities and \GlossaryHyperRef{person}{persons}.
+As outlined in Figure \ref{fig:interface}, there are three types of interfaces of particular relevance in the context of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, which are (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \GlossaryHyperRef{interface-system}{system interfaces}, and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
 
 \vfill
 
@@ -242,18 +243,24 @@ As depicted in Figure \ref{fig:service}, provider interfaces route messages to \
   \centering
   \includegraphics[scale=0.9]{figures/interface}
   \caption{
-    The interface as a boundary only messages of a certain protocol may cross.
-    Service, system and device interfaces enable services, systems and devices to communicate with entities beyond their own boundaries.
+    The interface as a set of supported protocols and enforced policies.
+    Devices, systems, services and operations have their own interface types, each with its corresponding protocol type.
+    In the order listed, each interface type may be able to pass on messages to its one or two neighbor types.
   }
   \label{fig:interface}
 \end{figure}
 
-Each of these interface levels depend on the layer below it, with the exception of the device interface at the bottom.
-As each interface supports its own set of protocols, each interface layer must support a protocol that extends that of the below layer.
-A device interface may, for example, support the IP \cite{deering2017internet} protocol via Ethernet \cite{iso202188023}, a system interface the HTTP \cite{fielding2014hypertext} protocol via TCP \cite{postel1981transmission}, and a service interface a custom HTTP extension allowing for a target service operation to be specified.
-Note that the protocol at each layer may consist of multiple protocols extending each other, as in this example.
-A particular chain of protocols supported by a device, system or service is referred to as a \GlossaryHyperRef{stack-protocol}{\textit{protocol stack}}.
-The protocol stack of the system in the previous example would be Ethernet, IP, TCP and HTTP, from the bottom and up.
+
+%At each level, if a received message satisfies its protocol, it is routed towards its designated recipient.
+%If the message does not satisfy its protocol, it is ignored, replied to with an error message, or some other set of actions are performed.
+%As depicted in Figure \ref{fig:service}, provider interfaces route messages to \GlossaryHyperRef{operation-service}{service operations}, which may handle them by sending new messages via consumer interfaces.
+
+%Each of these interface levels depend on the layer below it, with the exception of the device interface at the bottom.
+%As each interface supports its own set of protocols, each interface layer must support a protocol that extends that of the below layer.
+%A device interface may, for example, support the IP \cite{deering2017internet} protocol via Ethernet \cite{iso202188023}, a system interface the HTTP \cite{fielding2014hypertext} protocol via TCP \cite{postel1981transmission}, and a service interface a custom HTTP extension allowing for a target service operation to be specified.
+%Note that the protocol at each layer may consist of multiple protocols extending each other, as in this example.
+%A particular chain of protocols supported by a device, system or service is referred to as a \GlossaryHyperRef{stack-protocol}{\textit{protocol stack}}.
+%The protocol stack of the system in the previous example would be Ethernet, IP, TCP and HTTP, from the bottom and up.
 
 \subsection{Protocol}
 \label{sec:concepts:protocol}
