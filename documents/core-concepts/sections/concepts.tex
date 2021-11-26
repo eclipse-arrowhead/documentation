@@ -41,13 +41,13 @@ Stake may be concretely expressed by a stakeholder being associated with one or 
   \includegraphics[scale=0.9]{figures/stakeholder}
   \caption{
     The stakeholder as either a person or organization, where each such stakeholder takes on one ore more distinct roles.
-    The depicted roles is not an exhaustive list.
+    The array of roles is not complete.
     \GlossaryHyperRef{hid}{HID} is an abbreviation for \GlossaryHyperRef{device-human-interface}{Human Interface Device}.
   }
   \label{fig:stakeholder}
 \end{figure}
 
-The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of those interaction.
+The roles occupied by a given stakeholder dictates what \GlossaryHyperRef{entity}{entities} that person or organization will interact with, as well as the nature of those interactions.
 In Figure \ref{fig:stakeholder}, (1) \GlossaryHyperRef{owner}{owner}, (2) \GlossaryHyperRef{supplier}{supplier}, (3) \GlossaryHyperRef{developer}{developer}, (4) \GlossaryHyperRef{operator}{operator} and (5) \GlossaryHyperRef{user}{user} are named explicitly, but more roles are likely to be relevant, such as (6) \GlossaryHyperRef{acquirer}{acquirer} and (7) \GlossaryHyperRef{maintainer}{maintainer}, (8) \GlossaryHyperRef{builder}{builder}, (9) \GlossaryHyperRef{researcher}{researcher} and (10) \GlossaryHyperRef{architect}{architect}.
 The listed ten names should be used rather than any synonyms when referring to these particular roles.
 Please refer to the \hyperref[sec:glossary]{glossary} for their definitions.
@@ -56,7 +56,7 @@ If this document is read electronically, each role name can be clicked to be tak
 \subsection{Entity}
 \label{sec:concepts:entity}
 
-An \GlossaryHyperRef{entity}{entity} is an \GlossaryHyperRef{artifact}{artifact} that can be distinguished from all other artifacts.
+An \GlossaryHyperRef{entity}{entity} is an \GlossaryHyperRef{artifact}{artifact} that it \GlossaryHyperRef{identifiable}{identifiable}, which means that it can be distinguished from all other artifacts.
 We use the word \textit{artifact} to refer to any object or thing, physical or intangible.
 As depicted in Figure \ref{fig:entity}, this means that an entity always has an \GlossaryHyperRef{identity}{identity}.
 
@@ -68,24 +68,24 @@ As depicted in Figure \ref{fig:entity}, this means that an entity always has an 
   \caption{
     The entity as an artifact with an identity.
     An entity or artifact may or may not be considered to be a \GlossaryHyperRef{resource}{resource}, in which case it is deemed to be valuable or useful from the perspective of a \GlossaryHyperRef{stakeholder}{stakeholder}.
-    The group of entity types is not exhaustive.
-    Other examples are \GlossaryHyperRef{cloud-local}{local clouds}, certain \GlossaryHyperRef{data}{data}, \GlossaryHyperRef{policy}{policies} and \GlossaryHyperRef{profile}{profiles}.
+    The array of artifacts with an \textit{is}-relation to \textit{Entity} is not complete.
+    Other examples include \GlossaryHyperRef{cloud-local}{local clouds}, \GlossaryHyperRef{policy}{policies} and \GlossaryHyperRef{profile}{profiles}.
   }
   \label{fig:entity}
 \end{figure}
 
-
 Note that having an identity is not the same as being associated with an \GlossaryHyperRef{identifier}{identifier}, which is a name, number or other value referring to an entity.
 It is enough that any such identifier is possible to produce for an artifact to count as an entity.
-That being said, certain \GlossaryHyperRef{identification}{identification} requirements, perhaps related to security, performance or discoverability, may make it practically unfeasible not to use identifiers.
+That being said, certain \GlossaryHyperRef{identification}{identification} requirements, perhaps related to security, performance or discoverability, may make it impractical to treat any other artifacts as entities than those with identifiers.
 
 \subsection{Device}
 \label{sec:concepts:device}
 
-A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} with the significant \GlossaryHyperRef{capability}{capability} of being able to host at least one \GlossaryHyperRef{system}{system}, each of which may be given the opportunity to exercise the capabilities of that device.
-Examples of capabilities include moving robotic arms, reading from sensors, running \GlossaryHyperRef{procedure-software}{software procedures}, and sending \GlossaryHyperRef{message}{messages}. 
-Every device consists of \GlossaryHyperRef{component-hardware}{hardware components}.
-While there are no limits to what components can make up a device, each device must always have (1) \GlossaryHyperRef{unit-memory}{memory}, (2) \GlossaryHyperRef{unit-compute}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components, as shown in Figure \ref{fig:device}.
+A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} with certain automation and compute \GlossaryHyperRef{capability}{capabilities}.
+Examples of capabilities include moving robotic arms, reading from sensors, running \GlossaryHyperRef{software}{software}, and sending \GlossaryHyperRef{message}{messages}.
+Every device must be capable of \GlossaryHyperRef{hosting-system}{\textit{hosting}} at least one \GlossaryHyperRef{system}{system}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances}.
+Devices consist of \GlossaryHyperRef{component-hardware}{hardware components}.
+While there are no limits to what such components can make up a device, each device must always have (1) \GlossaryHyperRef{unit-memory}{memory}, (2) \GlossaryHyperRef{unit-compute}{compute} and (3) \GlossaryHyperRef{interface-device}{interfacing} components, as shown in Figure \ref{fig:device}.
 
 \vfill
 
@@ -93,48 +93,50 @@ While there are no limits to what components can make up a device, each device m
   \centering
   \includegraphics[scale=0.9]{figures/device}
   \caption{
-    The device as an entity with hardware components, together facilitating one or more capabilities.
-    Devices must be able to host systems, even if not made explicit by this figure.
-    Other examples of hardware components part of a device could be sensors, actuators, compute accelerators, or batteries.
+    The device as a set of hardware components, each with zero or more automation or compute capabilities.
+    Devices host \GlossaryHyperRef{component-software}{software components} using their compute units, even if not shown explicitly.
+    Other examples of hardware components could be sensors, actuators, compute accelerators and batteries.
   }
   \label{fig:device}
 \end{figure}
 
-A device \GlossaryHyperRef{hosting-system}{\textit{hosts}} a system by executing the \GlossaryHyperRef{software}{software} of that system in one or more of its compute units.
-Devices must be able to host systems, or they must be considered as hardware components.
+Every device must be able to host at least one system, or it is to be considered as being a hardware component.
 While it may seem unintuitive to consider certain machines as components, such as large pumping complexes or vehicles with only manual controls, the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is meant to facilitate automation through the use of interconnected devices with compute capabilities.
 If a machine cannot run software, making it able to host systems, that capability must be added before it can play a meaningful role in an \GlossaryHyperRef{arrowhead}{Arrowhead} context.
 Consequently, machines without system hosting capabilities must either be considered as components or not be considered from the perspective of Arrowhead at all.
 
+\newpage
+
 \subsection{System}
 \label{sec:concepts:system}
 
-A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is able to exercise the \GlossaryHyperRef{capability}{capabilities} of its \GlossaryHyperRef{hosting-system}{hosting} \GlossaryHyperRef{device}{device}.
-As shown in Figure \ref{fig:system}, systems consists of \GlossaryHyperRef{component-software}{software components}.
-Some significant such components are (1) \GlossaryHyperRef{state-software}{states}, (2) \GlossaryHyperRef{procedure-software}{procedures} and (3) \GlossaryHyperRef{interface-system}{system interfaces}.
-A system with these components should be able to \GlossaryHyperRef{consumer-service}{consume} and/or \GlossaryHyperRef{provider-service}{provide} \GlossaryHyperRef{service}{services}, or it must be referred to as an \GlossaryHyperRef{system-isolated}{\textit{isolated system}}.
+A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is \GlossaryHyperRef{hosting-system}{hosted} by a \GlossaryHyperRef{device}{device}.
+As shown in Figure \ref{fig:system}, a system consists of \GlossaryHyperRef{component-software}{software components}.
+Just as \GlossaryHyperRef{component-hardware}{hardware components}, software components can have various types of automation or compute capabilities.
+Every system should have the capability of \GlossaryHyperRef{consumer-service}{consuming services}, \GlossaryHyperRef{provider-service}{providing services}, or both.
+If a given system can do neither, it must be referred to as an \GlossaryHyperRef{system-opaque}{\textit{opaque system}}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/system}
   \caption{
-    The system as a collection of related software components, able to facilitate new capabilities.
-    While not made explicit by this figure, all software components are \GlossaryHyperRef{hosting-software}{hosted} by either hardware or software components, which means that they use and/or are maintained by those components.
-    Examples of software components could be operating systems, file systems, software libraries, programming language runtimes, databases or virtual machines.
+    The system as a set of related software components, endowing a hosting device with new automation or compute capabilities.
+    Other examples of software components could be operating systems, file systems, software libraries, programming language runtimes, databases and virtual machines.
   }
   \label{fig:system}
 \end{figure}
 
-This rather open-ended definition of ``system'' makes it possible for such to be realized in many ways.
-A system may or may not run in its own operating system process, use a certain virtual machine, and so on.
+Note that systems are not required to have any particular relationships to operating system processes, binary formats, virtual machines, and so on.
+They may be \GlossaryHyperRef{implementation-software}{implemented} in any way deemed suitable.
 
 \subsection{Service}
 \label{sec:concepts:service}
 
-A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{operation-service}{operations}, where each operation represents a significant set of activities the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{providing} the service can perform.
-Operations are \GlossaryHyperRef{procedure-software}{software procedures} that can be executed by sending \GlossaryHyperRef{message}{messages} to them via their \GlossaryHyperRef{interface-operation}{interfaces}.
+A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{interface-service}{service interfaces} and \GlossaryHyperRef{operation-service}{operations}.
+Each operation represents an activity the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{providing} the service can perform.
+Operations consist of \GlossaryHyperRef{instruction-software}{software instructions}, which may be executed by sending \GlossaryHyperRef{message}{messages} to them via their \GlossaryHyperRef{interface-operation}{interfaces}, as depicted in Figure \ref{fig:service}.
 The sender of such a message is referred to as a \GlossaryHyperRef{consumer-service}{service consumer}.
-As depicted in Figure \ref{fig:service}, an operation may use the \GlossaryHyperRef{capability-system}{capabilities} of its providing system to perform its activities and must ensure certain \GlossaryHyperRef{policy}{policies} are enforced before handling any received messages.
+
 
 %Other systems may consume such a service by sending a \GlossaryHyperRef{message}{message} via the interface of an operation part of that service.
 %If the sent message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}, the providing system should use its \GlossaryHyperRef{capability}{capabilities} to perform whatever request is described by that message.
@@ -151,6 +153,10 @@ As depicted in Figure \ref{fig:service}, an operation may use the \GlossaryHyper
   }
   \label{fig:service}
 \end{figure}
+
+%As depicted in Figure \ref{fig:service}, an operation may use the \GlossaryHyperRef{capability-system}{capabilities} of its providing system to perform its activities and must ensure certain \GlossaryHyperRef{policy}{policies} are enforced before handling any received messages.
+
+%, as described in Section \ref{sec:concepts:interface}
 
 A \textit{valid} message is such that conforms to the \GlossaryHyperRef{protocol-operation}{protocol} of an operation, while a \textit{permitted} message is such that conforms to all of its \GlossaryHyperRef{policy-operation}{policies}.
 Protocols and policies are described further in Sections \ref{sec:concepts:protocol} and \ref{sec:concepts:policy}, respectively.
@@ -173,7 +179,7 @@ As a new system now may control that particular light, a new capability has emer
 \subsection{Local Cloud}
 \label{sec:concepts:local-cloud}
 
-A \GlossaryHyperRef{cloud-local}{local cloud} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
+A \GlossaryHyperRef{cloud-local}{local cloud} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
 The resource pool of a local cloud could contain 3D-printers, autonomous unmanned vehicles, conventional servers, or anything else producing a value on demand.
 As depicted in Figure \ref{fig:local-cloud}, the local cloud is distinct from other types of \GlossaryHyperRef{cloud}{clouds} by having at least one \GlossaryHyperRef{boundary-local}{local boundary} and one \GlossaryHyperRef{resource-local}{local resource}, which means that it is physically tied to a concrete location.
 A local cloud could be engaged in manufacturing, repairs, heating, electricity distribution, workspace monitoring, drone fleet control, among many other possible kinds of physical activities.
@@ -209,7 +215,7 @@ A system-of-local-clouds cannot have resources beyond those of its constituent c
 \subsection{Network}
 \label{sec:concepts:network}
 
-A \GlossaryHyperRef{network}{network} is an \GlossaryHyperRef{identification}{identifiable} set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} such that any \GlossaryHyperRef{system}{systems} they host are able to \GlossaryHyperRef{communication}{communicate}.
+A \GlossaryHyperRef{network}{network} is an \GlossaryHyperRef{identifiable}{identifiable} set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} such that any \GlossaryHyperRef{system}{systems} they host are able to \GlossaryHyperRef{communication}{communicate}.
 As shown in Figure \ref{fig:network}, end devices may be \GlossaryHyperRef{interconnection}{interconnected} via \GlossaryHyperRef{device-intermediary}{intermediary devices}.
 
 \vfill
@@ -233,7 +239,7 @@ The term ``end device'' should only be used when a distinction needs to be made 
 \subsection{Interface}
 \label{sec:concepts:interface}
 
-An \GlossaryHyperRef{interface}{interface} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{boundary}{boundary} over which \GlossaryHyperRef{message}{messages} of certain supported \GlossaryHyperRef{protocol}{protocols} may cross.
+An \GlossaryHyperRef{interface}{interface} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{boundary}{boundary} over which \GlossaryHyperRef{message}{messages} of certain supported \GlossaryHyperRef{protocol}{protocols} may cross.
 An interface may pass messages between \GlossaryHyperRef{connection}{connections} and \GlossaryHyperRef{entity}{entities}, between entities, or between entities and \GlossaryHyperRef{person}{persons}.
 As outlined in Figure \ref{fig:interface}, there are three types of interfaces of particular relevance in the context of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, which are (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \GlossaryHyperRef{interface-system}{system interfaces}, and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
 
@@ -265,7 +271,7 @@ As outlined in Figure \ref{fig:interface}, there are three types of interfaces o
 \subsection{Protocol}
 \label{sec:concepts:protocol}
 
-A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identification}{identifiable} \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities} as dictated by zero or more \GlossaryHyperRef{state-protocol}{states}.
+A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities} as dictated by zero or more \GlossaryHyperRef{state-protocol}{states}.
 Received messages may be rejected for violating a current state, or cause a state to be updated.
 States may also be updated by temporal events, such as timeouts.
 As shown in Figure \ref{fig:protocol}, a protocol may be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, as well as be constrained by certain \GlossaryHyperRef{profile-protocol}{profiles} and \GlossaryHyperRef{encoding}{encodings}.
@@ -290,7 +296,7 @@ If a protocol defines its messages without referring to an encoding, it is consi
 \subsection{Policy}
 \label{sec:concepts:policy}
 
-A \GlossaryHyperRef{policy}{policy} is an \GlossaryHyperRef{identification}{identifiable} set of \GlossaryHyperRef{constraint}{constraints}, useful for determining if given \GlossaryHyperRef{message}{messages} are acceptable or not, as depicted in Figure \ref{fig:policy}.
+A \GlossaryHyperRef{policy}{policy} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{constraint}{constraints}, useful for determining if given \GlossaryHyperRef{message}{messages} are acceptable or not, as depicted in Figure \ref{fig:policy}.
 As messages are always meant to \GlossaryHyperRef{invocation-operation}{invoke operations}
 
 that must be satisfied by a \GlossaryHyperRef{message}{message} for the activity associated with a certain \GlossaryHyperRef{operation-service}{service operation} to be permitted, 
