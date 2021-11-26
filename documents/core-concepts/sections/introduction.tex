@@ -52,27 +52,27 @@ For those interested in using this document for software-architectural purposes,
 \subsection{Notational Conventions}
 \label{sec:introduction:conventions}
 
-The following conventions regarding diagrams depicting graphs, references and requirements are adhered to throughout this document.
+This document adheres to the notational conventions presented in the below subsections.
 
 \subsubsection{Graph Diagrams}
 \label{sec:introduction:conventions:graphs}
 
-A box with a solid border and a name inside it denotes a named \GlossaryHyperRef{entity}{entity} and may represent any Arrowhead \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
+In a graph diagram, a box with a solid border and a name inside it denotes a named model \GlossaryHyperRef{entity}{entity} and may represent any \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
 A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
-A relationship name is a form of attribute.
-Relationship names are defined either here or in relation to the figures they are used in, unless their significance can be considered obvious.
+Relationship names are defined either here, in the glossary of Section \ref{sec:glossary}, or in relation to the figures they are used in.
 The following relationship names are defined here only:
 
 \begin{enumerate}
-\item \textit{conforms to}, which means that the origin entity satisfies all \GlossaryHyperRef{constraint}{constraints} implicitly and/or explicitly associated with the target entity;
-\item \textit{extends}, which means that the origin entity \textit{conforms to} the target entity and inherits all of its \GlossaryHyperRef{attribute}{attributes} and relationships;
-\item \textit{is}, which means that the origin entity \textit{extends} the target entity and is member of a group named after that target entity; and, finally,
-\item \textit{has}, which means that the origin entity owns, or controls, the target entity.
+\item \textit{conforms to}, which implies that the target entity \textit{is} a \GlossaryHyperRef{constraint}{constraint} satisfied by the source entity;
+\item \textit{extends}, which means that the source entity \textit{conforms to} and inherits all relationships of the target entity;
+\item \textit{is}, which means that the source entity \textit{extends} and belongs to a set named after the target entity;
+\item \textit{has}, which means that the target entity cannot exist without the source entity;
+\item \textit{uses}, which means that the source entity depends on the target entity to fulfill its purpose;  and, finally,
+\item \textit{supports}, which means that the source entity \textit{has} and \textit{uses} 1 implied entity \textit{conforming to} the target entity.
 \end{enumerate}
 
 \paragraph{Quantifiers}
 If an arrow has an associated positive integer or range, which we refer to as a \textit{quantifier}, the relationship is to be considered as extending to the number of distinct entities indicated by that quantifier.
-A relationship quantifier is a form of attribute.
 No quantifier being associated with a certain relationship implies that it has a quantity of 1.
 A range is denoted by $x..y$, where $x$ and $y$ are integers and $0 \leq x < y$.
 If $y$ is substituted by $*$, the range is to be understood to extend infinitely from $x$ (e.g. ``$1..*$'').
@@ -81,6 +81,8 @@ If $y$ is substituted by $*$, the range is to be understood to extend infinitely
 To save space or improve clarity, arrows are sometimes grouped such that either their target or source ends are shared, as in Figure \ref{fig:graph-diagram}.
 Such a group of arrows always have any relationship name closest to its shared part, and any relationship quantifiers closest to each of its non-shared parts.
 The name must be understood to apply to each of the grouped arrows, as if they were not grouped at all.
+
+\vfill
 
 \begin{figure}[ht!]
   \centering
@@ -106,6 +108,8 @@ These are displayed as regular text rendered with blue color.
 \subsubsection{Requirements}
 
 Use of the terms \textbf{must}, \textbf{must not}, \textbf{should}, \textbf{should not} and \textbf{may} are to be interpreted as follows when used in this document: \textbf{must} and \textbf{must not} denote absolute requirements and prohibitions, respectively; \textbf{should} and \textbf{should not} denote recommendations that should be deviated from only if special circumstances make it relevant; and, finally, \textbf{may} denotes something being truly optional.
+
+\newpage
 
 \subsection{Relationships to Other Documents}
 \label{sec:introduction:relationships}
