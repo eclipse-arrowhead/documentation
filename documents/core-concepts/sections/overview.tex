@@ -18,7 +18,7 @@ While \textit{assumptions} and \textit{values} may be possible derive from this 
   \centering
   \includegraphics[scale=0.9]{figures/framework}
   \caption{
-    The two main components of the Arrowhead framework: ideas and software.
+    The two subframeworks of the Arrowhead framework, concerned with ideas and software.
   }
   \label{fig:framework}
 \end{figure}
@@ -28,7 +28,7 @@ While \textit{assumptions} and \textit{values} may be possible derive from this 
 \subsection{Stakeholders and Artifacts}
 
 There are two kinds of members of the world of Arrowhead, (1) \GlossaryHyperRef{stakeholder}{stakeholders} and (2) \GlossaryHyperRef{artifact}{artifacts}, as depicted in Figure \ref{fig:world}.
-The former denotes a \GlossaryHyperRef{person}{person} or \GlossaryHyperRef{organization}{organization} engaged in an Arrowhead \GlossaryHyperRef{enterprise}{enterprise}, while the latter is any thing or object, tangible or intangible, that could be relevant to consider as part of such an enterprise.
+The former denotes a \GlossaryHyperRef{person}{person} or \GlossaryHyperRef{organization}{organization} engaged in an Arrowhead enterprise, while the latter is any thing or object, tangible or intangible, that could be relevant to consider as part of such an enterprise.
 Stakeholders \GlossaryHyperRef{owner}{own}, \GlossaryHyperRef{supplier}{supply}, \GlossaryHyperRef{developer}{develop}, \GlossaryHyperRef{operator}{operate}, and \GlossaryHyperRef{user}{use} artifacts, among many other possible activities.
 It is their business needs and ambitions that govern what and how Arrowhead artifacts are employed.
 
@@ -47,12 +47,13 @@ It is their business needs and ambitions that govern what and how Arrowhead arti
 
 \subsection{Devices, Systems and Services}
 
-The most essential types of Arrowhead artifacts are (1) \GlossaryHyperRef{device}{devices}, (2) \GlossaryHyperRef{system}{systems} and (3) \GlossaryHyperRef{service}{services}, as shown in Figure \ref{fig:device-system-service}.
-\textit{Devices} are physical machines with compute \GlossaryHyperRef{capability}{capabilities}, making up the servers, robots, vehicles, tools, and other things part of the Arrowhead \GlossaryHyperRef{enterprise}{enterprise} at hand.
-Each device \GlossaryHyperRef{hosting-system}{hosts}, or runs, one or more \textit{systems}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances} that make the devices hosting them work toward fulfilling their purposes.
-Finally, systems \GlossaryHyperRef{provider-service}{provide} \textit{services}, which are sets of related \GlossaryHyperRef{operation-service}{operations} that a system can make its device perform for a person or another system.
-The service is the primary means whereby systems coordinate their work.
-Services may be concerned with manufacturing, repair, analysis, or any other physical or virtual activity.
+The most essential types of artifacts in the world of Arrowhead are (1) \GlossaryHyperRef{device}{devices}, (2) \GlossaryHyperRef{system}{systems} and (3) \GlossaryHyperRef{service}{services}, all shown in Figure \ref{fig:device-system-service}.
+\textit{Devices} are physical machines, such as servers, robots or tools, able to \GlossaryHyperRef{hosting-system}{host} \textit{systems}.
+A system is a \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instance} that \GlossaryHyperRef{provider-service}{provides} \textit{services}, each of which is a set of related \GlossaryHyperRef{operation-service}{operations} that system can execute.
+A service may be concerned with manufacturing, repairs, analysis, or any other physical or virtual activity.
+Each of its operations is dedicated to one aspect of the concern of that service.
+A service providing control over a door could, for example, have one operation for checking if the door is open and another for opening and closing it.
+Service operations can be \GlossaryHyperRef{invocation-operation}{invoked} by systems and \GlossaryHyperRef{person}{persons}.
 
 \vfill
 
@@ -83,7 +84,7 @@ Services may be concerned with manufacturing, repair, analysis, or any other phy
   \label{fig:service-consumption}
 \end{figure}
 
-When a providing system receives a message from a consuming system, it \GlossaryHyperRef{routing-message}{routes} it to the \GlossaryHyperRef{operation-service}{service operation} specified in that message, as described in Sections \ref{sec:concepts:service} and \ref{sec:concepts:interface}.
+When a providing system receives a message from a consuming system, it passes it on to the \GlossaryHyperRef{operation-service}{service operation} specified in that message, as described in Sections \ref{sec:concepts:service} and \ref{sec:concepts:interface}.
 The operation receiving the message will then handle it by performing whatever action it describes, given that the message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}.
 This handling may entail sending additional messages to other systems, starting or stopping various kinds of automation routines, reading from sensors, electronically signing contracts, sending notifications to an \GlossaryHyperRef{operator}{operator}, among many other possible examples.
 
