@@ -24,14 +24,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.4635"
-     inkscape:cx="352.54719"
-     inkscape:cy="137.0002"
-     inkscape:window-width="1851"
-     inkscape:window-height="1035"
-     inkscape:window-x="69"
+     inkscape:zoom="1.23175"
+     inkscape:cx="314.18713"
+     inkscape:cy="73.472701"
+     inkscape:window-width="1488"
+     inkscape:window-height="1003"
+     inkscape:window-x="72"
      inkscape:window-y="23"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
      showguides="false">
@@ -224,12 +224,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <path
-     d="m 9.9999999,22 -5,-5 V 13 H 14 v 6"
-     marker-end="url(#a)"
-     id="path11954"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="ccccc" />
   <g
      id="g4276"
      transform="matrix(1,0,0,-1,-13.000001,70.999999)">
@@ -1057,26 +1051,4 @@
        text-anchor="middle"
        id="tspan8408"
        style="font-size:3px;fill:#333333;fill-opacity:1">Operation</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="9.5205078"
-     y="16.470804"
-     id="text32838-7-9"><tspan
-       sodipodi:role="line"
-       id="tspan32836-2-3"
-       style="font-size:2.8px;text-align:center;text-anchor:middle;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-       x="9.5205078"
-       y="16.470804">0..*</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="9.4863281"
-     y="11.100503"
-     id="text32838-0-7"><tspan
-       sodipodi:role="line"
-       id="tspan32836-9-4"
-       style="font-size:2.8px;text-align:center;text-anchor:middle;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-       x="9.4863281"
-       y="11.100503">connects</tspan></text>
 </svg>

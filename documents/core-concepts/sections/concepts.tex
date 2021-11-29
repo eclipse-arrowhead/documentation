@@ -81,7 +81,7 @@ That being said, certain \GlossaryHyperRef{identification}{identification} requi
 \subsection{Device}
 \label{sec:concepts:device}
 
-A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} with certain automation and compute \GlossaryHyperRef{capability}{capabilities}.
+A \GlossaryHyperRef{device}{device} is a physical \GlossaryHyperRef{entity}{entity} with certain automation and compute \GlossaryHyperRef{capability-device}{capabilities}.
 Examples of capabilities include moving robotic arms, reading from sensors, running \GlossaryHyperRef{software}{software}, and sending \GlossaryHyperRef{message}{messages}.
 Every device must be capable of \GlossaryHyperRef{hosting-system}{\textit{hosting}} at least one \GlossaryHyperRef{system}{system}, which are \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instances}.
 Devices consist of \GlossaryHyperRef{component-hardware}{hardware components}.
@@ -112,7 +112,7 @@ Consequently, machines without system hosting capabilities must either be consid
 
 A \GlossaryHyperRef{system}{system} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{instance-software}{software instance} that is \GlossaryHyperRef{hosting-system}{hosted} by a \GlossaryHyperRef{device}{device}.
 As shown in Figure \ref{fig:system}, a system consists of \GlossaryHyperRef{component-software}{software components}.
-Just as \GlossaryHyperRef{component-hardware}{hardware components}, software components can have various types of automation or compute capabilities.
+Just as \GlossaryHyperRef{component-hardware}{hardware components}, software components can have various types of automation or compute \GlossaryHyperRef{capability-system}{capabilities}.
 Every system should have the capability of \GlossaryHyperRef{consumer-service}{consuming services}, \GlossaryHyperRef{provider-service}{providing services}, or both.
 If a given system can do neither, it must be referred to as an \GlossaryHyperRef{system-opaque}{\textit{opaque system}}.
 
@@ -133,13 +133,9 @@ They may be \GlossaryHyperRef{implementation-software}{implemented} in any way d
 \label{sec:concepts:service}
 
 A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{interface-service}{service interfaces} and \GlossaryHyperRef{operation-service}{operations}.
-Each operation represents an activity the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{providing} the service can perform.
-Operations consist of \GlossaryHyperRef{instruction-software}{software instructions}, which may be executed by sending \GlossaryHyperRef{message}{messages} to them via their \GlossaryHyperRef{interface-operation}{interfaces}, as depicted in Figure \ref{fig:service}.
-The sender of such a message is referred to as a \GlossaryHyperRef{consumer-service}{service consumer}.
-
-
-%Other systems may consume such a service by sending a \GlossaryHyperRef{message}{message} via the interface of an operation part of that service.
-%If the sent message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}, the providing system should use its \GlossaryHyperRef{capability}{capabilities} to perform whatever request is described by that message.
+Each \textit{service interface} represents one way in which the service can receive and/or send \GlossaryHyperRef{message}{messages}, while each \textit{operation} represents one activity the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{providing} the service can perform, if a \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted} message is received.
+As depicted in Figure \ref{fig:service}, service interfaces pass on, or \GlossaryHyperRef{routing-message}{route}, received messages to \GlossaryHyperRef{interface-operation}{operation interfaces}, which in turn may execute their associated operations with the messages as arguments.
+Those operations may then send additional messages via the same or other operation interfaces, which will pass them on toward other operations.
 
 \vfill
 
@@ -147,22 +143,16 @@ The sender of such a message is referred to as a \GlossaryHyperRef{consumer-serv
   \centering
   \includegraphics[scale=0.9]{figures/service}
   \caption{
-    The service as a set of operations made available via a provider interface, making it possible for a providing system to offer the use of its capabilities to consuming systems.
-    Every entity depicted in this figure, except for the \textit{System} and the \textit{Capability}, may be a \GlossaryHyperRef{component-software}{\textit{Software Component}}.
-    Each \GlossaryHyperRef{protocol-operation}{\textit{Operation Protocol}} extends $0..1$ \GlossaryHyperRef{protocol-service}{\textit{Service Protocol}}, even if not explicitly denoted in this graph diagram.
+    The service as a set of service interfaces and operations, making it possible for a providing system to offer the use of its capabilities to consuming systems via its service interfaces.
   }
   \label{fig:service}
 \end{figure}
 
-%As depicted in Figure \ref{fig:service}, an operation may use the \GlossaryHyperRef{capability-system}{capabilities} of its providing system to perform its activities and must ensure certain \GlossaryHyperRef{policy}{policies} are enforced before handling any received messages.
-
-%, as described in Section \ref{sec:concepts:interface}
-
-A \textit{valid} message is such that conforms to the \GlossaryHyperRef{protocol-operation}{protocol} of an operation, while a \textit{permitted} message is such that conforms to all of its \GlossaryHyperRef{policy-operation}{policies}.
-Protocols and policies are described further in Sections \ref{sec:concepts:protocol} and \ref{sec:concepts:policy}, respectively.
-Operations receive messages via \GlossaryHyperRef{interface-provider}{provider interfaces} and send their own messages via \GlossaryHyperRef{interface-consumer}{consumer interfaces}.
-There is no limits on how many messages an invoked operation may send, when they are sent, or who or what is intended to receive them.
-When a provider interface receives a message, as described in Section \ref{sec:concepts:interface}, it must \GlossaryHyperRef{routing-message}{route} it to the operation it targets.
+As all operations are \GlossaryHyperRef{component-software}{software components}, they may use any \GlossaryHyperRef{capability}{capabilities} of the devices and systems that host and provide them, respectively.
+If capable of it, an operation may send any number of messages to other operations, with any kinds of delays or intervals, once it has been successfully consumed.
+Messages can be sent within individual services, between services provided by the same system, between services provided by distinct systems hosted by the same device, or between services provided by systems residing on different devices, as described in Section \ref{sec:concepts:interface}.
+When a service starts up and shuts down, it may be considered as if receiving an implicit message via an \textit{initialization} or \textit{termination} operation, respectively.
+The messages to both of these operations may carry \GlossaryHyperRef{configuration}{configuration} \GlossaryHyperRef{data}{data} produced by and/or given to the system providing the service.
 
 \subsection{System-of-Systems}
 \label{sec:concepts:sos}
@@ -215,8 +205,9 @@ A system-of-local-clouds cannot have resources beyond those of its constituent c
 \subsection{Network}
 \label{sec:concepts:network}
 
-A \GlossaryHyperRef{network}{network} is an \GlossaryHyperRef{identifiable}{identifiable} set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} such that any \GlossaryHyperRef{system}{systems} they host are able to \GlossaryHyperRef{communication}{communicate}.
-As shown in Figure \ref{fig:network}, end devices may be \GlossaryHyperRef{interconnection}{interconnected} via \GlossaryHyperRef{device-intermediary}{intermediary devices}.
+A \GlossaryHyperRef{network}{network} is a set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} via \GlossaryHyperRef{interface-network}{network interfaces} such that \GlossaryHyperRef{message}{messages} can pass between them.
+As shown in Figure \ref{fig:network}, end devices may be \GlossaryHyperRef{interconnection}{interconnected} via \GlossaryHyperRef{device-intermediary}{intermediary devices}, examples of which could be routers, switches, hubs, busses and firewalls.
+Any technology able to connect end devices is treated as facilitating networks, even if not typically associated with conventional networking methods.
 
 \vfill
 
@@ -224,24 +215,19 @@ As shown in Figure \ref{fig:network}, end devices may be \GlossaryHyperRef{inter
   \centering
   \includegraphics[scale=0.9]{figures/network}
   \caption{
-    The network as a set of connected end devices, potentially interconnected by intermediary devices.
+    The network as a set of connected end devices, potentially interconnected via intermediary devices.
   }
   \label{fig:network}
 \end{figure}
 
-Both end devices and intermediary devices are regular \GlossaryHyperRef{device}{devices}, which means that they have \GlossaryHyperRef{interface-device}{device interfaces} through which they can send and receive \GlossaryHyperRef{message}{messages}.
-Only \GlossaryHyperRef{device-connected}{\textit{connected} devices} can pass messages between their interfaces, however.
-Intermediary devices pass on messages toward their intended end devices instead of handling them themselves.
-Examples of intermediary devices are routers, switches, and firewalls.
-Device interfaces used exclusively for passing on messages are referred to as \GlossaryHyperRef{interface-network}{network interfaces}.
-The term ``end device'' should only be used when a distinction needs to be made between end and intermediary devices.
+Messages can only pass between network interfaces if they are connected and their connection is \GlossaryHyperRef{connection-live}{\textit{live}}.
 
 \subsection{Interface}
 \label{sec:concepts:interface}
 
-An \GlossaryHyperRef{interface}{interface} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{boundary}{boundary} over which \GlossaryHyperRef{message}{messages} of certain supported \GlossaryHyperRef{protocol}{protocols} may cross.
-An interface may pass messages between \GlossaryHyperRef{connection}{connections} and \GlossaryHyperRef{entity}{entities}, between entities, or between entities and \GlossaryHyperRef{person}{persons}.
-As outlined in Figure \ref{fig:interface}, there are three types of interfaces of particular relevance in the context of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, which are (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \GlossaryHyperRef{interface-system}{system interfaces}, and (3) \GlossaryHyperRef{interface-service}{service interfaces}.
+An \GlossaryHyperRef{interface}{interface} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{boundary}{boundary} over which \GlossaryHyperRef{message}{messages} adhering to a supported \GlossaryHyperRef{protocol}{protocol} can cross, if those messages satisfy all \GlossaryHyperRef{policy}{policies} associated with that interface.
+When considering \GlossaryHyperRef{service}{service} \GlossaryHyperRef{provision-service}{provision} and \GlossaryHyperRef{consumption-service}{consumption}, four types of interfaces become particularly relevant.
+These are (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \GlossaryHyperRef{interface-system}{system interfaces}, (3) \GlossaryHyperRef{interface-service}{service interfaces} and (4) \GlossaryHyperRef{interface-operation}{operation interfaces}, arranged as outlined in Figure \ref{fig:interface}.
 
 \vfill
 
@@ -250,16 +236,49 @@ As outlined in Figure \ref{fig:interface}, there are three types of interfaces o
   \includegraphics[scale=0.9]{figures/interface}
   \caption{
     The interface as a set of supported protocols and enforced policies.
-    Devices, systems, services and operations have their own interface types, each with its corresponding protocol type.
-    In the order listed, each interface type may be able to pass on messages to its one or two neighbor types.
+    Devices, systems, services and operations have their own interface types, forming four stages through which messages can be passed.
   }
   \label{fig:interface}
 \end{figure}
 
+These four interface types form four stages, beginning with the device interface to the left.
+Whenever any of these stages receives a message, it will either \textit{send} it leftwards or \textit{route} it rightwards, depending on whichever direction brings the message closest to the \GlossaryHyperRef{operation-service}{service operation} it targets.
+If, for example, a message is targeting a service operation on a different system on the same device, it must be sent leftwards until it reaches the appropriate system interface, after which it can be routed rightwards.
+Device interfaces send messages to other devices or to \GlossaryHyperRef{person}{persons}, depending on if they are \GlossaryHyperRef{interface-network}{network interfaces} or \GlossaryHyperRef{interface-human}{human interfaces}, respectively.
+Operation interfaces do not route messages, but execute operations, as described in Section \ref{sec:concepts:service}.
 
-%At each level, if a received message satisfies its protocol, it is routed towards its designated recipient.
-%If the message does not satisfy its protocol, it is ignored, replied to with an error message, or some other set of actions are performed.
-%As depicted in Figure \ref{fig:service}, provider interfaces route messages to \GlossaryHyperRef{operation-service}{service operations}, which may handle them by sending new messages via consumer interfaces.
+Every interface only supports a limited set of protocols.
+This means that passing messages between two interfaces requires that both support at least one common protocol.
+If considering our four interface stages depicted in Figure \ref{fig:interface}, this means that a message can only pass between two adjacent stages if it adheres to a protocol supported by the right stage that is also an extension of a protocol supported by the left stage.
+More details regarding protocols extending each other can be read in Section \ref{sec:concepts:protocol}.
+
+\subsection{Protocol}
+\label{sec:concepts:protocol}
+
+A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{description}{description} of what \GlossaryHyperRef{message}{messages} may move between \GlossaryHyperRef{interface}{interfaces}.
+A protocol is formulated as a set of \GlossaryHyperRef{type-message}{message types} and another set of \GlossaryHyperRef{type-state}{state types}.
+Messages types determine what \GlossaryHyperRef{data}{data} valid messages must and may contain, while each state type dictates when certain messages are valid in relation to a certain \GlossaryHyperRef{state-protocol}{state}.
+As shown in Figure \ref{fig:protocol}, a protocol may also be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, as well as be constrained by certain \GlossaryHyperRef{profile-protocol}{profiles} and \GlossaryHyperRef{encoding}{encodings}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/protocol}
+  \caption{
+    The protocol as set of message and state types, conforming to certain profiles and encodings.
+  }
+  \label{fig:protocol}
+\end{figure}
+
+Protocols must often extend each other to allow for messages to pass between interfaces of different types, such as the ones outlined in Section \ref{sec:concepts:interface}.
+For example, the HTTP protocol \cite{fielding2014hypertext} is formulated as an extension of the TCP protocol \cite{postel1981transmission}, which is an extension of the IP protocol \cite{deering2017internet}, which can be an extension of the Ethernet protocol \cite{iso202188023}.
+The HTTP protocol is, in fact, designed to be extended by such that ...
+
+A \textit{profile} is a set of constraints added to every message of a protocol, defined only in terms of the contents of messages and the current protocol state.
+Profiles can be used to specify how authorization tokens are to be included in messages, or demand that a certain message semantics be observed.
+Adding a profile to a protocol not already conforming to it produces a new protocol.
+
+\textit{Encodings} introduce \GlossaryHyperRef{system-type}{type systems} in which message payloads can be expressed.
+If a protocol defines its messages without referring to an encoding, it is considered to have a \textit{custom} encoding.
 
 %Each of these interface levels depend on the layer below it, with the exception of the device interface at the bottom.
 %As each interface supports its own set of protocols, each interface layer must support a protocol that extends that of the below layer.
@@ -267,31 +286,6 @@ As outlined in Figure \ref{fig:interface}, there are three types of interfaces o
 %Note that the protocol at each layer may consist of multiple protocols extending each other, as in this example.
 %A particular chain of protocols supported by a device, system or service is referred to as a \GlossaryHyperRef{stack-protocol}{\textit{protocol stack}}.
 %The protocol stack of the system in the previous example would be Ethernet, IP, TCP and HTTP, from the bottom and up.
-
-\subsection{Protocol}
-\label{sec:concepts:protocol}
-
-A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{description}{description} of how certain \GlossaryHyperRef{message}{messages} may be sent between \GlossaryHyperRef{entity}{entities} as dictated by zero or more \GlossaryHyperRef{state-protocol}{states}.
-Received messages may be rejected for violating a current state, or cause a state to be updated.
-States may also be updated by temporal events, such as timeouts.
-As shown in Figure \ref{fig:protocol}, a protocol may be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, as well as be constrained by certain \GlossaryHyperRef{profile-protocol}{profiles} and \GlossaryHyperRef{encoding}{encodings}.
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.9]{figures/protocol}
-  \caption{
-    The protocol as set of state and message types, constrained by profiles and encodings.
-  }
-  \label{fig:protocol}
-\end{figure}
-
-Just as a \GlossaryHyperRef{policy}{policy}, a \textit{profile} is a set of constraints.
-Unlike the former, however, a profile is limited to only constraining the state types and message types of a protocol.
-Profiles can be used to specify how authorization tokens are to be included in messages, or demand that a certain message semantics be observed.
-Adding a profile to a protocol not already conforming to it produces a new protocol.
-
-Encodings introduce \GlossaryHyperRef{system-type}{type systems} in which message payloads can be expressed.
-If a protocol defines its messages without referring to an encoding, it is considered to have a \textit{custom} encoding.
 
 \subsection{Policy}
 \label{sec:concepts:policy}
