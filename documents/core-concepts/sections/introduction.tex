@@ -64,8 +64,7 @@ The following relationship names are defined here only:
 
 \begin{enumerate}
 \item \textit{conforms to}, which implies that the target entity \textit{is} a \GlossaryHyperRef{constraint}{constraint} satisfied by the source entity;
-\item \textit{extends}, which means that the source entity \textit{conforms to} and inherits all relationships of the target entity;
-\item \textit{is}, which means that the source entity \textit{extends} the target entity and belongs to a set named after it;
+\item \textit{is} (or \textit{extends}), which means that the source entity \textit{conforms to} the target entity, inherits all of its relationships and implicit \GlossaryHyperRef{attribute}{attributes}, as well as belongs to a set named after it;
 \item \textit{uses}, which means that the source entity depends on the target entity to fulfill its purpose;
 \item \textit{has}, which means that the target entity is \textit{used by} and must cease to exist without the source entity; and
 \item \textit{supports}, which means that the source entity \textit{has} 1 implied entity \textit{conforming to} the target entity.
@@ -79,8 +78,9 @@ If $y$ is substituted by $*$, the range is to be understood to extend infinitely
 
 \paragraph{Grouped Relationships}
 To save space or improve clarity, arrows are sometimes grouped such that either their target or source ends are shared, as in Figure \ref{fig:graph-diagram}.
-Such a group of arrows always have any relationship name closest to its shared part, and any relationship quantifiers closest to each of its non-shared parts.
-The name must be understood to apply to each of the grouped arrows, as if they were not grouped at all.
+If such a group of arrows has a relationship name closest to its shared part, it must be understood to apply to each arrow of the group, as if they were not grouped at all.
+Relationship quantifiers are always closest to the non-shared parts.
+Grouped arrows can always be replaced with non-grouped arrows without loss of information.
 
 \vfill
 

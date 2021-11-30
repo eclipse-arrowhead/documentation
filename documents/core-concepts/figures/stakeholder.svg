@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    width="150mm"
-   height="77mm"
+   height="74mm"
    version="1.1"
-   viewBox="0 0 150 76.999999"
+   viewBox="0 0 150 73.999999"
    id="svg162"
    sodipodi:docname="stakeholder.svg"
    inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.5792318"
-     inkscape:cx="252.9711"
-     inkscape:cy="176.35157"
-     inkscape:window-width="1851"
+     inkscape:zoom="3.1584636"
+     inkscape:cx="389.11324"
+     inkscape:cy="202.15525"
+     inkscape:window-width="1848"
      inkscape:window-height="1035"
-     inkscape:window-x="69"
+     inkscape:window-x="72"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -58,7 +58,7 @@
     </marker>
   </defs>
   <path
-     d="m 74.999999,37 0,-10"
+     d="M 74.999999,37 V 27"
      marker-end="url(#a)"
      id="path1281"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
@@ -122,11 +122,11 @@
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 73.000042,58.999999 H 62.999999 v 14 h 10.000043"
+     d="M 73.000042,55.999999 H 62.999999 v 14 h 10.000043"
      id="path6878"
      sodipodi:nodetypes="cccc" />
   <path
-     d="m 88.000038,70 -4e-6,-6.000001"
+     d="m 88.000038,67 -4e-6,-6.000001"
      marker-end="url(#a)"
      id="path8416"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -136,7 +136,7 @@
      y="0"
      xlink:href="#g26778"
      id="use27028"
-     transform="translate(25.999953,-54)"
+     transform="translate(25.999953,-51)"
      width="100%"
      height="100%" />
   <use
@@ -144,7 +144,7 @@
      y="0"
      xlink:href="#g26778"
      id="use27026"
-     transform="translate(-52.000046,-54)"
+     transform="translate(-52.000046,-51)"
      width="100%"
      height="100%" />
   <use
@@ -173,7 +173,7 @@
      height="100%" />
   <g
      id="g26778"
-     transform="translate(0,6)">
+     transform="translate(0,3)">
     <rect
        x="73.599998"
        y="50.599998"
@@ -235,28 +235,20 @@
      transform="translate(26)"
      width="100%"
      height="100%" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path14"
-     id="use1348"
-     transform="translate(25.999959)"
-     width="100%"
-     height="100%" />
   <path
-     d="m 74.999999,45 v 8.999999"
+     d="m 101,45 v 5.999999"
      marker-end="url(#a)"
      id="path14"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:nodetypes="cc" />
   <path
-     d="M 23,45 V 60.999999"
+     d="M 23,45 V 57.999999"
      marker-end="url(#a)"
      id="path16"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:nodetypes="cc" />
   <path
-     d="M 127,45 V 67.999999"
+     d="M 127,45 V 64.999999"
      marker-end="url(#a)"
      id="path18"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -464,13 +456,13 @@
        style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
   <text
      x="88.536781"
-     y="60.090576"
+     y="57.090576"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text88"><tspan
        x="88.536781"
-       y="60.090576"
+       y="57.090576"
        dx="0 0 0 0 0 0"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -535,7 +527,7 @@
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">uses</tspan></text>
   <text
      x="126.94292"
-     y="74.090576"
+     y="71.090576"
      font-family="sans-serif"
      font-size="3.5px"
      stroke-width="0.26458"
@@ -543,7 +535,7 @@
      xml:space="preserve"
      id="text120"><tspan
        x="126.94292"
-       y="74.090576"
+       y="71.090576"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -636,13 +628,13 @@
        style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
   <text
      x="36.514561"
-     y="67.124268"
+     y="64.124268"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text2220"><tspan
        x="36.514561"
-       y="67.124268"
+       y="64.124268"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -651,13 +643,13 @@
        style="font-size:3px;fill:#333333;fill-opacity:1">Artifact</tspan></text>
   <text
      x="88.414589"
-     y="74.078857"
+     y="71.078857"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text4990"><tspan
        x="88.414589"
-       y="74.078857"
+       y="71.078857"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -666,7 +658,7 @@
        style="font-size:3px;fill:#333333;fill-opacity:1">Device</tspan></text>
   <text
      x="108.10316"
-     y="71.286018"
+     y="68.286018"
      font-family="sans-serif"
      font-size="3px"
      stroke-width="0.26458"
@@ -674,19 +666,19 @@
      xml:space="preserve"
      id="text6964"><tspan
        x="108.10316"
-       y="71.286018"
+       y="68.286018"
        stroke-width="0.26458"
        id="tspan6962"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
   <path
-     d="M 62.999999,65.999999 H 53.000043"
+     d="M 62.999999,62.999999 H 53.000043"
      marker-end="url(#a)"
      id="path7221"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:nodetypes="cc" />
   <text
      x="63.126766"
-     y="64.13839"
+     y="61.13839"
      font-family="sans-serif"
      font-size="3px"
      stroke-width="0.26458"
@@ -694,45 +686,39 @@
      xml:space="preserve"
      id="text7225"><tspan
        x="61.250984"
-       y="64.13839"
+       y="61.13839"
        stroke-width="0.26458"
        id="tspan7223"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">is</tspan></text>
   <text
      x="89.592056"
-     y="68.163918"
+     y="65.163918"
      font-size="3px"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text8519"><tspan
        x="89.592056"
-       y="68.163918"
+       y="65.163918"
        stroke-width="0.26458"
        id="tspan8517"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
   <text
      x="89.488228"
-     y="68.163918"
+     y="65.163918"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text8523"><tspan
        x="86.413422"
-       y="68.163918"
+       y="65.163918"
        stroke-width="0.26458"
        id="tspan8521"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
   <path
-     d="m 112.00004,72.999999 h -7"
+     d="m 112.00004,69.999999 h -7"
      marker-end="url(#a)"
      id="path8812"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      sodipodi:nodetypes="cc" />
-  <path
-     d="m 74.999999,51 h -7 v 6.999999 c 1,0 1,2 0,2 v 5 h 7 v 3"
-     marker-end="url(#a)"
-     id="path1640"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     sodipodi:nodetypes="ccccccc" />
   <text
      x="115.43846"
      y="11.625342"
@@ -803,4 +789,9 @@
        stroke-width="0.26458"
        id="tspan10279"
        style="text-align:end;text-anchor:end">is</tspan></text>
+  <path
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 74.999999,45 v 5.999999 H 49"
+     id="path4321"
+     sodipodi:nodetypes="ccc" />
 </svg>

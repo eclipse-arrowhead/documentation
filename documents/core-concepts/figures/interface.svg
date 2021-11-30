@@ -24,14 +24,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.23175"
-     inkscape:cx="314.18713"
-     inkscape:cy="73.472701"
-     inkscape:window-width="1488"
-     inkscape:window-height="1003"
-     inkscape:window-x="72"
+     inkscape:zoom="2.4635001"
+     inkscape:cx="312.56342"
+     inkscape:cy="86.665311"
+     inkscape:window-width="1844"
+     inkscape:window-height="1035"
+     inkscape:window-x="76"
      inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
      height="73mm"
      showguides="false">
@@ -345,7 +345,7 @@
          y="42.324131"
          stroke-width="0.26458"
          id="tspan31581-1"
-         style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">extends</tspan></text>
+         style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">is</tspan></text>
     <text
        x="44.372696"
        y="47.428631"
@@ -530,7 +530,7 @@
        id="tspan1418"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">is</tspan></text>
   <path
-     d="M 74.999998,4.9999987 H 56.999988"
+     d="M 74.999998,4.9999987 52.999999,5"
      marker-end="url(#a)"
      id="path12781"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
@@ -612,7 +612,7 @@
      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
   <g
      id="g12301"
-     transform="translate(-3.0000002)">
+     transform="translate(-7.0000002)">
     <rect
        id="rect12189"
        x="29"
@@ -689,17 +689,17 @@
      y="0"
      xlink:href="#g12301"
      id="use13531"
-     transform="translate(99.999999)"
+     transform="translate(108)"
      width="100%"
      height="100%" />
   <text
-     x="39.968388"
+     x="35.968388"
      y="6.2723303"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text12195"><tspan
-       x="39.968388"
+       x="35.968388"
        y="6.2723303"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -707,13 +707,13 @@
        text-anchor="middle"
        id="tspan12193">Protocol</tspan></text>
   <text
-     x="139.96838"
+     x="143.96838"
      y="6.2723312"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text13535"><tspan
-       x="139.96838"
+       x="143.96838"
        y="6.2723312"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -1012,7 +1012,7 @@
        id="tspan28845"
        style="font-size:3px;fill:#333333;fill-opacity:1">Protocol</tspan></text>
   <path
-     d="M 18.000001,54.999999 H 0.99999999 V 5 l 22.00000101,-1.1e-6"
+     d="M 18.000001,54.999999 H 0.99999999 V 5 L 19,5"
      marker-end="url(#a)"
      id="path34093"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
