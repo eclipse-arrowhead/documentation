@@ -72,7 +72,7 @@
 }
 \NewDocumentCommand{\ArrowheadBox}{mm}{
   {
-    \vspace*{1.5\baselineskip}
+    \vspace*{\baselineskip}
     \setlength{\tabcolsep}{0pt}
     \renewcommand*{\arraystretch}{0}
     \noindent
@@ -83,6 +83,7 @@
     }
     \small{\textcolor[RGB]{0,72,117}{\textbf{#1}} #2}
     \end{tabularx}
+    \vspace*{\baselineskip}
   }
 }
 
