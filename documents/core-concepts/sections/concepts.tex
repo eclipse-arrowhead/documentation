@@ -248,11 +248,10 @@ These are (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \Gloss
 These four interface types form four stages, beginning with the device interface to the left.
 Whenever any of these stages receives a message, it will either \textit{send} it leftwards or \textit{route} it rightwards, depending on whichever direction brings the message closest to the \GlossaryHyperRef{operation-service}{service operation} it targets.
 If, for example, a message is targeting a service operation on a different system on the same device, it must be sent leftwards from the sending operation until it reaches the appropriate system interface, after which it can be routed rightwards.
-Why this movement back and forth?
-Because the sending operation must make sure its message satisfies the protocol of the target operation interface before it can pass it on to the target's system interface.
-The stages through which the senders message is assembled and validated before being sent are represented by its movements leftwards.
-At the turning stage, in this case at the system interface, the message jumps to another interface of the same type and is then routed rightwards.
-The jump must, of course, be supported by the interfaces in question.
+At the first leftward stage, at the operation interface, the message is encoded according to the protocol of the targeted operation interface.
+At that and every other leftward stage, the message may be tested against the \GlossaryHyperRef{state-protocol}{protocol state} and/or policies expected to be enforced by the corresponding interfaces of the target.
+At the turning stage, in this case at the system interface, the message typically jumps to another interface of the same type and is then routed rightwards.
+The jump must, of course, be supported by the interface in question.
 For example, a device interface being a \GlossaryHyperRef{interface-network}{network interface} supports making this jump via a \GlossaryHyperRef{network}{network}.
 
 Every interface only supports a limited set of protocols.
@@ -263,9 +262,8 @@ A device interface may, for example, support the IP protocol \cite{deering2017in
 \subsection{Protocol}
 \label{sec:concepts:protocol}
 
-A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{description}{description} of what \GlossaryHyperRef{message}{messages} may move between \GlossaryHyperRef{interface}{interfaces} that support them.
-A protocol is formulated as a set of \GlossaryHyperRef{type-message}{message types} and another set of \GlossaryHyperRef{type-state}{state types}.
-Message types determine what \GlossaryHyperRef{data}{data} valid messages must and may contain, while each state type dictates when certain messages are valid in relation to a certain \GlossaryHyperRef{state-protocol}{state}.
+A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{type-message}{message} and \GlossaryHyperRef{type-state}{state} types, useful for determining what \GlossaryHyperRef{message}{messages} may move through the \GlossaryHyperRef{interface}{interfaces} that support them.
+\textit{Message types} determine what \GlossaryHyperRef{data}{data} valid messages must and may contain, while each \textit{state type} dictates when certain messages are valid in relation to a certain \GlossaryHyperRef{state-protocol}{state}.
 As shown in Figure \ref{fig:protocol}, a protocol may also be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, as well as be constrained by certain \GlossaryHyperRef{profile-protocol}{profiles} and \GlossaryHyperRef{encoding}{encodings}, described in Sections \ref{sec:concepts:profile} and \ref{sec:concepts:encoding}.
 
 \vfill
@@ -279,9 +277,11 @@ As shown in Figure \ref{fig:protocol}, a protocol may also be defined as an \Glo
   \label{fig:protocol}
 \end{figure}
 
-\vfill
+A protocol may, when relevant, be considered as a \GlossaryHyperRef{function}{function} useful for testing if a given message is \GlossaryHyperRef{message-valid}{valid} or \GlossaryHyperRef{message-invalid}{invalid} with respect to a current state.
+If the message is valid, the function returns the type of the message, which is needed to interpret the contents of the message.
+If the message is invalid, the function returns an indication of why the message failed to satisfy the message and/or state types of the protocol. 
 
-Protocols should only be concerned with the \textit{interpretation} of messages, not with whether they are \textit{permissible} or not.
+Note that protocols should only be concerned with the \textit{interpretation} of messages, not with whether they are \GlossaryHyperRef{message-permitted}{\textit{permitted}} or not.
 This means that states should be associated with protocols only to ensure that received messages can be understood correctly.
 If, for example, a service controlling a door receives an message telling it to open its already open door, what does the sender of the message expect to happen?
 Nothing?
@@ -293,8 +293,6 @@ One way of avoiding this ambiguity is to make the protocol keep track of the sta
 
 A \GlossaryHyperRef{policy}{policy} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{constraint}{constraints}, useful for determining if given \GlossaryHyperRef{message}{messages} are permitted or not, as depicted in Figure \ref{fig:policy}.
 Policies may be concerned with authorization, contracts, economic goals, and so on.
-They are typically enforced by \GlossaryHyperRef{interface}{interfaces}, as described in Section \ref{sec:concepts:interface}.
-If a \GlossaryHyperRef{message}{message} fails to satisfy one or more of the policies of an interface, the message sender should be notified about the violated policies.
 
 \vfill
 
@@ -309,13 +307,14 @@ If a \GlossaryHyperRef{message}{message} fails to satisfy one or more of the pol
   \label{fig:policy}
 \end{figure}
 
-\vfill
+Every policy may, when relevant, be regarded as a \GlossaryHyperRef{function-predicate}{predicate function} useful for testing if given message is \GlossaryHyperRef{message-permitted}{permitted} or \GlossaryHyperRef{message-forbidden}{forbidden}, with respect to any kind of information.
+Policies are typically enforced by \GlossaryHyperRef{interface}{interfaces}, as described in Section \ref{sec:concepts:interface}.
+If a \GlossaryHyperRef{message}{message} fails to satisfy one or more of the policies of an interface, the message sender should be notified about the violated policies.
 
 While \GlossaryHyperRef{protocol}{protocols} help determine if a given message can be interpreted correctly, \textit{policies} are meant to determine if the activity described by that message would occur under desirable conditions.
 For example, an interface may receive a message requesting that a certain pump be started.
 While the interpretation of the message may be clear, there may still be other conditions that make it undesirable for the pump to activate.
-If the pump is on fire, turning it on may present a safety hazard.
-If the system attempting to start the pump is unauthorized, the risk is higher for sabotage and other wasteful behaviors.
+If the pump is on fire, turning it on may present a safety hazard; if the system attempting to start the pump is unauthorized, the risk is higher for sabotage and other wasteful behaviors; and so on.
 
 \newpage
 

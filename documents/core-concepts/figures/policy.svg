@@ -6,7 +6,7 @@
    viewBox="0 0 168 36"
    id="svg162"
    sodipodi:docname="policy.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.8958768"
-     inkscape:cx="475.50365"
-     inkscape:cy="74.416149"
-     inkscape:window-width="1844"
-     inkscape:window-height="1035"
-     inkscape:window-x="76"
-     inkscape:window-y="23"
+     inkscape:zoom="2.0476941"
+     inkscape:cx="262.97873"
+     inkscape:cy="33.940616"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
      height="73mm">
@@ -109,16 +109,92 @@
          id="path2-4" />
     </marker>
   </defs>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path8414"
+     id="use8416"
+     transform="matrix(-1,0,0,1,229,16)"
+     width="100%"
+     height="100%" />
+  <path
+     d="m 102,7.9999999 h 23"
+     marker-end="url(#a-0)"
+     id="path8414"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
+     sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 129,32.000001 h -4 v -16 h 4"
+     d="m 127,32 h -4 V 16 h 4"
      id="path12957"
      sodipodi:nodetypes="cccc" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g8205"
+     id="use8309"
+     transform="translate(-2.7000007e-7,7.9999998)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g8205"
+     id="use8311"
+     transform="translate(-2.7000007e-7,16)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g8205"
+     id="use8313"
+     transform="translate(-2.7000007e-7,24)"
+     width="100%"
+     height="100%" />
+  <g
+     id="g8205"
+     transform="translate(73.999999,-19.999998)">
+    <rect
+       id="rect8201"
+       x="53.600002"
+       y="25.6"
+       width="36"
+       height="6"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect8203"
+       x="53"
+       y="24.999998"
+       width="36"
+       height="5.9999995"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
   <path
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 5.9996107,14.000002 H 0.99961071"
+     d="M 5.9999999,12 H 0.99999995"
      id="path11162"
      sodipodi:nodetypes="cc" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1704"
+     id="use8062"
+     transform="translate(9.4e-7,7.9999988)"
+     width="100%"
+     height="100%" />
   <path
      d="M 5.9996107,4.0000007 H 0.99961071 L 1.0000009,20.000001 h 9.0000001"
      marker-end="url(#a-0)"
@@ -130,12 +206,6 @@
      d="M 42.999999,8.0000007 43.000001,12 h -5"
      id="path10711"
      sodipodi:nodetypes="ccc" />
-  <path
-     d="M 129,24 H 104"
-     marker-end="url(#a-0)"
-     id="path7058"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
-     sodipodi:nodetypes="cc" />
   <path
      d="m 37.999999,4.0000007 h 5 v 4 l 20.999999,-10e-8"
      marker-end="url(#a-0)"
@@ -201,67 +271,29 @@
   <text
      xml:space="preserve"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="123.21368"
-     y="22.20233"
+     x="121.21368"
+     y="22.202328"
      id="text8921"><tspan
        sodipodi:role="line"
        id="tspan8919"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1;stroke-width:0.264583"
-       x="123.21368"
-       y="22.20233">is</tspan></text>
-  <g
-     id="g7355"
-     transform="translate(75.999997,-11.999997)">
-    <rect
-       id="rect7015"
-       x="53.600002"
-       y="25.6"
-       width="32"
-       height="6"
-       rx="1.4"
-       fill="none"
-       opacity="0.91318"
-       stroke="#000000"
-       stroke-linejoin="round"
-       stroke-width="0.333"
-       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <rect
-       id="rect1250"
-       x="53"
-       y="24.999998"
-       width="32"
-       height="5.9999995"
-       rx="1"
-       fill="none"
-       opacity="0.91318"
-       stroke="#000000"
-       stroke-linejoin="round"
-       stroke-width="0.333"
-       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-  </g>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g7355"
-     id="use12673"
-     transform="translate(-3.4999994e-7,16)"
-     width="100%"
-     height="100%" />
+       x="121.21368"
+       y="22.202328">is</tspan></text>
   <text
      x="144.91458"
-     y="17.078859"
+     y="9.0788584"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text15009"><tspan
        x="144.91458"
-       y="17.078859"
+       y="9.0788584"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
        id="tspan15007"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Safety Constraint</tspan></text>
+       style="font-size:3px;fill:#333333;fill-opacity:1">Software Component</tspan></text>
   <text
      x="144.91457"
      y="33.078857"
@@ -346,14 +378,36 @@
   <g
      id="g982"
      transform="translate(41.400379,-19.599999)" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g7355"
+  <g
      id="use1704"
-     transform="translate(-123,-12)"
-     width="100%"
-     height="100%" />
+     transform="translate(-47.000001,-23.999997)">
+    <rect
+       id="rect7890"
+       x="53.600002"
+       y="25.6"
+       width="32"
+       height="6"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect7892"
+       x="53"
+       y="24.999998"
+       width="32"
+       height="5.9999995"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
   <text
      x="21.938559"
      y="5.0788617"
@@ -370,39 +424,20 @@
        id="tspan1706"
        style="font-size:3px;fill:#333333;fill-opacity:1">Permitted Message</tspan></text>
   <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="61.370651"
-     y="6.2113056"
-     id="text1714"><tspan
-       sodipodi:role="line"
-       id="tspan1712"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1;stroke-width:0.264583"
-       x="61.370651"
-       y="6.2113056">conforms to</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g7355"
-     id="use4716"
-     width="100%"
-     height="100%"
-     transform="translate(-1.2499998e-6,7.9999993)" />
-  <text
      x="144.91458"
-     y="25.078857"
+     y="17.078856"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text4720"><tspan
        x="144.91458"
-       y="25.078857"
+       y="17.078856"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
        id="tspan4718"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Security Constraint</tspan></text>
+       style="font-size:3px;fill:#333333;fill-opacity:1">Safety Constraint</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
@@ -414,14 +449,6 @@
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1;stroke-width:0.264583"
        x="41.282001"
        y="7.4116068">1</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g7355"
-     id="use9575"
-     transform="translate(-123,-4.0000003)"
-     width="100%"
-     height="100%" />
   <text
      x="21.938559"
      y="13.07886"
@@ -501,4 +528,52 @@
        style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
        x="2.6350093"
        y="18.101049">is</tspan></text>
+  <text
+     x="144.91458"
+     y="25.078856"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text918"><tspan
+       x="144.91458"
+       y="25.078856"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan916"
+       style="font-size:3px;fill:#333333;fill-opacity:1">Security Constraint</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="44.655418"
+     y="6.2113056"
+     id="text8500"><tspan
+       sodipodi:role="line"
+       id="tspan8498"
+       style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+       x="44.655418"
+       y="6.2113056">conforms to</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="103.79286"
+     y="6.2113056"
+     id="text9386"><tspan
+       sodipodi:role="line"
+       id="tspan9384"
+       style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+       x="103.79286"
+       y="6.2113056">uses</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="103.79286"
+     y="11.502973"
+     id="text11242"><tspan
+       sodipodi:role="line"
+       id="tspan11240"
+       style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+       x="103.79286"
+       y="11.502973">0..*</tspan></text>
 </svg>
