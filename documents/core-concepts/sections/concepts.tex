@@ -246,18 +246,17 @@ These are (1) \GlossaryHyperRef{interface-device}{device interfaces}, (2) \Gloss
 \end{figure}
 
 These four interface types form four stages, beginning with the device interface to the left.
-Whenever any of these stages receives a message, it will either \textit{send} it leftwards or \textit{route} it rightwards, depending on whichever direction brings the message closest to the \GlossaryHyperRef{operation-service}{service operation} it targets.
+Whenever any of these stages receives a message, it will either \textit{send} it leftwards or \GlossaryHyperRef{routing-message}{\textit{route}} it rightwards, depending on whichever direction brings the message closest to the \GlossaryHyperRef{operation-service}{service operation} it targets.
 If, for example, a message is targeting a service operation on a different system on the same device, it must be sent leftwards from the sending operation until it reaches the appropriate system interface, after which it can be routed rightwards.
 At the first leftward stage, at the operation interface, the message is encoded according to the protocol of the targeted operation interface.
-At that and every other leftward stage, the message may be tested against the \GlossaryHyperRef{state-protocol}{protocol state} and/or policies expected to be enforced by the corresponding interfaces of the target.
+At that and every other stage on the journey leftwards, the message may be tested against the \GlossaryHyperRef{state-protocol}{protocol state} and/or policies expected to be enforced by the corresponding interfaces of the target.
 At the turning stage, in this case at the system interface, the message typically jumps to another interface of the same type and is then routed rightwards.
 The jump must, of course, be supported by the interface in question.
 For example, a device interface being a \GlossaryHyperRef{interface-network}{network interface} supports making this jump via a \GlossaryHyperRef{network}{network}.
 
-Every interface only supports a limited set of protocols.
-Passing messages between two interfaces requires that both support at least one common protocol.
-This is accomplished by having rightmost of the two interfaces \textit{extend} the protocol of the leftmost.
-A device interface may, for example, support the IP protocol \cite{deering2017internet}, which makes it able route messages to and receive messages from system interfaces that support, for example, TCP/IP \cite{postel1981transmission}.
+Note that each interface only supports a single protocol and can only pass on messages of that protocol.
+For it to be possible to pass messages between stages, the protocol of the left stage must be \textit{extended} by the protocol of the right stage.
+If, for example, a device interface supports the IP protocol \cite{deering2017internet} and system interface the TCP/IP \cite{postel1981transmission} protocol, messages can pass between the two as the latter protocol is an extension of the former.
 
 \subsection{Protocol}
 \label{sec:concepts:protocol}

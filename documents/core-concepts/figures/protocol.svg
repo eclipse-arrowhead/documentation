@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.4142136"
-     inkscape:cx="328.45109"
-     inkscape:cy="66.821589"
+     inkscape:cx="383.60542"
+     inkscape:cy="12.374368"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -231,7 +231,7 @@
      y="0"
      xlink:href="#use21933"
      id="use9181"
-     transform="translate(-130.00001,16.000002)"
+     transform="translate(-133.99961,16.000002)"
      width="100%"
      height="100%" />
   <use
@@ -239,11 +239,11 @@
      y="0"
      xlink:href="#use21933"
      id="use9179"
-     transform="translate(-3.8626602e-4,8.000001)"
+     transform="translate(-3.8624e-4,8.000001)"
      width="100%"
      height="100%" />
   <path
-     d="m 105.0004,8 h 27 V 4 h 6"
+     d="M 105.0004,8 136,8 V 4 h 6"
      marker-end="url(#a)"
      id="path24821"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -266,7 +266,7 @@
        id="tspan16568"
        style="text-align:end;text-anchor:end">has</tspan></text>
   <path
-     d="m 104.0004,9.9999999 h 11 V 16 h -6 l -2.7,-2.7"
+     d="M 104.0004,9.9999999 123,9.9999997 V 16 l -13.9996,0 -2.7,-2.7"
      fill="none"
      marker-end="url(#e-0)"
      stroke="#666666"
@@ -275,19 +275,19 @@
      style="stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#e-0)"
      sodipodi:nodetypes="ccccc" />
   <text
-     x="118.11628"
+     x="126.10715"
      y="13.982782"
      style="font-size:3px;line-height:1.25"
      xml:space="preserve"
      id="text9373"><tspan
-       x="113.31173"
+       x="121.3026"
        y="13.982782"
        font-size="2.9px"
        stroke-width="0.26458"
        text-align="end"
        text-anchor="end"
        id="tspan9371"
-       style="font-size:3px;fill:#000000;fill-opacity:1">is</tspan></text>
+       style="font-size:3px;fill:#000000;fill-opacity:1">extends</tspan></text>
   <use
      x="0"
      y="0"
@@ -425,13 +425,13 @@
        text-anchor="middle"
        id="tspan44010">Protocol</tspan></text>
   <text
-     x="149.92673"
+     x="153.92633"
      y="13.078865"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text21931"><tspan
-       x="149.92673"
+       x="153.92633"
        y="13.078865"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -441,7 +441,7 @@
        style="font-size:3px;fill:#333333;fill-opacity:1">Encoding</tspan></text>
   <g
      id="use21933"
-     transform="translate(81.000392,-24.000002)">
+     transform="translate(84.99999,-24.000002)">
     <rect
        id="rect29272"
        x="59.599998"
@@ -470,13 +470,13 @@
        style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <text
-     x="149.92712"
+     x="153.92673"
      y="5.0788631"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text21937"><tspan
-       x="149.92712"
+       x="153.92673"
        y="5.0788631"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -485,24 +485,24 @@
        id="tspan21935"
        style="font-size:3px;fill:#333333;fill-opacity:1">Profile</tspan></text>
   <text
-     x="133.43994"
+     x="137.43954"
      y="8.0520582"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text24966"><tspan
-       x="133.43994"
+       x="137.43954"
        y="8.0520582"
        stroke-width="0.26458"
        id="tspan24964"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
   <text
-     x="133.43449"
+     x="137.43393"
      y="15.834207"
      style="font-size:2.80011px;line-height:1.25;font-family:sans-serif;stroke-width:0.264591"
      xml:space="preserve"
      id="text24970"
      transform="scale(1.0000399,0.9999601)"><tspan
-       x="133.43449"
+       x="137.43393"
        y="15.834207"
        stroke-width="0.264591"
        id="tspan24968"
@@ -519,7 +519,7 @@
        id="tspan30108"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">conforms to</tspan></text>
   <path
-     d="M 132.0004,7.9999999 V 12 l 6,-10e-7"
+     d="M 136,7.9999997 V 12 l 6,-10e-7"
      marker-end="url(#a)"
      id="path2689"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
@@ -625,12 +625,12 @@
        x="2.6353979"
        y="18.101048">is</tspan></text>
   <text
-     x="116.645"
+     x="124.63586"
      y="13.982782"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text12048"><tspan
-       x="116.645"
+       x="124.63586"
        y="13.982782"
        stroke-width="0.26458"
        id="tspan12046">0..1</tspan></text>

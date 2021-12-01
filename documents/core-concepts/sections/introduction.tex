@@ -57,17 +57,18 @@ This document adheres to the notational conventions presented in the below subse
 \subsubsection{Graph Diagrams}
 \label{sec:introduction:conventions:graphs}
 
-In a graph diagram, a box with a solid border and a name inside it denotes a named model \GlossaryHyperRef{entity}{entity} and may represent any \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
-A named arrow between boxes denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
+In a graph diagram, a box with a solid border and a name inside it denotes a named model \GlossaryHyperRef{entity}{entity}, representing an \GlossaryHyperRef{artifact}{artifact} or \GlossaryHyperRef{stakeholder}{stakeholder}.
+Model entities can be associated with \GlossaryHyperRef{attribute}{attributes} by describing those attributes in text in relation to the diagrams in which they occur.
+A named arrow from a source box to a target box denotes the \GlossaryHyperRef{relationship}{relationship} implied by the name.
 Relationship names are defined either here, in the glossary of Section \ref{sec:glossary}, or in relation to the figures they are used in.
 The following relationship names are defined here only:
 
 \begin{enumerate}
-\item \textit{conforms to}, which implies that the target entity \textit{is} a \GlossaryHyperRef{constraint}{constraint} satisfied by the source entity;
-\item \textit{is} (or \textit{extends}), which means that the source entity \textit{conforms to} the target entity, inherits all of its relationships and implicit \GlossaryHyperRef{attribute}{attributes}, as well as belongs to a set named after it;
-\item \textit{uses}, which means that the source entity depends on the target entity to fulfill its purpose;
-\item \textit{has}, which means that the target entity is \textit{used by} and must cease to exist without the source entity; and
-\item \textit{supports}, which means that the source entity \textit{has} 1 implied entity \textit{conforming to} the target entity.
+\item \textit{conforms to}, implying that the target \textit{has} a set of or \textit{is} a \GlossaryHyperRef{constraint}{constraint} satisfied by the source;
+\item \textit{extends}, meaning that the source \textit{conforms to} and inherits all relationships and attributes of the target;
+\item \textit{is}, meaning that the source \textit{extends} the target and belongs to a set named after it;
+\item \textit{uses}, meaning that the source depends on the target to fulfill its purpose;
+\item \textit{has}, meaning that the target is \textit{used by} and must cease to exist without the source; and
 \end{enumerate}
 
 \paragraph{Quantifiers}
