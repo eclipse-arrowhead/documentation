@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.3105226"
-     inkscape:cx="218.34887"
-     inkscape:cy="105.82022"
+     inkscape:cx="235.66097"
+     inkscape:cy="84.612892"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -137,12 +137,6 @@
     </marker>
   </defs>
   <path
-     d="m 84.999999,30 h 14"
-     marker-end="url(#a)"
-     id="path7162"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="cc" />
-  <path
      d="m 68.999998,20 -1e-6,5"
      marker-end="url(#a)"
      id="path2564"
@@ -207,14 +201,6 @@
      id="path886-3"
      style="stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#e-0)"
      sodipodi:nodetypes="cccccc" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g7355"
-     id="use7519"
-     transform="translate(48,13)"
-     width="100%"
-     height="100%" />
   <use
      x="0"
      y="0"
@@ -415,7 +401,7 @@
        text-align="center"
        text-anchor="middle"
        id="tspan15007"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Network Device</tspan></text>
+       style="font-size:3px;fill:#333333;fill-opacity:1">Device</tspan></text>
   <text
      x="42.280197"
      y="15.408048"
@@ -427,21 +413,6 @@
        stroke-width="0.26458"
        id="tspan15898"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
-  <text
-     x="116.91455"
-     y="31.258665"
-     font-size="3.5px"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text20860"><tspan
-       x="116.91455"
-       y="31.258665"
-       font-size="3.5px"
-       stroke-width="0.26458"
-       text-align="center"
-       text-anchor="middle"
-       id="tspan20858"
-       style="font-size:3px">Device Interface</tspan></text>
   <text
      x="68.914574"
      y="31.258661"
@@ -507,15 +478,4 @@
        style="stroke-width:0.264583"
        x="90.65596"
        y="2.9715452">has</tspan></text>
-  <text
-     x="86.280197"
-     y="28.408047"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text7166"><tspan
-       x="86.280197"
-       y="28.408047"
-       stroke-width="0.26458"
-       id="tspan7164"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
 </svg>

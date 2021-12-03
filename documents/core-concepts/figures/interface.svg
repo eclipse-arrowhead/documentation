@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.4635001"
-     inkscape:cx="294.90561"
-     inkscape:cy="111.83275"
+     inkscape:zoom="1.2317501"
+     inkscape:cx="325.95899"
+     inkscape:cy="117.31276"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g43763"
+     inkscape:current-layer="svg162"
      height="73mm"
      showguides="false">
     <inkscape:grid
@@ -273,17 +273,6 @@
      xml:space="preserve"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
      x="136.1797"
-     y="25.319118"
-     id="text32838-7-5"><tspan
-       sodipodi:role="line"
-       id="tspan32836-2-6"
-       style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-       x="136.1797"
-       y="25.319118">1</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="136.1797"
      y="20.442455"
      id="text32838-0-3"><tspan
        sodipodi:role="line"
@@ -346,17 +335,6 @@
          stroke-width="0.26458"
          id="tspan31581-1"
          style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">extends</tspan></text>
-    <text
-       x="44.372696"
-       y="47.428631"
-       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-       xml:space="preserve"
-       id="text36754"><tspan
-         x="42.405407"
-         y="47.428631"
-         stroke-width="0.26458"
-         id="tspan36752"
-         style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..1</tspan></text>
   </g>
   <g
      id="g43777"
@@ -406,17 +384,6 @@
          style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
          x="27.179808"
          y="19.442451">routes to</tspan></text>
-    <text
-       x="44.52457"
-       y="32.086632"
-       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-       xml:space="preserve"
-       id="text2628"><tspan
-         x="42.557281"
-         y="32.086632"
-         stroke-width="0.26458"
-         id="tspan2626"
-         style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..1</tspan></text>
   </g>
   <use
      x="0"
@@ -437,26 +404,15 @@
        sodipodi:nodetypes="cc" />
     <text
        x="19.096384"
-       y="34.367496"
+       y="32.020565"
        style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
        xml:space="preserve"
        id="text31583"><tspan
          x="17.129093"
-         y="34.367496"
+         y="32.020565"
          stroke-width="0.26458"
          id="tspan31581"
          style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">supports</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-       x="20.440838"
-       y="34.367496"
-       id="text32838"><tspan
-         sodipodi:role="line"
-         id="tspan32836"
-         style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-         x="20.440838"
-         y="34.367496">1</tspan></text>
   </g>
   <use
      x="0"
@@ -683,7 +639,7 @@
        text-align="center"
        text-anchor="middle"
        id="tspan33580"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Device </tspan></text>
+       style="font-size:3px;fill:#333333;fill-opacity:1">Network</tspan></text>
   <use
      x="0"
      y="0"
