@@ -6,7 +6,7 @@
    viewBox="0 0 152 47"
    id="svg162"
    sodipodi:docname="service.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4812791"
-     inkscape:cx="227.50608"
-     inkscape:cy="82.698797"
-     inkscape:window-width="1854"
-     inkscape:window-height="1035"
-     inkscape:window-x="66"
-     inkscape:window-y="23"
+     inkscape:zoom="2.094845"
+     inkscape:cx="310.52417"
+     inkscape:cy="94.279052"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
      height="73mm">
@@ -181,17 +181,6 @@
        stroke-width="0.26458"
        id="tspan3305"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">executes</tspan></text>
-  <text
-     x="98.733276"
-     y="23.9632"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text3311"><tspan
-       x="98.733276"
-       y="23.9632"
-       stroke-width="0.26458"
-       id="tspan3309"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">1</tspan></text>
   <text
      x="117.13846"
      y="37.127632"
@@ -489,12 +478,12 @@
        id="tspan1474">Operation</tspan></text>
   <text
      x="39.733299"
-     y="24.052509"
+     y="24.231127"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text54055"><tspan
        x="39.733299"
-       y="24.052509"
+       y="24.231127"
        stroke-width="0.26458"
        id="tspan54053"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
@@ -509,17 +498,6 @@
        stroke-width="0.26458"
        id="tspan54061"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
-  <text
-     x="58.138184"
-     y="36.853012"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text54067"><tspan
-       x="53.5909"
-       y="36.853012"
-       stroke-width="0.26458"
-       id="tspan54065"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..1</tspan></text>
   <use
      x="0"
      y="0"
