@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.7419577"
-     inkscape:cx="339.56048"
-     inkscape:cy="94.433981"
+     inkscape:zoom="1.2317501"
+     inkscape:cx="301.60338"
+     inkscape:cy="156.2817"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -213,6 +213,19 @@
          stroke-width="1pt"
          id="path2-33" />
     </marker>
+    <marker
+       id="a-36"
+       overflow="visible"
+       orient="auto">
+      <path
+         transform="scale(0.4)"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         fill="context-stroke"
+         fill-rule="evenodd"
+         stroke="context-stroke"
+         stroke-width="1pt"
+         id="path2-75" />
+    </marker>
   </defs>
   <metadata
      id="metadata33">
@@ -224,6 +237,12 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <path
+     d="m 9.9999999,25 -5,0 0,-9 H 13 v 3"
+     marker-end="url(#a-36)"
+     id="path31579-3"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-36)"
+     sodipodi:nodetypes="ccccc" />
   <g
      id="g4276"
      transform="matrix(1,0,0,-1,-13.000001,70.999999)">
@@ -996,4 +1015,26 @@
        text-anchor="middle"
        id="tspan8408"
        style="font-size:3px;fill:#333333;fill-opacity:1">Operation</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="4.7671967"
+     y="14.369823"
+     id="text32838-0-5"><tspan
+       sodipodi:role="line"
+       id="tspan32836-9-6"
+       style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+       x="4.7671967"
+       y="14.369823">connected to</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="6.2986584"
+     y="19.456816"
+     id="text3809"><tspan
+       sodipodi:role="line"
+       id="tspan3807"
+       style="font-size:2.8px;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+       x="6.2986584"
+       y="19.456816">0..*</tspan></text>
 </svg>

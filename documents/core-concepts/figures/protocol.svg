@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1"
-     inkscape:cx="205.49999"
-     inkscape:cy="6.4999998"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="329.86531"
+     inkscape:cy="141.77491"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -404,7 +404,7 @@
        x="46.417816"
        y="25.670141"
        stroke-width="0.26458"
-       id="tspan6768">1..*</tspan></text>
+       id="tspan6768">0..*</tspan></text>
   <text
      x="86.63018"
      y="25.670141"

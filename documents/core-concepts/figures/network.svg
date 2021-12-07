@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.3105226"
-     inkscape:cx="235.66097"
-     inkscape:cy="84.612892"
+     inkscape:zoom="1.6337862"
+     inkscape:cx="253.09309"
+     inkscape:cy="33.358098"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -136,6 +136,15 @@
          id="path25587" />
     </marker>
   </defs>
+  <path
+     d="m 84.999999,30 h 14"
+     fill="none"
+     marker-end="url(#e-0)"
+     stroke="#666666"
+     stroke-width=".667"
+     id="path930"
+     style="stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#e-0)"
+     sodipodi:nodetypes="cc" />
   <path
      d="m 68.999998,20 -1e-6,5"
      marker-end="url(#a)"
@@ -455,7 +464,7 @@
        text-align="end"
        text-anchor="end"
        id="tspan882-3"
-       style="font-size:2.8px;fill:#44444f;fill-opacity:1">connected with</tspan></text>
+       style="font-size:2.8px;fill:#44444f;fill-opacity:1">connected to</tspan></text>
   <text
      x="45.744171"
      y="30.980173"
@@ -478,4 +487,38 @@
        style="stroke-width:0.264583"
        x="90.65596"
        y="2.9715452">has</tspan></text>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g7355"
+     id="use924"
+     transform="translate(48,13)"
+     width="100%"
+     height="100%" />
+  <text
+     x="116.91455"
+     y="31.258661"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text928"><tspan
+       x="116.91455"
+       y="31.258661"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan926"
+       style="font-size:3px">Interface</tspan></text>
+  <text
+     x="86.361702"
+     y="28.313744"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text1109"><tspan
+       x="86.361702"
+       y="28.313744"
+       stroke-width="0.26458"
+       id="tspan1107"
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">is</tspan></text>
 </svg>
