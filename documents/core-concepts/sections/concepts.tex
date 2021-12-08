@@ -265,8 +265,9 @@ This means that all three of the network, system and service stages may base the
 \label{sec:concepts:protocol}
 
 A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{type-message}{message} and \GlossaryHyperRef{type-state}{state} types, useful for determining what \GlossaryHyperRef{message}{messages} may move through the \GlossaryHyperRef{interface}{interfaces} that support them.
-\textit{Message types} determine what \GlossaryHyperRef{data}{data} valid messages must and may contain, while each \textit{state type} dictates when certain messages are valid in relation to a certain \GlossaryHyperRef{state-protocol}{state}.
-As shown in Figure \ref{fig:protocol}, a protocol may also be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, as well as conform to certain \GlossaryHyperRef{profile-protocol}{profiles} and \GlossaryHyperRef{encoding}{encodings}, described in Sections \ref{sec:concepts:profile} and \ref{sec:concepts:encoding}.
+\textit{Message types} determine what \GlossaryHyperRef{data}{data} conformant messages must and may contain, while each \textit{state type} dictates when certain messages are acceptable in relation to a certain \GlossaryHyperRef{state-protocol}{state}.
+As shown in Figure \ref{fig:protocol}, a protocol may also be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, conform to certain \GlossaryHyperRef{profile-protocol}{profiles} and use certain \GlossaryHyperRef{encoding}{encodings}.
+Profiles and encodings are described in Sections \ref{sec:concepts:profile} and \ref{sec:concepts:encoding}.
 
 \vfill
 
@@ -274,13 +275,13 @@ As shown in Figure \ref{fig:protocol}, a protocol may also be defined as an \Glo
   \centering
   \includegraphics[scale=0.9]{figures/protocol}
   \caption{
-    The protocol as set of message and state types, conforming to certain profiles and encodings.
+    The protocol as set of message and state types, conforming to certain profiles.
   }
   \label{fig:protocol}
 \end{figure}
 
 A protocol may, when relevant, be considered as a \GlossaryHyperRef{function}{function} useful for testing if a given message is \GlossaryHyperRef{message-valid}{valid} or \GlossaryHyperRef{message-invalid}{invalid} with respect to a current state.
-If the message is valid, the function returns the type of the message, which is needed to interpret the contents of the message.
+If the message is valid, the function returns the type of the message, which is needed to interpret the contents of that message.
 If the message is invalid, the function returns an indication of why the message failed to satisfy the message and/or state types of the protocol. 
 
 Protocols should only be concerned with the \textit{destination} and \textit{interpretation} of messages, not with whether they are \GlossaryHyperRef{message-permitted}{\textit{permitted}} or not.
@@ -310,7 +311,7 @@ Policies may be concerned with authorization, contracts, economic goals, and so 
 
 Every policy may, when relevant, be regarded as a \GlossaryHyperRef{function-predicate}{predicate function} useful for testing if given message is permitted with respect to any kind of information.
 Policies are typically enforced by \GlossaryHyperRef{interface}{interfaces}, as described in Section \ref{sec:concepts:interface}.
-If a \GlossaryHyperRef{message}{message} fails to satisfy one or more of the policies of an interface, the message sender should be notified about the violated policies.
+If a \GlossaryHyperRef{message}{message} is forbidden with respect to one or more of the policies of an interface, those policies should be listed in any error message returned to the sender of that message.
 
 While \GlossaryHyperRef{protocol}{protocols} help determine if a given message can be passed on or interpreted correctly, \textit{policies} are meant to determine if the activity described by that message would occur under desirable conditions.
 For example, an interface may receive a message requesting that a certain pump be started.
@@ -322,32 +323,36 @@ If the pump is on fire, turning it on may present a safety hazard; if the system
 \subsection{Profile}
 \label{sec:concepts:profile}
 
-A \textit{profile} is a set of \GlossaryHyperRef{constraint-protocol}{constraints} added to every \GlossaryHyperRef{message}{message} of the \GlossaryHyperRef{protocol}{protocols} that elect to conform to it.
-As depicted in Figure \ref{fig:profile}, the constraints are formulated in terms of a protocol that that is extended by the protocols that elect to conform to it.
+A \textit{profile} is a set of \GlossaryHyperRef{constraint}{constraints} that can be added to a \GlossaryHyperRef{protocol}{protocol}.
+While a protocol may only extend up to one other protocol, it may conform to any number of profiles.
+In Figure \ref{fig:profile}, two significant types of constraints are illustrated, the \GlossaryHyperRef{constraint-protocol}{protocol constraint} and the \GlossaryHyperRef{constraint-encoding}{encoding constraint}.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/profile}
   \caption{
-    The profile as a set of protocol constraints.
+    The profile as a set of constraints, which may, for example, be concerned with protocols or encodings.
   }
   \label{fig:profile}
 \end{figure}
 
+A \textit{protocol constraint} is defined in terms of a protocol that must be extended by any protocols conforming to its owning profile. 
 For example, a \GlossaryHyperRef{interface-service}{service interface} may support a custom extension of the HTTP protocol \cite{fielding2014hypertext}.
 Such an extended HTTP protocol would, among other things, specify how a message will be routed from a system interface to a service interface, as described in Section \ref{sec:concepts:interface}.
-If that custom protocol elects to conform to a certain profile, the constraints of that profile must be formulated in terms of HTTP without the extension or any other protocol HTTP extends, such as TCP/IP \cite{postel1981transmission} or IP \cite{deering2017internet}.
+If that custom protocol is meant to be conformant to a certain profile, the constraints of that profile must be formulated in terms of HTTP without the extension, or any other protocol HTTP extends, namely TCP/IP \cite{postel1981transmission} or IP \cite{deering2017internet}.
 The profile in question may require that certain HTTP headers be included in every message, that certain TCP flags not be used, and so on.
-As a special case, a lone encoding, such as JSON \cite{rfc7159}, can be considered as being a protocol without any states or messages.
-This enables a profile to be concerned only with \GlossaryHyperRef{message-type}{message types}, perhaps useful as payloads for protocols electing to conform to it.
+A protocol constraint could specify how authorization tokens are to be included in certain messages, for example.
 
-A profiles could specify how authorization tokens are to be included in messages, demand that a certain message semantics, such as SenML \cite{rfc8428}, be observed, and so on.
-Note that adding a profile to a protocol not already conforming to it produces a new protocol, as implied in Figure \ref{fig:protocol}.
+An \textit{encoding constraint} is defined in terms of an \GlossaryHyperRef{encoding}{encoding} that must be used by any protocols conforming to its owning profile.
+Such a constraint could be used to force message payloads to adhere to a certain semantics, such as SenML \cite{rfc8428}.
 
 \subsection{Encoding}
 \label{sec:concepts:encoding}
 
 An \textit{encoding} is ...
+
+%As a special case, a lone encoding, such as JSON \cite{rfc7159}, can be considered as being a protocol without any states or messages.
+%This enables a profile to be concerned only with \GlossaryHyperRef{message-type}{message types}, perhaps useful as message payloads.
 
 %\textit{Encodings} introduce \GlossaryHyperRef{system-type}{type systems} in which message data can be expressed.
 %If a protocol defines its messages without referring to an encoding, it is considered to have a \textit{custom} encoding.
