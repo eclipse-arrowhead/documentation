@@ -323,9 +323,11 @@ If the pump is on fire, turning it on may present a safety hazard; if the system
 \subsection{Profile}
 \label{sec:concepts:profile}
 
-A \textit{profile} is a set of \GlossaryHyperRef{constraint}{constraints} that can be added to a \GlossaryHyperRef{protocol}{protocol}.
+A \textit{profile} is a set of \GlossaryHyperRef{constraint}{constraints} that can be added to a \GlossaryHyperRef{protocol}{protocol}, which can be used to require that certain flags or headers are included in certain messages, among other possible examples.
 While a protocol may only extend up to one other protocol, it may conform to any number of profiles.
 In Figure \ref{fig:profile}, two significant types of constraints are illustrated, the \GlossaryHyperRef{constraint-protocol}{protocol constraint} and the \GlossaryHyperRef{constraint-encoding}{encoding constraint}.
+
+\vfill
 
 \begin{figure}[ht!]
   \centering
@@ -336,12 +338,13 @@ In Figure \ref{fig:profile}, two significant types of constraints are illustrate
   \label{fig:profile}
 \end{figure}
 
+\vfill
+
 A \textit{protocol constraint} is defined in terms of a protocol that must be extended by any protocols conforming to its owning profile. 
 For example, a \GlossaryHyperRef{interface-service}{service interface} may support a custom extension of the HTTP protocol \cite{fielding2014hypertext}.
 Such an extended HTTP protocol would, among other things, specify how a message will be routed from a system interface to a service interface, as described in Section \ref{sec:concepts:interface}.
-If that custom protocol is meant to be conformant to a certain profile, the constraints of that profile must be formulated in terms of HTTP without the extension, or any other protocol HTTP extends, namely TCP/IP \cite{postel1981transmission} or IP \cite{deering2017internet}.
+If that custom protocol is meant to be conformant to a certain profile, the constraints of that profile must be formulated in terms of HTTP without the extension, or any other protocol HTTP extends, namely TCP \cite{postel1981transmission} or IP \cite{deering2017internet}.
 The profile in question may require that certain HTTP headers be included in every message, that certain TCP flags not be used, and so on.
-A protocol constraint could specify how authorization tokens are to be included in certain messages, for example.
 
 An \textit{encoding constraint} is defined in terms of an \GlossaryHyperRef{encoding}{encoding} that must be used by any protocols conforming to its owning profile.
 Such a constraint could be used to force message payloads to adhere to a certain semantics, such as SenML \cite{rfc8428}.
@@ -349,13 +352,12 @@ Such a constraint could be used to force message payloads to adhere to a certain
 \subsection{Encoding}
 \label{sec:concepts:encoding}
 
-An \textit{encoding} is ...
+An \textit{encoding} is a set of \GlossaryHyperRef{type-data}{data types} that make up a language or structure in which \GlossaryHyperRef{data}{data} can be formulated and interpreted.
+The term is typically only used when considering \GlossaryHyperRef{encoder}{encoders} and \GlossaryHyperRef{decoder}{decoders}, which transform data from being expressed in one encoding into another.
+More specifically, an \textit{encoder} turns data from an encoding suitable for processing into another suitable for transmission and/or storage, while a \textit{decoder} performs the reverse operation.
+As implied by Figure \ref{fig:encoding}, encodings suitable for transmission and/or storage are typically used to express \GlossaryHyperRef{message}{messages}.
 
-%As a special case, a lone encoding, such as JSON \cite{rfc7159}, can be considered as being a protocol without any states or messages.
-%This enables a profile to be concerned only with \GlossaryHyperRef{message-type}{message types}, perhaps useful as message payloads.
-
-%\textit{Encodings} introduce \GlossaryHyperRef{system-type}{type systems} in which message data can be expressed.
-%If a protocol defines its messages without referring to an encoding, it is considered to have a \textit{custom} encoding.
+\vfill
 
 \begin{figure}[ht!]
   \centering
@@ -365,3 +367,8 @@ An \textit{encoding} is ...
   }
   \label{fig:encoding}
 \end{figure}
+
+\vfill
+
+An encoding useful for \textit{transmission} could, for example, be JSON \cite{rfc7159}, while an encoding useful for \textit{storage} could be some kind of file or database format.
+An encoding useful for \textit{processing} could be the format employed by a \GlossaryHyperRef{unit-compute}{compute unit}, virtual machine or computer language runtime, among other possible examples.

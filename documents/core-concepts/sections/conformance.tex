@@ -17,7 +17,7 @@ For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{arti
 \item Every concept taken from this work must be represented by the name it is given here.
 	\begin{enumerate}
 	\item If important to be able to distinguish an Arrowhead concept from other such of relevance, concepts from this work may be qualified by the leading word ``Arrowhead'', as in, for example, ``Arrowhead system`` or ``Arrowhead service function''.
-	\item Note that some concepts defined here are given more than one name. For example, \GlossaryHyperRef{function-program}{program function} and \GlossaryHyperRef{procedure-software}{software procedure} are declared to be synonyms in the glossary. When synonyms exist, only one of their entries in the glossary will have a definition. The name of that definition should be the name being used.
+	\item Note that some concepts defined here are given more than one name. When synonyms exist, only one of their entries in the glossary will have a definition. The name of that entry should be the name being used by the derived work.
 	\end{enumerate}
 \item Concepts taken from this work may be \textit{specialized} and/or \textit{simplified}, but must never be \textit{contradicted}.
 	\begin{enumerate}
@@ -29,17 +29,16 @@ For a document, \GlossaryHyperRef{model}{model}, or other \GlossaryHyperRef{arti
 	\begin{enumerate}
 	\item The graph constructs that have to be mapped are as follows:
 		\begin{enumerate}
-		\item \textit{entities}, which are the boxes with solid lines and names inside them;
-		\item \textit{relationships}, which are the unidirectional arrows denoting relationships;
-		\item \textit{attributes}, which are the \textit{names} and \textit{quantifiers} associated with graph relationships;
-		\item \textit{groups}, which are the boxed dashed lines that encapsulate entities and other groups;
-		\item \textit{combined relationships}, which are relationships with a shared target or source end; and
-		\item \textit{custom attributes}, which are special attributes expressed in text only.
+		\item \textit{entities}, which are boxes with solid lines and names inside them;
+		\item \textit{relationships}, which are unidirectional arrows with \textit{names} and \textit{quantifiers} that denote association;
+		\item \textit{attributes}, which are special properties expressed in text only.
 		\end{enumerate}
-		Mapping to the latter three constructs must be specified only if they are used by concepts of relevance to the derived work. Most uses of combined relationships in this work can be substituted for many regular relationships without loss of information. If only such combined relationships are of relevance to a derived work, that work may choose to not include a mapping to the combined relationship construct. Each relevant type custom attribute of this work must receive its own individual mapping.
+		Each relevant relationship name and attribute of this document must be mapped to an equivalent construct in the target notation.
 	\item In practice, only text documents claiming to adhere to the graph diagram notation of Section \ref{sec:introduction:conventions:graphs} are exempt from having to describe or refer to such a notational mapping. As mappings to this document will be hard to produce rigorously without text, we expect all such mappings to be described in text documents.
 	\end{enumerate}
 \end{enumerate}
+
+\newpage
 
 \subsection{ISO/IEC/IEEE 42010}
 \label{sec:conformance:iso42010}
