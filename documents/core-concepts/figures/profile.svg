@@ -5,7 +5,7 @@
    version="1.1"
    viewBox="0 0 124 40"
    id="svg162"
-   sodipodi:docname="profile2.svg"
+   sodipodi:docname="profile.svg"
    inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.0238471"
-     inkscape:cx="190.94649"
-     inkscape:cy="38.579981"
+     inkscape:zoom="1.4479385"
+     inkscape:cx="202.70199"
+     inkscape:cy="82.531132"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="72"
@@ -367,7 +367,7 @@
        text-align="center"
        text-anchor="middle"
        id="tspan13678"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Protocol</tspan></text>
+       style="font-size:3px;fill:#333333;fill-opacity:1">Protocol'</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
