@@ -246,8 +246,8 @@ See also \GlossaryNameRef{state}.
 		Its possible set of symbols is $\{0, 1\}$.
 	}
 
-\GlossaryEntry{decoder}{Decoder}
-An \GlossaryHyperRef{entity}{entity} capable of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{encoding}{encoding} suitable for transmission or storage to another encoding suitable for interpretation.
+\GlossaryEntry{decode}{Decode}
+The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{encoding}{encoding} suitable for transmission or storage to another encoding suitable for interpretation.
 
 	\GlossaryNote{Note 1}{
 		Decoding is the reverse of \GlossaryHyperRef{encode}{encoding}.
@@ -256,6 +256,9 @@ An \GlossaryHyperRef{entity}{entity} capable of transforming \GlossaryHyperRef{d
 	\GlossaryNote{Note 2}{
 		The term can also be used to express the act of a human interpreting data.
 	}
+
+\GlossaryEntry{decoder}{Decoder}
+An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{decode}{decoding} \GlossaryHyperRef{data}{data}.
 
 \GlossaryEntry{description}{Description}
 Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
@@ -271,49 +274,105 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} developing the \GlossaryHyperRef{c
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{device}{Device}
-X
+A physical \GlossaryHyperRef{entity}{entity} made from \GlossaryHyperRef{component-hardware}{hardware components} with the significant \GlossaryHyperRef{capability}{capability} of being able to host \GlossaryHyperRef{system}{systems}.
+See Section \ref{sec:concepts:device}.
+
+	\GlossaryNote{IoTA:AF}{
+		defines device as ``a piece of equipment, machine, hardware, etc. with computational, memory and communication capabilities which hosts one or several Arrowhead Framework systems and can be bootstrapped in an Arrowhead local cloud''.
+		The definition provided here should be interpreted as being equivalent.
+	}
+
+\GlossaryEntry{device-connected}{Device, Connected}
+A \GlossaryHyperRef{device}{device} that is \GlossaryHyperRef{connection}{connected} to at least one other device via their \GlossaryHyperRef{interface-network}{network interfaces}, enabling them to \GlossaryHyperRef{communication}{communicate}.
 
 \GlossaryEntry{device-end}{Device, End}
-X
+A \GlossaryHyperRef{device-connected}{connected device} being the intended recipient of a \GlossaryHyperRef{message}{message}.
 
 \GlossaryEntry{device-human-interface}{Device, Human Interface}
-X
+A \GlossaryHyperRef{device}{device} with sensors and actuators that together make up a \GlossaryHyperRef{interface-human}{human interface}.
 
 \GlossaryEntry{device-intermediary}{Device, Intermediary}
-X
+A \GlossaryHyperRef{device-connected}{connected device} that receives and forwards \GlossaryHyperRef{message}{messages} toward \GlossaryHyperRef{device-end}{end devices}.
+
+\GlossaryEntry{encode}{Encode}
+The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{encoding}{encoding} suitable for interpretation to another encoding suitable for transmission or storage.
+
+	\GlossaryNote{Note 1}{
+		Encoding is the reverse of \GlossaryHyperRef{decode}{decoding}.
+	}
+
+	\GlossaryNote{Note 2}{
+		The term can also be used to express the act of a human recording data.
+	}
 
 \GlossaryEntry{encoder}{Encoder}
-X
+An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{encode}{encoding} \GlossaryHyperRef{data}{data}.
 
-\GlossaryEntry{encoding}{Encoding}
-X
+\GlossaryEntry[(noun)]{encoding}{Encoding}
+A \GlossaryHyperRef{type-data}{data type} used to structure and interpret certain \GlossaryHyperRef{data}{data}.
+See Section \ref{sec:concepts:encoding}.
 
 \GlossaryEntry{entity}{Entity}
-X
+An \GlossaryHyperRef{artifact}{artifact} with an \GlossaryHyperRef{identity}{identity}, allowing for it to be distinguished from all other artifacts.
+See Section \ref{sec:concepts:entity}.
+
+	\GlossaryNote{Note 1}{
+		An entity being uniquely identifiable does not necessarily mean that it is associated with a certificate or \GlossaryHyperRef{identifier}{identifier}.
+		It only means that a \GlossaryHyperRef{description}{description} can be rendered that unambiguously refers to the entity in question.
+	}
+
+	\GlossaryNote{SOA-RM}{
+		mentions the word ``entity'' nine times, but provides no explicit definition.
+		We assume their definition to match that of a regular English dictionary, such as ``something that has separate and distinct existence and objective or conceptual reality'' \cite{webster2021entity}.
+		Our definition should be interpreted as being equivalent.
+	}
+
+	\GlossaryNote{RAMI4.0}{
+		defines entity as an ``uniquely identifiable object which is administered in the information world due to its importance''.
+		Our definition should be interpreted as being equivalent.
+	}
 
 \GlossaryEntry{framework}{Framework}
-X
+A set of ideas and software artifacts that frame and address a certain problem domain.
+See Section \ref{sec:overview}.
+
+	\GlossaryNote{SOA-RM}{
+		defines framework as ``a set of assumptions, concepts, values, and practices that constitutes a way of viewing the current environment''.
+		Our definition of \GlossaryHyperRef{framework-idea}{\textit{framework of ideas}} should be interpreted as being equivalent to that of SOA-RM.
+	}
 
 \GlossaryEntry{framework-architecture}{Framework, Architecture}
 X
 
 \GlossaryEntry{framework-arrowhead}{Framework, Arrowhead}
-X
+Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the Arrowhead project.
+See Section \ref{sec:overview}.
 
 \GlossaryEntry{framework-idea}{Framework, Idea}
-X
+A set of assumptions, concepts, values and practices that frame a certain problem domain.
+See Section \ref{sec:overview}.
 
 \GlossaryEntry{framework-software}{Framework, Software}
-X
+A set of software specifications, \GlossaryHyperRef{implementation-software}{implementations} and other \GlossaryHyperRef{artifact}{artifacts} meant to help address the problem domain of a certain \GlossaryHyperRef{framework}{framework}.
+See Section \ref{sec:overview}.
 
 \GlossaryEntry{function}{Function}
-X
+A conceptual mathematical construct that transforms given input values into output values.
+
+	\GlossaryNote{Note 1}{
+		Most functions can be \GlossaryHyperRef{implementation}{implemented} as \GlossaryHyperRef{implementation-software}{software}.
+	}
 
 \GlossaryEntry{function-predicate}{Function, Predicate}
-X
+A \GlossaryHyperRef{function}{function} whose output value must be a \textit{Boolean variable}.
+An output value of \textit{true} indicates that the function is \textit{satisfied}, while an output value of false indicates it being \textit{violated}.
+
+	\GlossaryNote{Note 1}{
+		A \textit{Boolean variable} can only be either of the two mentioned values, \textit{true} and \textit{false}.
+	}
 
 \GlossaryEntry{hid}{HID}
-X
+Abbreviation for \GlossaryNameRef{device-human-interface}.
 
 \GlossaryEntry{hosting-system}{Hosting, System}
 X
@@ -325,49 +384,65 @@ Prefer \GlossaryNameRef{person}.
 X
 
 \GlossaryEntry{identification}{Identification}
-X
+The process through which an \GlossaryHyperRef{entity}{entity} determines and/or verifies the \GlossaryHyperRef{identity}{identity} of another entity. 
 
 \GlossaryEntry{identifier}{Identifier}
-X
+\GlossaryHyperRef{data}{Data} associated with an \GlossaryHyperRef{entity}{entity} that allows for it to be \GlossaryHyperRef{identification}{identified}.
 
 \GlossaryEntry{identity}{Identity}
-X
+The aspect or aspects, such as \GlossaryHyperRef{identifier}{identifiers}, that makes an \GlossaryHyperRef{entity}{entity} distinct from all other entities.
+
+\GlossaryEntry{image-software}{Image, Software}
+A \GlossaryHyperRef{data}{data} \GlossaryHyperRef{artifact}{artifact} comprised of instructions that could be executed by a compatible \GlossaryHyperRef{unit-compute}{compute unit} or virtual machine.
 
 \GlossaryEntry{implementation}{Implementation}
-X
+The realization of a \GlossaryHyperRef{design}{design} as a set of \GlossaryHyperRef{artifact}{artifacts}.
 
 \GlossaryEntry{implementation-software}{Implementation, Software}
-X
+An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{component-software}{software components}.
 
 \GlossaryEntry{implementation-hardware}{Implementation, Hardware}
-X
+An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{component-hardware}{hardware components}.
 
 \GlossaryEntry{industry40}{Industry 4.0}
-X
+The fourth industrial paradigm, primarily characterized by high degrees of computerization, digitization and interconnectivity.
+See also \cite{adolphs2016reference}.
 
 \GlossaryEntry{instance-software}{Instance, Software}
-X
+A \GlossaryHyperRef{image-software}{software image} currently being executed by a \GlossaryHyperRef{unit-compute}{compute unit} or virtual machine.
 
 \GlossaryEntry{interconnection}{Interconnection}
-X
+A \GlossaryHyperRef{connection}{connection} that passes through one or more \GlossaryHyperRef{device-intermediary}{intermediary devices}.
 
 \GlossaryEntry{interface}{Interface}
-X
+A \GlossaryHyperRef{boundary}{boundary} where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between a \GlossaryHyperRef{connection}{connection} and an \GlossaryHyperRef{entity}{entity}, between two entities, or between an entity and a person.
+See Section \ref{sec:concepts:interface}.
 
 \GlossaryEntry{interface-human}{Interface, Human}
-X
+An \GlossaryHyperRef{interface}{interface} through which a person may send and/or receive \GlossaryHyperRef{message}{messages} to/from an \GlossaryHyperRef{entity}{entity}.
 
 \GlossaryEntry{interface-network}{Interface, Network}
-X
+An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{device}{device} could communicate with other devices, or with itself, over a \GlossaryHyperRef{network}{network}.
 
 \GlossaryEntry{interface-operation}{Interface, Operation}
 X
 
 \GlossaryEntry{interface-service}{Interface, Service}
-X
+An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
+
+	\GlossaryNote{Note 1}{
+		Consuming a service requires that \GlossaryHyperRef{message}{messages} be passed from its \GlossaryHyperRef{device}{device} to its \GlossaryHyperRef{system}{system}, and then from its system to the service itself.
+		As the \GlossaryHyperRef{software}{software} making up the service is owned by the system, it is the system that is understood to produce any responses.
+		Those are passed on via its device.
+	}
+
+	\GlossaryNote{SOA-RM}{
+		defines service interface as ``the means by which the underlying capabilities of a service are accessed''.
+		Our definition should be interpreted as being equivalent.
+	}
 
 \GlossaryEntry{interface-system}{Interface, System}
-X
+An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{system}{system} may send and/or receive \GlossaryHyperRef{message}{messages} via its \GlossaryHyperRef{hosting-system}{hosting} \GlossaryHyperRef{device}{device}.
 
 \GlossaryEntry{kind-model}{Kind, Model}
 X
@@ -379,7 +454,19 @@ X
 X
 
 \GlossaryEntry{message}{Message}
-X
+\GlossaryHyperRef{data}{Data} sent or received via an \GlossaryHyperRef{interface}{interface}.
+Every message must \GlossaryHyperRef{identification}{identify} a target \GlossaryHyperRef{operation-service}{service operation} and may contain \GlossaryHyperRef{metadata}{metadata} and a payload.
+
+	\GlossaryNote{Note 1}{
+		The metadata of a message represent the details it contains about its transmission and interpretation.
+		Metadata are always concerned with the \GlossaryHyperRef{protocol}{protocol} of the message and with satisfying the \GlossaryHyperRef{policy}{policies} of the interfaces that must be passed on its journey to its target operation.
+		Metadata may be added, modified and/or used by \GlossaryHyperRef{interface}{interfaces} when messages pass through them.
+	}
+
+	\GlossaryNote{Note 2}{
+		A payload is an input to a service operation.
+		Operations are not required to expect input data, which is why having a message payload is optional.
+	}
 
 \GlossaryEntry{message-error}{Message, Error}
 X
@@ -396,14 +483,26 @@ X
 \GlossaryEntry{message-valid}{Message, Valid}
 X
 
+\GlossaryEntry{metadata}{Metadata}
+\GlossaryHyperRef{data}{Data} \GlossaryHyperRef{description}{describing} other data.
+
 \GlossaryEntry{metamodel}{Metamodel}
 X
 
 \GlossaryEntry{model}{Model}
-X
+A representation of facts in the form of a graph, consisting of \GlossaryHyperRef{entity}{entities}, \GlossaryHyperRef{relationship}{relationships} and \GlossaryHyperRef{attribute}{attributes}.
+
+	\GlossaryNote{Note 1}{
+		Models can be expressed or recorded in many ways, including as visual diagrams, spoken words, text and binary data.
+	}
+
+	\GlossaryNote{Note 2}{
+		Models can be human-readable, machine-readable, or both.
+	}
 
 \GlossaryEntry{network}{Network}
-X
+A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} in such a manner that any \GlossaryHyperRef{system}{systems} they host are able to \GlossaryHyperRef{communication}{communicate}.
+See Section \ref{sec:concepts:network}.
 
 \GlossaryEntry{operation}{Operation}
 X
@@ -412,34 +511,75 @@ X
 X
 
 \GlossaryEntry{operator}{Operator}
-X
+A \GlossaryHyperRef{stakeholder}{stakeholder} responsible for the \GlossaryHyperRef{configure}{configuration} and oversight of \GlossaryHyperRef{system}{systems} and the \GlossaryHyperRef{resource}{resources} those systems manage.
+See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{organization}{Organization}
-X
+A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of other stakeholders and/or other persons.
 
 \GlossaryEntry{owner}{Owner}
-X
+A \GlossaryHyperRef{stakeholder}{stakeholder} that owns significant \GlossaryHyperRef{resource}{resources} and/or other \GlossaryHyperRef{artifact}{artifacts}.
+See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{person}{Person}
 X
 
 \GlossaryEntry{policy}{Policy}
-X
+A set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied for a certain activity to be permitted.
+See Section \ref{sec:concepts:policy}.
+
+	\GlossaryNote{SOA-RM}{
+		defines policy as ``a statement of obligations, constraints or other conditions of use of an owned entity as defined by a participant''.
+		Our definition should be interpreted as being equivalent.
+	}
 
 \GlossaryEntry{profile}{Profile}
-X
+A set of \GlossaryHyperRef{constraint}{constraints} superimposed on a \GlossaryHyperRef{protocol}{protocol}.
+
+	\GlossaryNote{Note 1}{
+		A profile \textit{never} introduces more \GlossaryHyperRef{message}{messages} or \GlossaryHyperRef{state}{states} to a protocol.
+		It adds constraints to the existing messages or states of a protocol.
+	}
+
+	\GlossaryNote{Note 2}{
+		A profile could, for example, introduce an authentication mechanism to a protocol by requiring that a certain type of token be included in each message.
+		It could demand that a certain protocol be extended, or that a particular kind of \GlossaryHyperRef{encoding}{encoding} be used for message bodies, and so on.
+	}
 
 \GlossaryEntry{profile-protocol}{Profile, Protocol}
-X
+Prefer \GlossaryNameRef{profile}.
 
 \GlossaryEntry{project-eclipse-arrowhead}{Project, Eclipse Arrowhead}
 X
 
 \GlossaryEntry{protocol}{Protocol}
-X
+A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{state}{states} and \GlossaryHyperRef{message}{messages}.
+See Section \ref{sec:concepts:protocol}.
+
+	\GlossaryNote{Note 1}{
+		The states, if any, dictate the outcomes of sending certain messages.
+		For example, let us assume that some state can be either \texttt{BUSY} or \texttt{READY}.
+		If the former state would be the active when a certain message is received, the designated response could be an error message.
+		If, however, the \texttt{READY} state would have been active, the state could be transitioned to the \texttt{BUSY} value and a success response be provided to the sender.
+	}
 
 \GlossaryEntry{protocol-extensible}{Protocol, Extensible}
-X
+A \GlossaryHyperRef{protocol}{protocol} allowing for \GlossaryHyperRef{subprotocol}{subprotocols} to be formulated in terms of its \GlossaryHyperRef{message}{messages}.
+See also \GlossaryNameRef{stack-protocol}.
+
+	\GlossaryNote{Note 1}{
+		Every new message introduced by a subprotocol must be a \GlossaryHyperRef{validation}{valid} message of its \GlossaryHyperRef{superprotocol}{superprotocol}.
+	}
+
+	\GlossaryNote{Note 2}{
+		Many of the currently prevalent protocols are designed with the intent of being extensible.
+		For example, HTTP \cite{fielding2014hypertext} provides provisions for an extending protocol to define its own set of directory operations, to simultaneously support multiple \GlossaryHyperRef{encoding}{encodings}, and so on.
+	}
+
+	\GlossaryNote{Note 3}{
+		As long as a given protocol provides at least one message whose contents can be arbitrary, a subprotocol can be produced.
+		This means that even protocols not designed to be extended can, in some contexts, be meaningfully used to define subprotocols.
+	}
 
 \GlossaryEntry{protocol-service}{Protocol, Service}
 X
@@ -554,7 +694,7 @@ X
 %See Section \ref{sec:introduction:scope}.
 
 %	\GlossaryNote{RAMI4.0}{
-%	    defines architecture as the ``combination of elements of a model based on principles and rules for constructing, refining and using it''.
+%		defines architecture as the ``combination of elements of a model based on principles and rules for constructing, refining and using it''.
 %		We consider ``combinations of elements of a model'' to be a ``model of a system-of-systems'' and to be ``based on principles and rules for constructing, refining and using it'' as building upon reference models and architectures.
 %		Our definition should be interpreted as being compatible but more specific.
 %	}
@@ -576,8 +716,8 @@ X
 %	}
 
 %	\GlossaryNote{SOA-RM}{
-%	    defines reference architecture as ``an architectural design pattern that indicates how an abstract set of mechanisms and relationships realizes a predetermined set of requirements''.
-%	    While we let the part about requirements be implicit, our definition should be interpreted as being compatible but more specific.
+%		defines reference architecture as ``an architectural design pattern that indicates how an abstract set of mechanisms and relationships realizes a predetermined set of requirements''.
+%		While we let the part about requirements be implicit, our definition should be interpreted as being compatible but more specific.
 %	}
 
 % \GlossaryEntry{architecture-service-oriented}{Architecture, Service, Oriented (SOA)}
@@ -869,8 +1009,8 @@ X
 % 	}
 
 % 	\GlossaryNote{SOA-RM}{
-% 	    mentions the word ``entity'' nine times, but provides no explicit definition.
-% 	    We assume their definition to match that of a regular English dictionary, such as ``something that has separate and distinct existence and objective or conceptual reality'' \cite{webster2021entity}.
+% 		mentions the word ``entity'' nine times, but provides no explicit definition.
+% 		We assume their definition to match that of a regular English dictionary, such as ``something that has separate and distinct existence and objective or conceptual reality'' \cite{webster2021entity}.
 % 		Our definition should be interpreted as being equivalent.
 % 	}
 

@@ -25,8 +25,8 @@ Each subsection of this section \GlossaryHyperRef{description}{describes} one of
 \ref{sec:concepts:interface}   & \textbf{\nameref{sec:concepts:interface}}   & A \GlossaryHyperRef{boundary}{boundary} that can be crossed by the \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols}.\\
 \ref{sec:concepts:protocol}    & \textbf{\nameref{sec:concepts:protocol}}    & A \GlossaryHyperRef{description}{description} of what \GlossaryHyperRef{message}{messages} can be sent between certain \GlossaryHyperRef{interface}{interfaces}.\\
 \ref{sec:concepts:policy}      & \textbf{\nameref{sec:concepts:policy}}      & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for a \GlossaryHyperRef{message}{message} to be \GlossaryHyperRef{message-permitted}{permitted}.\\
-\ref{sec:concepts:profile}     & \textbf{\nameref{sec:concepts:profile}}     & A set of \GlossaryHyperRef{constraint}{constraints} added to a \GlossaryHyperRef{protocol}{protocol} or \GlossaryHyperRef{encoding}{encoding}.\\
-\ref{sec:concepts:encoding}    & \textbf{\nameref{sec:concepts:encoding}}    & A \GlossaryHyperRef{type-data}{data type} used to formulate and interpret certain \GlossaryHyperRef{message}{messages}.\\
+\ref{sec:concepts:profile}     & \textbf{\nameref{sec:concepts:profile}}     & A set of \GlossaryHyperRef{constraint}{constraints} added to a \GlossaryHyperRef{protocol}{protocol}.\\
+\ref{sec:concepts:encoding}    & \textbf{\nameref{sec:concepts:encoding}}    & A \GlossaryHyperRef{type-data}{data type} used to structure and interpret certain \GlossaryHyperRef{data}{data}.\\
 \end{tabularx}
 
 \vspace*{-2mm}
@@ -323,7 +323,7 @@ If the pump is on fire, turning it on may present a safety hazard; if the system
 \subsection{Profile}
 \label{sec:concepts:profile}
 
-A \textit{profile} is a set of \GlossaryHyperRef{constraint}{constraints} that can be added to a \GlossaryHyperRef{protocol}{protocol}, which can be used to require that certain flags or headers are included in certain messages, among other possible examples.
+A \GlossaryHyperRef{profile}{profile} is a set of \GlossaryHyperRef{constraint}{constraints} that can be added to a \GlossaryHyperRef{protocol}{protocol}, which can be used to require that certain flags or headers are included in certain messages, among other possible examples.
 While a protocol may only extend up to one other protocol, it may conform to any number of profiles.
 In Figure \ref{fig:profile}, two significant types of constraints are illustrated, the \GlossaryHyperRef{constraint-protocol}{protocol constraint} and the \GlossaryHyperRef{constraint-encoding}{encoding constraint}.
 
@@ -333,7 +333,7 @@ In Figure \ref{fig:profile}, two significant types of constraints are illustrate
   \centering
   \includegraphics[scale=0.9]{figures/profile}
   \caption{
-    The profile as a set of constraints, which may, for example, be concerned with protocols or encodings.
+    The profile as a set of protocol constraints, which may, for example, be concerned with protocols or encodings.
     \textit{Protocol'} represents any protocol that \textit{Protocol} could extend, directly or by any extended protocol.
   }
   \label{fig:profile}
