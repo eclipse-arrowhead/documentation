@@ -100,7 +100,7 @@ A task, of any nature, that can be executed by an \GlossaryHyperRef{artifact}{ar
 
 	\GlossaryNote{Note 1}{
 		The term must be understood in the most general sense possible.
-		It includes the abilities of hosting \GlossaryHyperRef{system}{systems}, reading from sensors, triggering actuators, among many other possible examples.
+		It includes the abilities of \GlossaryHyperRef{hosting-system}{hosting systems}, reading from sensors, triggering actuators, among many other possible examples.
 	}
 
 	\GlossaryNote{SOA-RM}{
@@ -274,7 +274,7 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} developing the \GlossaryHyperRef{c
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{device}{Device}
-A physical \GlossaryHyperRef{entity}{entity} made from \GlossaryHyperRef{component-hardware}{hardware components} with the significant \GlossaryHyperRef{capability}{capability} of being able to host \GlossaryHyperRef{system}{systems}.
+A physical \GlossaryHyperRef{entity}{entity} made from \GlossaryHyperRef{component-hardware}{hardware components} with the significant \GlossaryHyperRef{capability}{capability} of being able to \GlossaryHyperRef{hosting-system}{host systems}.
 See Section \ref{sec:concepts:device}.
 
 	\GlossaryNote{IoTA:AF}{
@@ -399,10 +399,18 @@ A \GlossaryHyperRef{data}{data} \GlossaryHyperRef{artifact}{artifact} comprised 
 The realization of a \GlossaryHyperRef{design}{design} as a set of \GlossaryHyperRef{artifact}{artifacts}.
 
 \GlossaryEntry{implementation-software}{Implementation, Software}
-An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{component-software}{software components}.
+An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{software}{software} \GlossaryHyperRef{artifact}{artifacts}.
+
+	\GlossaryNote{Note 1}{
+		The term may also be used to refer to all software artifacts part of an implementation.
+	}
 
 \GlossaryEntry{implementation-hardware}{Implementation, Hardware}
-An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{component-hardware}{hardware components}.
+An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{hardware}{hardware} \GlossaryHyperRef{artifact}{artifacts}.
+
+	\GlossaryNote{Note 1}{
+		The term may also be used to refer to all hardware artifacts part of an implementation.
+	}
 
 \GlossaryEntry{industry40}{Industry 4.0}
 The fourth industrial paradigm, primarily characterized by high degrees of computerization, digitization and interconnectivity.
@@ -410,6 +418,11 @@ See also \cite{adolphs2016reference}.
 
 \GlossaryEntry{instance-software}{Instance, Software}
 A \GlossaryHyperRef{image-software}{software image} currently being executed by a \GlossaryHyperRef{unit-compute}{compute unit} or virtual machine.
+
+	\GlossaryNote{Note 1}{
+		The same image can be executed any number of times, even in parallel.
+		Each execution of that image is its own instance, distinct from all other instances.
+	}
 
 \GlossaryEntry{interconnection}{Interconnection}
 A \GlossaryHyperRef{connection}{connection} that passes through one or more \GlossaryHyperRef{device-intermediary}{intermediary devices}.
@@ -501,14 +514,14 @@ A representation of facts in the form of a graph, consisting of \GlossaryHyperRe
 	}
 
 \GlossaryEntry{network}{Network}
-A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} in such a manner that any \GlossaryHyperRef{system}{systems} they host are able to \GlossaryHyperRef{communication}{communicate}.
+A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperRef{connection}{connected} in such a manner that any \GlossaryHyperRef{system}{systems} they \GlossaryHyperRef{hosting-system}{host} are able to \GlossaryHyperRef{communication}{communicate}.
 See Section \ref{sec:concepts:network}.
 
 \GlossaryEntry{operation}{Operation}
 X
 
 \GlossaryEntry{operation-service}{Operation, Service}
-X
+Prefer \GlossaryNameRef{operation}.
 
 \GlossaryEntry{operator}{Operator}
 A \GlossaryHyperRef{stakeholder}{stakeholder} responsible for the \GlossaryHyperRef{configure}{configuration} and oversight of \GlossaryHyperRef{system}{systems} and the \GlossaryHyperRef{resource}{resources} those systems manage.
@@ -525,7 +538,7 @@ See Section \ref{sec:concepts:stakeholder}.
 X
 
 \GlossaryEntry{policy}{Policy}
-A set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied for a certain activity to be permitted.
+A set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied by all \GlossaryHyperRef{message}{messages} passed on by an \GlossaryHyperRef{interface}{interface}.
 See Section \ref{sec:concepts:policy}.
 
 	\GlossaryNote{SOA-RM}{
@@ -533,12 +546,15 @@ See Section \ref{sec:concepts:policy}.
 		Our definition should be interpreted as being equivalent.
 	}
 
+\GlossaryEntry{policy-message}{Policy, Message}
+Prefer \GlossaryNameRef{policy}.
+
 \GlossaryEntry{profile}{Profile}
 A set of \GlossaryHyperRef{constraint}{constraints} superimposed on a \GlossaryHyperRef{protocol}{protocol}.
+See Section \ref{sec:concepts:profile}.
 
 	\GlossaryNote{Note 1}{
 		A profile \textit{never} introduces more \GlossaryHyperRef{message}{messages} or \GlossaryHyperRef{state}{states} to a protocol.
-		It adds constraints to the existing messages or states of a protocol.
 	}
 
 	\GlossaryNote{Note 2}{
@@ -581,7 +597,16 @@ See also \GlossaryNameRef{stack-protocol}.
 		This means that even protocols not designed to be extended can, in some contexts, be meaningfully used to define subprotocols.
 	}
 
+\GlossaryEntry{protocol-network}{Protocol, Network}
+X
+
+\GlossaryEntry{protocol-operation}{Protocol, Operation}
+X
+
 \GlossaryEntry{protocol-service}{Protocol, Service}
+X
+
+\GlossaryEntry{protocol-system}{Protocol, System}
 X
 
 \GlossaryEntry{provider-service}{Provider, Service}
