@@ -27,10 +27,12 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} who seeks to improve upon or exten
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{architecture}{Architecture}
-X
+A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of a certain (1) goals, ambitions or other principles; (2) and environment, abstract or concrete; (3) as well as significant life-cycle events, such as construction, maintenance or decommissioning.
 
 	\GlossaryNote{ISO42010}{
-		X
+		defines architecture as ``$<$system$>$ fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution''.
+		Our definition should be interpreted as being equivalent.
+		Note that ISO42010 uses the term ``element'' to refer to what we call a \textit{\GlossaryHyperRef{model}{model} \GlossaryHyperRef{entity}{entity}}.
 	}
 
 	\GlossaryNote{SOA-RM}{
@@ -41,10 +43,12 @@ X
 
 	\GlossaryNote{RAMI4.0}{
 		defines architecture as the ``combination of elements of a model based on principles and rules for constructing, refining and using it''.
-		We consider ``combinations of elements of a model'' to be a ``model of a system-of-systems'' and to be ``based on principles and rules for constructing, refining and using it'' as building upon reference models and architectures.
+		We consider ``combinations of elements of a model'' to be a ``model of a system-of-systems'' and to be ``based on principles and rules for constructing, refining and using it'' as being concerned with principles, an environment and life-cycle events.
 		Our definition should be interpreted as being compatible but more specific.
 	}
 
+\GlossaryEntry{architecture-software}{Architecture, Software}
+Prefer \GlossaryNameRef{architecture}.
 
 \GlossaryEntry{arrowhead}{Arrowhead}
 The name of the initiative part of which this document and the rest of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is being produced.
@@ -207,13 +211,20 @@ A \GlossaryHyperRef{attribute}{attribute} that imposes constraints, or limits, o
 	}
 
 \GlossaryEntry{constraint-encoding}{Constraint, Encoding}
-X
+A \GlossaryHyperRef{constraint}{constraint} imposed on an \GlossaryHyperRef{encoding}{encoding}.
+See Section \ref{sec:concepts:profile}.
+
+	\GlossaryNote{Note 1}{
+		An encoding constraint could require that an optional \GlossaryHyperRef{data}{data} field be present or omitted, require that the values of certain fields satisfy a certain \GlossaryHyperRef{function-predicate}{predicate function}, and so on.
+	}
 
 \GlossaryEntry{constraint-policy}{Constraint, Policy}
-X
+A \GlossaryHyperRef{constraint}{constraint} imposed by a \GlossaryHyperRef{policy}{policy}.
+See Section \ref{sec:concepts:policy}.
 
 \GlossaryEntry{constraint-protocol}{Constraint, Protocol}
-X
+A \GlossaryHyperRef{constraint}{constraint} imposed on a \GlossaryHyperRef{protocol}{protocol}.
+See Section \ref{sec:concepts:profile}.
 
 \GlossaryEntry{consumer-service}{Consumer, Service}
 A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{consumption-service}{consuming} a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation-service}{operations}.
@@ -228,7 +239,8 @@ A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{consumption-serv
 	}
 
 \GlossaryEntry{consumption-service}{Consumption, Service}
-X
+The act of consuming a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation-service}{operations}.
+See \GlossaryNameRef{consumer-service}.
 
 \GlossaryEntry{data}{Data}
 A sequence of \GlossaryHyperRef{datum}{datums} recording a set of \GlossaryHyperRef{description}{descriptions} via the structure superimposed by a \GlossaryHyperRef{type-data}{data type}.
@@ -344,8 +356,13 @@ See Section \ref{sec:concepts:entity}.
 A set of \GlossaryHyperRef{entity}{entities} that share a common \GlossaryHyperRef{attribute}{attribute}.
 
 \GlossaryEntry{framework}{Framework}
-A set of ideas and software artifacts that frame and address a certain problem domain.
+A set of ideas and software artifacts that frame and address a problem domain of a certain community of \GlossaryHyperRef{stakeholder}{stakeholders}.
 See Section \ref{sec:overview}.
+
+	\GlossaryNote{ISO42010}{
+	 	defines architecture framework as ``conventions, principles and practices for the description of architectures established within a specific domain of application and/or community of stakeholders''.
+		Our definition of \GlossaryHyperRef{framework-idea}{\textit{framework of ideas}} should be interpreted as being compatible with that of ISO42010.
+	}
 
 	\GlossaryNote{SOA-RM}{
 		defines framework as ``a set of assumptions, concepts, values, and practices that constitutes a way of viewing the current environment''.
@@ -353,7 +370,7 @@ See Section \ref{sec:overview}.
 	}
 
 \GlossaryEntry{framework-architecture}{Framework, Architecture}
-X
+Prefer \GlossaryNameRef{framework}.
 
 \GlossaryEntry{framework-arrowhead}{Framework, Arrowhead}
 Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the Arrowhead project.
@@ -394,13 +411,17 @@ See \GlossaryNameRef{hardware}.
 Abbreviation for \GlossaryNameRef{device-human-interface}.
 
 \GlossaryEntry{hosting-system}{Hosting, System}
-X
+The act of making a \GlossaryHyperRef{service}{service} available for \GlossaryHyperRef{consumption-service}{consumption} by running its \GlossaryHyperRef{software}{software} and giving that software access to a \GlossaryHyperRef{network}{network}.
 
 \GlossaryEntry{human}{Human}
 Prefer \GlossaryNameRef{person}.
 
 \GlossaryEntry{identifiable}{Identifiable}
-X
+The property of being possible to distinguish a certain \GlossaryHyperRef{artifact}{artifact} from all other artifacts.
+
+	\GlossaryHyperRef{Note 1}{
+		Being identifiable is the same as being an \GlossaryHyperRef{entity}{entity}.
+	}
 
 \GlossaryEntry{identification}{Identification}
 The process through which an \GlossaryHyperRef{entity}{entity} determines and/or verifies the \GlossaryHyperRef{identity}{identity} of another entity. 
