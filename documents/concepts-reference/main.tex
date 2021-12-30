@@ -1,0 +1,120 @@
+% Copyright (c) Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+\documentclass[a4paper]{arrowhead}
+
+\usepackage[yyyymmdd]{datetime}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+
+\renewcommand{\dateseparator}{-}
+
+\begin{document}
+
+%% Arrowhead Document Properties
+\ArrowheadTitle{Concepts Reference}
+\ArrowheadType{Framework Description}
+\ArrowheadTypeShort{FD}
+\ArrowheadVersion{1.0}
+\ArrowheadDate{\today}
+\ArrowheadAuthor{Emanuel Palm and Jerker Delsing}
+\ArrowheadStatus{Proposal}
+\ArrowheadContact{emanuel.palm@pinterop.se}
+\ArrowheadFooter{\href{www.arrowhead.eu}{www.arrowhead.eu}}
+\ArrowheadSetup
+%%
+
+%% Custom Document Commands
+\newcommand{\GlossaryHyperRef}[2]{{\color{ArrowheadDarkBlue}\hyperref[sec:glossary:#1]{#2}}}
+\newcommand{\GlossaryNameRef}[1]{{\color{ArrowheadDarkBlue}\nameref{sec:glossary:#1}}}
+%%
+
+%% Front Page
+\begin{center}
+  \vspace*{1cm}
+  \Large{Eclipse Arrowhead}
+
+  \vspace*{0.1cm}
+  \huge{\arrowtitle}
+
+  \vspace*{0.8cm}
+  \Large{\arrowtype}
+  \vspace*{1cm}
+  \vspace*{\fill}
+
+  % \includegraphics[scale=1.5]{path/to/image}
+
+  \vspace*{1cm}
+  \vspace*{\fill}
+
+  \begin{abstract}
+    This document provides authoritative definitions for the most fundamental concepts of relevance to \textit{Eclipse Arrowhead}, a framework designed to facilitate the effective creation of highly dynamic automation systems.
+    It is meant to serve as foundation for other documents with relevance to the framework, providing a precise vocabulary untied to any specific practices or technologies.
+    While presented in the form of a model, the document does not in and of itself build upon or endorse any particular modeling language.
+  \end{abstract}
+
+  \vspace*{1cm}
+\end{center}
+\newpage
+%%
+
+%% Table of Contents
+\tableofcontents
+\newpage
+%%
+
+\section{Introduction}
+\label{sec:introduction}
+\input{sections/introduction}
+
+\section{Overview}
+\label{sec:overview}
+\input{sections/overview}
+
+\section{Core Concepts}
+\label{sec:concepts}
+\input{sections/concepts}
+
+\section{Conformance Requirements}
+\label{sec:conformance}
+\input{sections/conformance}
+
+\section{Glossary}
+\label{sec:glossary}
+\input{sections/glossary}
+
+\renewcommand{\bibsection}{\section{References}\label{sec:references}}
+\bibliographystyle{arrowhead}
+\bibliography{bibliography}
+
+\newpage
+
+\section{Revision History}
+\label{sec:revision}
+
+\subsection{Amendments}
+
+\noindent\begin{tabularx}{\textwidth}{| p{1cm} | p{2cm} | p{1.25cm} | X | p{4cm} |} \hline
+\rowcolor{gray!33} No. & Date & Version & Subject of Amendments & Author \\ \hline
+
+1 & & & & \\ \hline
+
+\end{tabularx}
+
+\subsection{Quality Assurance}
+
+\noindent\begin{tabularx}{\textwidth}{| p{1cm} | p{2cm} | p{1.25cm} | X |} \hline
+\rowcolor{gray!33} No. & Date & Version & Approved by \\ \hline
+
+1 & & & \\ \hline
+
+\end{tabularx}
+
+\end{document}
