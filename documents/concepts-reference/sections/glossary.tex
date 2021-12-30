@@ -27,7 +27,7 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} who seeks to improve upon or exten
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{architecture}{Architecture}
-A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of a certain (1) goals, ambitions or other principles; (2) and environment, abstract or concrete; (3) as well as significant life-cycle events, such as construction, maintenance or decommissioning.
+A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of a certain (1) goals, ambitions or other principles; (2) an environment, either abstract or concrete; (3) as well as significant life-cycle events, such as construction, maintenance or decommissioning.
 
 	\GlossaryNote{ISO42010}{
 		defines architecture as ``$<$system$>$ fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution''.
@@ -468,17 +468,17 @@ A \GlossaryHyperRef{image-software}{software image} currently being executed by 
 A \GlossaryHyperRef{connection}{connection} that passes through one or more \GlossaryHyperRef{device-intermediary}{intermediary devices}.
 
 \GlossaryEntry{interface}{Interface}
-A \GlossaryHyperRef{boundary}{boundary} where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between a \GlossaryHyperRef{connection}{connection} and an \GlossaryHyperRef{entity}{entity}, between two entities, or between an entity and a person.
+A \GlossaryHyperRef{boundary}{boundary} where \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols} can pass between a \GlossaryHyperRef{connection}{connection} and an \GlossaryHyperRef{entity}{entity}, between two entities, or between an entity and a \GlossaryHyperRef{person}.
 See Section \ref{sec:concepts:interface}.
 
 \GlossaryEntry{interface-human}{Interface, Human}
-An \GlossaryHyperRef{interface}{interface} through which a person may send and/or receive \GlossaryHyperRef{message}{messages} to/from an \GlossaryHyperRef{entity}{entity}.
+An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{person} may send and/or receive \GlossaryHyperRef{message}{messages} to/from an \GlossaryHyperRef{entity}{entity}.
 
 \GlossaryEntry{interface-network}{Interface, Network}
 An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{device}{device} could communicate with other devices, or with itself, over a \GlossaryHyperRef{network}{network}.
 
 \GlossaryEntry{interface-operation}{Interface, Operation}
-X
+An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{operation}{operation} of some \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
 
 \GlossaryEntry{interface-service}{Interface, Service}
 An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
@@ -498,13 +498,20 @@ An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHype
 An \GlossaryHyperRef{interface}{interface} through which a \GlossaryHyperRef{system}{system} may send and/or receive \GlossaryHyperRef{message}{messages} via its \GlossaryHyperRef{hosting-system}{hosting} \GlossaryHyperRef{device}{device}.
 
 \GlossaryEntry{kind-model}{Kind, Model}
-X
+A \GlossaryHyperRef{description}{description} of how to produce a certain kind of \GlossaryHyperRef{model}{model}.
+
+	\GlossaryNote{ISO42010}{
+		defines model kind as ``conventions for a type of modelling''.
+		It also provides ``data flow diagrams, class diagrams, Petri nets, balance sheets, organization charts and state transition models'' as examples of what model kinds could establish.
+		Our definition must be considered as being either equivalent or incorrect.
+	}
 
 \GlossaryEntry{language-architecture-description}{Language, Architecture Description}
-X
+A formal language in which \GlossaryHyperRef{architecture}{architectures} can be \GlossaryHyperRef{description}{described}.
 
 \GlossaryEntry{maintainer}{Maintainer}
-X
+A \GlossaryHyperRef{stakeholder}{stakeholder} involved in maintaining \GlossaryHyperRef{device}{devices} and \GlossaryHyperRef{system}{systems}, primarily by repairing and upgrading devices and updating system software.
+See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{message}{Message}
 \GlossaryHyperRef{data}{Data} sent or received via an \GlossaryHyperRef{interface}{interface}.
@@ -522,25 +529,44 @@ Every message must \GlossaryHyperRef{identification}{identify} a target \Glossar
 	}
 
 \GlossaryEntry{message-error}{Message, Error}
-X
+A \GlossaryHyperRef{message}{message} indicating why the request expressed by some other message could not be executed.
+
+	\GlossaryNote{Note 1}{
+		We expect the receiver of most error messages to be the respective senders of the messages that could not be executed.
+	}
 
 \GlossaryEntry{message-forbidden}{Message, Forbidden}
-X
+A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will not be executed.
+See Section \ref{sec:concepts:policy}.
 
 \GlossaryEntry{message-invalid}{Message, Invalid}
-X
+A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{protocol}{protocol} of concern and, therefore, will not be executed.
+See Section \ref{sec:concepts:protocol}.
 
 \GlossaryEntry{message-permitted}{Message, Permitted}
-X
+A \GlossaryHyperRef{message}{message} that does satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will be executed if all other policies are also satisfied.
+See Section \ref{sec:concepts:policy}.
 
 \GlossaryEntry{message-valid}{Message, Valid}
-X
+A \GlossaryHyperRef{message}{message} that does satisfy a \GlossaryHyperRef{protocol}{protocol} of concern and, therefore, will be executed if it is \GlossaryHyperRef{message-permitted}{permitted}.
+See Section \ref{sec:concepts:protocol}.
 
 \GlossaryEntry{metadata}{Metadata}
 \GlossaryHyperRef{data}{Data} \GlossaryHyperRef{description}{describing} other data.
 
 \GlossaryEntry{metamodel}{Metamodel}
-X
+A basic set of \GlossaryHyperRef{model}{model} constructs that can be extended by other models.
+
+	\GlossaryNote{Note 1}{
+		A metamodel can be thought of as a general language in which more specific models can be expressed.
+		Just as a given sentence in a human language can be determined to be valid or invalid, a model can also be verified to be correct in relation to its metamodels, if any.
+	}
+
+	\GlossaryNote{ISO42010}{
+		defines metamodel as what ``presents  the  [architectural description] elements that comprise the vocabulary of a \GlossaryHyperRef{kind-model}{model kind}''.
+		It further adds that a ``metamodel should present entities[,] attributes[,] relationships [and] constraints''.
+		Our definition must be considered as being either equivalent or incorrect.
+	}
 
 \GlossaryEntry{model}{Model}
 A representation of facts in the form of a graph, consisting of \GlossaryHyperRef{entity}{entities}, \GlossaryHyperRef{relationship}{relationships} and \GlossaryHyperRef{attribute}{attributes}.
@@ -558,7 +584,8 @@ A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperR
 See Section \ref{sec:concepts:network}.
 
 \GlossaryEntry{operation}{Operation}
-X
+An activity a \GlossaryHyperRef{service}{service} can perform if receiving a \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted} \GlossaryHyperRef{message} targeting that operation.
+See Section \ref{sec:concepts:service}.
 
 \GlossaryEntry{operation-service}{Operation, Service}
 Prefer \GlossaryNameRef{operation}.
@@ -575,7 +602,7 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} that owns significant \GlossaryHyp
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{person}{Person}
-X
+A human being.
 
 \GlossaryEntry{policy}{Policy}
 A set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied by all \GlossaryHyperRef{message}{messages} passed on by an \GlossaryHyperRef{interface}{interface}.
@@ -607,7 +634,7 @@ See Section \ref{sec:concepts:profile}.
 Prefer \GlossaryNameRef{profile}.
 
 \GlossaryEntry{project-eclipse-arrowhead}{Project, Eclipse Arrowhead}
-X
+The effort of the \GlossaryHyperRef{arrowhead}{Arrowhead} community to increase the utility of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
 
 \GlossaryEntry{protocol}{Protocol}
 A \GlossaryHyperRef{model}{model} of communication defined in terms of \GlossaryHyperRef{state}{states} and \GlossaryHyperRef{message}{messages}.
@@ -719,7 +746,7 @@ A \GlossaryHyperRef{resource}{resource} whose value or utility is not derived fr
 An assignment, objective, or other responsibility, that makes a \GlossaryHyperRef{person}{person} or \GlossaryHyperRef{organization}{organization} into a \GlossaryHyperRef{stakeholder}{stakeholder}. 
 
 \GlossaryEntry{role-stakeholder}{Role, Stakeholder}
-Prefer \GlossaryNameRef{role}{role}.
+Prefer \GlossaryNameRef{role}.
 
 \GlossaryEntry{routing}{Routing}
 The act of forwarding a \GlossaryHyperRef{message}{message} towards the \GlossaryHyperRef{operation}{service operation} it targets.
@@ -759,8 +786,11 @@ A set of sequences of instructions that can be executed by a \GlossaryHyperRef{u
 		Virtual machines, interpreters and other utilities may be used to execute instructions, which means that our definition of `software'' may be more open-ended than what initially may seem to be the case.
 	}
 
+\GlossaryEntry{specification}{Specification}
+A detailed \GlossaryHyperRef{description}{description}, outlining the design of some \GlossaryHyperRef{artifact}{artifact} of concern.
+
 \GlossaryEntry{specification-software}{Specification, Software}
-X
+A \GlossaryHyperRef{specification}{specification} concerned only or primarily with \GlossaryHyperRef{software}{software}.
 
 \GlossaryEntry{stake}{Stake}
 Any type of engagement or commitment.
@@ -807,7 +837,7 @@ A \GlossaryHyperRef{software}{software} \GlossaryHyperRef{entity}{entity} capabl
 	}
 
 \GlossaryEntry{system-automation}{System, Automation}
-X
+Any kind of system, compatible with the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} or not, meant to facilitate some form of \GlossaryHyperRef{automation}{automation}.
 
 \GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
 A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
@@ -859,7 +889,7 @@ Prefer \GlossaryNameRef{type}.
 The \GlossaryHyperRef{type}{type} dictating the structure of the \GlossaryHyperRef{data}{data} in a \GlossaryHyperRef{message}{message}.
 
 \GlossaryEntry{type-state}{Type, State}
-X
+The \GlossaryHyperRef{type}{type} specifying a set of possible \GlossaryHyperRef{state}{states} and transitions between them.
 
 \GlossaryEntry{unit-compute}{Unit, Compute}
 A \GlossaryHyperRef{component-hardware}{hardware component} able to execute \GlossaryHyperRef{software}{software} compatible with a certain instruction set.
@@ -880,6 +910,11 @@ See Section \ref{sec:concepts:stakeholder}.
 The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies a \GlossaryHyperRef{constraint}{constraint}.
 
 \GlossaryEntry{viewpoint-architecture}{Viewpoint, Architecture}
-X
+An \GlossaryHyperRef{description}{description} of a problem domain, specifying (1) concerns, (2) conventions and (3) \GlossaryHyperRef{kind-model}{model kinds}.
+
+	\GlossaryNote{ISO42010}{
+		defines architecture viewpoint as ``work product establishing the conventions for the construction, interpretation and use of architecture views to frame specific system concerns''.
+		Our definition is meant to express this definition and must be considered as being either equivalent or incorrect.
+	}
 
 }
