@@ -1,4 +1,4 @@
-% Copyright (c) 2021 Eclipse Arrowhead Project
+% Copyright (c) Eclipse Arrowhead Project
 %
 % This program and the accompanying materials are made available under the
 % terms of the Eclipse Public License 2.0 which is available at
@@ -6,8 +6,8 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-\def\fileversion{1.6}
-\def\filedate{2021/11/11}
+\def\fileversion{2.0}
+\def\filedate{2022/01/01}
 \NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{arrowhead}[\filedate\space Version \fileversion\space]
@@ -62,6 +62,8 @@
     \newcommand{\arrowauthor}{#1}
   }
 }
+\NewDocumentCommand{\ArrowheadOrganization}{m}{\newcommand{\arroworg}{#1}}
+\NewDocumentCommand{\ArrowheadAbstract}{m}{\newcommand{\arrowabstract}{#1}}
 \NewDocumentCommand{\ArrowheadStatus}{m}{\newcommand{\arrowstatus}{#1}}
 \NewDocumentCommand{\ArrowheadContact}{m}{\newcommand{\arrowcontact}{#1}}
 \NewDocumentCommand{\ArrowheadFooter}{m}{\newcommand{\arrowfooter}{#1}}
@@ -85,6 +87,48 @@
     \end{tabularx}
     \vspace*{\baselineskip}
   }
+}
+\NewDocumentCommand{\ArrowheadFrontPage}{oo}{
+  \begin{center}
+    \vspace*{1cm}
+
+    \IfNoValueTF{\arroworg}{}{
+      \Large{\arroworg}
+      \vspace*{0.2cm}
+    }
+    
+    \IfNoValueTF{\arrowtitle}{
+      Set \texttt{\\ArrowheadTitle\{Your Document Title\}} to specify a document title.
+    }{
+      {\huge{\arrowtitle}}
+    }
+
+    \IfNoValueTF{\arrowtype}{}{
+      \vspace*{0.125cm}
+      {\normalsize \textit{\arrowtype\ (\arrowtypeshort)}}
+      \vspace*{1cm}
+    }
+
+    \vspace*{\fill}
+
+    \IfNoValueTF{#1}{}{
+      #1
+      \vspace*{1cm}
+      \vspace*{\fill}
+    }
+
+    \begin{abstract}
+      \IfNoValueTF{\arrowabstract}{}{\arrowabstract}
+    \end{abstract}
+
+    \vspace*{1cm}
+
+    \IfNoValueTF{#2}{}{
+      #2
+      \vspace*{1cm}
+    }
+
+  \end{center}
 }
 
 \makeatletter
