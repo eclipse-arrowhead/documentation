@@ -1,0 +1,19 @@
+% Copyright (c) 2021 Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+The X.509 profiles of this document provide two fields and one extension whose values could be used to identify a particular certificate or its owner.
+These are the the `serialNumber` and `subject` fields, as well as the `Subject Key Identifier` extension.
+Despite this, they \textit{must not} be used by machines referring to certificates.
+The reason for this is that they are all set arbitrarily by the creator of each certificate.
+An adversary with a given certificate could create another certificate with the same values, allowing it to masquerade as the owner of the original certificate without knowledge of its private key.
+
+What \textit{should} be used, rather, is either (1) the cryptographic hash of an entire certificate in its DER form (i.e. its fingerprint) or (2) the cryptographic hash of its `subjectPublicKey` value (excluding the tag, length, and number of unused bits) of the `subjectPublicKeyInfo` field, also in its DER form.
+While the second of these two identifiers will be equal to the `Subject Key Identifier` for a conformant certificate, it \textit{should not} be generally assumed that a given certificate is conformant.
+Both of these hashes include the public key of the certificate owner, which means that it becomes harder for an adversary to create a counterfeit certificate.
+We \textit{recommend} that the certificate hash (fingerprint) be generally used as identifier, as it protects the integrity of the entire certificate as opposed to only one field of it.
+See Section 3 for details about what hash algorithms to use.

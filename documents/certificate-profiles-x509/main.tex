@@ -1,0 +1,98 @@
+% Copyright (c) Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+\documentclass[a4paper]{arrowhead}
+
+\usepackage[yyyymmdd]{datetime}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+
+\renewcommand{\dateseparator}{-}
+
+\begin{document}
+
+%% Arrowhead Document Properties
+\ArrowheadTitle{X.509 Certificate Profiles}
+\ArrowheadType{Profile Description}
+\ArrowheadTypeShort{PD}
+\ArrowheadVersion{1.0}
+\ArrowheadDate{\today}
+\ArrowheadAuthor{Emanuel Palm}
+\ArrowheadOrganization{Eclipse Arrowhead}
+\ArrowheadStatus{Proposal}
+\ArrowheadContact{emanuel.palm@pinterop.se}
+\ArrowheadAbstract{
+  This document specifies how X.509 certificates are to be configured, issued and validated to facilitate secure identification and communication within and between \textit{Eclipse Arrowhead} local clouds, when such security is desired and the kind of certificate is relevant.
+}
+\ArrowheadFooter{\href{www.arrowhead.eu}{www.arrowhead.eu}}
+\ArrowheadSetup
+%%
+
+%% Front Page
+\ArrowheadFrontPage
+%%
+
+%% Table of Contents
+\tableofcontents
+\newpage
+%%
+
+\section{Introduction}
+\label{sec:introduction}
+\input{sections/introduction}
+
+\section{Certificate Profiles}
+\label{sec:profiles}
+\input{sections/profiles}
+
+\section{Algorithms, Key Lengths and Other Security Details}
+\label{sec:security}
+\input{sections/security}
+
+\section{Identifying Certificates and Their Owners}
+\label{sec:identification}
+\input{sections/identification}
+
+\section{Certificate Life-Cycle Management}
+\label{sec:life-cycle}
+\input{sections/life-cycle}
+
+\section{Authorizing Certificate Owners}
+\label{sec:authorization}
+\input{sections/authorization}
+
+\renewcommand{\bibsection}{\section{References}\label{sec:references}}
+\bibliographystyle{arrowhead}
+\bibliography{bibliography}
+
+\newpage
+
+\section{Revision History}
+\label{sec:revision}
+
+\subsection{Amendments}
+
+\noindent\begin{tabularx}{\textwidth}{| p{1cm} | p{2cm} | p{1.25cm} | X | p{4cm} |} \hline
+\rowcolor{gray!33} No. & Date & Version & Subject of Amendments & Author \\ \hline
+
+1 & & & & \\ \hline
+
+\end{tabularx}
+
+\subsection{Quality Assurance}
+
+\noindent\begin{tabularx}{\textwidth}{| p{1cm} | p{2cm} | p{1.25cm} | X |} \hline
+\rowcolor{gray!33} No. & Date & Version & Approved by \\ \hline
+
+1 & & & \\ \hline
+
+\end{tabularx}
+
+\end{document}

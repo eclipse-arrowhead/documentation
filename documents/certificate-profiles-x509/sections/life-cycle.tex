@@ -1,0 +1,26 @@
+% Copyright (c) 2021 Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+Certificates must be created, distributed, replaced as they expire and, sometimes, revoked before they expire.
+If these tasks are handled without care, it can lead to serious security vulnerabilities.
+To help making this handling as rigorous as possible, the Eclipse Arrowhead project provides the \textit{Certificate Authority} system, which, through some other helper systems, provides an infrastructure for managing the certificate life-cycle within local clouds.
+We \textit{recommend} that the system be used, or a similarly capable replacement, for all Eclipse Arrowhead installations.
+
+Generally, when certificate life-cycles are managed, we \textit{recommend} that the following be observed:
+
+1. Create each private key on the device that will use it.
+2. Use CSRs to avoid moving private keys between devices during certificate issuance.
+3. Never make backups or other copies of private keys that can be trivially replaced.
+4. Store backups of sensitive private keys offline, if possible.
+5. Store active private keys in secure hardware elements, such as TPMs (ISO/IEC 11889).
+6. Immediately revoke owned certificates whose private keys are suspected to be compromised.
+7. Actively look for and act on revocations in the certificate chains of counter-parties.
+
+The above list is \textit{not} to be considered as being exhaustive.
+Adhering to it is not a substitute for consulting independent and credible security experts.
+The list is likely to be revised as more experience is gained related to the security of Arrowhead installations.

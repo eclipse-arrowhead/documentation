@@ -1,0 +1,65 @@
+% Copyright (c) 2021 Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+While no steps in addition to those in Section 6 of RFC 5280 are mandatory for certificate \textit{validation}, there are additional details made available by our profiles that \textit{should} be used for \textit{authorization} when applicable.
+These details are (A) profile identifiers and (B) issuer identities.
+For example, if an Arrowhead system provides a service, it \textit{may} be relevant to ensure that any consumer of that service belongs to the same local cloud and is an operator.
+
+We \textit{recommend} that a procedure practically equivalent to the below algorithm, described in pseudo-code, is used when extracting certificate profile identifiers.
+The input to the algorithm is an array containing a certificate chain `chain` of a given peer.
+The certificate at index 0 of that array is owned by the peer in question, while the remaining certificates represent its issuance hierarchy, in order of issuance from least significant to most.
+
+\begin{verbatim}
+function getCertificateProfileIdentifier(chain) {
+    if (chain.length == 0) { throw "empty chain"; }
+
+    let dnq = getDNQualifier(chain[0]);
+    switch (dnq) {
+        case "ma":
+            break;
+        case "or": case "ga":
+            requireProfileSequence(chain[1..], ["ma"]); break;
+        case "lo":
+            requireProfileSequence(chain[1..], ["or", "ma"]); break;
+        case "on": case "de": case "sy": case "op":
+            requireProfileSequence(chain[1..], ["lo", "or", "ma"]); break;
+        default:
+            throw "unexpected DNQualifier";
+    }
+    return dnq;
+}
+
+function requireProfileSequence(chain, identifiers) {
+    if (identifiers.length == 0) { return; }
+    if (chain.length == 0) { throw "expected additional certificate(s)"; }
+
+    if (getDNQualifier(chain[0]) != identifiers[0]) {
+        throw "unexpected certificate profile";
+    }
+
+    requireProfileSequence(chain[1..], identifiers[1..]);
+}
+\end{verbatim}
+
+The `getDNQualifier` function is assumed to extract the `subject` `DN` field, described in Section 2.1.6, of a given certificate.
+If several such fields is present in a given certificate, the rightmost (i.e. least significant) must be returned by the function.
+The `[1..]` notation is used to describe an array being "sliced" such that a new array is produced containing all but the first element of the original array.
+The algorithm asserts that any extracted identifier appears at the expected hierarchical level, apart from extracting the identifier itself.
+
+Testing elements of an issuance hierarchy could be performed by comparing certificate DER representations byte by byte, or by comparing their DER hashes.
+The following pseudo-code describes how a service provider could assert that a given peer is a system belonging to a certain local cloud:
+
+\begin{verbatim}
+if (getCertificateProfileIdentifier(peer.chain) != "sy" || hash(peer.chain[1]) != hashOfRelevantLocalCloudCertificate) {
+    throw "unauthorized";
+}
+\end{verbatim}
+
+Note that if either of the secure transports TLS or DTLS is used by a given Arrowhead peer, the `post\_handshake\_auth` extension (RFC 8446, Section 4.6.2), must be required in order for both peers of a connection to provide and validate certificates.
+The extension \textit{should} always be required when Arrowhead systems communicate.
+Use of the `post\_handshake\_auth` extension is referred to as \textit{client authentication} by many software libraries and applications, as the initiating peer, or \textit{client}, is also authenticated by the responding peer, or \textit{server}.

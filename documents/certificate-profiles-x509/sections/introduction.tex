@@ -1,0 +1,103 @@
+% Copyright (c) 2021 Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+In this document, we describe how X.509 certificates must be configured if used in conjunction with Eclipse Arrowhead.
+X.509 is a certificate standard produced by the International Telecommunication Union - Telecommunication Standardization Sector (ITU-T) and is famously used by the TLS and DTLS protocols, the former of which is used to establish secure connections on the World Wide Web.
+In brief, an X.509 certificate represents the identity of its owner.
+It records required inputs to a secure key exchange algorithm, as well as how the identity it represents is endorsed by a hierarchy of issuers.
+In the context of Eclipse Arrowhead, X.509 certificates are used to manage what IoT devices, and other entities, are to be trusted and what cryptographic algorithms are to be used to establish their identities.
+
+The rest of this document is organized as follows.
+This section continues by listing key terminology and outlining some linguistic conventions.
+Section 2 outlines the X.509 certificate format and the 8 core Arrowhead X.509 profiles.
+Sections 3, 4, 5 and 6 consider secure algorithm inputs, certificate identification, certificate life-cycle management, and using certificates as input to authorization procedures, respectively.
+
+\subsection{Relation to the IETF RFC 5280 X.509 Profile}
+
+All certificate profiles specified in this document are \textit{required} to be strict subsets of the RFC 5280 X.509 profile of the Internet Engineering Task Force (IETF).
+
+\subsection{Significant Terminology}
+
+The following subsections represent technical domains with particular bearing on this document.
+Each subsection briefly describes a domain and defines relevant terms and abbreviations.
+
+\subsubsection{Eclipse Arrowhead}
+
+Service-oriented communication architecture for Industry 4.0 automation.
+
+\begin{itemize}
+\item \textbf{Device}: A physical machine that could be capable of hosting Arrowhead \textit{systems}.
+\item \textbf{Local Cloud}: A physical protected network consisting of communicating \textit{systems}.
+\item \textbf{Service}: An explicitly defined network application interface accessible to authorized \textit{systems}.
+\item \textbf{System}: A software application providing Arrowhead-compliant \textit{services} that runs on a \textit{device}.
+\end{itemize}
+
+\subsubsection{X.509}
+
+Certificate standard for establishing trust between devices over untrusted computer networks.
+
+\begin{itemize}
+\item \textbf{Certificate Authority (CA)}: Entity issuing (signing) other certificates to endorse their validity.
+\item \textbf{Certificate Chain}: A chain consisting of an \textit{end entity} certificate, its \textit{issuer}'s certificate, that \textit{issuer}'s \textit{issuer}'s certificate, and so on up to the \textit{root CA}'s certificate.
+\item \textbf{Certificate Revocation List (CRL)}: A list identifying certificates that no longer are to be considered valid even though they are yet to expire.
+\item \textbf{Certificate Signing Request (CSR)}: A request for a certificate to be issued by a receiving CA.
+\item \textbf{End Entity}: Entity having but not issuing certificates.
+\item \textbf{Entity}: Any thing or being potentially able to hold and use an X.509 certificate.
+\item \textbf{Fingerprint}: The hash of the DER form of an X.509 certificate, produced using a cryptographic \textit{hash algorithm}.
+\item \textbf{Hash Algorithm}: A function that produces an arbitrary fixed-size output for any given arbitrarily sized input. The same input always produces the same output.
+\item \textbf{Intermediary CA}: CA that \textit{did not} issue its own certificate and, therefore, can be trusted by explicitly trusting another certificate further up its issuance hierarchy.
+\item \textbf{Issuer}: The CA that signed a given certificate.
+\item \textbf{Public Key Infrastructure (PKI)}: The structure of entities, each having a certain role, required to facilitate secure certificate distribution.
+\item \textbf{Root CA}: CA that \textit{did} issue (self-sign) its own certificate and, therefore, must be explicitly trusted.
+\item \textbf{Subject}: The entity owning and being described by a given certificate.
+\item \textbf{Trust Anchor}: Another name for \textit{root CA}.
+\end{itemize}
+
+\subsubsection{X.501}
+
+Naming schema for X.500 directories.
+The standard is used to name the subjects and issuers of X.509 certificates.
+
+\begin{itemize}
+\item \textbf{Distinguished Name (DN)}: A hierarchical naming format composed consisting of RDNs. An example of a DN could be `O=My Company,CN=Robert Robertson+E=robert@mail.com`. The `O` RDN is at the highest hierarchical level, while the `CN+E` RDN is at the level below it. The comma character `,` is used to delimit the RDNs in this example.
+\item \textbf{Relative Distinguished Name (RDN)}: A list of attribute/value pairs belonging to the same hierarchical level in a DN. Examples of RDNs could be `O=My Company` and `CN=Robert Robertson+E=robert@mail.com`. The first RDN consists of a single pair while the second consists of two delimited by `+`.
+\end{itemize}
+
+\subsubsection{ASN.1}
+
+Interface description language for describing messages that can be sent or received over computer networks using several associated encodings.
+The standard is used to describe the structure of X.509 certificates, which \textit{must} be encoded using ASN.1 DER, as defined below.
+
+\begin{itemize}
+\item \textbf{Basic Encoding Rules (BER)}: Binary ASN.1 encoding that appends basic type and length information to each encoded value, which means that decoding a given message does not require knowledge of its original ASN.1 description. Defined in X.690.
+\item \textbf{Distinguished Encoding Rules (DER)}: A subset of BER that guarantees canonical representation, which is to say that every pair of structurally equivalent ASN.1 messages can be represented in DER in exactly one way. Must be used when encoding X.509 certificates. Defined in X.690.
+\item \textbf{Object Identifier (OID)}: A hierarchical and universally unique identifier, useful for identifying parts of ASN.1 messages.
+\item \textbf{Octet}: An 8-bit byte.
+\end{itemize}
+
+\subsubsection{TLS and DTLS}
+
+\textit{Transport Layer Security} (TLS) and \textit{Datagram Transport Layer Security} (DTLS) are IETF (Internet Engineering Task-Force) standards for establishing secure connections over untrusted transports.
+Both can use X.509 to perform authentication when establishing secure connections.
+
+\begin{itemize}
+\item \textbf{Authentication Algorithm}: An asymmetric, or \textit{public key}, encryption algorithm used to establish a degree of confidence in the identity of a peer.
+\item \textbf{Cipher Suite}: A four-part set consisting of a \textit{key exchange}, \textit{authentication}, \textit{encryption} and \textit{hash} algorithm. Such a suite must be agreed upon for a TLS connection to be possible to establish. The \textit{authentication} and \textit{hash} algorithms form a \textit{signature suite}.
+\item \textbf{Encryption Algorithm}: A symmetric encryption algorithm, typically used to make data opaque in transit between a sender and a recipient. Can also be referred to as a \textit{stream} or \textit{block} cipher, depending on its mode of operation.
+\item \textbf{Key Exchange Algorithm}: An algorithm used by parties for exchanging \textit{public keys} as part of preparing for secure communication.
+\item \textbf{Hash Algorithm}: A function that produces an arbitrary fixed-size output for any given arbitrarily sized input. The same input always produces the same output. Used to reduce the size of public key signatures, among other things.
+\item \textbf{Peer}: Either end of a two-way communication.
+\item \textbf{Public key}: The public component of a public/private key pair. Knowledge of the public key allows for messages to be encrypted such that only the possessor of the private key can decrypt them, and vice versa. Used to produce \textit{signatures} and to \textit{share secrets}.
+\item \textbf{Shared Secret}: The input to an \textit{encryption algorithm} that has been secretly shared between two parties.
+\item \textbf{Signature}: The private key encryption of a hashed object, which most significantly can be an X.509 certificate. Knowledge of the corresponding public key, hashing algorithm and hashed object can is sufficient to verify that the signature was created by the possessor of the private key and that the object has not been tampered with.
+\item \textbf{Signature Suite}: A two-part set consisting of an \textit{authentication} and \textit{hash} algorithm. Used to produce and validate \textit{signatures}. Can be a subset of a \textit{cipher suite}.
+\end{itemize}
+
+\subsection{Conventions}
+
+The words \textbf{must}, \textbf{must not}, \textbf{required}, \textbf{should}, \textbf{should not}, \textbf{recommended}, \textbf{may}, and \textbf{optional} in this document are to be interpreted as follows: \textbf{must} and \textbf{required} denote absolute requirements that must be adhered to for a certificate to be considered compliant to a given profile; \textbf{must not} denotes an absolute prohibition; \textbf{should}, \textbf{should not} and \textbf{recommended} denote recommendations that should be deviated from only if special circumstances make it relevant; and, finally, \textbf{may} and \textbf{optional} denote something being truly optional.

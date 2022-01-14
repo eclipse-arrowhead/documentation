@@ -1,0 +1,28 @@
+% Copyright (c) 2021 Eclipse Arrowhead Project
+%
+% This program and the accompanying materials are made available under the
+% terms of the Eclipse Public License 2.0 which is available at
+% http://www.eclipse.org/legal/epl-2.0.
+%
+% SPDX-License-Identifier: EPL-2.0
+
+WChoosing a signature suite for a certificate poorly can lead to severe security vulnerabilities.
+We \textit{recommend} that credible information security institutes, such as NIST, ENSIA or IETF, be consulted for making choices about algorithms, key lengths and other relevant security details.
+
+Given that no relevant breakthroughs are made or expected in quantum computing, you \textit{may} chose to follow RFC 7525, which recommends the following four TLS cipher suites:
+
+| Key Exchange | Authentication             | Encryption  | Hash   |
+|:-------------|:---------------------------|:------------|:-------|
+| DHE          | RSA (2048-bit or 3072-bit) | AES 128 GCM | SHA256 |
+| ECDHE        | RSA (2048-bit or 3072-bit) | AES 128 GCM | SHA256 |
+| DHE          | RSA (2048-bit or 3072-bit) | AES 256 GCM | SHA384 |
+| ECDHE        | RSA (2048-bit or 3072-bit) | AES 256 GCM | SHA384 |
+
+Only the first of the above cipher suites is required to be supported by all TLS 1.3 implementations (RFC 8446, Section 9.1).
+Each cipher suite includes a signature suite (the \textit{Authentication} and \textit{Hash} fields).
+Adherence to RFC 7525 means that RSA (2048-bit or 3072-bit) with SHA256 or SHA384 is used to sign certificates.
+Given that RFC 7525 is trusted, SHA256 and SHA384 \textit{may} be suitable choices for producing certificate identifiers, as discussed in Section 4.
+
+The above recommendations are \textit{general}, in the sense that no particular assumptions are made about the setting in which the device employing the signature or cipher suite is located.
+We understand that many Arrowhead installations will involve hardware with limited computational capabilities, which may not be able to handle primitives of the cryptographic strengths we have mentioned.
+The Eclipse Arrowhead project will publish summaries of recommendations for such and other settings in the future.
