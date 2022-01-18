@@ -11,7 +11,7 @@ export ASSEMBLY_PATH := $(abspath distribution)
 
 ASSEMBLY_DOCUMENTS := $(wildcard $(ASSEMBLY_PATH)/*.pdf)
 ASSEMBLY_PREFIX    := eclipse-arrowhead-core-documentation-
-ASSEMBLY_VERSION   := $(shell git describe --always)
+ASSEMBLY_VERSION   := $(subst /,-,$(shell git describe --always))
 ASSEMBLY_NAME      := $(ASSEMBLY_PREFIX)$(ASSEMBLY_VERSION)
 MKDIR              := mkdir
 RM                 := rm -Rf
