@@ -138,16 +138,21 @@ Supporting them means that that their OIDs are known to be associated with value
 Failing to support them means that the certificate validation procedure of RFC 5280, Section 6, cannot be executed.
 See RFC 5280 Section 4.1.2.4 for more attributes that \textit{should} be supported.
 
-| Attribute Type               | Abbreviation | OID |
-|:-----------------------------|:-------------|:----|
-| Common Name                  | \texttt{CN}         | \texttt{2.5.4.3}
-| Country                      | \texttt{C}          | \texttt{2.5.4.6} 
-| Distinguished Name Qualifier | \texttt{DN}         | \texttt{2.5.4.46}
-| Domain Component             | \texttt{DC}         | \texttt{0.9.2342.19200300.100.1.25}
-| Organization                 | \texttt{O}          | \texttt{2.5.4.10}
-| Organizational Unit          | \texttt{OU}         | \texttt{2.5.4.11}
-| Serial Number                | \texttt{SN}         | \texttt{2.5.4.5}
-| State or Province Name       | \texttt{ST}         | \texttt{2.5.4.8}
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{5cm} | p{3cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & Abbreviation & OID \\ \hline
+
+Common Name                       & \texttt{CN}  & \texttt{2.5.4.3} \\ \hline
+Country                           & \texttt{C}   & \texttt{2.5.4.6}  \\ \hline
+Distinguished Name Qualifier      & \texttt{DN}  & \texttt{2.5.4.46} \\ \hline
+Domain Component                  & \texttt{DC}  & \texttt{0.9.2342.19200300.100.1.25} \\ \hline
+Organization                      & \texttt{O}   & \texttt{2.5.4.10} \\ \hline
+Organizational Unit               & \texttt{OU}  & \texttt{2.5.4.11} \\ \hline
+Serial Number                     & \texttt{SN}  & \texttt{2.5.4.5} \\ \hline
+State or Province Name            & \texttt{ST}  & \texttt{2.5.4.8} \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 Every certificate \textit{must} contain at least one \texttt{subject} \textit{Distinguished Name Qualifier} (\texttt{DN}).
 It \textit{should} only contain one.
@@ -155,16 +160,21 @@ It \textit{should} be encoded as a \texttt{PrintableString}.
 The rightmost (i.e. least significant) such identifies the profile of the certificate.
 The identifiers are as follows:
 
-| X.509 Profile | Distinguished Name Qualifier (\texttt{DN}) |
-|:--------------|:------------------------------------|
-| Master        | \texttt{ma}
-| Gate          | \texttt{ga}
-| Organization  | \texttt{or}
-| Local Cloud   | \texttt{lo}
-| On-Boarding   | \texttt{on}
-| Device        | \texttt{de}
-| System        | \texttt{sy}
-| Operator      | \texttt{op}
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{3cm} | X |} \hline
+\rowcolor{gray!33} X.509 Profile  & Distinguished Name Qualifier (\texttt{DN}) \\ \hline
+
+Master                            & \texttt{ma} \\ \hline
+Gate                              & \texttt{ga} \\ \hline
+Organization                      & \texttt{or} \\ \hline
+Local Cloud                       & \texttt{lo} \\ \hline
+On-Boarding                       & \texttt{on} \\ \hline
+Device                            & \texttt{de} \\ \hline
+System                            & \texttt{sy} \\ \hline
+Operator                          & \texttt{op} \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 In addition, each certificate \textit{must} contain at least one \texttt{subject} \textit{Common Name} (\texttt{CN}) that is a valid DNS label (https://datatracker.ietf.org/doc/html/rfc1035\#section-2.3.1) of no more than 62 characters.
 It \textit{should} only contain one \texttt{CN}.
@@ -215,32 +225,37 @@ Extension  ::= SEQUENCE {
 
 RFC 5280 explicitly outlines 17 different X.509 extensions, listed by category below.
 
-| Extension                    | \texttt{extnID} (OID)       | Brief Description |
-|:-----------------------------|:---------------------|:------------------|
-| \textbf{Identifier Extensions}    |                      |
-| Authority Key Identifier     | \texttt{2.5.29.35}          | Identifier uniquely associated with certificate issuer.
-| Subject Key Identifier       | \texttt{2.5.29.14}          | Identifier uniquely associated with certificate subject.
-| \textbf{Key Usage Extensions}     |                      |
-| Key Usage                    | \texttt{2.5.29.15}          | Public key usage restrictions.
-| Extended Key Usage           | \texttt{2.5.29.37}          | Additional public key usage restrictions.
-| \textbf{Policy Extensions}        |                      |
-| Certificate Policies         | \texttt{2.5.29.32}          | List of policies accepted by the certificate subject.
-| Policy Mappings              | \texttt{2.5.29.33}          | List of policy equivalence relations.
-| Policy Constraints           | \texttt{2.5.29.36}          | Policy validation constraints (e.g. policy X must be accepted).
-| Inhibit \texttt{anyPolicy}          | \texttt{2.5.29.54}          | Policy validation constraint related to use of \texttt{anyPolicy}.
-| \textbf{Name Extensions}          |                      |
-| Subject Alternative Name     | \texttt{2.5.29.17}          | Additional names associated with the certificate subject.
-| Issuer Alternative Name      | \texttt{2.5.29.18}          | Additional names associated with the certificate issuer.
-| Name Constraints             | \texttt{2.5.29.30}          | List of subject name restrictions for issued certificates.
-| \textbf{CRL Extensions}           |                      |
-| CRL Distribution Points      | \texttt{2.5.29.31}          | List of where relevant CRLs can be found.
-| Freshest CRL                 | \texttt{2.5.29.46}          | List of where delta CRLs can be found.
-| \textbf{Information Extensions}   |                      |
-| Authority Information Access | \texttt{1.3.6.1.5.5.7.1.1}  | List of where issuer information and services can be found.
-| Subject Information Access   | \texttt{1.3.6.1.5.5.7.1.11} | List of where subject information and services can be found.
-| \textbf{Other Extensions}         |                      |
-| Subject Directory Attributes | \texttt{2.5.29.9}           | Additional subject identification attributes (e.g. nationality).
-| Basic Constraints            | \texttt{2.5.29.19}          | Description of where a certificate belongs in its CA hierarchy.
+\vspace*{0.35cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4.5cm} | p{2.3cm} | X |} \hline
+\rowcolor{gray!33} Extension    & \texttt{extnID} (OID) & Brief Description \\ \hline
+
+\multicolumn{3}{| l |}{\textbf{Identifier Extensions}} \\ \hline
+Authority Key Identifier        & \texttt{2.5.29.35}          & Identifier uniquely associated with certificate issuer. \\ \hline
+Subject Key Identifier          & \texttt{2.5.29.14}          & Identifier uniquely associated with certificate subject. \\ \hline
+\multicolumn{3}{| l |}{\textbf{Key Usage Extensions}} \\ \hline
+Key Usage                       & \texttt{2.5.29.15}          & Public key usage restrictions. \\ \hline
+Extended Key Usage              & \texttt{2.5.29.37}          & Additional public key usage restrictions. \\ \hline
+\multicolumn{3}{| l |}{\textbf{Policy Extensions}} \\ \hline
+Certificate Policies            & \texttt{2.5.29.32}          & List of policies accepted by the certificate subject. \\ \hline
+Policy Mappings                 & \texttt{2.5.29.33}          & List of policy equivalence relations. \\ \hline
+Policy Constraints              & \texttt{2.5.29.36}          & Policy validation constraints (e.g. policy X must be accepted). \\ \hline
+Inhibit \texttt{anyPolicy}      & \texttt{2.5.29.54}          & Policy validation constraint related to use of \texttt{anyPolicy}. \\ \hline
+\multicolumn{3}{| l |}{\textbf{Name Extensions}} \\ \hline
+Subject Alternative Name        & \texttt{2.5.29.17}          & Additional names associated with the certificate subject. \\ \hline
+Issuer Alternative Name         & \texttt{2.5.29.18}          & Additional names associated with the certificate issuer. \\ \hline
+Name Constraints                & \texttt{2.5.29.30}          & List of subject name restrictions for issued certificates. \\ \hline
+\multicolumn{3}{| l |}{\textbf{CRL Extensions}} \\ \hline
+CRL Distribution Points         & \texttt{2.5.29.31}          & List of where relevant CRLs can be found. \\ \hline
+Freshest CRL                    & \texttt{2.5.29.46}          & List of where delta CRLs can be found. \\ \hline
+\multicolumn{3}{| l |}{\textbf{Information Extensions}} \\ \hline
+Authority Information Access    & \texttt{1.3.6.1.5. 5.7.1.1}  & List of where issuer information and services can be found. \\ \hline
+Subject Information Access      & \texttt{1.3.6.1.5. 5.7.1.11} & List of where subject information and services can be found. \\ \hline
+\multicolumn{3}{| l |}{\textbf{Other Extensions}} \\ \hline
+Subject Directory Attributes    & \texttt{2.5.29.9}           & Additional subject identification attributes (e.g. nationality). \\ \hline
+Basic Constraints               & \texttt{2.5.29.19}          & Description of where a certificate belongs in its CA hierarchy. \\ \hline
+
+\end{tabularx}
+\vspace*{0.35cm}
 
 Each category of extensions is described in the following subsections.
 
@@ -380,6 +395,8 @@ It \textit{must} be marked as non-critical if used.
 The \textbf{Basic Constraints} extension allows for it to be denoted whether or not a given certificate belongs to a CA, as well as how many intermediary CAs may exist below it in any given certificate chain.
 The extension is defined as follows:
 
+\newpage
+
 \begin{verbatim}
 BasicConstraints ::= SEQUENCE {
     cA                BOOLEAN DEFAULT FALSE,
@@ -390,6 +407,7 @@ BasicConstraints ::= SEQUENCE {
 The extension \textit{must} be used and marked critical by all Arrowhead-compliant certificates.
 The \texttt{pathLenConstraint} \textit{must} be set by all CA certificates, but \textit{must not} be set by end entity certificates.
 
+\newpage
 \subsection{Master Profile}
 
 A \textit{Master} certificate exists to establish trust between organizations that may want to interconnect their Arrowhead systems.
@@ -413,30 +431,47 @@ Having CAs above a Master provides for new opportunities and new risks at the sa
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{ma}
-| Common Name (CN)  | \texttt{2.5.4.3}  |  Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{ma} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. Omit field if self-signed. See Section 2.1.9.1.
-| Subject Key Identifier   | \texttt{2.5.29.14} | No       | Hash of subject public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: true, pathLenConstraint: 2}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{keyCertSign(5)} and \texttt{cRLSign(6)} \textit{must} be set. See Section 2.1.9.2.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
+
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. Omit field if self-signed. See Section 2.1.9.1. \\ \hline
+Subject Key Identifier       & \texttt{2.5.29.14} & No       & Hash of subject public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: true, pathLenConstraint: 2}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{keyCertSign(5)} and \texttt{cRLSign(6)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 If the certificate will be used to automatically respond to CSRs via a network application interface, the following must also be present:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set in addition to \texttt{5} and \texttt{6}. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes`serverAuth` and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier to which CSRs can be sent. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
 
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set in addition to \texttt{5} and \texttt{6}. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes`serverAuth` and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier to which CSRs can be sent. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
+\newpage
 \subsection{Gate Profile}
 
 A \textit{Gate} certificate is associated with a message broker or bus that exists to guarantee delivery of messages between the local clouds of distinct organizations.
@@ -450,23 +485,34 @@ Its existence means that such messages can sent over a secure transport.
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{ga}
-| Common Name (CN)  | \texttt{2.5.4.3}  | Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{ga} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: false}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier through which the system can be reached. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
 
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: false}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier through which the system can be reached. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
+\newpage
 \subsection{Organization Profile}
 
 An \textit{Organization} certificate is maintained by a single organization, allowing it to manage the certificates of its own local clouds.
@@ -479,30 +525,46 @@ An \textit{Organization} certificate is maintained by a single organization, all
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{or}
-| Common Name (CN)  | \texttt{2.5.4.3}  |  Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{or} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. See Section 2.1.9.1.
-| Subject Key Identifier   | \texttt{2.5.29.14} | No       | Hash of subject public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: true, pathLenConstraint: 1}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{keyCertSign(5)} and \texttt{cRLSign(6)} \textit{must} be set. See Section 2.1.9.2.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
+
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. See Section 2.1.9.1. \\ \hline
+Subject Key Identifier       & \texttt{2.5.29.14} & No       & Hash of subject public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: true, pathLenConstraint: 1}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{keyCertSign(5)} and \texttt{cRLSign(6)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 If the certificate will be used to automatically respond to CSRs via a network application interface, the following must also be present:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set in addition to \texttt{5} and \texttt{6}. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes`serverAuth` and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier to which CSRs can be sent. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
 
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set in addition to \texttt{5} and \texttt{6}. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes`serverAuth` and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier to which CSRs can be sent. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
+\newpage
 \subsection{Local Cloud Profile}
 
 An \textit{Local Cloud} certificate is maintained by a single local cloud, enabling it to issue end entity certificates for on-boarding and on-boarded devices, as well as for systems and operators.
@@ -515,30 +577,46 @@ An \textit{Local Cloud} certificate is maintained by a single local cloud, enabl
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{lo}.
-| Common Name (CN)  | \texttt{2.5.4.3}  |  Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{lo} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. See Section 2.1.9.1.
-| Subject Key Identifier   | \texttt{2.5.29.14} | No       | Hash of subject public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: true, pathLenConstraint: 0}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{keyCertSign(5)} and \texttt{cRLSign(6)} \textit{must} be set. See Section 2.1.9.2.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
+
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. See Section 2.1.9.1. \\ \hline
+Subject Key Identifier       & \texttt{2.5.29.14} & No       & Hash of subject public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: true, pathLenConstraint: 0}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{keyCertSign(5)} and \texttt{cRLSign(6)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 If the certificate will be used to automatically respond to CSRs via a network application interface, the following must also be present:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set in addition to \texttt{5} and \texttt{6}. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes`serverAuth` and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier to which CSRs can be sent. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
 
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set in addition to \texttt{5} and \texttt{6}. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes`serverAuth` and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier to which CSRs can be sent. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
+\newpage
 \subsection{On-Boarding Profile}
 
 An \textit{On-Boarding} certificate allows for a device in an Arrowhead local cloud to request a new device certificate.
@@ -553,23 +631,34 @@ Certificates adhering to this profile \textit{must} only be provided to devices 
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{on}.
-| Common Name (CN)  | \texttt{2.5.4.3}  | Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{on} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: false}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier through which the owning device can be reached. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
 
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: false}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier through which the owning device can be reached. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
+\newpage
 \subsection{Device Profile}
 
 A \textit{Device} certificate allows for a device in an Arrowhead local cloud to request new system certificates.
@@ -584,23 +673,34 @@ Certificates adhering to this profile \textit{must} only be provided to devices 
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{de}
-| Common Name (CN)  | \texttt{2.5.4.3}  | Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{de} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: false}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier through which the device can be reached. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
 
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: false}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier through which the device can be reached. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
+\newpage
 \subsection{System Profile}
 
 A \textit{System} certificate allows for a device in an Arrowhead local cloud to provide the services associated with a particular system, and/or to act as a service consumer.
@@ -613,23 +713,34 @@ A \textit{System} certificate allows for a device in an Arrowhead local cloud to
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{sy}
-| Common Name (CN)  | \texttt{2.5.4.3}  | Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{sy} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: false}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier through which the system can be reached. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
 
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: false}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier through which the system can be reached. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
+
+\newpage
 \subsection{Operator Profile}
 
 An \textit{Operator} certificate allows for a human or computer operator to administer a particular Arrowhead local cloud.
@@ -642,19 +753,29 @@ An \textit{Operator} certificate allows for a human or computer operator to admi
 
 The subject field DN \textit{must} contain the following attributes exactly once, either in the same or different RDNs:
 
-| Attribute Type    | OID        | Value |
-|:------------------|:-----------|:------|
-| DN Qualifier (DN) | \texttt{2.5.4.46} | \texttt{op}
-| Common Name (CN)  | \texttt{2.5.4.3}  | Randomized identifier. See Section 2.1.6.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | X |} \hline
+\rowcolor{gray!33} Attribute Type & OID               & Value \\ \hline
+
+DN Qualifier (DN)                 & \texttt{2.5.4.46} & \texttt{op} \\ \hline
+Common Name (CN)                  & \texttt{2.5.4.3}  &  Randomized identifier. See Section 2.1.6. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 \subsubsection{\texttt{extensions}}
 
 The following extensions \textit{must} be used and configured as described:
 
-| Extension                | OID         | Critical | Value |
-|:-------------------------|:------------|:---------|:------|
-| Authority Key Identifier | \texttt{2.5.29.35} | No       | Hash of issuer public key. See Section 2.1.9.1.
-| Basic Constraints        | \texttt{2.5.29.19} | Yes      | \texttt{cA: false}. See Section 2.1.9.7.
-| Key Usage                | \texttt{2.5.29.15} | Yes      | Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2.
-| Extended Key Usage       | \texttt{2.5.29.37} | No       | Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2.
-| Subject Alternative Name | \texttt{2.5.29.17} | No       | At least one IP address, DNS name or other identifier through which the operator's control system can be reached. See Section 2.1.9.4.
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{4cm} | p{2cm} | p{1.2cm} | X |} \hline
+\rowcolor{gray!33} Extension & OID                & Critical & Value \\ \hline
+
+Authority Key Identifier     & \texttt{2.5.29.35} & No       & Hash of issuer public key. See Section 2.1.9.1. \\ \hline
+Basic Constraints            & \texttt{2.5.29.19} & Yes      & \texttt{cA: false}. See Section 2.1.9.7. \\ \hline
+Key Usage                    & \texttt{2.5.29.15} & Yes      & Bits \texttt{digitalSignature(0)} and \texttt{keyEncipherment(2)} \textit{must} be set. See Section 2.1.9.2. \\ \hline
+Extended Key Usage           & \texttt{2.5.29.37} & No       & Purposes \texttt{serverAuth} and \texttt{clientAuth} \textit{must} be specified. See Section 2.1.9.2. \\ \hline
+Subject Alternative Name     & \texttt{2.5.29.17} & No       & At least one IP address, DNS name or other identifier through which the operator's control system can be reached. See Section 2.1.9.4. \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}

@@ -11,12 +11,17 @@ We \textit{recommend} that credible information security institutes, such as NIS
 
 Given that no relevant breakthroughs are made or expected in quantum computing, you \textit{may} chose to follow RFC 7525, which recommends the following four TLS cipher suites:
 
-| Key Exchange | Authentication             | Encryption  | Hash   |
-|:-------------|:---------------------------|:------------|:-------|
-| DHE          | RSA (2048-bit or 3072-bit) | AES 128 GCM | SHA256 |
-| ECDHE        | RSA (2048-bit or 3072-bit) | AES 128 GCM | SHA256 |
-| DHE          | RSA (2048-bit or 3072-bit) | AES 256 GCM | SHA384 |
-| ECDHE        | RSA (2048-bit or 3072-bit) | AES 256 GCM | SHA384 |
+\vspace*{0.5cm}
+\noindent\begin{tabularx}{\textwidth}{| p{2.5cm} | p{4.5cm} | p{2.5cm} | X |} \hline
+\rowcolor{gray!33} Key Exchange & Authentication             & Encryption  & Hash \\ \hline
+
+DHE                             & RSA (2048-bit or 3072-bit) & AES 128 GCM & SHA256 \\ \hline
+ECDHE                           & RSA (2048-bit or 3072-bit) & AES 128 GCM & SHA256 \\ \hline
+DHE                             & RSA (2048-bit or 3072-bit) & AES 256 GCM & SHA384 \\ \hline
+ECDHE                           & RSA (2048-bit or 3072-bit) & AES 256 GCM & SHA384 \\ \hline
+
+\end{tabularx}
+\vspace*{0.5cm}
 
 Only the first of the above cipher suites is required to be supported by all TLS 1.3 implementations (RFC 8446, Section 9.1).
 Each cipher suite includes a signature suite (the \textit{Authentication} and \textit{Hash} fields).

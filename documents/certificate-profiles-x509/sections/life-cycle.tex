@@ -13,13 +13,15 @@ We \textit{recommend} that the system be used, or a similarly capable replacemen
 
 Generally, when certificate life-cycles are managed, we \textit{recommend} that the following be observed:
 
-1. Create each private key on the device that will use it.
-2. Use CSRs to avoid moving private keys between devices during certificate issuance.
-3. Never make backups or other copies of private keys that can be trivially replaced.
-4. Store backups of sensitive private keys offline, if possible.
-5. Store active private keys in secure hardware elements, such as TPMs (ISO/IEC 11889).
-6. Immediately revoke owned certificates whose private keys are suspected to be compromised.
-7. Actively look for and act on revocations in the certificate chains of counter-parties.
+\begin{enumerate}
+\item Create each private key on the device that will use it.
+\item Use CSRs to avoid moving private keys between devices during certificate issuance.
+\item Never make backups or other copies of private keys that can be trivially replaced.
+\item Store backups of sensitive private keys offline, if possible.
+\item Store active private keys in secure hardware elements, such as TPMs (ISO/IEC 11889).
+\item Immediately revoke owned certificates whose private keys are suspected to be compromised.
+\item Actively look for and act on revocations in the certificate chains of counter-parties.
+\end{enumerate}
 
 The above list is \textit{not} to be considered as being exhaustive.
 Adhering to it is not a substitute for consulting independent and credible security experts.
