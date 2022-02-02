@@ -8,7 +8,14 @@
 
 There are eight certificate profiles defined in this document, depicted in the following diagram:
 
-![Hierarchy of X.509 Profiles](profile-hierarchy.svg)
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.8]{figures/profile-hierarchy}
+  \caption{
+    Hierarchy of X.509 Profiles
+  }
+  \label{fig:profile-hierarchy}
+\end{figure}
 
 Each diagram box represents a profile.
 The arrows in the diagram are to be read as "issued by", meaning that the every certificate adhering to the profile from which the arrow extends must be issued (signed) by a certificate with the profile pointed to.
