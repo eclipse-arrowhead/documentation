@@ -175,7 +175,7 @@ As a new system now may control that particular light, a new capability has emer
 \subsection{Local Cloud}
 \label{sec:concepts:local-cloud}
 
-A \GlossaryHyperRef{cloud-local}{local cloud} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
+A \GlossaryHyperRef{cloud-local}{local cloud} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}, each of which is managed by a so-called \GlossaryHyperRef{system-supervisory}{\textit{supervisory system}}.
 The resource pool of a local cloud could contain 3D-printers, autonomous unmanned vehicles, conventional servers, or anything else producing a value on demand.
 As depicted in Figure \ref{fig:local-cloud}, the local cloud is distinct from other types of \GlossaryHyperRef{cloud}{clouds} by having at least one \GlossaryHyperRef{boundary-local}{local boundary} and one \GlossaryHyperRef{resource-local}{local resource}, which means that it is physically tied to a concrete location.
 A local cloud could be engaged in manufacturing, repairs, heating, electricity distribution, workspace monitoring, drone fleet control, among many other possible kinds of physical activities.
@@ -188,16 +188,16 @@ A cloud that has no resources or boundaries tied to any particular physical loca
   \centering
   \includegraphics[scale=0.9]{figures/local-cloud}
   \caption{
-    The local cloud as a regular cloud with at least one local boundary and one local resource.
+    The local cloud as a regular cloud with at least one local boundary and one local resource, apart from any other boundaries or resources.
+    Note that as a local cloud \textit{is} a regular cloud, it also \textit{has} at least two systems out of which at least one must be a supervisory system.
   }
   \label{fig:local-cloud}
 \end{figure}
 
+That a system is a supervisory system has no significance beyond that it manages at least one resource, of any type.
 That a local cloud has a boundary means that a distinction is being made between \GlossaryHyperRef{system}{systems} inside and outside the cloud.
 A boundary being local means that the distinction is being made by a physical \GlossaryHyperRef{attribute}{attribute}, such as device location, type of device, or physical attachment to a certain \GlossaryHyperRef{entity}{entity}.
 Boundaries may be protected, which means that measures are in place to guarantee security, safety, real-time characteristics, or other local cloud attributes.
-The resources of a local cloud may be of any type, from virtual compute resources to physical drills or pumps.
-A system managing a resource may be referred to as a \GlossaryHyperRef{system-supervisory}{\textit{supervisory system}}.
 
 \subsection{System-of-Local-Clouds}
 \label{sec:concepts:solc}

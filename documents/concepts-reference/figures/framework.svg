@@ -6,7 +6,7 @@
    viewBox="0 0 174 34"
    id="svg162"
    sodipodi:docname="framework.svg"
-   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,12 +25,12 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.4635001"
-     inkscape:cx="303.43007"
-     inkscape:cy="54.19119"
-     inkscape:window-width="1848"
-     inkscape:window-height="1016"
-     inkscape:window-x="72"
-     inkscape:window-y="27"
+     inkscape:cx="315.60786"
+     inkscape:cy="51.75563"
+     inkscape:window-width="1386"
+     inkscape:window-height="855"
+     inkscape:window-x="54"
+     inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
      height="73mm">
@@ -466,7 +466,7 @@
        y="9.8982544"
        stroke-width="0.26458"
        id="tspan10314"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">1..*</tspan></text>
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">0..*</tspan></text>
   <use
      x="0"
      y="0"
@@ -517,7 +517,7 @@
        id="tspan11854"
        style="font-size:2.8px;fill:#444444;fill-opacity:1;stroke-width:0.264583"
        x="133.39163"
-       y="17.898254">1..*</tspan></text>
+       y="17.898254">0..*</tspan></text>
   <use
      x="0"
      y="0"

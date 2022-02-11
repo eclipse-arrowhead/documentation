@@ -25,11 +25,11 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="3.1584636"
-     inkscape:cx="389.11324"
-     inkscape:cy="202.15525"
-     inkscape:window-width="1848"
-     inkscape:window-height="1035"
-     inkscape:window-x="72"
+     inkscape:cx="320.88386"
+     inkscape:cy="200.88881"
+     inkscape:window-width="1380"
+     inkscape:window-height="855"
+     inkscape:window-x="60"
      inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg162"
@@ -701,7 +701,7 @@
        y="65.163918"
        stroke-width="0.26458"
        id="tspan8517"
-       style="font-size:2.8px;fill:#444444;fill-opacity:1">0..*</tspan></text>
+       style="font-size:2.8px;fill:#444444;fill-opacity:1">1..*</tspan></text>
   <text
      x="89.488228"
      y="65.163918"
@@ -712,7 +712,7 @@
        y="65.163918"
        stroke-width="0.26458"
        id="tspan8521"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">hosts</tspan></text>
   <path
      d="m 112.00004,69.999999 h -7"
      marker-end="url(#a)"
