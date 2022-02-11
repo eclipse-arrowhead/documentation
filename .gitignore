@@ -10,3 +10,5 @@
 *.zip
 
 !/distribution/*
+
+.DS_Store
