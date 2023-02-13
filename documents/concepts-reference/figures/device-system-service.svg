@@ -6,7 +6,7 @@
    viewBox="0 0 114 27"
    id="svg899"
    sodipodi:docname="device-system-service.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,15 +25,17 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.2477314"
-     inkscape:cx="297.63342"
-     inkscape:cy="88.311262"
+     inkscape:cx="185.29794"
+     inkscape:cy="100.76827"
      inkscape:window-width="1386"
      inkscape:window-height="855"
      inkscape:window-x="54"
-     inkscape:window-y="23"
+     inkscape:window-y="521"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg899"
-     width="113mm">
+     width="113mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid1335"
@@ -128,14 +130,6 @@
        stroke-width="0.26458"
        id="tspan2293"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">is</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path7287"
-     id="use1676"
-     transform="matrix(1,0,0,-1,0,33.999802)"
-     width="100%"
-     height="100%" />
   <path
      id="path7287"
      d="m 68,13.999901 3,-3 h 14.000002 l 2,2"
@@ -198,6 +192,15 @@
      transform="translate(-88)"
      width="100%"
      height="100%" />
+  <path
+     id="path1458"
+     d="m 68,19.907866 3,3 h 14.000002 l 2,-2"
+     fill="none"
+     marker-end="url(#e-05)"
+     stroke="#666666"
+     stroke-width=".667"
+     style="stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#e-05)"
+     sodipodi:nodetypes="cccc" />
   <use
      x="0"
      y="0"
@@ -378,12 +381,10 @@
        style="font-size:2.9px;stroke-width:0.264583"
        x="70.87738"
        y="20.993238">provides</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path2291"
-     id="use2619"
-     transform="matrix(-1,0,0,1,114,0)"
-     width="100%"
-     height="100%" />
+  <path
+     d="M 101.14544,13 V 4 H 68.145434"
+     marker-end="url(#b)"
+     id="path1926"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="ccc" />
 </svg>

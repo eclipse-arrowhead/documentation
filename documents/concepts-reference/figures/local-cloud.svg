@@ -6,7 +6,7 @@
    viewBox="0 0 146 59"
    id="svg162"
    sodipodi:docname="local-cloud.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,15 +25,17 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.2625667"
-     inkscape:cx="454.62945"
-     inkscape:cy="241.96741"
-     inkscape:window-width="1386"
-     inkscape:window-height="855"
-     inkscape:window-x="54"
-     inkscape:window-y="23"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg162"
-     height="69mm">
+     inkscape:cx="230.48287"
+     inkscape:cy="92.668372"
+     inkscape:window-width="1423"
+     inkscape:window-height="606"
+     inkscape:window-x="0"
+     inkscape:window-y="521"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g26347"
+     height="69mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid987"
@@ -148,29 +150,34 @@
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="M 72.999998,8.9999995 V 15"
      id="path24999" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path25081-9"
+  <path
+     d="m 129,35 v 6"
+     marker-end="url(#a-0)"
      id="use26566"
-     transform="translate(112)"
-     width="100%"
-     height="100%"
-     style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
+     sodipodi:nodetypes="cc" />
   <path
      d="m 101,35 v 5 l 15,10e-7 1.52917,1.529166"
      marker-end="url(#a)"
      id="path3155"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cccc" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g26347"
+  <g
      id="use26349"
-     transform="matrix(-1,0,0,1,146,4e-7)"
-     width="100%"
-     height="100%" />
+     transform="matrix(-1,0,0,1,156,4e-7)">
+    <path
+       d="M 82.999997,46 H 63.999998 L 64,37"
+       marker-end="url(#a-34)"
+       id="path4174"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-34)"
+       sodipodi:nodetypes="ccc" />
+    <path
+       d="M 63.999998,46 H 38.999999"
+       marker-end="url(#a-34)"
+       id="path4176"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-34)"
+       sodipodi:nodetypes="cc" />
+  </g>
   <use
      x="0"
      y="0"
@@ -528,14 +535,16 @@
        style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
        sodipodi:nodetypes="ccc" />
   </g>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g25336"
+  <g
      id="use25338"
-     transform="matrix(-1,0,0,1,146,-2.1e-7)"
-     width="100%"
-     height="100%" />
+     transform="matrix(-1,0,0,1,156,-2.1e-7)">
+    <path
+       d="M 82.999998,15 H 26.999999 v 6"
+       marker-end="url(#a)"
+       id="path4362"
+       style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
+       sodipodi:nodetypes="ccc" />
+  </g>
   <text
      x="76.077721"
      y="12.900222"

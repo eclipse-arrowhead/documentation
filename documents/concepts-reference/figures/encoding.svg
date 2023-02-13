@@ -6,7 +6,7 @@
    viewBox="0 0 158 39"
    id="svg162"
    sodipodi:docname="encoding.svg"
-   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,17 +24,19 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.0238471"
-     inkscape:cx="161.64524"
-     inkscape:cy="39.556689"
-     inkscape:window-width="1848"
-     inkscape:window-height="1016"
-     inkscape:window-x="72"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
+     inkscape:zoom="2.248723"
+     inkscape:cx="257.92416"
+     inkscape:cy="49.361348"
+     inkscape:window-width="1901"
+     inkscape:window-height="948"
+     inkscape:window-x="1981"
+     inkscape:window-y="355"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
-     width="160mm">
+     width="160mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid987"
@@ -123,14 +125,12 @@
          id="path2-4-6" />
     </marker>
   </defs>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path30365"
+  <path
+     d="m 127,4.9999999 -30.999999,-3e-7"
+     marker-end="url(#a-0)"
      id="use30542"
-     transform="matrix(-1,0,0,1,158,-2.5e-7)"
-     width="100%"
-     height="100%" />
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
+     sodipodi:nodetypes="cc" />
   <path
      d="m 30.999999,5.0000002 31,-3e-7"
      marker-end="url(#a-0)"

@@ -6,7 +6,7 @@
    viewBox="0 0 124 40"
    id="svg162"
    sodipodi:docname="profile.svg"
-   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,16 +25,18 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.4479385"
-     inkscape:cx="202.70199"
-     inkscape:cy="82.531132"
-     inkscape:window-width="1848"
-     inkscape:window-height="1016"
-     inkscape:window-x="72"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
+     inkscape:cx="191.30647"
+     inkscape:cy="23.48166"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="521"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
-     width="167mm">
+     width="167mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid987"
@@ -123,22 +125,33 @@
          id="path2-4-6" />
     </marker>
   </defs>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path13819"
+  <path
+     d="M 72.000001,3.9999997 H 103 v 9.9999993"
+     marker-end="url(#a-0)"
      id="use48588"
-     transform="matrix(-1,0,0,1,124,1.7e-7)"
-     width="100%"
-     height="100%" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g48371"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
+     sodipodi:nodetypes="ccc" />
+  <g
      id="use48373"
-     transform="translate(81.999999)"
-     width="100%"
-     height="100%" />
+     transform="translate(66.999999,13.999999)">
+    <path
+       d="M 36,17 V 9.9999999"
+       marker-end="url(#a-0)"
+       id="path6301"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="34.223503"
+       y="14.975653"
+       id="text6305"><tspan
+         sodipodi:role="line"
+         id="tspan6303"
+         style="font-size:2.8px;text-align:end;text-anchor:end;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+         x="34.223503"
+         y="14.975653">uses</tspan></text>
+  </g>
   <path
      d="m 40.999999,34.999999 h 6.999558"
      marker-end="url(#a-0)"
@@ -500,14 +513,12 @@
        text-align="center"
        text-anchor="middle"
        id="tspan37716">Constraint</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path41614"
+  <path
+     d="M 82.999121,34.999999 H 75.999563"
+     marker-end="url(#a-0)"
      id="use45519"
-     transform="matrix(-1,0,0,1,123.99912,-1.7e-7)"
-     width="100%"
-     height="100%" />
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
+     sodipodi:nodetypes="cc" />
   <text
      xml:space="preserve"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"

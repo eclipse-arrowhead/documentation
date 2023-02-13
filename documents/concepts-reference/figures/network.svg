@@ -6,7 +6,7 @@
    viewBox="0 0 138 35"
    id="svg162"
    sodipodi:docname="network.svg"
-   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,16 +25,18 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.6337862"
-     inkscape:cx="253.09309"
-     inkscape:cy="33.358098"
-     inkscape:window-width="1848"
-     inkscape:window-height="1016"
-     inkscape:window-x="72"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
+     inkscape:cx="253.39913"
+     inkscape:cy="37.642624"
+     inkscape:window-width="1309"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="521"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
-     width="160mm">
+     width="160mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid987"
@@ -173,28 +175,24 @@
        style="font-size:2.8px;fill:#444444;fill-opacity:1;stroke-width:0.264583"
        x="70.205078"
        y="23.217808">1..*</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path6700"
+  <path
+     d="M 89,5 117,4.8934189 117,11"
+     marker-end="url(#a)"
      id="use5196"
-     transform="matrix(-1,0,0,1,138,-5e-8)"
-     width="100%"
-     height="100%" />
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="ccc" />
   <path
      d="m 41,17.000001 h 9.999999"
      marker-end="url(#a)"
      id="path15759"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path15759"
+  <path
+     d="M 97,17.000001 H 87.000001"
+     marker-end="url(#a)"
      id="use22564"
-     transform="matrix(-1,0,0,1,138,-3.0000002e-8)"
-     width="100%"
-     height="100%" />
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="cc" />
   <path
      d="M 49,5 20.999997,4.893419 21,11"
      marker-end="url(#a)"
