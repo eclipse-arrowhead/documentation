@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    width="108mm"
-   height="22mm"
+   height="34mm"
    version="1.1"
-   viewBox="0 0 108 22"
+   viewBox="0 0 108 34"
    id="svg162"
    sodipodi:docname="world.svg"
    inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.4635002"
-     inkscape:cx="127.05499"
-     inkscape:cy="49.725996"
+     inkscape:zoom="3.0186058"
+     inkscape:cx="240.17711"
+     inkscape:cy="70.065459"
      inkscape:window-width="2215"
      inkscape:window-height="1037"
      inkscape:window-x="1647"
-     inkscape:window-y="241"
+     inkscape:window-y="213"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
@@ -41,7 +41,9 @@
        id="grid987"
        units="mm"
        spacingx="0.99999999"
-       spacingy="0.99999999" />
+       spacingy="0.99999999"
+       originx="0"
+       originy="0" />
   </sodipodi:namedview>
   <defs
      id="defs5">
@@ -200,19 +202,19 @@
     </rdf:RDF>
   </metadata>
   <path
-     d="m 30.999999,17 h 44"
+     d="m 16,27 v 6 h 75.999999 v -4"
      marker-end="url(#a-9-3)"
      id="path24957"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-9-3)"
-     sodipodi:nodetypes="cc" />
+     sodipodi:nodetypes="cccc" />
   <path
-     d="m 67,7.0000011 25,-9e-7 V 11"
+     d="m 53.999999,23 h 21"
      marker-end="url(#a-9-3)"
      id="use24305"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-9-3)"
-     sodipodi:nodetypes="ccc" />
+     sodipodi:nodetypes="cc" />
   <path
-     d="m 41,7.0000011 -25,-9e-7 V 11"
+     d="M 53.999999,13 V 23 H 33"
      marker-end="url(#a-9-3)"
      id="path21818"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-9-3)"
@@ -277,7 +279,7 @@
        id="tspan10192">World</tspan></text>
   <g
      id="g23280"
-     transform="translate(3.9999981,-49.926949)">
+     transform="translate(3.9999981,-43.926949)">
     <rect
        id="rect940"
        x="-1.999998"
@@ -315,13 +317,13 @@
      height="100%" />
   <text
      x="15.879784"
-     y="18.272331"
+     y="24.272331"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text44012"><tspan
        x="15.879784"
-       y="18.272331"
+       y="24.272331"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -329,82 +331,71 @@
        id="tspan44010">Stakeholder</tspan></text>
   <text
      x="91.987167"
-     y="18.272331"
+     y="24.272331"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text24231"><tspan
        x="91.987167"
-       y="18.272331"
+       y="24.272331"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
        id="tspan24229">Artifact</tspan></text>
   <text
-     x="43.906708"
-     y="5.0389833"
+     x="57.266106"
+     y="16.941643"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text26638"><tspan
-       x="39.022919"
-       y="5.0389833"
+       x="52.382317"
+       y="16.941643"
        stroke-width="0.26458"
        id="tspan26636"
        style="text-align:end;text-anchor:end">has</tspan></text>
   <text
-     xml:space="preserve"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="68.797615"
-     y="5.0389833"
-     id="text25389"><tspan
-       sodipodi:role="line"
-       id="tspan25387"
-       style="stroke-width:0.264583"
-       x="68.797615"
-       y="5.0389833">has</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="32.73642"
-     y="20.826321"
-     id="text26919"><tspan
-       sodipodi:role="line"
-       id="tspan26917"
-       style="stroke-width:0.264583"
-       x="32.73642"
-       y="20.826321">is concerned with</tspan></text>
-  <text
-     x="44.241631"
-     y="10.859817"
+     x="77.125488"
+     y="21"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text1023"><tspan
-       x="39.357841"
-       y="10.859817"
+       x="72.241699"
+       y="21"
        stroke-width="0.26458"
        id="tspan1021"
        style="text-align:end;text-anchor:end">1..*</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="68.797615"
-     y="10.859817"
+     x="35.592773"
+     y="21"
      id="text1447"><tspan
        sodipodi:role="line"
        id="tspan1445"
        style="stroke-width:0.264583"
-       x="68.797615"
-       y="10.859817">1..*</tspan></text>
+       x="35.592773"
+       y="21">1..*</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="62.104141"
-     y="20.871731"
+     x="40.840572"
+     y="31.128586"
+     id="text26919"><tspan
+       sodipodi:role="line"
+       id="tspan26917"
+       style="stroke-width:0.264583"
+       x="40.840572"
+       y="31.128586">is concerned with</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+     x="82.911331"
+     y="31.173996"
      id="text2609"><tspan
        sodipodi:role="line"
        id="tspan2607"
        style="stroke-width:0.264583"
-       x="62.104141"
-       y="20.871731">1..*</tspan></text>
+       x="82.911331"
+       y="31.173996">1..*</tspan></text>
 </svg>

@@ -64,6 +64,14 @@ Synonymous to \GlossaryNameRef{resource}.
 		See \GlossaryNameRef{resource} for a comparable term.
 	}
 
+\GlossaryEntry{assumption}{Assumption}
+The taking for granted that some fact or statement is true.
+
+	\GlossaryNote{Note 1}{
+		Assumptions can be an important method of imposing delimitation to a \GlossaryHyperRef{model}{model} or \GlossaryHyperRef{framework}{framework}.
+		If, for example, assuming that a suitable means of secure \GlossaryHyperRef{communication}{communication} will exist, a model of communication can be formulated without having to specify how its \GlossaryHyperRef{message}{messages} are secured.
+	}
+
 \GlossaryEntry{attribute}{Attribute}
 A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \GlossaryHyperRef{entity}{entity} or a \GlossaryHyperRef{relationship}{relationship}.
 
@@ -126,16 +134,11 @@ See Section \ref{sec:concepts:system}.
 
 \GlossaryEntry{cloud}{Cloud}
 A \GlossaryHyperRef{boundary}{bounded} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to independently execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
-
-	\GlossaryNote{Note 1}{
-		When the term ``cloud'' is used elsewhere, it often refers to clouds with only virtual resources, such as compute, storage and software-defined network utilities.
-		Here, we refer to such clouds as \GlossaryHyperRef{cloud-virtual}{virtual clouds}.
-		By making the unqualified word ``cloud'' less specific, it becomes more clear how our \GlossaryHyperRef{cloud-local}{local cloud} concept shares similarities with other types of clouds.
-	}
+See Section \ref{sec:concepts:cloud}.
 
 \GlossaryEntry{cloud-local}{Cloud, Local}
 A \GlossaryHyperRef{cloud}{cloud} \GlossaryHyperRef{boundary-local}{bound to a physical location} due to its acting on or producing \GlossaryHyperRef{resource-local}{local resources}.
-See Section \ref{sec:concepts:local-cloud}.
+See Section \ref{sec:concepts:cloud}.
 
 	\GlossaryNote{IoTA:AF}{
 		provides an introduction to the local cloud concept in its second chapter, as well as an architectural definition in its third chapter.
@@ -159,9 +162,11 @@ See Section \ref{sec:concepts:local-cloud}.
 
 \GlossaryEntry{cloud-local-automation}{Cloud, Local Automation}
 Prefer \GlossaryNameRef{cloud-local}.
+See Section \ref{sec:concepts:cloud}.
 
 \GlossaryEntry{cloud-virtual}{Cloud, Virtual}
 A \GlossaryHyperRef{cloud}{cloud} \GlossaryHyperRef{boundary-virtual}{unbound by physical location} by only acting on or producing \GlossaryHyperRef{resource-virtual}{virtual resources}.
+See Section \ref{sec:concepts:cloud}.
 
 \GlossaryEntry{communication}{Communication}
 The activity of sending and/or receiving \GlossaryHyperRef{message}{messages}.
@@ -189,6 +194,9 @@ See Section \ref{sec:concepts:device}.
 \GlossaryEntry{component-software}{Component, Software}
 A virtual \GlossaryHyperRef{component}{component} that can only be part of a \GlossaryHyperRef{system}{system}.
 See Section \ref{sec:concepts:system}.
+
+\GlossaryEntry{concept}{Concept}
+The description of a generic or abstract idea.
 
 \GlossaryEntry{configuration}{Configuration}
 A set of changeable \GlossaryHyperRef{attribute}{attributes} that directly influence how a \GlossaryHyperRef{system}{system} exercises its \GlossaryHyperRef{capability-system}{capabilities}.
@@ -314,6 +322,18 @@ A \GlossaryHyperRef{device}{device} with sensors and actuators that together mak
 \GlossaryEntry{device-intermediary}{Device, Intermediary}
 A \GlossaryHyperRef{device-connected}{connected device} that receives and forwards \GlossaryHyperRef{message}{messages} toward \GlossaryHyperRef{device-end}{end devices}.
 
+\GlossaryEntry{domain-problem}{Domain, Problem}
+All aspects, known and unknown, that influence the potential for solving a particular problem.
+
+\GlossaryNote{Note 1}{
+	When you \textit{address} a problem domain, you provide a solution to its problem that accounts for all of its known aspects.
+}
+
+\GlossaryNote{Note 2}{
+	The problem domain of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} consists of all aspects, known and unknown, that influence the potential for computer systems to exchange the information they need to execute tasks they have been assigned.
+	Addressing its problem domain means that software specifications or implementations are produced that describe or handle such information exchanges, respectively.
+}
+
 \GlossaryEntry{encode}{Encode}
 The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{encoding}{encoding} suitable for interpretation to another encoding suitable for transmission or storage.
 
@@ -373,7 +393,7 @@ See Section \ref{sec:overview}.
 Prefer \GlossaryNameRef{framework}.
 
 \GlossaryEntry{framework-arrowhead}{Framework, Arrowhead}
-Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the Arrowhead project.
+Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the \GlossaryHyperRef{project-eclipse-arrowhead}{Arrowhead project}.
 See Section \ref{sec:overview}.
 
 \GlossaryEntry{framework-idea}{Framework, Idea}
@@ -616,6 +636,13 @@ See Section \ref{sec:concepts:policy}.
 \GlossaryEntry{policy-message}{Policy, Message}
 Prefer \GlossaryNameRef{policy}.
 
+\GlossaryEntry{practice}{Practice}
+A particular way in which some task or activity is carried out.
+
+	\GlossaryNote{Note 1}{
+		The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is, among other things, concerned with shaping practices surrounding the development and maintenance of \GlossaryHyperRef{system-of-systems}{systems-of-systems}.
+	}
+
 \GlossaryEntry{profile}{Profile}
 A set of \GlossaryHyperRef{constraint}{constraints} superimposed on a \GlossaryHyperRef{protocol}{protocol}.
 See Section \ref{sec:concepts:profile}.
@@ -707,6 +734,9 @@ A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{servic
 \GlossaryEntry{provision-service}{Provision, Service}
 The act of making \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumption-service}{consumption}.
 See \GlossaryNameRef{provider-service}.
+
+\GlossaryEntry{proxy}{Proxy}
+An \GlossaryHyperRef{entity}{entity} representing the agenda or desires of another entity or \GlossaryHyperRef{stakeholder}{stakeholder}.
 
 \GlossaryEntry{relationship}{Relationship}
 A named uni-directional association between two \GlossaryHyperRef{model}{model} \GlossaryHyperRef{entity}{entities}.
@@ -839,11 +869,15 @@ A \GlossaryHyperRef{software}{software} \GlossaryHyperRef{entity}{entity} capabl
 \GlossaryEntry{system-automation}{System, Automation}
 Any kind of system, compatible with the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} or not, meant to facilitate some form of \GlossaryHyperRef{automation}{automation}.
 
-\GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
-A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
-See Section \ref{sec:concepts:solc}.
+\GlossaryEntry{system-of-clouds}{System-of-Clouds (SoCl)}
+A set of \GlossaryHyperRef{cloud}{clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
+See Section \ref{sec:concepts:soc}.
 
-\GlossaryEntry{system-of-systems}{System, of-Systems (SoS)}
+\GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
+A \GlossaryHyperRef{system-of-clouds}{system-of-clouds} where every constituent \GlossaryHyperRef{cloud}{cloud} is a \GlossaryHyperRef{cloud-local}{local cloud}.
+See Section \ref{sec:concepts:soc}.
+
+\GlossaryEntry{system-of-systems}{System-of-Systems (SoS)}
 A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent systems could \GlossaryHyperRef{provision-service}{provide} on its own.
 See Section \ref{sec:concepts:sos}.
 
@@ -852,6 +886,10 @@ See Section \ref{sec:concepts:sos}.
 		It further adds that ``when Arrowhead compliant systems collaborate, they become a System of Systems in the Arrowhead Framework's definition''.
 		While we clarify here that the desired outcome of collaboration is the facilitation of new capabilities, the definitions should be interpreted as being equivalent.
 	}
+
+\GlossaryEntry{system-of-virtual-clouds}{System-of-Virtual-Clouds (SoVC)}
+A \GlossaryHyperRef{system-of-clouds}{system-of-clouds} where every constituent \GlossaryHyperRef{cloud}{cloud} is a \GlossaryHyperRef{cloud-virtual}{virtual cloud}.
+See Section \ref{sec:concepts:soc}.
 
 \GlossaryEntry{system-opaque}{System, Opaque}
 A \GlossaryHyperRef{system}{system} that is unable to either \GlossaryHyperRef{provider-service}{provide} or \GlossaryHyperRef{consumer-service}{consume} \GlossaryHyperRef{service}{services}.
@@ -908,6 +946,14 @@ See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{validation}{Validation}
 The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies a \GlossaryHyperRef{constraint}{constraint}.
+
+\GlossaryEntry{value}{Value}
+Something, such as principle or quality, \GlossaryHyperRef{assumption}{assumed} to be intrinsically desirable.
+
+\GlossaryNote{Note 1}{
+	In the context of a technical \GlossaryHyperRef{framework}{framework}, values capture priorities assumed to be had be the users of the framework.
+	Values could concern the importance of being able to meet realtime deadlines, technical complexity, material costs, and so on.
+}
 
 \GlossaryEntry{viewpoint-architecture}{Viewpoint, Architecture}
 An \GlossaryHyperRef{description}{description} of a problem domain, specifying (1) concerns, (2) conventions and (3) \GlossaryHyperRef{kind-model}{model kinds}.

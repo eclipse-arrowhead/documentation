@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="122mm"
-   height="31mm"
+   width="138mm"
+   height="60mm"
    version="1.1"
-   viewBox="0 0 122 31"
+   viewBox="0 0 138 60"
    id="svg162"
    sodipodi:docname="system-of-systems.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,23 +24,28 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.3105225"
-     inkscape:cx="240.85461"
-     inkscape:cy="57.346336"
-     inkscape:window-width="1859"
-     inkscape:window-height="1035"
-     inkscape:window-x="61"
-     inkscape:window-y="23"
-     inkscape:window-maximized="1"
+     inkscape:zoom="1.6804758"
+     inkscape:cx="221.96095"
+     inkscape:cy="124.96461"
+     inkscape:window-width="1957"
+     inkscape:window-height="908"
+     inkscape:window-x="1873"
+     inkscape:window-y="269"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
-     width="157mm">
+     width="157mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="false">
     <inkscape:grid
        type="xygrid"
        id="grid987"
        units="mm"
        spacingx="0.99999999"
-       spacingy="0.99999999" />
+       spacingy="0.99999999"
+       originx="0"
+       originy="0" />
   </sodipodi:namedview>
   <defs
      id="defs5">
@@ -98,18 +103,104 @@
     </marker>
   </defs>
   <path
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:3.00472;stroke-opacity:1"
+     d="M 27,55.999999 H 8.9999999 l -7e-7,-10"
+     id="path47340"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M 27,45.999999 H 8.9999989 l 3e-7,-9"
+     marker-end="url(#a)"
+     id="path46845"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:3.00472;stroke-opacity:1"
+     d="m 125,55.999999 h 4 l 0,-10"
+     id="path64159"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="m 125,45.999999 h 4 v -9"
+     marker-end="url(#a)"
+     id="path64161"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="m 84.999999,56 h -30"
+     marker-end="url(#a)"
+     id="path64005"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="cc" />
+  <text
+     x="87.551033"
+     y="54.132416"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text64009"><tspan
+       x="83.006485"
+       y="54.132416"
+       stroke-width="0.26458"
+       id="tspan64007"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
+  <text
+     x="87.661774"
+     y="59.875263"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text64013"><tspan
+       x="83.117226"
+       y="59.875263"
+       stroke-width="0.26458"
+       id="tspan64011"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">2..*</tspan></text>
+  <g
+     id="g63331"
+     transform="translate(21.001006,0.99999947)">
+    <rect
+       id="rect63327"
+       x="64.599991"
+       y="52.599998"
+       width="40"
+       height="6.0000005"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect63329"
+       x="63.998993"
+       y="52"
+       width="40"
+       height="6"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <path
+     d="m 84.999999,45.999999 h -30"
+     marker-end="url(#a)"
+     id="path62098"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="cc" />
+  <path
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 32.999503,22.000001 v -5 h 56 v 5"
+     d="m 30,27 -9.86e-4,-8 H 107.99901 L 108,27"
      id="path16281"
      sodipodi:nodetypes="cccc" />
   <path
-     d="m 60.999502,17.000001 v -6"
+     d="m 68.999008,19 -10e-7,-7.999999"
      marker-end="url(#a)"
      id="path3155"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="cc" />
   <path
-     d="m 66.999006,26.000001 h -10"
+     d="M 84.999999,31 H 55"
      marker-end="url(#a)"
      id="use19748"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
@@ -119,12 +210,12 @@
      y="0"
      xlink:href="#g1951"
      id="use1953"
-     transform="translate(57.999503)"
+     transform="translate(78)"
      width="100%"
      height="100%" />
   <g
      id="use1449"
-     transform="translate(24.000013,-49.999999)">
+     transform="translate(34.001006,-50)">
     <rect
        id="rect985"
        x="71.599998"
@@ -153,7 +244,7 @@
        style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <path
-     d="m 83.999006,5.000001 h 9"
+     d="M 91.998511,5.000001 103,5"
      marker-end="url(#a)"
      id="use2317"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -170,7 +261,7 @@
   </metadata>
   <g
      id="g1951"
-     transform="translate(-18.000497,-13.999999)">
+     transform="translate(-19.999505,-9.0000003)">
     <rect
        id="rect1867"
        x="28"
@@ -199,52 +290,52 @@
        style="opacity:1;fill:#fefefe;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
   <text
-     x="31.913544"
-     y="27.258661"
+     x="29.914534"
+     y="32.258659"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text8978"><tspan
-       x="31.913544"
-       y="27.258661"
+       x="29.914534"
+       y="32.258659"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan8976">Local Cloud</tspan></text>
+       id="tspan8976">Cloud</tspan></text>
   <text
-     x="89.913551"
-     y="27.258661"
+     x="107.91504"
+     y="32.258659"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text8982"><tspan
-       x="89.913551"
-       y="27.258661"
+       x="107.91504"
+       y="32.258659"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan8980">System-of-Local-Clouds</tspan></text>
+       id="tspan8980">System-of-Clouds</tspan></text>
   <text
-     x="61.161644"
-     y="15.124291"
+     x="69.039291"
+     y="16.997238"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use32783"><tspan
-       x="59.194359"
-       y="15.124291"
+       x="67.072006"
+       y="16.997238"
        stroke-width="0.26458"
        id="tspan6742"
        style="text-align:end;text-anchor:end">is</tspan></text>
   <text
-     x="70.453682"
-     y="24.261187"
+     x="87.978676"
+     y="29.261185"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use34501"><tspan
-       x="65.581612"
-       y="24.261187"
+       x="83.106606"
+       y="29.261185"
        stroke-width="0.26458"
        id="tspan6776"
        style="text-align:end;text-anchor:end">has</tspan></text>
@@ -253,17 +344,17 @@
      y="0"
      xlink:href="#g1951"
      id="use972"
-     transform="translate(29.000497,-21.000001)"
+     transform="translate(38.99901,-26)"
      width="100%"
      height="100%" />
   <text
-     x="60.958107"
+     x="68.957611"
      y="6.2723341"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text44012"><tspan
-       x="60.958107"
+       x="68.957611"
        y="6.2723341"
        font-size="3.5px"
        stroke-width="0.26458"
@@ -271,25 +362,25 @@
        text-anchor="middle"
        id="tspan44010">System-of-Systems</tspan></text>
   <text
-     x="71.450279"
-     y="29.887632"
+     x="88.975273"
+     y="34.88763"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="use15854"><tspan
-       x="65.930748"
-       y="29.887632"
+       x="83.455742"
+       y="34.88763"
        stroke-width="0.26458"
        id="tspan22947"
        style="text-align:end;text-anchor:end">2..*</tspan></text>
   <text
-     x="108.03049"
-     y="5.8085947"
+     x="118.03148"
+     y="6"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text11944"><tspan
-       x="108.03049"
-       y="5.8085947"
+       x="118.03148"
+       y="6"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
@@ -297,25 +388,219 @@
        id="tspan11942"
        style="font-size:3px;fill:#333333;fill-opacity:1">System</tspan></text>
   <text
-     x="85.527481"
+     x="93.526985"
      y="8.6420927"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text2401"><tspan
-       x="85.527481"
+       x="93.526985"
        y="8.6420927"
        stroke-width="0.26458"
        id="tspan2399"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">2..*</tspan></text>
   <text
-     x="85.527481"
+     x="93.526985"
      y="3.1075029"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text1176"><tspan
-       x="85.527481"
+       x="93.526985"
        y="3.1075029"
        stroke-width="0.26458"
        id="tspan1174"
        style="font-size:2.8px;fill:#444444;fill-opacity:1">has</tspan></text>
+  <g
+     id="g46843"
+     transform="translate(-43.998993,-9.0000004)">
+    <rect
+       id="rect46839"
+       x="71.599998"
+       y="52.599998"
+       width="26"
+       height="6.0000005"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect46841"
+       x="70.998993"
+       y="52"
+       width="26"
+       height="6.0000005"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <text
+     x="40.031471"
+     y="46.999996"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text46849"><tspan
+       x="40.031471"
+       y="46.999996"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan46847"
+       style="font-size:3px;fill:#333333;fill-opacity:1">Local Cloud</tspan></text>
+  <text
+     x="11.595898"
+     y="41.006245"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text46857"><tspan
+       x="7.0513663"
+       y="41.006245"
+       stroke-width="0.26458"
+       id="tspan46855"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">is</tspan></text>
+  <g
+     id="g46935"
+     transform="translate(-43.998992,1.0000007)">
+    <rect
+       id="rect46931"
+       x="71.599998"
+       y="52.599998"
+       width="26"
+       height="6.0000005"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect46933"
+       x="70.998993"
+       y="52"
+       width="26"
+       height="6.0000005"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <text
+     x="40.031475"
+     y="57"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text46939"><tspan
+       x="40.031475"
+       y="57"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan46937"
+       style="font-size:3px;fill:#333333;fill-opacity:1">Virtual Cloud</tspan></text>
+  <g
+     id="g61383"
+     transform="translate(21.001006,-9.0000004)">
+    <rect
+       id="rect61379"
+       x="64.599991"
+       y="52.599998"
+       width="40"
+       height="6.0000005"
+       rx="1.4"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect61381"
+       x="63.998993"
+       y="52"
+       width="40"
+       height="6"
+       rx="1"
+       fill="none"
+       opacity="0.91318"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-width="0.333"
+       style="opacity:1;fill:#f7f7f7;fill-opacity:1;stroke:#333333;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <text
+     x="105.03146"
+     y="46.999996"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text61387"><tspan
+       x="105.03146"
+       y="46.999996"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan61385"
+       style="font-size:3px;fill:#333333;fill-opacity:1">System-of-Local-Clouds</tspan></text>
+  <text
+     x="131.65939"
+     y="40.963081"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text61496"><tspan
+       x="127.11485"
+       y="40.963081"
+       stroke-width="0.26458"
+       id="tspan61494"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">is</tspan></text>
+  <text
+     x="87.551033"
+     y="44.132412"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text62246"><tspan
+       x="83.006485"
+       y="44.132412"
+       stroke-width="0.26458"
+       id="tspan62244"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">has</tspan></text>
+  <text
+     x="87.661774"
+     y="49.875259"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:end;text-anchor:end;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text62274"><tspan
+       x="83.117226"
+       y="49.875259"
+       stroke-width="0.26458"
+       id="tspan62272"
+       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#444444;fill-opacity:1">2..*</tspan></text>
+  <text
+     x="105.06903"
+     y="57"
+     font-size="3.5px"
+     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
+     xml:space="preserve"
+     id="text63277"><tspan
+       x="105.06903"
+       y="57"
+       font-size="3.5px"
+       stroke-width="0.26458"
+       text-align="center"
+       text-anchor="middle"
+       id="tspan63275"
+       style="font-size:3px;fill:#333333;fill-opacity:1">System-of-Virtual-Clouds</tspan></text>
 </svg>
