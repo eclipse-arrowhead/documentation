@@ -27,7 +27,7 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} who designs or specifies Arrowhead
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{architecture}{Architecture}
-A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of a certain (1) goals, ambitions or other principles; (2) an environment, either abstract or concrete; (3) as well as significant life-cycle events, such as construction, maintenance or decommissioning.
+A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of (1) goals, ambitions and other design principles; (2) an environment, either abstract or concrete; (3) as well as significant life-cycle events, such as construction, maintenance or decommissioning.
 
 	\GlossaryNote{ISO42010}{
 		defines architecture as ``$<$system$>$ fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution''.
@@ -100,7 +100,7 @@ A \GlossaryHyperRef{boundary}{boundary} that exists in the physical world.
 	}
 
 \GlossaryEntry{boundary-virtual}{Boundary, Virtual}
-A \GlossaryHyperRef{boundary}{boundary} that exists only virtually.
+A \GlossaryHyperRef{boundary}{boundary} that exists only \GlossaryHyperRef{virtual}{virtually}.
 
 	\GlossaryNote{Note 1}{
 		Virtual boundaries can be facilitated by cryptographic secrets, identifiers, ownership statements, contracts, and so on.
@@ -127,6 +127,10 @@ A task, of any nature, that can be executed by an \GlossaryHyperRef{artifact}{ar
 \GlossaryEntry{capability-device}{Capability, Device}
 A \GlossaryHyperRef{capability}{capability} facilitated by the \GlossaryHyperRef{component-hardware}{hardware components} of a \GlossaryHyperRef{device}{device}.
 See Section \ref{sec:concepts:device}.
+
+\GlossaryEntry{capability-emergent}{Capability, Emergent}
+A \GlossaryHyperRef{capability}{capability} facilitated by the formation of a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
+See Section \ref{sec:concepts:sos}.
 
 \GlossaryEntry{capability-system}{Capability, System}
 A \GlossaryHyperRef{capability}{capability} facilitated by the \GlossaryHyperRef{component-software}{software components} of a \GlossaryHyperRef{system}{system}.
@@ -178,22 +182,26 @@ The activity of sending and/or receiving \GlossaryHyperRef{message}{messages}.
 An \GlossaryHyperRef{artifact}{artifact} that can be part of another artifact and contribute to it facilitating its \GlossaryHyperRef{capability}{capabilities}.
 
 	\GlossaryNote{Note 1}{
-		The term ``component'' should never be used to refer to a system being a constituent of a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
-		Such a system should be referred to as being a \GlossaryHyperRef{subsystem}{subsystem}.
+		The term ``component'' should not be used to refer to a system being a constituent of a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
+		Such a system should rather be referred to as being a \GlossaryHyperRef{subsystem}{subsystem}.
 	}
 
 	\GlossaryNote{RAMI4.0}{
-		makes no practical distinction between components and systems, as is done here.
-		See \GlossaryNameRef{system} for more details.
+		makes no practical distinction between components and \GlossaryHyperRef{system}{systems}.
+		We approach something akin to a practical distinction by only defining \GlossaryHyperRef{device}{devices} and systems as having components.
+		We do not, however, forbid other, more generic, uses of the word.
 	}
 
 \GlossaryEntry{component-hardware}{Component, Hardware}
-A physical \GlossaryHyperRef{component}{component} that can only be part of a \GlossaryHyperRef{device}{device}.
+A physical \GlossaryHyperRef{component}{component} that may be part of a \GlossaryHyperRef{device}{device}.
 See Section \ref{sec:concepts:device}.
 
 \GlossaryEntry{component-software}{Component, Software}
-A virtual \GlossaryHyperRef{component}{component} that can only be part of a \GlossaryHyperRef{system}{system}.
+A \GlossaryHyperRef{virtual}{virtual} \GlossaryHyperRef{component}{component} that may be part of a \GlossaryHyperRef{system}{system}.
 See Section \ref{sec:concepts:system}.
+
+\GlossaryEntry{component-virtual-hardware}{Component, Virtual Hardware}
+A \GlossaryHyperRef{component-software}{software component} that represents what normally would be a \GlossaryHyperRef{component-hardware}{hardware component}.
 
 \GlossaryEntry{concept}{Concept}
 The description of a generic or abstract idea.
@@ -322,6 +330,10 @@ A \GlossaryHyperRef{device}{device} with sensors and actuators that together mak
 \GlossaryEntry{device-intermediary}{Device, Intermediary}
 A \GlossaryHyperRef{device-connected}{connected device} that receives and forwards \GlossaryHyperRef{message}{messages} toward \GlossaryHyperRef{device-end}{end devices}.
 
+\GlossaryEntry{device-virtual}{Device, Virtual}
+A \GlossaryHyperRef{device}{device} that exists only \GlossaryHyperRef{virtual}{virtually}.
+Examples of virtual devices can be application containers, virtual machines or emulated machines.
+
 \GlossaryEntry{domain-problem}{Domain, Problem}
 All aspects, known and unknown, that influence the potential for solving a particular problem.
 
@@ -408,8 +420,13 @@ See Section \ref{sec:overview}.
 A conceptual mathematical construct that transforms given input values into output values.
 
 	\GlossaryNote{Note 1}{
-		Most functions can be \GlossaryHyperRef{implementation}{implemented} as \GlossaryHyperRef{implementation-software}{software}.
+		Most functions can be \GlossaryHyperRef{implementation}{implemented} as \GlossaryHyperRef{implementation-software}{software}, in which case they can also be referred to as \GlossaryHyperRef{function-computer}{computer functions}.
 	}
+
+\GlossaryEntry{function-computer}{Function, Computer}
+A sequence of instructions executed by one or more \GlossaryHyperRef{unit-compute}{compute units} in response to an invocation with a set of arguments.
+The result of executing such a function may be that the \GlossaryHyperRef{state}{state} of the computer is updated and/or that the function returns a value.
+See \GlossaryNameRef{function}.
 
 \GlossaryEntry{function-predicate}{Function, Predicate}
 A \GlossaryHyperRef{function}{function} whose output value must be a \textit{Boolean variable}.
@@ -420,7 +437,7 @@ An output value of \textit{true} indicates that the function is \textit{satisfie
 	}
 
 \GlossaryEntry[(adjective)]{hardware-adjective}{Hardware}
-The property of being physical, as opposed to being virtual.
+The property of being physical, as opposed to being \GlossaryHyperRef{virtual}{virtual}.
 See \GlossaryNameRef{software-adjective}.
 
 \GlossaryEntry[(noun)]{hardware}{Hardware}
@@ -536,6 +553,7 @@ See Section \ref{sec:concepts:stakeholder}.
 \GlossaryEntry{message}{Message}
 \GlossaryHyperRef{data}{Data} sent or received via an \GlossaryHyperRef{interface}{interface}.
 Every message must \GlossaryHyperRef{identification}{identify} a target \GlossaryHyperRef{operation-service}{service operation} and may contain \GlossaryHyperRef{metadata}{metadata} and a payload.
+See Section \ref{sec:concepts:message}.
 
 	\GlossaryNote{Note 1}{
 		The metadata of a message represent the details it contains about its transmission and interpretation.
@@ -559,9 +577,17 @@ A \GlossaryHyperRef{message}{message} indicating why the request expressed by so
 A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will not be executed.
 See Section \ref{sec:concepts:policy}.
 
+\GlossaryEntry{message-inbound}{Message, Inbound}
+A \GlossaryHyperRef{message}{message} that it currently being \GlossaryHyperRef{routing}{routed} away from a \GlossaryHyperRef{interface-network}{network interface} and towards an \GlossaryHyperRef{operation}{operation}.
+See Section \ref{sec:concepts:interface}.
+
 \GlossaryEntry{message-invalid}{Message, Invalid}
 A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{protocol}{protocol} of concern and, therefore, will not be executed.
 See Section \ref{sec:concepts:protocol}.
+
+\GlossaryEntry{message-outbound}{Message, Outbound}
+A \GlossaryHyperRef{message}{message} that it currently being sent towards a \GlossaryHyperRef{interface-network}{network interface} as part of its journey to an \GlossaryHyperRef{operation}{operation}.
+See Section \ref{sec:concepts:interface}.
 
 \GlossaryEntry{message-permitted}{Message, Permitted}
 A \GlossaryHyperRef{message}{message} that does satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will be executed if all other policies are also satisfied.
@@ -604,8 +630,12 @@ A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperR
 See Section \ref{sec:concepts:network}.
 
 \GlossaryEntry{operation}{Operation}
-An activity a \GlossaryHyperRef{service}{service} can perform if receiving a \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted} \GlossaryHyperRef{message} targeting that operation.
-See Section \ref{sec:concepts:service}.
+A set of activities a \GlossaryHyperRef{service}{service} can perform if receiving a \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted} \GlossaryHyperRef{message}.
+See Section \ref{sec:concepts:operation}.
+
+\GlossaryEntry{operation-exposed}{Operation, Exposed}
+An \GlossaryHyperRef{operation}{operation} part of a service \GlossaryHyperRef{service}{service} that is currently being \GlossaryHyperRef{provision-service}{provided} by a \GlossaryHyperRef{system}{system}.
+See Section \ref{sec:concepts:operation}.
 
 \GlossaryEntry{operation-service}{Operation, Service}
 Prefer \GlossaryNameRef{operation}.
@@ -767,7 +797,7 @@ A \GlossaryHyperRef{resource}{resource} whose value or utility is inextricably t
 A \GlossaryHyperRef{resource}{resource} whose value or utility is not derived from any physical \GlossaryHyperRef{attribute}{attribute}.
 
 	\GlossaryNote{Note 1}{
-		Examples of virtual resources could be compute, storage, or software-defined network utilities.
+		Examples of \GlossaryHyperRef{virtual}{virtual} resources could be compute, storage, or software-defined network utilities.
 		While all of these resources are facilitated by physical entities, namely various types of computer equipment, they do not depend on any particular machines.
 		They can be moved to different machines without loosing their value or utility.
 	}
@@ -805,7 +835,7 @@ See Section \ref{sec:concepts:service}.
 	}
 
 \GlossaryEntry[(adjective)]{software-adjective}{Software}
-The property of being virtual, as opposed to being physical.
+The property of being \GlossaryHyperRef{virtual}{virtual}, as opposed to being physical.
 See \GlossaryNameRef{hardware-adjective}.
 
 \GlossaryEntry[(noun)]{software}{Software}
@@ -845,6 +875,12 @@ One out of all possible sequences of values that could be expressed by the \Glos
 The \GlossaryHyperRef{state}{state} of a \GlossaryHyperRef{protocol}{protocol} in active use, determining what \GlossaryHyperRef{message}{messages} it currently deems valid.
 See Section \ref{sec:concepts:protocol}.
 
+\GlossaryEntry{stub-service}{Stub, Service}
+The means through which a \GlossaryHyperRef{system}{system} \GlossaryHyperRef{consumption-service}{consumes} a \GlossaryHyperRef{service}{service} of another system.
+Every service stub has its own \GlossaryHyperRef{interface-operation}{operation interfaces}.
+If one of those operation interfaces is provided with a \GlossaryHyperRef{message}{message}, the service stub will attempt to pass on that message to the service represented by the stub.
+See Section \ref{sec:concepts:interface}.
+
 \GlossaryEntry{subprotocol}{Subprotocol}
 A \GlossaryHyperRef{protocol}{protocol} that is realized as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol.
 
@@ -870,7 +906,7 @@ A \GlossaryHyperRef{software}{software} \GlossaryHyperRef{entity}{entity} capabl
 Any kind of system, compatible with the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} or not, meant to facilitate some form of \GlossaryHyperRef{automation}{automation}.
 
 \GlossaryEntry{system-of-clouds}{System-of-Clouds (SoCl)}
-A set of \GlossaryHyperRef{cloud}{clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
+A set of at least two \GlossaryHyperRef{cloud}{clouds} that collaborate by at least one cloud \GlossaryHyperRef{consumer-service}{consuming} at least one \GlossaryHyperRef{service}{service} \GlossaryHyperRef{provider-service}{provided} by another cloud in the set.
 See Section \ref{sec:concepts:soc}.
 
 \GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
@@ -878,13 +914,12 @@ A \GlossaryHyperRef{system-of-clouds}{system-of-clouds} where every constituent 
 See Section \ref{sec:concepts:soc}.
 
 \GlossaryEntry{system-of-systems}{System-of-Systems (SoS)}
-A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent systems could \GlossaryHyperRef{provision-service}{provide} on its own.
+A set of at least two \GlossaryHyperRef{system}{systems} that collaborate by at least one system \GlossaryHyperRef{consumer-service}{consuming} at least one \GlossaryHyperRef{service}{service} \GlossaryHyperRef{provider-service}{provided} by another system in the set.
 See Section \ref{sec:concepts:sos}.
 
 	\GlossaryNote{IoTA:AF}{
 		defines a system-of-systems as ``a set of systems, which [...] exchange information by means of services''.
-		It further adds that ``when Arrowhead compliant systems collaborate, they become a System of Systems in the Arrowhead Framework's definition''.
-		While we clarify here that the desired outcome of collaboration is the facilitation of new capabilities, the definitions should be interpreted as being equivalent.
+		Our definition must be interpreted as being equivalent or as being incorrect.
 	}
 
 \GlossaryEntry{system-of-virtual-clouds}{System-of-Virtual-Clouds (SoVC)}
@@ -900,7 +935,7 @@ A \GlossaryHyperRef{system}{system} that is tasked with managing one or more \Gl
 	\GlossaryNote{Note 1}{
 		All systems are managing the resources provided to them by their hosting \GlossaryHyperRef{device}{devices}, such as primary memory, compute time, and so on.
 		This term is meant to capture the systems that are engaged in overseeing and/or managing resources beyond those directly provided.
-		Examples of such scenarios could be a single system being responsible for provisioning other devices, or a system using its robot device to collect and handle raw materials.
+		Examples of such scenarios could be a single system being responsible for provisioning other devices than its own, or a system using its robot arm to collect and handle raw materials.
 	}
 
 \GlossaryEntry{type}{Type}
@@ -962,5 +997,8 @@ An \GlossaryHyperRef{description}{description} of a problem domain, specifying (
 		defines architecture viewpoint as ``work product establishing the conventions for the construction, interpretation and use of architecture views to frame specific system concerns''.
 		Our definition is meant to express this definition and must be considered as being either equivalent or incorrect.
 	}
+
+\GlossaryEntry{virtual}{Virtual}
+The property of having ones existence maintained by a computer.
 
 }

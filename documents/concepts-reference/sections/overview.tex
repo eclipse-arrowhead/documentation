@@ -8,7 +8,7 @@
 
 The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, which is illustrated in Figure \ref{fig:framework}, consists of two subframeworks: a \GlossaryHyperRef{framework-idea}{framework of ideas} and a \GlossaryHyperRef{framework-software}{framework of software}.
 The framework of ideas formulates and frames the \GlossaryHyperRef{domain-problem}{\textit{problem domain}} the framework of software is meant to help address.
-By this we mean that the framework of ideas presents the \GlossaryHyperRef{assumption}{assumptions}, \GlossaryHyperRef{concept}{concepts}, \GlossaryHyperRef{value}{values} and \GlossaryHyperRef{practice}{practices} that should be applied when \GlossaryHyperRef{specification}{specifying} and \GlossaryHyperRef{implementation}{implementing} any kinds of Arrowhead solutions.
+By this we mean that the framework of ideas presents the \GlossaryHyperRef{assumption}{assumptions}, \GlossaryHyperRef{concept}{concepts}, \GlossaryHyperRef{value}{values} and \GlossaryHyperRef{practice}{practices} that should be applied when \GlossaryHyperRef{specification}{specifying} \GlossaryHyperRef{architecture}{architectural} or other technical documentation and when \GlossaryHyperRef{implementation}{implementing} any kinds of Arrowhead systems or components.
 
 \begin{figure}[ht!]
   \centering
@@ -27,12 +27,12 @@ However, before we move on to consider our overview those concepts, we will firs
   At the time of writing, the best source of assumptions, values and practices of the Arrowhead framework is Jerker Delsing's book \textit{{IoT} Automation: Arrowhead Framework} \cite{delsing2017iot}.
   The \GlossaryHyperRef{project-eclipse-arrowhead}{Eclipse Arrowhead project} may publish other works of relevance in the future.
 }
-It is, for example, \textit{assumed} that the framework will be applied in contexts where the primary activity is markedly physical, such as in transportation, mining, manufacturing, electricity generation, healthcare, and so on.
+It is, for example, \textit{assumed} that the framework may be applied in contexts where the primary activity is markedly physical, such as in transportation, mining, manufacturing, electricity generation, healthcare, and so on.
 One of the system characteristics \textit{valued} by the framework is \textit{resilience}, or the expectation that every system should do its outmost to mitigate and recover from degradations, failures or other contingencies that may affect its ability to perform its designated tasks.
 Finally, one of its \textit{recommended practices} is that every system-of-systems should be thoroughly documented at every level, from its smallest components up to its most high-level interactions.
 
 The rest of this section gives an overview of the most fundamental concepts of the framework.
-It is meant to prepare you for the next section, where the same concepts, and other supporting concepts, are presented in much greater detail.
+It is meant to prepare you for the next section, where the same concepts, and other supporting concepts, are presented in greater detail.
 
 \subsection{Stakeholders and Artifacts}
 
@@ -103,32 +103,33 @@ The human interface enables the person, via its buttons, prompts or other elemen
 
 When a providing system receives a message from a consuming system or person, it passes it on to the service operation specified in that message, as described in Sections \ref{sec:concepts:service} and \ref{sec:concepts:interface}.
 The operation receiving the message will then handle it by performing whatever action it describes, given that the message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}.
-This handling may entail sending additional messages to other systems, starting or stopping various kinds of automation routines, reading from sensors, electronically signing contracts, sending notifications to an \GlossaryHyperRef{operator}{operator}, among many other possible examples.
+This handling may entail sending additional messages to other systems, starting or stopping various kinds of automation routines, reading from sensors, electronically signing contracts, sending notifications to an \GlossaryHyperRef{operator}{operator}, sending one or more messages back to the sender, among many other possible examples.
 
 \subsection{System Composition}
+\label{sec:overview:system-composition}
 
-We expect it to not be typical for \GlossaryHyperRef{system}{systems} to \GlossaryHyperRef{consumer-service}{consume services} at random.
-Rather, we expect them to do it because it is a necessary part of fulfilling the tasks they were designed to, and are currently assigned to, perform.
+\GlossaryHyperRef{system}{Systems} will typically \GlossaryHyperRef{consumer-service}{consume services} because it is a necessary part of executing the tasks they were designed to perform.
 Consider, for example, a scenario in which a number of automated guided vehicles, each of which is a system, are to move items around a factory as directed by a scheduling system.
-The individual vehicles will not move unless a system directs them.
-Likewise, the scheduling system cannot physically move any items by itself.
-However, when these systems consume each others' services, they become able to do things none of them could by themselves.
+As the scheduling system does not have wheels, engine or other necessary sensors and actuators, it cannot physically move any items by itself. 
+Likewise, the individual vehicles are not capable of themselves deciding what needs to be taken to what location.
+However, when these different systems cooperate by consuming each others' services, they become able to do things none of them could by themselves.
+The combination of scheduling system and vehicles becomes able to plan, track and execute the moving of items.
 When systems consume each other's services in this manner, they form a so-called \GlossaryHyperRef{system-of-systems}{system-of-systems}.
-Such a system-of-systems is always able to perform activities none of its constituent \GlossaryHyperRef{subsystem}{subsystems} can perform on its own.
+Such a system-of-systems is often capable of performing activities none of its constituent \GlossaryHyperRef{subsystem}{subsystems} could perform on its own.
 
-As depicted in Figure \ref{fig:system-of-systems}, there are different kinds of systems-of-systems with their own characteristics.
+As depicted in Figure \ref{fig:systems-of-systems}, there are different kinds of systems-of-systems with their own characteristics.
 There are \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-clouds}{systems-of-clouds}, as well as \textit{local} and \textit{virtual} variants of both.
 
 \vfill
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[scale=0.9]{figures/system-of-systems}
+  \includegraphics[scale=0.9]{figures/systems-of-systems}
   \caption{
     The different kinds of \textit{systems-of-systems}, each of which consists of a number of \textit{systems} that consume each others' services.
     Clouds are systems-of-systems with \textit{boundaries} and \textit{resource pools}, while systems-of-clouds combine multiple clouds.
   }
-  \label{fig:system-of-systems}
+  \label{fig:systems-of-systems}
 \end{figure}
 
 \vfill
@@ -138,20 +139,20 @@ Boundaries may be formed via access control policies, firewalls, gateway systems
 Pools of resources may consist of mining equipment, \GlossaryHyperRef{unit-compute}{compute units}, sand, or whatever else is used by the cloud in question to render its services.
 Because the Arrowhead framework is highly concerned with physical automation processes, we distinguish \GlossaryHyperRef{cloud-local}{local clouds} from \GlossaryHyperRef{cloud-virtual}{virtual clouds}.
 
-The \textbf{local cloud} has \GlossaryHyperRef{boundary-local}{local boundaries} and \GlossaryHyperRef{resource-local}{local resources}, which is to say that it must, by necessity, be associated with a physical location.
+The \textbf{local cloud} has \GlossaryHyperRef{boundary-local}{local boundaries} and \GlossaryHyperRef{resource-local}{local resources}, which means that it must be associated with a physical location.
 Examples of local clouds could be smelting stations, drone control towers, assembly lines, power distribution centers, or the components of a satellite.
-Whether it be ore, drones, parts, power cables or a complex mesh of all those things, the resources of these example clouds are all markedly physical.
+Whether it be ore, drones, parts, power cables or a complex mesh of all those things, the resources of these example clouds are all markedly \textit{physical}.
 Because of their physicality, it matters \textit{where} the clouds are physically located.
 Since physical isolation is a form of physical boundary, each of them has both at least one local boundary and at least one local resource.
 
 On the other hand, a \textbf{virtual cloud} has only \GlossaryHyperRef{boundary-virtual}{virtual boundaries} and \GlossaryHyperRef{resource-virtual}{virtual resources}, which means that the values produced by the cloud are not tied to its physical location.
 This is the kind of cloud that underpins much of the modern Internet.
-A few companies let out virtual compute, storage and network resources, which their clients use to provision their own virtual clouds and provide their own virtual services.
-It is, of course, also possible to set up ones own virtual cloud, even though it is not as common.
+A few companies let out virtual compute, storage and network resources, which their clients rent to provision their own virtual clouds and provide their own virtual services.
+A virtual cloud could provide services for forecasting, analysis, design, planning, communication, or digital entertainment, among other possible examples.
 
 Individual clouds may be interconnected to former even larger systems-of-systems, which we then refer to as \textbf{systems-of-clouds}.
 The individual clouds may be owned and operated by different departments, subdivisions or teams at the same company, or even by different legal entities.
 Some of them may be local, while other may be virtual.
-Examples of systems-of-clouds may be a set of weather stations operated by the same company, the robots of distinct collaborating companies at a mining site, the various departments of a manufacturing plant, or the carriers of a supply chain.
+Examples of systems-of-clouds may be a set of weather stations operated by the same company, the robots of distinct collaborating companies at a mining site, or the carriers of a supply chain.
 When a system-of-clouds contain only local clouds, we refer to it as a \GlossaryHyperRef{system-of-local-clouds}{systems-of-local-clouds}.
 Likewise, a system-of-clouds with only virtual clouds constitute a \GlossaryHyperRef{system-of-virtual-clouds}{systems-of-virtual-clouds}.
