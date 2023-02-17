@@ -203,6 +203,14 @@ See Section \ref{sec:concepts:system}.
 \GlossaryEntry{component-virtual-hardware}{Component, Virtual Hardware}
 A \GlossaryHyperRef{component-software}{software component} that represents what normally would be a \GlossaryHyperRef{component-hardware}{hardware component}.
 
+\GlossaryEntry{compress}{Compress}
+To \GlossaryHyperRef{encode}{encode} \GlossaryHyperRef{data}{data} from its original form to a space-efficient form.
+See Section \ref{sec:concepts:encoding:compression}.
+
+\GlossaryEntry[(noun)]{compression}{Compression}
+An \GlossaryHyperRef{encoding}{encoding} that \GlossaryHyperRef{compress}{compresses} \GlossaryHyperRef{data}{data} into a space-efficient form and \GlossaryHyperRef{decompress}{decompresses} it back to its original form.
+See Section \ref{sec:concepts:encoding:compression}.
+
 \GlossaryEntry{concept}{Concept}
 The description of a generic or abstract idea.
 
@@ -226,24 +234,16 @@ A \GlossaryHyperRef{attribute}{attribute} that imposes constraints, or limits, o
 		Perhaps a bit counterintuitively, a constraint \textit{adds} information to its target by reducing the ways in which it could be realized.
 	}
 
-\GlossaryEntry{constraint-encoding}{Constraint, Encoding}
-A \GlossaryHyperRef{constraint}{constraint} imposed on an \GlossaryHyperRef{encoding}{encoding}.
-See Section \ref{sec:concepts:profile}.
-
-	\GlossaryNote{Note 1}{
-		An encoding constraint could require that an optional \GlossaryHyperRef{data}{data} field be present or omitted, require that the values of certain fields satisfy a certain \GlossaryHyperRef{function-predicate}{predicate function}, and so on.
-	}
-
 \GlossaryEntry{constraint-policy}{Constraint, Policy}
 A \GlossaryHyperRef{constraint}{constraint} imposed by a \GlossaryHyperRef{policy}{policy}.
 See Section \ref{sec:concepts:policy}.
 
-\GlossaryEntry{constraint-protocol}{Constraint, Protocol}
-A \GlossaryHyperRef{constraint}{constraint} imposed on a \GlossaryHyperRef{protocol}{protocol}.
+\GlossaryEntry{constraint-profile}{Constraint,Profile}
+A \GlossaryHyperRef{constraint}{constraint} imposed by a \GlossaryHyperRef{profile}{profile}.
 See Section \ref{sec:concepts:profile}.
 
 \GlossaryEntry{consumer-service}{Consumer, Service}
-A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{consumption-service}{consuming} a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation-service}{operations}.
+A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{consumption-service}{consuming} a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation}{operations}.
 
 	\GlossaryNote{Note 1}{
 		The term may also be used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, in which case the stakeholder must be interpreted as if consuming services via systems.
@@ -255,7 +255,7 @@ A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{consumption-serv
 	}
 
 \GlossaryEntry{consumption-service}{Consumption, Service}
-The act of consuming a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation-service}{operations}.
+The act of consuming a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation}{operations}.
 See \GlossaryNameRef{consumer-service}.
 
 \GlossaryEntry{data}{Data}
@@ -295,6 +295,14 @@ The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a 
 
 \GlossaryEntry{decoder}{Decoder}
 An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{decode}{decoding} \GlossaryHyperRef{data}{data}.
+
+\GlossaryEntry{decompress}{Decompress}
+To \GlossaryHyperRef{decode}{decode} \GlossaryHyperRef{data}{data} from a space-efficient form to its original form.
+See Section \ref{sec:concepts:encoding:compression}.
+
+\GlossaryEntry{decrypt}{Decrypt}
+To \GlossaryHyperRef{decode}{decode} \GlossaryHyperRef{data}{data} from an undecipherable, or \textit{cipher text}, form to its original form.
+See Section \ref{sec:concepts:encoding:encryption}.
 
 \GlossaryEntry{description}{Description}
 Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
@@ -363,6 +371,14 @@ An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{encode}{encodi
 \GlossaryEntry[(noun)]{encoding}{Encoding}
 A \GlossaryHyperRef{type-data}{data type} used to structure and interpret certain \GlossaryHyperRef{data}{data}.
 See Section \ref{sec:concepts:encoding}.
+
+\GlossaryEntry{encrypt}{Encrypt}
+To \GlossaryHyperRef{encode}{encode} \GlossaryHyperRef{data}{data} from its original form to an undecipherable, or \textit{cipher text}, form.
+See Section \ref{sec:concepts:encoding:encryption}.
+
+\GlossaryEntry[(noun)]{encryption}{Encryption}
+An \GlossaryHyperRef{encoding}{encoding} that \GlossaryHyperRef{encrypt}{encrypts} \GlossaryHyperRef{data}{data} into an undecipherable, or \textit{cipher text}, form and \GlossaryHyperRef{decrypt}{decrypts} it back to its original, or \textit{clear text}, form.
+See Section \ref{sec:concepts:encoding:encryption}.
 
 \GlossaryEntry{entity}{Entity}
 An \GlossaryHyperRef{artifact}{artifact} with an \GlossaryHyperRef{identity}{identity}, allowing for it to be distinguished from all other artifacts.
@@ -456,7 +472,7 @@ Prefer \GlossaryNameRef{person}.
 \GlossaryEntry{identifiable}{Identifiable}
 The property of being possible to distinguish a certain \GlossaryHyperRef{artifact}{artifact} from all other artifacts.
 
-	\GlossaryHyperRef{Note 1}{
+	\GlossaryNote{Note 1}{
 		Being identifiable is the same as being an \GlossaryHyperRef{entity}{entity}.
 	}
 
@@ -551,27 +567,11 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} involved in maintaining \GlossaryH
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{message}{Message}
-\GlossaryHyperRef{data}{Data} sent or received via an \GlossaryHyperRef{interface}{interface}.
-Every message must \GlossaryHyperRef{identification}{identify} a target \GlossaryHyperRef{operation-service}{service operation} and may contain \GlossaryHyperRef{metadata}{metadata} and a payload.
+\GlossaryHyperRef{data}{Data} describing how to invoke a certain \GlossaryHyperRef{operation}{service operation}.
 See Section \ref{sec:concepts:message}.
 
-	\GlossaryNote{Note 1}{
-		The metadata of a message represent the details it contains about its transmission and interpretation.
-		Metadata are always concerned with the \GlossaryHyperRef{protocol}{protocol} of the message and with satisfying the \GlossaryHyperRef{policy}{policies} of the interfaces that must be passed on its journey to its target operation.
-		Metadata may be added, modified and/or used by \GlossaryHyperRef{interface}{interfaces} when messages pass through them.
-	}
-
-	\GlossaryNote{Note 2}{
-		A payload is an input to a service operation.
-		Operations are not required to expect input data, which is why having a message payload is optional.
-	}
-
 \GlossaryEntry{message-error}{Message, Error}
-A \GlossaryHyperRef{message}{message} indicating why the request expressed by some other message could not be executed.
-
-	\GlossaryNote{Note 1}{
-		We expect the receiver of most error messages to be the respective senders of the messages that could not be executed.
-	}
+A \GlossaryHyperRef{message}{message} indicating why the request expressed by some other message could not be satisfied.
 
 \GlossaryEntry{message-forbidden}{Message, Forbidden}
 A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will not be executed.
@@ -630,15 +630,12 @@ A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperR
 See Section \ref{sec:concepts:network}.
 
 \GlossaryEntry{operation}{Operation}
-A set of activities a \GlossaryHyperRef{service}{service} can perform if receiving a \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted} \GlossaryHyperRef{message}.
+A \GlossaryHyperRef{component-software}{component} of a \GlossaryHyperRef{service}{service} that handles given \GlossaryHyperRef{message}{messages} by using the \GlossaryHyperRef{capability-system}{capabilities} of its \GlossaryHyperRef{system}{system}.
 See Section \ref{sec:concepts:operation}.
 
 \GlossaryEntry{operation-exposed}{Operation, Exposed}
-An \GlossaryHyperRef{operation}{operation} part of a service \GlossaryHyperRef{service}{service} that is currently being \GlossaryHyperRef{provision-service}{provided} by a \GlossaryHyperRef{system}{system}.
+An \GlossaryHyperRef{operation}{operation} part of a \GlossaryHyperRef{service}{service} that is currently being \GlossaryHyperRef{provision-service}{provided} by a \GlossaryHyperRef{system}{system}.
 See Section \ref{sec:concepts:operation}.
-
-\GlossaryEntry{operation-service}{Operation, Service}
-Prefer \GlossaryNameRef{operation}.
 
 \GlossaryEntry{operator}{Operator}
 A \GlossaryHyperRef{stakeholder}{stakeholder} responsible for the \GlossaryHyperRef{configure}{configuration} and oversight of \GlossaryHyperRef{system}{systems} and the \GlossaryHyperRef{resource}{resources} those systems manage.
@@ -812,7 +809,17 @@ Prefer \GlossaryNameRef{role}.
 The act of forwarding a \GlossaryHyperRef{message}{message} towards the \GlossaryHyperRef{operation}{service operation} it targets.
 
 \GlossaryEntry{routing-message}{Routing, Message}
-Prefer \GlossaryNameRef{routing}{routing}.
+Prefer \GlossaryNameRef{routing}.
+
+\GlossaryEntry{semantics}{Semantics}
+A \GlossaryHyperRef{model}{model} used to interpret \GlossaryHyperRef{decode}{decoded} \GlossaryHyperRef{data}{data}, such that it meanings can be acted upon.
+See Section \ref{sec:concepts:semantics}.
+
+\GlossaryEntry{semantics-data}{Semantics, Data}
+Prefer \GlossaryNameRef{semantics}.
+
+\GlossaryEntry{semantics-message}{Semantics, Message}
+The \GlossaryHyperRef{semantics}{semantics} of a \GlossaryHyperRef{message}{message}.
 
 \GlossaryEntry{service}{Service}
 A set of \GlossaryHyperRef{operation}{operations} that can be \GlossaryHyperRef{provision-service}{provided} by a \GlossaryHyperRef{system}{system} via one or more \GlossaryHyperRef{interface-service}{service interfaces}.

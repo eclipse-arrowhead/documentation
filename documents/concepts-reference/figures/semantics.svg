@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="104mm"
+   width="74mm"
    height="40mm"
    version="1.1"
-   viewBox="0 0 104 40"
+   viewBox="0 0 74 40"
    id="svg162"
-   sodipodi:docname="profile.svg"
+   sodipodi:docname="semantics.svg"
    inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -24,13 +23,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.4170022"
-     inkscape:cx="137.36024"
-     inkscape:cy="51.923826"
+     inkscape:zoom="3.1199647"
+     inkscape:cx="166.02752"
+     inkscape:cy="86.6997"
      inkscape:window-width="2067"
      inkscape:window-height="931"
-     inkscape:window-x="1743"
-     inkscape:window-y="206"
+     inkscape:window-x="1791"
+     inkscape:window-y="339"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
@@ -128,13 +127,19 @@
     </marker>
   </defs>
   <path
-     d="m 71.999999,35 h 9"
+     d="M 37.000179,33 V 27"
      marker-end="url(#a-0)"
      id="path2866"
      style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
      sodipodi:nodetypes="cc" />
   <path
-     d="m 51.999556,22.999998 v 6.000001"
+     d="m 47.000178,36 h 26 V 4.9999995 l -22,4e-7"
+     marker-end="url(#a-0)"
+     id="path3292"
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="M 37.000179,8.9999979 V 14.999999"
      marker-end="url(#a-0)"
      id="path43887"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
@@ -142,40 +147,28 @@
   <text
      xml:space="preserve"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="53.383766"
-     y="27.050158"
+     x="38.384388"
+     y="13.050157"
      id="text43891"><tspan
        sodipodi:role="line"
        id="tspan43889"
        style="stroke-width:0.264583"
-       x="53.383766"
-       y="27.050158">1..*</tspan></text>
+       x="38.384388"
+       y="13.050157">1..*</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="50.202827"
-     y="27.050158"
+     x="35.203449"
+     y="13.050157"
      id="text43895"><tspan
        sodipodi:role="line"
        id="tspan43893"
        style="font-size:3px;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-       x="50.202827"
-       y="27.050158">has</tspan></text>
-  <path
-     d="M 41.999999,3.9999995 H 11 v 9.9999995"
-     marker-end="url(#a-0)"
-     id="path13819"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
-     sodipodi:nodetypes="ccc" />
-  <path
-     d="M 51.999999,6.9999995 V 13"
-     marker-end="url(#a-0)"
-     id="path1710"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
-     sodipodi:nodetypes="cc" />
+       x="35.203449"
+       y="13.050157">supports</tspan></text>
   <g
      id="g8205"
-     transform="translate(-19,-23.999999)">
+     transform="translate(-33.999821,8.0000016)">
     <rect
        id="rect8201"
        x="61.600006"
@@ -205,8 +198,8 @@
   </g>
   <rect
      id="rect896"
-     x="40.999557"
-     y="15.999999"
+     x="26.000622"
+     y="1.999999"
      width="24"
      height="8"
      rx="1.6"
@@ -228,8 +221,8 @@
   </metadata>
   <rect
      id="rect45004"
-     x="39.999557"
-     y="15"
+     x="25.000179"
+     y="1"
      width="24"
      height="8"
      rx="1"
@@ -239,108 +232,57 @@
      stroke-linejoin="round"
      stroke-width="0.333"
      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g8205"
-     id="use13676"
-     width="100%"
-     height="100%"
-     transform="translate(-41,15)" />
   <text
-     x="51.914581"
-     y="5.0788584"
+     x="36.914761"
+     y="37.078857"
      font-size="3.5px"
      style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text15009"><tspan
-       x="51.914581"
-       y="5.0788584"
+       x="36.914761"
+       y="37.078857"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
        id="tspan15007"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Protocol</tspan></text>
+       style="font-size:3px;fill:#333333;fill-opacity:1">Data</tspan></text>
   <g
      id="g982"
-     transform="translate(-8.6000602,7.3999994)" />
-  <path
-     d="M 32,35 11,35 V 23.999999"
-     marker-end="url(#a-0)"
-     id="path8414"
-     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#a-0)"
-     sodipodi:nodetypes="ccc" />
+     transform="translate(-23.599881,7.3999994)" />
   <text
      xml:space="preserve"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="30.33543"
-     y="33.251869"
+     x="35.35157"
+     y="31.192614"
      id="text9386"><tspan
        sodipodi:role="line"
        id="tspan9384"
        style="font-size:2.8px;text-align:end;text-anchor:end;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-       x="30.33543"
-       y="33.251869">uses</tspan></text>
+       x="35.35157"
+       y="31.192614">conforms to</tspan></text>
   <text
-     x="10.914581"
-     y="20.078857"
-     font-size="3.5px"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text13680"><tspan
-       x="10.914581"
-       y="20.078857"
-       font-size="3.5px"
-       stroke-width="0.26458"
-       text-align="center"
-       text-anchor="middle"
-       id="tspan13678"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Protocol'</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="40.388809"
-     y="2.348033"
-     id="text14044"><tspan
-       sodipodi:role="line"
-       id="tspan14042"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-       x="40.388809"
-       y="2.348033">extends</tspan></text>
-  <text
-     x="51.95768"
-     y="20.272331"
+     x="36.958302"
+     y="6.2723312"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text2513"><tspan
-       x="51.95768"
-       y="20.272331"
+       x="36.958302"
+       y="6.2723312"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan2511">Profile</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-     x="50.282768"
-     y="10.561785"
-     id="text45825"><tspan
-       sodipodi:role="line"
-       id="tspan45823"
-       style="font-size:2.8px;text-align:end;text-anchor:end;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-       x="50.282768"
-       y="10.561785">conforms to</tspan></text>
+       id="tspan2511">Semantics</tspan></text>
   <g
      id="use2507"
-     transform="translate(-1.0000003,30)">
+     transform="translate(-15.999377,16)">
     <rect
        id="rect43709"
-       x="34"
-       y="1.9999995"
-       width="40"
+       x="42"
+       y="1.9999996"
+       width="24"
        height="8"
        rx="1.6"
        fill="none"
@@ -351,9 +293,9 @@
        style="opacity:1;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:0.8;stroke-miterlimit:4;stroke-dasharray:none" />
     <rect
        id="rect43711"
-       x="33"
-       y="0.99999952"
-       width="40"
+       x="41"
+       y="0.9999997"
+       width="24"
        height="8"
        rx="1"
        fill="none"
@@ -364,51 +306,50 @@
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
   <text
-     x="51.958115"
-     y="36.272331"
+     x="36.958736"
+     y="22.272331"
      font-size="3.5px"
      style="line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
      xml:space="preserve"
      id="text10273"><tspan
-       x="51.958115"
-       y="36.272331"
+       x="36.958736"
+       y="22.272331"
        font-size="3.5px"
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan10271">Profile Constraint</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#g8205"
-     id="use2788"
-     width="100%"
-     height="100%"
-     transform="translate(40.999999,31.000001)" />
-  <text
-     x="92.914581"
-     y="36.078857"
-     font-size="3.5px"
-     style="font-size:3px;line-height:1.25;font-family:sans-serif;stroke-width:0.26458"
-     xml:space="preserve"
-     id="text2792"><tspan
-       x="92.914581"
-       y="36.078857"
-       font-size="3.5px"
-       stroke-width="0.26458"
-       text-align="center"
-       text-anchor="middle"
-       id="tspan2790"
-       style="font-size:3px;fill:#333333;fill-opacity:1">Constraint</tspan></text>
+       id="tspan10271">Data Type</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
-     x="73.549698"
-     y="33.251869"
+     x="48.524948"
+     y="34.220573"
      id="text2870"><tspan
        sodipodi:role="line"
        id="tspan2868"
        style="font-size:2.8px;text-align:start;text-anchor:start;fill:#454545;fill-opacity:1;stroke-width:0.264583"
-       x="73.549698"
-       y="33.251869">is</tspan></text>
+       x="48.524948"
+       y="34.220573">interpretable via</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+     x="38.444675"
+     y="31.192614"
+     id="text3368"><tspan
+       sodipodi:role="line"
+       id="tspan3366"
+       style="font-size:2.8px;text-align:start;text-anchor:start;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+       x="38.444675"
+       y="31.192614">1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:2.8px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;stroke-width:0.264583"
+     x="48.524948"
+     y="39.616455"
+     id="text3444"><tspan
+       sodipodi:role="line"
+       id="tspan3442"
+       style="font-size:2.8px;text-align:start;text-anchor:start;fill:#454545;fill-opacity:1;stroke-width:0.264583"
+       x="48.524948"
+       y="39.616455">1</tspan></text>
 </svg>

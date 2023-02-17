@@ -21,7 +21,7 @@ You may choose to read the table from beginning to end, use it as a means of dec
 & \ref{sec:concepts:device}      & \textbf{\nameref{sec:concepts:device}}      & A physical \GlossaryHyperRef{entity}{entity} with the \GlossaryHyperRef{capability}{capability} of hosting \GlossaryHyperRef{system}{systems}. \\
 & \ref{sec:concepts:system}      & \textbf{\nameref{sec:concepts:system}}      & A \GlossaryHyperRef{instance-software}{software instance} able to exercise the \GlossaryHyperRef{capability}{capabilities} of its hosting \GlossaryHyperRef{device}{device}. \\
 & \ref{sec:concepts:service}     & \textbf{\nameref{sec:concepts:service}}     & A set of \GlossaryHyperRef{operation}{operations} \GlossaryHyperRef{provider-service}{provided} by a \GlossaryHyperRef{system}{system} for other systems to \GlossaryHyperRef{consumer-service}{consume}. \\
-& \ref{sec:concepts:operation}   & \textbf{\nameref{sec:concepts:operation}}   & An activity a \GlossaryHyperRef{service}{service} can perform in response to a received \GlossaryHyperRef{message}{message}. \\
+& \ref{sec:concepts:operation}   & \textbf{\nameref{sec:concepts:operation}}   & A \GlossaryHyperRef{component-software}{component} of a \GlossaryHyperRef{service}{service} that handles \GlossaryHyperRef{message}{messages}. \\
 &&&\\
 \multicolumn{3}{@{} p{5.2cm} @{}}{\textbf{Compositional Concepts}}             & \textit{Significant compositions of systemic concepts.} \\ [2mm]
 & \ref{sec:concepts:sos}         & \textbf{\nameref{sec:concepts:sos}}         & A set of \GlossaryHyperRef{system}{systems} that collaborate by \GlossaryHyperRef{consumer-service}{consuming} each others' \GlossaryHyperRef{service}{services}. \\
@@ -32,13 +32,13 @@ You may choose to read the table from beginning to end, use it as a means of dec
 & \ref{sec:concepts:network}     & \textbf{\nameref{sec:concepts:network}}     & A set of \GlossaryHyperRef{device}{devices} with \GlossaryHyperRef{interface-network}{network interfaces} that are able to \GlossaryHyperRef{communication}{communicate}. \\
 & \ref{sec:concepts:interface}   & \textbf{\nameref{sec:concepts:interface}}   & A \GlossaryHyperRef{boundary}{boundary} that can be crossed by the \GlossaryHyperRef{message}{messages} of certain \GlossaryHyperRef{protocol}{protocols}. \\
 & \ref{sec:concepts:protocol}    & \textbf{\nameref{sec:concepts:protocol}}    & A \GlossaryHyperRef{description}{description} of what \GlossaryHyperRef{message}{messages} can be sent between certain \GlossaryHyperRef{interface}{interfaces}. \\
-& \ref{sec:concepts:message}     & \textbf{\nameref{sec:concepts:message}}     & A description of how to invoke a certain \GlossaryHyperRef{operation-service}{service operation}. \\
+& \ref{sec:concepts:message}     & \textbf{\nameref{sec:concepts:message}}     & A description of how to invoke a certain \GlossaryHyperRef{service}{service} \GlossaryHyperRef{operation}{operation}. \\
 & \ref{sec:concepts:policy}      & \textbf{\nameref{sec:concepts:policy}}      & A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied for a \GlossaryHyperRef{message}{message} to be \GlossaryHyperRef{message-permitted}{permitted}. \\
 & \ref{sec:concepts:profile}     & \textbf{\nameref{sec:concepts:profile}}     & A set of \GlossaryHyperRef{constraint}{constraints} added to a \GlossaryHyperRef{protocol}{protocol}. \\
 &&&\\
-\multicolumn{3}{@{} p{5.2cm} @{}}{\textbf{Interpretational Concepts}}          & \textit{Constructs for representation and interpretation of messages.} \\ [2mm]
-& \ref{sec:concepts:encoding}    & \textbf{\nameref{sec:concepts:encoding}}    & A \GlossaryHyperRef{type-data}{data type} used to structure and partially interpret certain \GlossaryHyperRef{data}{data}. \\
-& \ref{sec:concepts:semantics}   & \textbf{\nameref{sec:concepts:semantics}}   & A \GlossaryHyperRef{model}{model} used to derive full interpretations from \GlossaryHyperRef{decode}{decoded} \GlossaryHyperRef{data}{data}. \\
+\multicolumn{3}{@{} p{5.2cm} @{}}{\textbf{Interpretational Concepts}}          & \textit{Constructs relevant to the formulation and interpretation of messages.} \\ [2mm]
+& \ref{sec:concepts:encoding}    & \textbf{\nameref{sec:concepts:encoding}}    & A \GlossaryHyperRef{type-data}{data type} used to \GlossaryHyperRef{encode}{encode} and \GlossaryHyperRef{decode}{decode} \GlossaryHyperRef{data}{data}. \\
+& \ref{sec:concepts:semantics}   & \textbf{\nameref{sec:concepts:semantics}}   & A \GlossaryHyperRef{model}{model} used interpret \GlossaryHyperRef{decode}{decoded} \GlossaryHyperRef{data}{data}. \\
 
 \end{tabularx}
 \caption{A summary of the primary concepts outlined in this section.}
@@ -149,7 +149,7 @@ They may be \GlossaryHyperRef{implementation-software}{implemented} in any way d
 \subsection{Service}
 \label{sec:concepts:service}
 
-A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{operation-service}{operations}, where each operation represents one set of activities the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{providing} the service can perform in response to a \GlossaryHyperRef{message}{message}.
+A \GlossaryHyperRef{service}{service} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{operation}{operations}, where each operation represents one set of activities the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provider-service}{providing} the service can perform in response to a \GlossaryHyperRef{message}{message}.
 A \GlossaryHyperRef{provision-service}{provided} service always \GlossaryHyperRef{operation-exposed}{exposes} all of its operations.
 Examples of activities an operation could perform include sending messages, moving robotic arms, reading value from sensors and generating a statistical reports.
 For it to be possible for the service to receive messages, it must have at least one \GlossaryHyperRef{interface-service}{\textit{service interface}}, as depicted in Figure \ref{fig:service}.
@@ -171,10 +171,10 @@ Most significantly, such groups enables the designer of an operation to require 
 \subsection{Operation}
 \label{sec:concepts:operation}
 
-An \GlossaryHyperRef{operation-service}{operation} is an \GlossaryHyperRef{identifiable}{identifiable} and executable \GlossaryHyperRef{component-software}{software component} that can handle given \GlossaryHyperRef{message}{messages}.
-Every operation is \GlossaryHyperRef{operation-exposed}{exposed} via a \GlossaryHyperRef{service}{service} and may use any \GlossaryHyperRef{capability-system}{capabilities} of the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provision-service}{providing} it, as depicted in Figure \ref{fig:operation}.
+An \GlossaryHyperRef{operation}{operation} is an individually \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{component-software}{component} of a \GlossaryHyperRef{service}{service} that can handle given \GlossaryHyperRef{message}{messages}.
+Every operation is \GlossaryHyperRef{operation-exposed}{\textit{exposed}} via a service and may use any \GlossaryHyperRef{capability-system}{capabilities} of the \GlossaryHyperRef{system}{system} \GlossaryHyperRef{provision-service}{providing} it, as depicted in Figure \ref{fig:operation}.
 Operations receive messages via \GlossaryHyperRef{interface-operation}{\textit{operation interfaces}}, which, in turn, receive them via \GlossaryHyperRef{interface-service}{service interfaces}.
-If an operation needs to send messages, it must do so via the operation interfaces of \GlossaryHyperRef{stub-service}{service stubs} representing the services it targets.
+If an operation needs to send messages, it may do so via the operation interfaces of \GlossaryHyperRef{stub-service}{service stubs} representing the services it targets.
 How \GlossaryHyperRef{interface}{interfaces} send and receive messages is described in detail in Section \ref{sec:concepts:interface}.
 
 \begin{figure}[ht!]
@@ -288,52 +288,77 @@ These are (1) \GlossaryHyperRef{interface-network}{network interfaces}, (2) \Glo
   \label{fig:interface}
 \end{figure}
 
-These four interface types form four stages, beginning with the network interface to the left and ending with the operation interface to the right.
-When a network interface receives a message, it is \GlossaryHyperRef{routing-message}{\textit{routed}} rightwards through each stage until it is found to be \GlossaryHyperRef{message-invalid}{invalid}, \GlossaryHyperRef{message-forbidden}{forbidden} or reaches an \GlossaryHyperRef{operation-service}{operation}.
-If the message is found to be invalid or forbidden, an \GlossaryHyperRef{message-error}{error message} may be sent back to its sender by the interface or operation that identified the problem.
-The receiving operation may elect to send additional messages via the operation interfaces of \GlossaryHyperRef{stub-service}{service stubs}, which represent other services.
+These four interface types form four conceptual stages, beginning with the network interface to the left and ending with the operation interface to the right.\footnote{
+  For those familiar with the Internet \cite{rfc1122} and OSI \cite{iso7498_1} network models, the \textit{network interface} represents their \textit{transport layers}, while the \textit{system, service and operation} interfaces represent the \textit{application layer} of the Internet model and the \textit{session, presentation and application layers} of the OSI model.
+  The system and service interfaces do not correspond directly to the OSI session and presentation layers.
+}
+When a network interface receives a message, it is \GlossaryHyperRef{routing-message}{\textit{routed}} rightwards through each stage until it reaches an \GlossaryHyperRef{operation}{operation}.
+If the message is found to be \GlossaryHyperRef{message-invalid}{invalid}, \GlossaryHyperRef{message-forbidden}{forbidden} at any stage, an \GlossaryHyperRef{message-error}{error message} may be sent back to its sender by the stage in question.
+The stages are conceptual in the sense that they are understood to exist even if they are not explicitly implemented.
+An operation receiving a message may send its own messages via the operation interfaces of \GlossaryHyperRef{stub-service}{service stubs}, which represent other services.
 Those operation interfaces pass on received messages primarily to network interfaces, but may pass them on directly to system or service interfaces when the targeted operation resides on the same device or system, respectively.
 
 As each interface only supports a single protocol, it can only pass on messages of that protocol.
-To make it possible for messages to pass between the four interface stages, the system, service and operation interfaces all extend the protocols of the stage to their left.
+To make it possible for messages to pass between the four interface stages, each of the system, service and operation interfaces extends the protocols of the stage to its left.
 This can be thought of as each stage requiring additional details to know where to route the messages they receive.
 For a message to arrive at a network interface, for example, only network details are required.
 To route that message to a system, the device owning the network interface must know what system the message targets, and so on.
 
-For those familiar with the Internet \cite{rfc1122} and OSI \cite{iso7498_1} network models, the network interface represents the transport layers, while the system, service and operation interfaces represent the application layer of the Internet model and the session, presentation and application layers of the OSI model.
-Note that the system, service and operation interfaces do not correspond to the session, presentation and application layers of the OSI model.
-
 \subsection{Protocol}
 \label{sec:concepts:protocol}
 
-A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{type-message}{message} and \GlossaryHyperRef{type-state}{state} types, useful for determining what \GlossaryHyperRef{message}{messages} may move through the \GlossaryHyperRef{interface}{interfaces} that support them.
-\textit{Message types} determine what \GlossaryHyperRef{data}{data} conformant messages must and may contain, while each \textit{state type} dictates when certain messages are acceptable in relation to a certain \GlossaryHyperRef{state-protocol}{state}.
-As shown in Figure \ref{fig:protocol}, a protocol may also be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, conform to certain \GlossaryHyperRef{profile-protocol}{profiles} and use certain \GlossaryHyperRef{encoding}{encodings}.
-Profiles and encodings are described in Sections \ref{sec:concepts:profile} and \ref{sec:concepts:encoding}.
+A \GlossaryHyperRef{protocol}{protocol} is an \GlossaryHyperRef{identifiable}{identifiable} set of \GlossaryHyperRef{type-message}{message} and \GlossaryHyperRef{type-state}{state} types, used when formulating and interpreting \GlossaryHyperRef{message}{messages}.
+The \textit{message types} describe what \GlossaryHyperRef{data}{data} messages must contain, while the \textit{state types} describe when received message are acceptable in relation to \GlossaryHyperRef{state-protocol}{states} protocol \GlossaryHyperRef{implementation}{implementations} are expected to maintain.
+As shown in Figure \ref{fig:protocol}, a protocol may be defined as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol, conform to certain \GlossaryHyperRef{profile-protocol}{profiles} and use certain \GlossaryHyperRef{encoding}{encodings}.
+Profiles add \GlossaryHyperRef{constraint}{constraints} to protocols, such as requiring that certain \GlossaryHyperRef{metadata}{metadata} by added to messages, while encodings are used to \GlossaryHyperRef{encode}{encode} and \GlossaryHyperRef{decode}{decode} messages.
+
+\vfill
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/protocol}
   \caption{
-    The protocol as set of message and state types, conforming to certain profiles.
+    The protocol as set of message and state types, conforming to certain profiles and using certain encodings.
   }
   \label{fig:protocol}
 \end{figure}
 
-A protocol may, when relevant, be considered as a \GlossaryHyperRef{function}{function} useful for testing if a given message is \GlossaryHyperRef{message-valid}{valid} or \GlossaryHyperRef{message-invalid}{invalid} with respect to a current state.
-If the message is valid, the function returns the type of the message, which is needed to interpret the contents of that message.
-If the message is invalid, the function returns an indication of why the message failed to satisfy the message and/or state types of the protocol. 
+\vfill
 
-Protocols should only be concerned with the \textit{destination} and \textit{interpretation} of messages, not with whether they are \GlossaryHyperRef{message-permitted}{\textit{permitted}} or not.
-This means that states should be associated with protocols only to ensure that received messages can be passed on or understood correctly.
-If, for example, a service controlling a door receives an message telling it to open its already open door, what does the sender of the message expect to happen?
-Nothing at all?
-That it closes and opens again?
-This ambiguity can be avoided by having the protocol be aware of the state of the door.
-Messages received when their interpretation is unclear can then be rejected.
+Protocols are exclusively concerned with if given messages are \GlossaryHyperRef{message-valid}{valid} or \GlossaryHyperRef{message-invalid}{invalid}.
+A valid message can be correctly interpreted and acted upon by the implementation of the protocol, while an invalid message cannot.
+Invalid messages do not conform to all of the encodings, profiles and state types of the protocol.
+Protocols are \textit{never} concerned with what messages are \GlossaryHyperRef{message-permitted}{\textit{permitted}}, which rather is the concern of the \GlossaryHyperRef{policy}{policy}.
+
+States can be used to account for scenarios where the context in which a message is received impacts how it must be interpreted.
+Consider, for example, a scenario where a \GlossaryHyperRef{service}{service} is provided for opening and closing a door.
+Let us assume that the door is currently open, and a message is received by the service that instructs it to open it.
+As the door is already open, it cannot be opened any more than it already is.
+The message could, therefore, either be interpreted as being already handled or be rejected, depending on what the use case makes most relevant.
+If the protocol of the message would not have accounted for the state of the door, open and close messages would have to always be accepted.
 
 \subsection{Message}
 \label{sec:concepts:message}
+
+A \GlossaryHyperRef{message}{message} is \GlossaryHyperRef{data}{data} that \GlossaryHyperRef{identification}{identifies} an \GlossaryHyperRef{operation}{operation}, among any other \GlossaryHyperRef{metadata}{metadata}, any may include a payload, as depicted in Figure \ref{fig:message}.
+In other words, a message describes how it is to be sent to a particular operation, made available by a particular \GlossaryHyperRef{service}{service}, \GlossaryHyperRef{system}{system} and \GlossaryHyperRef{device}{device}, as well as including any payload necessary for that operation to be able to execute as intended.
+
+\vfill
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/message}
+  \caption{
+    The message as data that must include metadata targeting an operation, as well as a payload.
+  }
+  \label{fig:message}
+\end{figure}
+
+\vfill
+
+The metadata of a message specify the details required for it to arrive at the operation it targets, as well as additional details required to interpret the message and its payload correctly, such as by stating what \GlossaryHyperRef{encoding}{encodings} are used.
+The metadata may also include details required to satisfy the \GlossaryHyperRef{policy}{policies} of the interfaces that must be passed on its journey to its target operation.
+Metadata may be added, modified and/or used by \GlossaryHyperRef{interface}{interfaces} when messages pass through them.
 
 \newpage
 
@@ -364,9 +389,10 @@ If the pump is on fire, turning it on may present a safety hazard; if the system
 \subsection{Profile}
 \label{sec:concepts:profile}
 
-A \GlossaryHyperRef{profile}{profile} is a set of \GlossaryHyperRef{constraint}{constraints} that can be added to a \GlossaryHyperRef{protocol}{protocol}, which can be used to require that certain flags or headers are included in certain messages, among other possible examples.
+A \GlossaryHyperRef{profile}{profile} is a set of \GlossaryHyperRef{constraint}{constraints} that can be added to a \GlossaryHyperRef{protocol}{protocol}.
+A profile may require that certain flags, headers, or other \GlossaryHyperRef{metadata}{metadata}, are included in the messages of the protocols that conform to it, among other possible examples.
 While a protocol may only extend up to one other protocol, it may conform to any number of profiles.
-In Figure \ref{fig:profile}, two significant types of constraints are illustrated, the \GlossaryHyperRef{constraint-protocol}{protocol constraint} and the \GlossaryHyperRef{constraint-encoding}{encoding constraint}.
+The \GlossaryHyperRef{constraint-profile}{constraints} of a profile must be based on a protocol extended by every protocol conforming to that profile, as we show in Figure \ref{fig:profile}.
 
 \begin{figure}[ht!]
   \centering
@@ -378,34 +404,86 @@ In Figure \ref{fig:profile}, two significant types of constraints are illustrate
   \label{fig:profile}
 \end{figure}
 
-A \textit{protocol constraint} is defined in terms of a protocol that must be extended by any protocols conforming to its owning profile. 
-For example, a \GlossaryHyperRef{interface-service}{service interface} may support a custom extension of the HTTP protocol \cite{fielding2014hypertext}.
-Such an extended HTTP protocol would, among other things, specify how a message will be routed from a system interface to a service interface, as described in Section \ref{sec:concepts:interface}.
-If that custom protocol is meant to be conformant to a certain profile, the constraints of that profile must be formulated in terms of HTTP without the extension, or any other protocol HTTP extends, namely TCP \cite{postel1981transmission} or IP \cite{deering2017internet}.
-The profile in question may require that certain HTTP headers be included in every message, that certain TCP flags not be used, and so on.
-
-An \textit{encoding constraint} is defined in terms of an \GlossaryHyperRef{encoding}{encoding} that must be used by any protocols conforming to its owning profile.
-Such a constraint could be used to force message payloads to adhere to a certain semantics, such as SenML \cite{rfc8428}.
+While perhaps a bit difficult to grasp initially, unless this was the case there would not be anything to base the constraints on.
+Consider, for example, a \GlossaryHyperRef{service}{service} with an \GlossaryHyperRef{interface-service}{interface} that supports a custom extension of the HTTP protocol \cite{fielding2014hypertext}.
+Such an extended HTTP protocol could, among other things, specify how one would formulate request lines to target the \GlossaryHyperRef{operation}{operations} of the service.
+An example of such a request line could be \texttt{GET /pump-7b/pressures/a14 HTTP/1.1}, which we can imagine targets an operation that fetches a pressure value from a pump.
+If our custom protocol is meant to be conformant to a certain profile, the constraints of that profile must be formulated in terms of HTTP without the extension of the service interface.
+As HTTP extends TCP \cite{postel1981transmission} and IP \cite{deering2017internet}, our constraints may also target details of those protocols.
+An example profile could require that certain HTTP headers be included in every message, or that certain TCP flags not be used, among many other possible examples.
 
 \subsection{Encoding}
 \label{sec:concepts:encoding}
 
-An \textit{encoding} is a set of \GlossaryHyperRef{type-data}{data types} that make up a language or structure in which \GlossaryHyperRef{data}{data} can be formulated and interpreted.
+An \textit{encoding} is a \GlossaryHyperRef{type-data}{data type} that makes up a language or structure in which \GlossaryHyperRef{data}{data} can be formulated and interpreted.
 The term is typically only used when considering \GlossaryHyperRef{encoder}{encoders} and \GlossaryHyperRef{decoder}{decoders}, which transform data from being expressed in one encoding into another.
 More specifically, an \textit{encoder} turns data from an encoding suitable for processing into another suitable for transmission and/or storage, while a \textit{decoder} performs the reverse operation.
-As implied by Figure \ref{fig:encoding}, encodings suitable for transmission and/or storage are typically used to express \GlossaryHyperRef{message}{messages}.
+How encodings, encoders and decoders relate is depicted in Figure \ref{fig:encoding}.
+
+\vfill
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/encoding}
   \caption{
-    The encoding as set of data types, supported by certain encoders and decoders.
+    The encoding as a data type, supported by certain encoders and decoders.
+    The \GlossaryHyperRef{compression}{compression} and the \GlossaryHyperRef{encryption}{encryption} are treated as special kinds of encodings.
   }
   \label{fig:encoding}
 \end{figure}
 
-An encoding useful for \textit{transmission} could, for example, be JSON \cite{rfc7159}, while an encoding useful for \textit{storage} could be some kind of file or database format.
-An encoding useful for \textit{processing} could be the format employed by a \GlossaryHyperRef{unit-compute}{compute unit}, virtual machine or computer language runtime, among other possible examples.
+\vfill
+
+An encoding useful for \textit{transmission} could, for example, be JSON \cite{rfc7159},\footnote{
+  The data type of the JSON encoding is a union type of seven variants: \textit{object}, \textit{array}, \textit{string}, \textit{number}, \textit{true}, \textit{false} and \textit{null}.
+  Other encodings provide other data types.
+  The data type of XML \cite{w3c2008xml} is, for example, its \textit{document} type, which in turn uses \textit{elements}, \textit{texts} and other types.
+} while an encoding useful for \textit{storage} could be some kind of file or database format.
+An encoding useful for \textit{processing} could be the binary format employed by a \GlossaryHyperRef{unit-compute}{compute unit}, virtual machine or computer language runtime, among other possible examples.
+
+There are two kinds of encodings that deserve special attention.
+These are \textit{compressions} and \textit{encryptions}.
+While perhaps not often treated as if being encodings, they do fit the description of encoding we have just presented.
+They transform data, often treated as plain byte arrays irrespective of their original structures, from a form suitable for processing into another form suitable for transmission and/or storage, and vice versa.
+However, they differ from other encodings in that the transmission and storage form of the data is expected to gain special properties, namely to require less space or become undecipherable without knowledge of specific secrets.
+
+\subsubsection{Compression}
+\label{sec:concepts:encoding:compression}
+
+A \GlossaryHyperRef{compression}{compression} is an \GlossaryHyperRef{encoding}{encoding} used to make \GlossaryHyperRef{data}{data} representable using less \GlossaryHyperRef{datum}{datums} during transmission or storage, which can improve performance by requiring less transmission time or storage space.
+Once \GlossaryHyperRef{compress}{compressed}, the data typically cannot be interpreted in any meaningful way.
+To use the data again, it must first be \GlossaryHyperRef{decompress}{decompressed}, which restores it to its original form, or some approximation of its original form.
+Compressions that can restore data to their original forms are often referred to as being \textit{lossless}, while those that deal with approximations are referred to as being \textit{lossy}.
+Lossy compressions are typically used for images, audio, video and other media, while lossless compression is typically used for \GlossaryHyperRef{message}{messages}.
+
+\subsubsection{Encryption}
+\label{sec:concepts:encoding:encryption}
+
+An \GlossaryHyperRef{encryption}{encryption} is an \GlossaryHyperRef{encoding}{encoding} used to turn \GlossaryHyperRef{data}{data} into a form that cannot be interpreted by a third party during its transmission or storage.
+Once \GlossaryHyperRef{encrypt}{encrypted}, there should be no practically computable means of reverting, or \GlossaryHyperRef{decrypt}{decrypting}, the data to its original form.
+To make it possible for the owner of the data, or its intended receiver, to revert it back to its original form, some form of secret numbers, passwords or other keys are typically used.
+
+Encryption is the means through which \GlossaryHyperRef{system-of-systems}{systems-of-systems} can be made secure.
+It facilitates security in the sense that it makes it practically possible to guarantee the privacy, integrity and authenticity of transmitted \GlossaryHyperRef{message}{messages} and other stored data.
+
+\newpage
 
 \subsection{Semantics}
 \label{sec:concepts:semantics}
+
+A \GlossaryHyperRef{semantics}{semantics} is a \GlossaryHyperRef{model}{model} used to interpret \GlossaryHyperRef{data}{data} of one or more supported \GlossaryHyperRef{type-data}{types}.
+In other words, unless you are able to associate a given data type with a semantics, you cannot understand or act on any data conforming to the type.
+Every data type must have exactly one semantics, but every semantics can have any number of data types, as illustrated in Figure \ref{fig:semantics}.
+This means that it is possible to \GlossaryHyperRef{encode}{encode} the same semantical, or abstract, data using several different data types.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.9]{figures/semantics}
+  \caption{
+    The semantics as a model used to interpret data of certain types.
+  }
+  \label{fig:semantics}
+\end{figure}
+
+Because of this property, it becomes possible to formulate \GlossaryHyperRef{profile-semantic}{semantic profiles}.
+A semantic profile is a special kind of \GlossaryHyperRef{profile}{profile} that requires that more than one \GlossaryHyperRef{protocol}{protocol} use \GlossaryHyperRef{encoding}{encodings} whose fundamental data type all have the same semantics.
