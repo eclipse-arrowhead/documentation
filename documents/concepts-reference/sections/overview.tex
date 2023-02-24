@@ -76,12 +76,12 @@ When a system or stakeholder makes use of a service, it is said to \GlossaryHype
 Every service represents one area of concern its hosting system can address.
 Examples of such areas of concern could be generating financial statements, replacing propellers on drones, manufacturing bolts or measuring humidity.
 A service providing control over a door could, for example, make it possible to check if the door is open, to open it and to close it.
-Each such activity of every service is represented by one \GlossaryHyperRef{operation-service}{service operation}, which we will consider more in the next section.
+Each such activity of every service is represented by one \GlossaryHyperRef{operation}{service operation}, which we will consider more in the next section.
 
 \subsection{Service Provision and Consumption}
 
 As we have already established, \GlossaryHyperRef{communication}{communication} between systems is formulated in terms of the \GlossaryHyperRef{provision-service}{provision} and \GlossaryHyperRef{consumption-service}{consumption} of \GlossaryHyperRef{service}{services}.
-\GlossaryHyperRef{system}{Systems} may \textit{provide} services, which other systems can \textit{consume} by sending \GlossaryHyperRef{message}{messages} to their \GlossaryHyperRef{operation-service}{operations}, as depicted in Figure \ref{fig:service-consumption}.
+\GlossaryHyperRef{system}{Systems} may \textit{provide} services, which other systems can \textit{consume} by sending \GlossaryHyperRef{message}{messages} to their \GlossaryHyperRef{operation}{operations}, as depicted in Figure \ref{fig:service-consumption}.
 
 \vfill
 
@@ -110,15 +110,17 @@ This handling may entail sending additional messages to other systems, starting 
 
 \GlossaryHyperRef{system}{Systems} will typically \GlossaryHyperRef{consumer-service}{consume services} because it is a necessary part of executing the tasks they were designed to perform.
 Consider, for example, a scenario in which a number of automated guided vehicles, each of which is a system, are to move items around a factory as directed by a scheduling system.
-As the scheduling system does not have wheels, engine or other necessary sensors and actuators, it cannot physically move any items by itself. 
+As the scheduling system does not have wheels, engines or other necessary sensors and actuators, it cannot physically move any items by itself. 
 Likewise, the individual vehicles are not capable of themselves deciding what needs to be taken to what location.
-However, when these different systems cooperate by consuming each others' services, they become able to do things none of them could by themselves.
-The combination of scheduling system and vehicles becomes able to plan, track and execute the moving of items.
+However, the combination of a scheduling system and vehicles becomes able to plan, track and execute the moving of items.
+When these systems cooperate by consuming each others' services, they become able to do things none of them could by themselves.
 When systems consume each other's services in this manner, they form a so-called \GlossaryHyperRef{system-of-systems}{system-of-systems}.
-Such a system-of-systems is often capable of performing activities none of its constituent \GlossaryHyperRef{subsystem}{subsystems} could perform on its own.
 
 As depicted in Figure \ref{fig:systems-of-systems}, there are different kinds of systems-of-systems with their own characteristics.
-There are \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-clouds}{systems-of-clouds}, as well as \textit{local} and \textit{virtual} variants of both.
+There are \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-clouds}{systems-of-clouds}, as well as \textit{local} and \textit{virtual} variants of both.\footnote{
+  In addition to being local or virtual, a cloud may also be \textit{Arrowhead-compliant}.
+  Such a cloud is referred to as an \GlossaryHyperRef{cloud-arrowhead}{\textit{Arrowhead cloud}} and conforms to various architectural requirements put forth by the \GlossaryHyperRef{project-eclipse-arrowhead}{Eclipse Arrowhead project} in a separate document.
+}
 
 \vfill
 
