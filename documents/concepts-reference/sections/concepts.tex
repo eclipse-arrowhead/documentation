@@ -38,7 +38,7 @@ You may choose to read the table from beginning to end, use it as a means of dec
 &&&\\
 \multicolumn{3}{@{} p{5.2cm} @{}}{\textbf{Interpretational Concepts}}          & \textit{Constructs relevant to the formulation and interpretation of messages.} \\ [2mm]
 & \ref{sec:concepts:encoding}    & \textbf{\nameref{sec:concepts:encoding}}    & A \GlossaryHyperRef{type-data}{data type} used to \GlossaryHyperRef{encode}{encode} and \GlossaryHyperRef{decode}{decode} \GlossaryHyperRef{data}{data}. \\
-& \ref{sec:concepts:semantics}   & \textbf{\nameref{sec:concepts:semantics}}   & A \GlossaryHyperRef{model}{model} used interpret \GlossaryHyperRef{decode}{decoded} \GlossaryHyperRef{data}{data}. \\
+& \ref{sec:concepts:semantics}   & \textbf{\nameref{sec:concepts:semantics}}   & A \GlossaryHyperRef{model}{model} used to derive meaning from \GlossaryHyperRef{data}{data}. \\
 
 \end{tabularx}
 \caption{A summary of the primary concepts outlined in this section.}
@@ -471,19 +471,32 @@ It facilitates security in the sense that it makes it practically possible to gu
 \subsection{Semantics}
 \label{sec:concepts:semantics}
 
-A \GlossaryHyperRef{semantics}{semantics} is a \GlossaryHyperRef{model}{model} used to interpret \GlossaryHyperRef{data}{data} of one or more supported \GlossaryHyperRef{type-data}{types}.
+A \GlossaryHyperRef{semantics}{semantics} is a \GlossaryHyperRef{model}{model} used to derive meaning from \GlossaryHyperRef{data}{data}.
+More specifically, it \textit{disambiguates}, or makes the interpretation clear, of data conforming to any out of one or more \GlossaryHyperRef{type-data}{data types}, as illustrated in Figure \ref{fig:semantics}.
+All data that are known to conform to any of these data types then become possible to interpret.
 In other words, unless you are able to associate a given data type with a semantics, you cannot understand or act on any data conforming to the type.
-Every data type must have exactly one semantics, but every semantics can have any number of data types, as illustrated in Figure \ref{fig:semantics}.
-This means that it is possible to \GlossaryHyperRef{encode}{encode} the same semantical, or abstract, data using several different data types.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/semantics}
   \caption{
-    The semantics as a model used to interpret data of certain types.
+    The semantics as a model used to disambiguate data types, making it possible to interpret data conforming to those types.
   }
   \label{fig:semantics}
 \end{figure}
 
-Because of this property, it becomes possible to formulate \GlossaryHyperRef{profile-semantic}{semantic profiles}.
-A semantic profile is a special kind of \GlossaryHyperRef{profile}{profile} that requires that more than one \GlossaryHyperRef{protocol}{protocol} use \GlossaryHyperRef{encoding}{encodings} whose fundamental data type all have the same semantics.
+All data types disambiguated by the same semantics must express the same intrinsic meaning.
+Consider, for example, the JSON \cite{rfc7159} object \texttt{\{"v":21.30\}} and the XML \cite{w3c2008xml} element \texttt{<rd temp=70.34/>}.
+Both of these are data, both of them conform to a data type, and both of those data types conform to the same semantics.
+The JSON object represents a temperature value in celsius and the XML element represents the same temperature expressed in fahrenheit.
+Despite having the same semantics, however, their structures are quite different.
+
+\subsubsection{Semantics Profile}
+\label{sec:concepts:semantics:profile}
+
+When a semantics disambiguates two or more data types, it can be used to construct a \GlossaryHyperRef{profile-semantic}{semantic profile}.
+Such a \GlossaryHyperRef{profile}{profile} requires that the every conformant \GlossaryHyperRef{protocol}{protocol} has a relevant \GlossaryHyperRef{encoding}{encoding} whose data type is disambiguated by a certain semantics.
+
+A common application of semantic profiles is to make different protocols express the same meanings, even though they use different encodings.
+For example, a certain protocol may be based on HTTP \cite{fielding2014hypertext} and JSON \cite{rfc7159}, while another is based on CoAP \cite{rfc7252} and CBOR \cite{rfc8949}.
+If the payloads of both protocols would conform to the same semantic profile, the messages of both protocols would express the same intents and meanings despite being structured differently.
