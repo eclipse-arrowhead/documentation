@@ -1,4 +1,4 @@
-% Copyright (c) 2021 Eclipse Arrowhead Project
+% Copyright (c) 2021-2023 Eclipse Arrowhead Project
 %
 % This program and the accompanying materials are made available under the
 % terms of the Eclipse Public License 2.0 which is available at
@@ -14,10 +14,13 @@ However, it will also lead to new magnitudes of complexity, not the least becaus
 
 The \GlossaryHyperRef{framework-arrowhead}{\textit{Arrowhead framework}} is designed to address this explosion of complexity.
 It provides a foundation for \GlossaryHyperRef{communication-service-oriented}{\textit{service-oriented communication}} \cite{mackenzie2006reference} between automation systems and other computers, such that interoperability, security, safety, performance, and other major concerns can be addressed efficiently and effectively.
-It notably allows for \GlossaryHyperRef{system}{system} \GlossaryHyperRef{capability}{capabilities} to be \GlossaryHyperRef{description}{described}, shared and exploited dynamically by \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{device}{devices}.
+It allows for the \GlossaryHyperRef{capability}{capabilities} and other \GlossaryHyperRef{attribute}{attributes} of individual \GlossaryHyperRef{system}{systems} to be \GlossaryHyperRef{description}{described}, shared and exploited dynamically by \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{device}{devices}.
+Most notably, this makes it possible to design distributed systems that are highly resilient to degradations and failures, as well as being cheap, in terms of time and money, to develop, extend, upgrade, retrofit and decommission.
 
 In this document, we, the \GlossaryHyperRef{project-eclipse-arrowhead}{Eclipse Arrowhead project}, present an authoritative set of concept definitions, meant to serve as the fundamental language for describing \GlossaryHyperRef{arrowhead}{Arrowhead}-based system \GlossaryHyperRef{design}{designs}.
 It exist to help mitigate compatibility and consistency issues in \GlossaryHyperRef{software}{software}, tooling, \GlossaryHyperRef{model}{models}, documentation and all other things of relevance to the Arrowhead framework.
+We do not present architectural design patterns, system specifications or implementations, other than as illustrative examples.
+While highly relevant in the wider context of Arrowhead, such topics are out of the scope of this particular document.
 
 \subsection{Primary Audiences}
 \label{sec:introduction:audiences}
@@ -26,7 +29,7 @@ This document is being written and maintained for all who need precise and rigor
 
 \begin{itemize}
 \item Advanced \GlossaryHyperRef{user}{users} of Arrowhead \GlossaryHyperRef{system}{systems}.
-\item \GlossaryHyperRef{architect}{Architects} contributing to or extending the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
+\item \GlossaryHyperRef{architect}{Architects} of Arrowhead systems, or of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} itself.
 \item \GlossaryHyperRef{developer}{Developers} of Arrowhead systems, or of devices that are expected to host Arrowhead systems.
 \item \GlossaryHyperRef{operator}{Operators} of Arrowhead systems.
 \item \GlossaryHyperRef{researcher}{Researchers} concerned with analyzing or refining the Arrowhead framework or Arrowhead systems.
@@ -67,8 +70,8 @@ The following relationship names are defined here only:
 \item \textit{conforms to}, implying that the target \textit{has} a set of \GlossaryHyperRef{constraint}{constraints} satisfied by the source;
 \item \textit{extends}, meaning that the source \textit{conforms to} and inherits all relationships and attributes of the target;
 \item \textit{is}, meaning that the source \textit{extends} the target and belongs to a set named after it;
-\item \textit{uses}, meaning that the source depends on the target to fulfill its purpose;
-\item \textit{has}, meaning that the target is \textit{used by} and must cease to exist without the source; and
+\item \textit{uses}, meaning that the source depends on the target to fulfill its purpose; and
+\item \textit{has}, meaning that the target is \textit{used by} and must cease to exist without the source.
 \end{enumerate}
 
 \paragraph{Quantifiers}
@@ -102,7 +105,7 @@ Grouped arrows can always be replaced with non-grouped arrows without loss of in
 Square brackets around integers (e.g. \cite{delsing2017iot}) are references to the reference list in Section \ref{sec:references}.
 The integer within the brackets of any given reference corresponds to the entry with the same integer in the reference list.
 
-References within this document are hyperlinked, which means that those reading it electronically can click the references and immediately be taken to their targets.
+References within this document are hyperlinked, which means that those reading it electronically can click the references and immediately be taken to their targets, given that the used reader supports this feature.
 Special treatment is given to references targeting Section \ref{sec:glossary}, the \nameref{sec:glossary}.
 These are displayed as regular text rendered with blue color.
 
@@ -138,7 +141,7 @@ In particular, the document describes how to model and design communicating indu
 However, as RAMI4.0 is a reference \textit{architecture} rather than a reference \textit{model}, we have only been concerned with what concepts it defines and what problems it frames.
 This delimitation excludes its ``architectural layers'', ``life-cycle \& value-stream'' phases and ``hierarchical levels'', as well as the abstract design of its ``asset administrative shell''.
 These excluded aspects are neither condemned nor endorsed by this document.
-They are simply outside its scope.
+As they are primarily architectural, they are simply outside its scope.
 
 \end{enumerate}
 
@@ -156,12 +159,11 @@ The remaining sections of this document are organized as follows:
 This section.
 
 \item[Section \ref{sec:overview}]
-A brief and formal overview of \GlossaryHyperRef{arrowhead}{Arrowhead}, describing how its core concepts relate to each other.
-The section also serves to provide a workable summary of the \GlossaryHyperRef{framework}{framework} and to prepare readers for better understanding Section \ref{sec:concepts}.
+A brief and formal overview of \GlossaryHyperRef{arrowhead}{Arrowhead}, introducing its most fundamental concepts and how those concepts relate to each other.
 
 \item[Section \ref{sec:concepts}]
-A formal description of the most significant concepts of Arrowhead.
-Each of its subsections is concerned with one primary concept, ranging from \GlossaryHyperRef{entity}{entities} to \GlossaryHyperRef{system-of-local-clouds}{systems-of-local-clouds}.
+An in-depth and formal description of the most fundamental concepts of Arrowhead, as well as other important auxiliary concepts.
+Each of its subsections is concerned with one concept, ranging from \GlossaryHyperRef{entity}{entities} to \GlossaryHyperRef{system-of-local-clouds}{systems-of-local-clouds}.
 
 \item[Section \ref{sec:conformance}]
 A list of requirements, meant to help determine if a document or \GlossaryHyperRef{model}{model} referring to the concepts of this document can be considered conformant.

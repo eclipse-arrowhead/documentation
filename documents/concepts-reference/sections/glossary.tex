@@ -1,4 +1,4 @@
-% Copyright (c) 2021 Eclipse Arrowhead Project
+% Copyright (c) 2021-2023 Eclipse Arrowhead Project
 %
 % This program and the accompanying materials are made available under the
 % terms of the Eclipse Public License 2.0 which is available at
@@ -11,6 +11,7 @@ Each term consisting of more than one word is sorted by its final, or qualified,
 This means that the definition of \GlossaryHyperRef{protocol-service}{service protocol}, for example, is found at \GlossaryNameRef{protocol-service}.
 
 Many of the definitions are amended with notes and references to IoTA:AF \cite{delsing2017iot}, ISO42010 \cite{iso42010}, SOA-RM \cite{mackenzie2006reference} and RAMI4.0 \cite{adolphs2016reference}, which are always listed after the definition they amend.
+The works in question are introduced in Section \ref{sec:introduction:relationships}.
 Regular notes are numbered, while those making a comment on a definition in IoTA:AF, ISO42010, SOA-RM or RAMI4.0 are introduced with the abbreviations just listed.
 
 {
@@ -23,11 +24,11 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} in the process of acquiring, or co
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{architect}{Architect}
-A \GlossaryHyperRef{stakeholder}{stakeholder} who seeks to improve upon or extend the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} itself, by, for example, writing core documentation or producing architectural \GlossaryHyperRef{description}{descriptions}.
+A \GlossaryHyperRef{stakeholder}{stakeholder} who designs or specifies Arrowhead systems or systems-of-systems, or who extends the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} itself, by, for example, writing core documentation or producing architectural \GlossaryHyperRef{description}{descriptions}.
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{architecture}{Architecture}
-A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of a certain (1) goals, ambitions or other principles; (2) an environment, either abstract or concrete; (3) as well as significant life-cycle events, such as construction, maintenance or decommissioning.
+A \GlossaryHyperRef{model}{model} of a \GlossaryHyperRef{system-of-systems}{system-of-systems} defined in terms of (1) goals, ambitions and other design principles; (2) an environment, either abstract or concrete; (3) as well as significant life-cycle events, such as construction, maintenance or decommissioning.
 
 	\GlossaryNote{ISO42010}{
 		defines architecture as ``$<$system$>$ fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution''.
@@ -64,6 +65,14 @@ Synonymous to \GlossaryNameRef{resource}.
 		See \GlossaryNameRef{resource} for a comparable term.
 	}
 
+\GlossaryEntry{assumption}{Assumption}
+The taking for granted that some fact or statement is true.
+
+	\GlossaryNote{Note 1}{
+		Assumptions can be an important method of imposing delimitation on a \GlossaryHyperRef{model}{model} or \GlossaryHyperRef{framework}{framework}.
+		If, for example, assuming that a suitable means of secure \GlossaryHyperRef{communication}{communication} will exist, a model of communication can be formulated without having to specify how its \GlossaryHyperRef{message}{messages} are secured.
+	}
+
 \GlossaryEntry{attribute}{Attribute}
 A name/value pair of \GlossaryHyperRef{data}{data}, associated with either an \GlossaryHyperRef{entity}{entity} or a \GlossaryHyperRef{relationship}{relationship}.
 
@@ -92,7 +101,7 @@ A \GlossaryHyperRef{boundary}{boundary} that exists in the physical world.
 	}
 
 \GlossaryEntry{boundary-virtual}{Boundary, Virtual}
-A \GlossaryHyperRef{boundary}{boundary} that exists only virtually.
+A \GlossaryHyperRef{boundary}{boundary} that exists only \GlossaryHyperRef{virtual}{virtually}.
 
 	\GlossaryNote{Note 1}{
 		Virtual boundaries can be facilitated by cryptographic secrets, identifiers, ownership statements, contracts, and so on.
@@ -113,6 +122,8 @@ A task, of any nature, that can be executed by an \GlossaryHyperRef{artifact}{ar
 	\GlossaryNote{SOA-RM}{
 		defines a capability as ``a real-world effect that a service provider is able to provide to a service consumer''.
 		Our definition is more general in the sense that not only \GlossaryHyperRef{provider-service}{service providers} are allowed to have capabilities.
+		We do only, however, explicitly define one way in which capabilities can be exercised, namely via the \GlossaryHyperRef{operation}{operations} exposed by \GlossaryHyperRef{service}{services}.
+		The two definitions may, therefore, be considered practically equivalent.
 		See also \GlossaryNameRef{capability-system}.
 	}
 
@@ -120,22 +131,30 @@ A task, of any nature, that can be executed by an \GlossaryHyperRef{artifact}{ar
 A \GlossaryHyperRef{capability}{capability} facilitated by the \GlossaryHyperRef{component-hardware}{hardware components} of a \GlossaryHyperRef{device}{device}.
 See Section \ref{sec:concepts:device}.
 
+\GlossaryEntry{capability-emergent}{Capability, Emergent}
+A \GlossaryHyperRef{capability}{capability} facilitated by the formation of a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
+See Section \ref{sec:concepts:sos}.
+
 \GlossaryEntry{capability-system}{Capability, System}
-A \GlossaryHyperRef{capability}{capability} facilitated by the \GlossaryHyperRef{component-software}{software components} of a \GlossaryHyperRef{system}{system}.
+A \GlossaryHyperRef{capability}{capability} facilitated by the \GlossaryHyperRef{component-hardware}{hardware} and \GlossaryHyperRef{component-software}{software} \GlossaryHyperRef{component}{components} of a \GlossaryHyperRef{system}{system}.
 See Section \ref{sec:concepts:system}.
 
 \GlossaryEntry{cloud}{Cloud}
-A \GlossaryHyperRef{boundary}{bounded} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to independently execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}.
+A \GlossaryHyperRef{cloud}{cloud} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} with at least one \GlossaryHyperRef{boundary}{boundary}, dedicated to producing or acting on a significant \GlossaryHyperRef{resource}{resource}.
+See Section \ref{sec:concepts:cloud}.
+
+\GlossaryEntry{cloud-arrowhead}{Cloud, Arrowhead}
+
+A \GlossaryHyperRef{cloud}{cloud} that conforms to a set of \GlossaryHyperRef{architecture}{architectural} requirements \GlossaryHyperRef{specification}{specified} by the \GlossaryHyperRef{project-eclipse-arrowhead}{Eclipse Arrowhead project}.
 
 	\GlossaryNote{Note 1}{
-		When the term ``cloud'' is used elsewhere, it often refers to clouds with only virtual resources, such as compute, storage and software-defined network utilities.
-		Here, we refer to such clouds as \GlossaryHyperRef{cloud-virtual}{virtual clouds}.
-		By making the unqualified word ``cloud'' less specific, it becomes more clear how our \GlossaryHyperRef{cloud-local}{local cloud} concept shares similarities with other types of clouds.
+		These requirements are outside the scope of this document and are, as a consequence, not specified here.
+		Please refer to the architectural documentation of the Eclipse Arrowhead project for more information Arrowhead-compliant clouds.
 	}
 
 \GlossaryEntry{cloud-local}{Cloud, Local}
 A \GlossaryHyperRef{cloud}{cloud} \GlossaryHyperRef{boundary-local}{bound to a physical location} due to its acting on or producing \GlossaryHyperRef{resource-local}{local resources}.
-See Section \ref{sec:concepts:local-cloud}.
+See Section \ref{sec:concepts:cloud}.
 
 	\GlossaryNote{IoTA:AF}{
 		provides an introduction to the local cloud concept in its second chapter, as well as an architectural definition in its third chapter.
@@ -150,8 +169,7 @@ See Section \ref{sec:concepts:local-cloud}.
 		\begin{quote}
 		In the Arrowhead Framework context a local cloud is defined as a self-contained network with the three mandatory core systems deployed and at least one application system deployed [...]
 		\end{quote}
-		Both of these descriptions are practical, in the sense that they emphasize engineering aspects.
-		As this document is a reference model, engineering aspects are out of scope.
+		Both of these descriptions are architectural rather than conceptual, which means that only some of the aspects they cover are inside the scope of this document.
 		The more general terms ``geographically local'', ``room'' and ``boundary'' clearly highlight the physicality of the local cloud itself, while the depiction of ``devices'' performing ``automation tasks'' makes it apparent that some kind of physical activity is involved, such as manufacturing.
 		Finally, the local cloud being ``encapsulated'', ``protected'' and ``self-contained'' indicates that it is understood to exhibit a degree of independence with respect to the tasks it is given, which we expect all kinds of clouds to exhibit.
 		Our definition should be interpreted as a summation of these characteristics.
@@ -159,9 +177,11 @@ See Section \ref{sec:concepts:local-cloud}.
 
 \GlossaryEntry{cloud-local-automation}{Cloud, Local Automation}
 Prefer \GlossaryNameRef{cloud-local}.
+See Section \ref{sec:concepts:cloud}.
 
 \GlossaryEntry{cloud-virtual}{Cloud, Virtual}
 A \GlossaryHyperRef{cloud}{cloud} \GlossaryHyperRef{boundary-virtual}{unbound by physical location} by only acting on or producing \GlossaryHyperRef{resource-virtual}{virtual resources}.
+See Section \ref{sec:concepts:cloud}.
 
 \GlossaryEntry{communication}{Communication}
 The activity of sending and/or receiving \GlossaryHyperRef{message}{messages}.
@@ -173,22 +193,41 @@ The activity of sending and/or receiving \GlossaryHyperRef{message}{messages}.
 An \GlossaryHyperRef{artifact}{artifact} that can be part of another artifact and contribute to it facilitating its \GlossaryHyperRef{capability}{capabilities}.
 
 	\GlossaryNote{Note 1}{
-		The term ``component'' should never be used to refer to a system being a constituent of a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
-		Such a system should be referred to as being a \GlossaryHyperRef{subsystem}{subsystem}.
+		The term ``component'' should not be used to refer to a system being a constituent of a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
+		Such a system should rather be referred to as being a \GlossaryHyperRef{subsystem}{subsystem}.
 	}
 
 	\GlossaryNote{RAMI4.0}{
-		makes no practical distinction between components and systems, as is done here.
-		See \GlossaryNameRef{system} for more details.
+		makes no practical distinction between components and \GlossaryHyperRef{system}{systems}.
+		We approach something akin to a practical distinction by only defining \GlossaryHyperRef{device}{devices} and systems as having components.
+		We do not, however, forbid other, more generic, uses of the word.
 	}
 
 \GlossaryEntry{component-hardware}{Component, Hardware}
-A physical \GlossaryHyperRef{component}{component} that can only be part of a \GlossaryHyperRef{device}{device}.
+A physical \GlossaryHyperRef{component}{component} that may be part of a \GlossaryHyperRef{device}{device}.
 See Section \ref{sec:concepts:device}.
 
 \GlossaryEntry{component-software}{Component, Software}
-A virtual \GlossaryHyperRef{component}{component} that can only be part of a \GlossaryHyperRef{system}{system}.
+A \GlossaryHyperRef{virtual}{virtual} \GlossaryHyperRef{component}{component} that may be part of a \GlossaryHyperRef{system}{system}.
 See Section \ref{sec:concepts:system}.
+
+\GlossaryEntry{component-virtual-hardware}{Component, Virtual Hardware}
+A \GlossaryHyperRef{component-software}{software component} that represents what normally would be a \GlossaryHyperRef{component-hardware}{hardware component}.
+
+\GlossaryEntry{compress}{Compress}
+To \GlossaryHyperRef{encode}{encode} \GlossaryHyperRef{data}{data} from its original form to a space-efficient form.
+See Section \ref{sec:concepts:encoding:compression}.
+
+	\GlossaryNote{Note 1}{
+		Comressing is the reverse of \GlossaryHyperRef{decompress}{decompressing}.
+	}
+
+\GlossaryEntry[(noun)]{compression}{Compression}
+An \GlossaryHyperRef{encoding}{encoding} that describes a space-efficient \GlossaryHyperRef{data}{data} format.
+See \GlossaryNameRef{compress}, \GlossaryNameRef{decompress}, Section \ref{sec:concepts:encoding:compression}.
+
+\GlossaryEntry{concept}{Concept}
+The description of a generic or abstract idea.
 
 \GlossaryEntry{configuration}{Configuration}
 A set of changeable \GlossaryHyperRef{attribute}{attributes} that directly influence how a \GlossaryHyperRef{system}{system} exercises its \GlossaryHyperRef{capability-system}{capabilities}.
@@ -200,7 +239,7 @@ To update a \GlossaryHyperRef{configuration}{configuration}.
 An active medium through which attached \GlossaryHyperRef{interface}{interfaces} can \GlossaryHyperRef{communication}{communicate}.
 
 \GlossaryEntry{constraint}{Constraint}
-A \GlossaryHyperRef{attribute}{attribute} that imposes constraints, or limits, on an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{relationship}{relationship}.
+An \GlossaryHyperRef{attribute}{attribute} that imposes constraints, or limits, on an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{relationship}{relationship}.
 
 	\GlossaryNote{Note 1}{
 		The presence of constraints enable \GlossaryHyperRef{validation}{validation}.
@@ -210,36 +249,29 @@ A \GlossaryHyperRef{attribute}{attribute} that imposes constraints, or limits, o
 		Perhaps a bit counterintuitively, a constraint \textit{adds} information to its target by reducing the ways in which it could be realized.
 	}
 
-\GlossaryEntry{constraint-encoding}{Constraint, Encoding}
-A \GlossaryHyperRef{constraint}{constraint} imposed on an \GlossaryHyperRef{encoding}{encoding}.
-See Section \ref{sec:concepts:profile}.
-
-	\GlossaryNote{Note 1}{
-		An encoding constraint could require that an optional \GlossaryHyperRef{data}{data} field be present or omitted, require that the values of certain fields satisfy a certain \GlossaryHyperRef{function-predicate}{predicate function}, and so on.
-	}
-
 \GlossaryEntry{constraint-policy}{Constraint, Policy}
 A \GlossaryHyperRef{constraint}{constraint} imposed by a \GlossaryHyperRef{policy}{policy}.
 See Section \ref{sec:concepts:policy}.
 
-\GlossaryEntry{constraint-protocol}{Constraint, Protocol}
-A \GlossaryHyperRef{constraint}{constraint} imposed on a \GlossaryHyperRef{protocol}{protocol}.
+\GlossaryEntry{constraint-profile}{Constraint,Profile}
+A \GlossaryHyperRef{constraint}{constraint} imposed by a \GlossaryHyperRef{profile}{profile}.
 See Section \ref{sec:concepts:profile}.
 
 \GlossaryEntry{consumer-service}{Consumer, Service}
-A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{consumption-service}{consuming} a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation-service}{operations}.
+A \GlossaryHyperRef{system}{system} currently \GlossaryHyperRef{consumption-service}{consuming} a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation}{operations}.
 
 	\GlossaryNote{Note 1}{
-		The term may also be used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder}, in which case the stakeholder must be interpreted as if consuming services via systems.
+		The term may also be used to refer to a \GlossaryHyperRef{stakeholder}{stakeholder} consuming a service via a \GlossaryHyperRef{interface-human}{human interface}.
 	}
 
 	\GlossaryNote{SOA-RM}{
 		defines a service consumer as ``an entity which seeks to satisfy a particular need through the use [of] capabilities offered by means of a service''.
-		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} rather than just any \GlossaryHyperRef{entity}{entity}, as well as (2) that the \GlossaryHyperRef{capability-system}{capabilities} of the consumed service be exercised by invoking a function.
+		We require that the one consuming the service is (1) a \GlossaryHyperRef{system}{system} or a \GlossaryHyperRef{stakeholder}{stakeholder} rather than just any \GlossaryHyperRef{entity}{entity}, as well as (2) that the \GlossaryHyperRef{capability-system}{capabilities} of the consumed service be exercised via an operation.
+		Our definitions should be considered as compatible but more specific.
 	}
 
 \GlossaryEntry{consumption-service}{Consumption, Service}
-The act of consuming a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation-service}{operations}.
+The act of consuming a \GlossaryHyperRef{service}{service} by sending a \GlossaryHyperRef{message}{message} to one of its \GlossaryHyperRef{operation}{operations}.
 See \GlossaryNameRef{consumer-service}.
 
 \GlossaryEntry{data}{Data}
@@ -250,11 +282,11 @@ A sequence of \GlossaryHyperRef{datum}{datums} recording a set of \GlossaryHyper
 		The type associated with the data requires that it always consists of 8 bits, organized such that the first 4 bits indicate the speed of drilling in multiples of 100 rotations per minute, while the latter 4 determine how much to lower the drill in multiples of 5 millimeters.
 		A \GlossaryHyperRef{state}{state} that could be expressed with those 8 bits is \texttt{0100 1101}.
 		If each of the two sequences of 4 bits is treated as a big-endian integer with base 2, they record $4$ and $13$ in decimal notation.
-		This would indicate that the drill should spin at $4 * 100 = 400$ rotations per minute and be lowered $13 * 5 = 65$ millimeters.
+		This could, for example, indicate that the drill should spin at $4 * 100 = 400$ rotations per minute and be lowered $13 * 5 = 65$ millimeters.
 	}
 
 	\GlossaryNote{Note 2}{
-		Without knowledge of the types and context associated with some data, that data cannot be interpreted.
+		Both the type and \GlossaryHyperRef{semantics}{semantics} of given data must be known for the data to be possible to interpret.
 	}
 
 \GlossaryEntry{datum}{Datum}
@@ -262,7 +294,7 @@ A variable expressing one out of a set of possible values.
 See also \GlossaryNameRef{state}.
 
 	\GlossaryNote{Note 1}{
-		A familiar example of a datum may be the bit, or \textit{binary digit}.
+		An example of a datum familiar to many could be the bit, or \textit{binary digit}.
 		Its possible set of symbols is $\{0, 1\}$.
 	}
 
@@ -274,11 +306,27 @@ The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a 
 	}
 
 	\GlossaryNote{Note 2}{
-		The term can also be used to express the act of a human interpreting data.
+		The term can also be used to express the act of a \GlossaryHyperRef{person}{person} interpreting data.
 	}
 
 \GlossaryEntry{decoder}{Decoder}
-An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{decode}{decoding} \GlossaryHyperRef{data}{data}.
+An \GlossaryHyperRef{component}{component} capable of \GlossaryHyperRef{decode}{decoding} \GlossaryHyperRef{data}{data}.
+
+\GlossaryEntry{decompress}{Decompress}
+To \GlossaryHyperRef{decode}{decode} \GlossaryHyperRef{data}{data} from a space-efficient form to its original form.
+See Section \ref{sec:concepts:encoding:compression}.
+
+	\GlossaryNote{Note 1}{
+		Decomressing is the reverse of \GlossaryHyperRef{compress}{compressing}.
+	}
+
+\GlossaryEntry{decrypt}{Decrypt}
+To \GlossaryHyperRef{decode}{decode} \GlossaryHyperRef{data}{data} from an undecipherable form to its original form.
+See Section \ref{sec:concepts:encoding:encryption}.
+
+	\GlossaryNote{Note 1}{
+		Decrypting is the reverse of \GlossaryHyperRef{encrypt}{encrypting}.
+	}
 
 \GlossaryEntry{description}{Description}
 Facts about an \GlossaryHyperRef{entity}{entity} or \GlossaryHyperRef{entity-class-of}{class of entities}, expressed in the form of a \GlossaryHyperRef{model}{model}, a text, or both.
@@ -314,6 +362,22 @@ A \GlossaryHyperRef{device}{device} with sensors and actuators that together mak
 \GlossaryEntry{device-intermediary}{Device, Intermediary}
 A \GlossaryHyperRef{device-connected}{connected device} that receives and forwards \GlossaryHyperRef{message}{messages} toward \GlossaryHyperRef{device-end}{end devices}.
 
+\GlossaryEntry{device-virtual}{Device, Virtual}
+A \GlossaryHyperRef{device}{device} that exists only \GlossaryHyperRef{virtual}{virtually}.
+Examples of virtual devices can be application containers, virtual machines or emulated machines.
+
+\GlossaryEntry{domain-problem}{Domain, Problem}
+All aspects, known and unknown, that influence the potential for solving a particular problem.
+
+	\GlossaryNote{Note 1}{
+		When you \textit{address} a problem domain, you provide a solution to its problem that accounts for all of its known aspects.
+	}
+
+	\GlossaryNote{Note 2}{
+		The problem domain of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} consists of all aspects, known and unknown, that influence the potential for computer systems to exchange the information they need to execute tasks they have been assigned.
+		Addressing its problem domain means that software specifications or implementations are produced that describe or handle such information exchanges, respectively.
+	}
+
 \GlossaryEntry{encode}{Encode}
 The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a \GlossaryHyperRef{encoding}{encoding} suitable for interpretation to another encoding suitable for transmission or storage.
 
@@ -322,15 +386,27 @@ The act of transforming \GlossaryHyperRef{data}{data} from being expressed in a 
 	}
 
 	\GlossaryNote{Note 2}{
-		The term can also be used to express the act of a human recording data.
+		The term can also be used to express the act of a \GlossaryHyperRef{person}{person} recording data.
 	}
 
 \GlossaryEntry{encoder}{Encoder}
-An \GlossaryHyperRef{entity}{entity} capable of \GlossaryHyperRef{encode}{encoding} \GlossaryHyperRef{data}{data}.
+An \GlossaryHyperRef{component}{component} capable of \GlossaryHyperRef{encode}{encoding} \GlossaryHyperRef{data}{data}.
 
 \GlossaryEntry[(noun)]{encoding}{Encoding}
-A \GlossaryHyperRef{type-data}{data type} used to structure and interpret certain \GlossaryHyperRef{data}{data}.
+A \GlossaryHyperRef{type-data}{data type} used to structure and interpret conformant \GlossaryHyperRef{data}{data}.
 See Section \ref{sec:concepts:encoding}.
+
+\GlossaryEntry{encrypt}{Encrypt}
+To \GlossaryHyperRef{encode}{encode} \GlossaryHyperRef{data}{data} from its original form to an undecipherable form.
+See Section \ref{sec:concepts:encoding:encryption}.
+
+	\GlossaryNote{Note 1}{
+		Encrypting is the reverse of \GlossaryHyperRef{decrypt}{decrypting}.
+	}
+
+\GlossaryEntry[(noun)]{encryption}{Encryption}
+An \GlossaryHyperRef{encoding}{encoding} that describes an undecipherable \GlossaryHyperRef{data}{data} format used to hide data from others that its intended receivers.
+See \GlossaryNameRef{encrypt}, \GlossaryNameRef{decrypt}, Section \ref{sec:concepts:encoding:encryption}.
 
 \GlossaryEntry{entity}{Entity}
 An \GlossaryHyperRef{artifact}{artifact} with an \GlossaryHyperRef{identity}{identity}, allowing for it to be distinguished from all other artifacts.
@@ -343,7 +419,7 @@ See Section \ref{sec:concepts:entity}.
 
 	\GlossaryNote{SOA-RM}{
 		mentions the word ``entity'' nine times, but provides no explicit definition.
-		We assume their definition to match that of a regular English dictionary, such as ``something that has separate and distinct existence and objective or conceptual reality'' \cite{webster2021entity}.
+		We assume their definition to match that of a regular English dictionary, such as ``something that has separate and distinct existence and objective or conceptual reality'' \cite{webster2023entity}.
 		Our definition should be interpreted as being equivalent.
 	}
 
@@ -373,34 +449,39 @@ See Section \ref{sec:overview}.
 Prefer \GlossaryNameRef{framework}.
 
 \GlossaryEntry{framework-arrowhead}{Framework, Arrowhead}
-Either of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the Arrowhead project.
-See Section \ref{sec:overview}.
+Either or both of the \GlossaryHyperRef{framework}{framework of ideas} and the \GlossaryHyperRef{framework-software}{framework of software} maintained by the \GlossaryHyperRef{project-eclipse-arrowhead}{Arrowhead project}.
+See \GlossaryNameRef{framework}, Section \ref{sec:overview}.
 
 \GlossaryEntry{framework-idea}{Framework, Idea}
 A set of assumptions, concepts, values and practices that frame a certain problem domain.
-See Section \ref{sec:overview}.
+See \GlossaryNameRef{framework}, Section \ref{sec:overview}.
 
 \GlossaryEntry{framework-software}{Framework, Software}
 A set of software specifications, \GlossaryHyperRef{implementation-software}{implementations} and other \GlossaryHyperRef{artifact}{artifacts} meant to help address the problem domain of a certain \GlossaryHyperRef{framework}{framework}.
-See Section \ref{sec:overview}.
+See \GlossaryNameRef{framework}, Section \ref{sec:overview}.
 
 \GlossaryEntry{function}{Function}
 A conceptual mathematical construct that transforms given input values into output values.
 
 	\GlossaryNote{Note 1}{
-		Most functions can be \GlossaryHyperRef{implementation}{implemented} as \GlossaryHyperRef{implementation-software}{software}.
+		Most functions can be practically \GlossaryHyperRef{implementation}{implemented} as \GlossaryHyperRef{implementation-software}{software}, in which case they can also be referred to as \GlossaryHyperRef{function-computer}{computer functions}.
 	}
+
+\GlossaryEntry{function-computer}{Function, Computer}
+A sequence of instructions executed by one or more \GlossaryHyperRef{unit-compute}{compute units} in response to an invocation with a set of arguments.
+The result of executing such a function may be that the \GlossaryHyperRef{state}{state} of the computer is updated and/or that the function returns a value.
+Compare with \GlossaryNameRef{function}.
 
 \GlossaryEntry{function-predicate}{Function, Predicate}
 A \GlossaryHyperRef{function}{function} whose output value must be a \textit{Boolean variable}.
 An output value of \textit{true} indicates that the function is \textit{satisfied}, while an output value of false indicates it being \textit{violated}.
 
 	\GlossaryNote{Note 1}{
-		A \textit{Boolean variable} can only be either of the two mentioned values, \textit{true} and \textit{false}.
+		A \textit{Boolean variable} can only be either of the two mentioned values, \textit{true} or \textit{false}.
 	}
 
 \GlossaryEntry[(adjective)]{hardware-adjective}{Hardware}
-The property of being physical, as opposed to being virtual.
+The property of being physical, as opposed to being \GlossaryHyperRef{virtual}{virtual}.
 See \GlossaryNameRef{software-adjective}.
 
 \GlossaryEntry[(noun)]{hardware}{Hardware}
@@ -419,7 +500,7 @@ Prefer \GlossaryNameRef{person}.
 \GlossaryEntry{identifiable}{Identifiable}
 The property of being possible to distinguish a certain \GlossaryHyperRef{artifact}{artifact} from all other artifacts.
 
-	\GlossaryHyperRef{Note 1}{
+	\GlossaryNote{Note 1}{
 		Being identifiable is the same as being an \GlossaryHyperRef{entity}{entity}.
 	}
 
@@ -441,19 +522,11 @@ The realization of a \GlossaryHyperRef{design}{design} as a set of \GlossaryHype
 \GlossaryEntry{implementation-software}{Implementation, Software}
 An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{software}{software} \GlossaryHyperRef{artifact}{artifacts}.
 
-	\GlossaryNote{Note 1}{
-		The term may also be used to refer to all software artifacts part of an implementation.
-	}
-
 \GlossaryEntry{implementation-hardware}{Implementation, Hardware}
 An \GlossaryHyperRef{implementation}{implementation} comprised of \GlossaryHyperRef{hardware}{hardware} \GlossaryHyperRef{artifact}{artifacts}.
 
-	\GlossaryNote{Note 1}{
-		The term may also be used to refer to all hardware artifacts part of an implementation.
-	}
-
 \GlossaryEntry{industry40}{Industry 4.0}
-The fourth industrial paradigm, primarily characterized by high degrees of computerization, digitization and interconnectivity.
+The anticipated fourth industrial paradigm, primarily characterized by high degrees of computerization, digitization and interconnectivity.
 See also \cite{adolphs2016reference}.
 
 \GlossaryEntry{instance-software}{Instance, Software}
@@ -482,12 +555,7 @@ An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHype
 
 \GlossaryEntry{interface-service}{Interface, Service}
 An \GlossaryHyperRef{interface}{interface} through which a certain \GlossaryHyperRef{service}{service} can be \GlossaryHyperRef{consumer-service}{consumed}.
-
-	\GlossaryNote{Note 1}{
-		Consuming a service requires that \GlossaryHyperRef{message}{messages} be passed from its \GlossaryHyperRef{device}{device} to its \GlossaryHyperRef{system}{system}, and then from its system to the service itself.
-		As the \GlossaryHyperRef{software}{software} making up the service is owned by the system, it is the system that is understood to produce any responses.
-		Those are passed on via its device.
-	}
+See Sections \ref{sec:concepts:service}, \ref{sec:concepts:interface}.
 
 	\GlossaryNote{SOA-RM}{
 		defines service interface as ``the means by which the underlying capabilities of a service are accessed''.
@@ -514,48 +582,41 @@ A \GlossaryHyperRef{stakeholder}{stakeholder} involved in maintaining \GlossaryH
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{message}{Message}
-\GlossaryHyperRef{data}{Data} sent or received via an \GlossaryHyperRef{interface}{interface}.
-Every message must \GlossaryHyperRef{identification}{identify} a target \GlossaryHyperRef{operation-service}{service operation} and may contain \GlossaryHyperRef{metadata}{metadata} and a payload.
-
-	\GlossaryNote{Note 1}{
-		The metadata of a message represent the details it contains about its transmission and interpretation.
-		Metadata are always concerned with the \GlossaryHyperRef{protocol}{protocol} of the message and with satisfying the \GlossaryHyperRef{policy}{policies} of the interfaces that must be passed on its journey to its target operation.
-		Metadata may be added, modified and/or used by \GlossaryHyperRef{interface}{interfaces} when messages pass through them.
-	}
-
-	\GlossaryNote{Note 2}{
-		A payload is an input to a service operation.
-		Operations are not required to expect input data, which is why having a message payload is optional.
-	}
+\GlossaryHyperRef{data}{Data} describing how to invoke a certain \GlossaryHyperRef{operation}{operation}.
+See Section \ref{sec:concepts:message}.
 
 \GlossaryEntry{message-error}{Message, Error}
-A \GlossaryHyperRef{message}{message} indicating why the request expressed by some other message could not be executed.
-
-	\GlossaryNote{Note 1}{
-		We expect the receiver of most error messages to be the respective senders of the messages that could not be executed.
-	}
+A \GlossaryHyperRef{message}{message} indicating why the request expressed by some other message could not be satisfied.
 
 \GlossaryEntry{message-forbidden}{Message, Forbidden}
-A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will not be executed.
+A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will not be passed to the \GlossaryHyperRef{operation}{operation} it targets.
 See Section \ref{sec:concepts:policy}.
 
+\GlossaryEntry{message-inbound}{Message, Inbound}
+A \GlossaryHyperRef{message}{message} that it currently being \GlossaryHyperRef{routing}{routed} away from a \GlossaryHyperRef{interface-network}{network interface} and towards an \GlossaryHyperRef{operation}{operation}.
+See Section \ref{sec:concepts:interface}.
+
 \GlossaryEntry{message-invalid}{Message, Invalid}
-A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{protocol}{protocol} of concern and, therefore, will not be executed.
+A \GlossaryHyperRef{message}{message} that fails to satisfy a \GlossaryHyperRef{protocol}{protocol} of concern and, therefore, will not be passed to the \GlossaryHyperRef{operation}{operation} it targets.
 See Section \ref{sec:concepts:protocol}.
 
+\GlossaryEntry{message-outbound}{Message, Outbound}
+A \GlossaryHyperRef{message}{message} that it currently being sent towards a \GlossaryHyperRef{interface-network}{network interface} as part of its journey to an \GlossaryHyperRef{operation}{operation}.
+See Section \ref{sec:concepts:interface}.
+
 \GlossaryEntry{message-permitted}{Message, Permitted}
-A \GlossaryHyperRef{message}{message} that does satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will be executed if all other policies are also satisfied.
+A \GlossaryHyperRef{message}{message} that does satisfy a \GlossaryHyperRef{policy}{policy} of concern and, therefore, will be passed to the \GlossaryHyperRef{operation}{operation} it tagets---if all other policies are also satisfied.
 See Section \ref{sec:concepts:policy}.
 
 \GlossaryEntry{message-valid}{Message, Valid}
-A \GlossaryHyperRef{message}{message} that does satisfy a \GlossaryHyperRef{protocol}{protocol} of concern and, therefore, will be executed if it is \GlossaryHyperRef{message-permitted}{permitted}.
+A \GlossaryHyperRef{message}{message} that does satisfy a \GlossaryHyperRef{protocol}{protocol} of concern and, therefore, will be passed to the \GlossaryHyperRef{operation}{operation} it targets---if it is \GlossaryHyperRef{message-permitted}{permitted}.
 See Section \ref{sec:concepts:protocol}.
 
 \GlossaryEntry{metadata}{Metadata}
 \GlossaryHyperRef{data}{Data} \GlossaryHyperRef{description}{describing} other data.
 
 \GlossaryEntry{metamodel}{Metamodel}
-A basic set of \GlossaryHyperRef{model}{model} constructs that can be extended by other models.
+A set of \GlossaryHyperRef{model}{model} constructs that can be used to formulate other models.
 
 	\GlossaryNote{Note 1}{
 		A metamodel can be thought of as a general language in which more specific models can be expressed.
@@ -584,18 +645,19 @@ A set of two or more \GlossaryHyperRef{device-end}{end devices}, \GlossaryHyperR
 See Section \ref{sec:concepts:network}.
 
 \GlossaryEntry{operation}{Operation}
-An activity a \GlossaryHyperRef{service}{service} can perform if receiving a \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted} \GlossaryHyperRef{message} targeting that operation.
-See Section \ref{sec:concepts:service}.
+A \GlossaryHyperRef{component-software}{component} of a \GlossaryHyperRef{service}{service} that handles given \GlossaryHyperRef{message}{messages} by using the \GlossaryHyperRef{capability-system}{capabilities} of its \GlossaryHyperRef{system}{system}.
+See Section \ref{sec:concepts:operation}.
 
-\GlossaryEntry{operation-service}{Operation, Service}
-Prefer \GlossaryNameRef{operation}.
+\GlossaryEntry{operation-exposed}{Operation, Exposed}
+An \GlossaryHyperRef{operation}{operation} part of a \GlossaryHyperRef{service}{service} that is currently being \GlossaryHyperRef{provision-service}{provided} by a \GlossaryHyperRef{system}{system}.
+See Section \ref{sec:concepts:operation}.
 
 \GlossaryEntry{operator}{Operator}
 A \GlossaryHyperRef{stakeholder}{stakeholder} responsible for the \GlossaryHyperRef{configure}{configuration} and oversight of \GlossaryHyperRef{system}{systems} and the \GlossaryHyperRef{resource}{resources} those systems manage.
 See Section \ref{sec:concepts:stakeholder}.
 
 \GlossaryEntry{organization}{Organization}
-A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of other stakeholders and/or other persons.
+A \GlossaryHyperRef{stakeholder}{stakeholder} comprised of an organized body of other stakeholders and/or other \GlossaryHyperRef{person}{persons}.
 
 \GlossaryEntry{owner}{Owner}
 A \GlossaryHyperRef{stakeholder}{stakeholder} that owns significant \GlossaryHyperRef{resource}{resources} and/or other \GlossaryHyperRef{artifact}{artifacts}.
@@ -605,7 +667,7 @@ See Section \ref{sec:concepts:stakeholder}.
 A human being.
 
 \GlossaryEntry{policy}{Policy}
-A set of \GlossaryHyperRef{constraint}{constraints}, of any nature, that must be satisfied by all \GlossaryHyperRef{message}{messages} passed on by an \GlossaryHyperRef{interface}{interface}.
+A set of \GlossaryHyperRef{constraint}{constraints} that must be satisfied by all \GlossaryHyperRef{message}{messages} passed on by a conforming \GlossaryHyperRef{interface}{interface}.
 See Section \ref{sec:concepts:policy}.
 
 	\GlossaryNote{SOA-RM}{
@@ -615,6 +677,13 @@ See Section \ref{sec:concepts:policy}.
 
 \GlossaryEntry{policy-message}{Policy, Message}
 Prefer \GlossaryNameRef{policy}.
+
+\GlossaryEntry{practice}{Practice}
+A particular way in which some task or activity is carried out.
+
+	\GlossaryNote{Note 1}{
+		The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} is, among other things, concerned with shaping practices surrounding the development and maintenance of \GlossaryHyperRef{system-of-systems}{systems-of-systems}.
+	}
 
 \GlossaryEntry{profile}{Profile}
 A set of \GlossaryHyperRef{constraint}{constraints} superimposed on a \GlossaryHyperRef{protocol}{protocol}.
@@ -632,6 +701,10 @@ See Section \ref{sec:concepts:profile}.
 
 \GlossaryEntry{profile-protocol}{Profile, Protocol}
 Prefer \GlossaryNameRef{profile}.
+
+\GlossaryEntry{profile-semantic}{Profile, Semantic}
+A \GlossaryHyperRef{profile}{profile} requiring that the \GlossaryHyperRef{type-data}{data type} of each relevant \GlossaryHyperRef{protocol}{protocol} \GlossaryHyperRef{encoding}{encoding} is disambiguated by one specific \GlossaryHyperRef{semantics}{semantics}.
+See Section \ref{sec:concepts:semantics:profile}.
 
 \GlossaryEntry{project-eclipse-arrowhead}{Project, Eclipse Arrowhead}
 The effort of the \GlossaryHyperRef{arrowhead}{Arrowhead} community to increase the utility of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
@@ -708,6 +781,9 @@ A \GlossaryHyperRef{system}{system} that makes \GlossaryHyperRef{service}{servic
 The act of making \GlossaryHyperRef{service}{services} available for \GlossaryHyperRef{consumption-service}{consumption}.
 See \GlossaryNameRef{provider-service}.
 
+\GlossaryEntry{proxy}{Proxy}
+An \GlossaryHyperRef{entity}{entity} representing the agenda or desires of another entity or \GlossaryHyperRef{stakeholder}{stakeholder}.
+
 \GlossaryEntry{relationship}{Relationship}
 A named uni-directional association between two \GlossaryHyperRef{model}{model} \GlossaryHyperRef{entity}{entities}.
 
@@ -737,7 +813,7 @@ A \GlossaryHyperRef{resource}{resource} whose value or utility is inextricably t
 A \GlossaryHyperRef{resource}{resource} whose value or utility is not derived from any physical \GlossaryHyperRef{attribute}{attribute}.
 
 	\GlossaryNote{Note 1}{
-		Examples of virtual resources could be compute, storage, or software-defined network utilities.
+		Examples of \GlossaryHyperRef{virtual}{virtual} resources could be compute, storage, or software-defined network utilities.
 		While all of these resources are facilitated by physical entities, namely various types of computer equipment, they do not depend on any particular machines.
 		They can be moved to different machines without loosing their value or utility.
 	}
@@ -749,10 +825,21 @@ An assignment, objective, or other responsibility, that makes a \GlossaryHyperRe
 Prefer \GlossaryNameRef{role}.
 
 \GlossaryEntry{routing}{Routing}
-The act of forwarding a \GlossaryHyperRef{message}{message} towards the \GlossaryHyperRef{operation}{service operation} it targets.
+The act of forwarding a \GlossaryHyperRef{message}{message} away from a \GlossaryHyperRef{interface-network}{network interface} towards the \GlossaryHyperRef{operation}{service operation} it targets.
 
 \GlossaryEntry{routing-message}{Routing, Message}
-Prefer \GlossaryNameRef{routing}{routing}.
+Prefer \GlossaryNameRef{routing}.
+
+\GlossaryEntry{semantics}{Semantics}
+A \GlossaryHyperRef{model}{model} used to derive meaning from \GlossaryHyperRef{data}{data}.
+Data wihout a known semantics cannot be interpreted.
+See Section \ref{sec:concepts:semantics}.
+
+\GlossaryEntry{semantics-data}{Semantics, Data}
+Prefer \GlossaryNameRef{semantics}.
+
+\GlossaryEntry{semantics-message}{Semantics, Message}
+The \GlossaryHyperRef{semantics}{semantics} of a \GlossaryHyperRef{message}{message}.
 
 \GlossaryEntry{service}{Service}
 A set of \GlossaryHyperRef{operation}{operations} that can be \GlossaryHyperRef{provision-service}{provided} by a \GlossaryHyperRef{system}{system} via one or more \GlossaryHyperRef{interface-service}{service interfaces}.
@@ -775,7 +862,7 @@ See Section \ref{sec:concepts:service}.
 	}
 
 \GlossaryEntry[(adjective)]{software-adjective}{Software}
-The property of being virtual, as opposed to being physical.
+The property of being \GlossaryHyperRef{virtual}{virtual}, as opposed to being physical.
 See \GlossaryNameRef{hardware-adjective}.
 
 \GlossaryEntry[(noun)]{software}{Software}
@@ -787,7 +874,7 @@ A set of sequences of instructions that can be executed by a \GlossaryHyperRef{u
 	}
 
 \GlossaryEntry{specification}{Specification}
-A detailed \GlossaryHyperRef{description}{description}, outlining the design of some \GlossaryHyperRef{artifact}{artifact} of concern.
+A detailed \GlossaryHyperRef{description}{description}, outlining the \GlossaryHyperRef{design}{design} of some \GlossaryHyperRef{artifact}{artifact} of concern.
 
 \GlossaryEntry{specification-software}{Specification, Software}
 A \GlossaryHyperRef{specification}{specification} concerned only or primarily with \GlossaryHyperRef{software}{software}.
@@ -815,6 +902,12 @@ One out of all possible sequences of values that could be expressed by the \Glos
 The \GlossaryHyperRef{state}{state} of a \GlossaryHyperRef{protocol}{protocol} in active use, determining what \GlossaryHyperRef{message}{messages} it currently deems valid.
 See Section \ref{sec:concepts:protocol}.
 
+\GlossaryEntry{stub-service}{Stub, Service}
+The means through which a \GlossaryHyperRef{system}{system} \GlossaryHyperRef{consumption-service}{consumes} a \GlossaryHyperRef{service}{service} of another system.
+Every service stub has its own \GlossaryHyperRef{interface-operation}{operation interfaces}.
+If one of those operation interfaces is provided with a \GlossaryHyperRef{message}{message}, the service stub will attempt to pass on that message to the service represented by the stub.
+See Section \ref{sec:concepts:interface}.
+
 \GlossaryEntry{subprotocol}{Subprotocol}
 A \GlossaryHyperRef{protocol}{protocol} that is realized as an \GlossaryHyperRef{protocol-extensible}{extension} of another protocol.
 
@@ -839,19 +932,26 @@ A \GlossaryHyperRef{software}{software} \GlossaryHyperRef{entity}{entity} capabl
 \GlossaryEntry{system-automation}{System, Automation}
 Any kind of system, compatible with the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} or not, meant to facilitate some form of \GlossaryHyperRef{automation}{automation}.
 
-\GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
-A set of \GlossaryHyperRef{cloud-local}{local clouds} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent local clouds could \GlossaryHyperRef{provider-service}{provide} on its own.
-See Section \ref{sec:concepts:solc}.
+\GlossaryEntry{system-of-clouds}{System-of-Clouds (SoCl)}
+A set of at least two \GlossaryHyperRef{cloud}{clouds} that collaborate by at least one cloud \GlossaryHyperRef{consumer-service}{consuming} at least one \GlossaryHyperRef{service}{service} \GlossaryHyperRef{provider-service}{provided} by another cloud in the set.
+See Section \ref{sec:concepts:soc}.
 
-\GlossaryEntry{system-of-systems}{System, of-Systems (SoS)}
-A set of \GlossaryHyperRef{system}{systems} that \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services} in order to facilitate a \GlossaryHyperRef{capability-system}{capability} none of the constituent systems could \GlossaryHyperRef{provision-service}{provide} on its own.
+\GlossaryEntry{system-of-local-clouds}{System-of-Local-Clouds (SoLC)}
+A \GlossaryHyperRef{system-of-clouds}{system-of-clouds} where every constituent \GlossaryHyperRef{cloud}{cloud} is a \GlossaryHyperRef{cloud-local}{local cloud}.
+See Section \ref{sec:concepts:soc}.
+
+\GlossaryEntry{system-of-systems}{System-of-Systems (SoS)}
+A set of at least two \GlossaryHyperRef{system}{systems} that collaborate by at least one system \GlossaryHyperRef{consumer-service}{consuming} at least one \GlossaryHyperRef{service}{service} \GlossaryHyperRef{provider-service}{provided} by another system in the set.
 See Section \ref{sec:concepts:sos}.
 
 	\GlossaryNote{IoTA:AF}{
 		defines a system-of-systems as ``a set of systems, which [...] exchange information by means of services''.
-		It further adds that ``when Arrowhead compliant systems collaborate, they become a System of Systems in the Arrowhead Framework's definition''.
-		While we clarify here that the desired outcome of collaboration is the facilitation of new capabilities, the definitions should be interpreted as being equivalent.
+		Our definition must be interpreted as being equivalent or as being incorrect.
 	}
+
+\GlossaryEntry{system-of-virtual-clouds}{System-of-Virtual-Clouds (SoVC)}
+A \GlossaryHyperRef{system-of-clouds}{system-of-clouds} where every constituent \GlossaryHyperRef{cloud}{cloud} is a \GlossaryHyperRef{cloud-virtual}{virtual cloud}.
+See Section \ref{sec:concepts:soc}.
 
 \GlossaryEntry{system-opaque}{System, Opaque}
 A \GlossaryHyperRef{system}{system} that is unable to either \GlossaryHyperRef{provider-service}{provide} or \GlossaryHyperRef{consumer-service}{consume} \GlossaryHyperRef{service}{services}.
@@ -862,11 +962,11 @@ A \GlossaryHyperRef{system}{system} that is tasked with managing one or more \Gl
 	\GlossaryNote{Note 1}{
 		All systems are managing the resources provided to them by their hosting \GlossaryHyperRef{device}{devices}, such as primary memory, compute time, and so on.
 		This term is meant to capture the systems that are engaged in overseeing and/or managing resources beyond those directly provided.
-		Examples of such scenarios could be a single system being responsible for provisioning other devices, or a system using its robot device to collect and handle raw materials.
+		Examples of such scenarios could be a single system being responsible for provisioning other devices than its own, or a system using its robot arm to collect and handle raw materials.
 	}
 
 \GlossaryEntry{type}{Type}
-A \GlossaryHyperRef{description}{description} of how datums are to be arranged to \GlossaryHyperRef{encode}{encode} certain facts.
+A \GlossaryHyperRef{description}{description} of how datums are to be arranged to \GlossaryHyperRef{encode}{encode} certain structures.
 See also \GlossaryNameRef{data}.
 
 	\GlossaryNote{Note 1}{
@@ -880,6 +980,7 @@ See also \GlossaryNameRef{data}.
 		While knowing the type used to code some data is required for its interpretation, contextual knowledge is also needed.
 		For example, a type may specify a \texttt{name}, but it will not indicate when or why that name is useful.
 		That information would have to be provided via documentation or some other means.
+		Formally, the contextual knowledge of a data type is represented by its \GlossaryHyperRef{semantics}{semantics}.
 	}
 
 \GlossaryEntry{type-data}{Type, Data}
@@ -909,12 +1010,23 @@ See Section \ref{sec:concepts:stakeholder}.
 \GlossaryEntry{validation}{Validation}
 The process through which it is determined if a \GlossaryHyperRef{model}{model} satisfies a \GlossaryHyperRef{constraint}{constraint}.
 
+\GlossaryEntry{value}{Value}
+Something, such as a principle or quality, \GlossaryHyperRef{assumption}{assumed} to be intrinsically desirable.
+
+\GlossaryNote{Note 1}{
+	In the context of a technical \GlossaryHyperRef{framework}{framework}, values capture priorities assumed to be had be the users of the framework.
+	Values could concern the importance of being able to meet realtime deadlines, technical complexity, material costs, and so on.
+}
+
 \GlossaryEntry{viewpoint-architecture}{Viewpoint, Architecture}
-An \GlossaryHyperRef{description}{description} of a problem domain, specifying (1) concerns, (2) conventions and (3) \GlossaryHyperRef{kind-model}{model kinds}.
+An \GlossaryHyperRef{description}{description} of a \GlossaryHyperRef{domain-problem}{problem domain}, specifying (1) concerns, (2) conventions and (3) \GlossaryHyperRef{kind-model}{model kinds}.
 
 	\GlossaryNote{ISO42010}{
 		defines architecture viewpoint as ``work product establishing the conventions for the construction, interpretation and use of architecture views to frame specific system concerns''.
 		Our definition is meant to express this definition and must be considered as being either equivalent or incorrect.
 	}
+
+\GlossaryEntry{virtual}{Virtual}
+The property of having ones existence maintained by a computer.
 
 }

@@ -6,7 +6,7 @@
    viewBox="0 0 90 28"
    id="svg162"
    sodipodi:docname="graph-diagram.svg"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,15 +25,17 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="2.4635001"
-     inkscape:cx="175.96914"
-     inkscape:cy="52.567483"
-     inkscape:window-width="1851"
-     inkscape:window-height="1035"
-     inkscape:window-x="69"
-     inkscape:window-y="23"
-     inkscape:window-maximized="1"
+     inkscape:cx="144.91576"
+     inkscape:cy="91.333465"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="521"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
-     height="73mm">
+     height="73mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid987"
@@ -251,14 +253,12 @@
        text-align="center"
        text-anchor="middle"
        id="tspan1038">A</tspan></text>
-  <use
-     x="0"
-     y="0"
-     xlink:href="#path8035"
+  <path
+     d="m 45,14 v 5"
+     marker-end="url(#a)"
      id="use3577"
-     transform="rotate(180,45,14)"
-     width="100%"
-     height="100%" />
+     style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="cc" />
   <text
      xml:space="preserve"
      style="font-size:2.8px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"

@@ -5,7 +5,7 @@
    version="1.1"
    viewBox="0 0 116 24"
    id="svg162"
-   sodipodi:docname="system-of-systems.svg"
+   sodipodi:docname="system-of-clouds.svg"
    inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="3.4349897"
-     inkscape:cx="233.47959"
-     inkscape:cy="23.580857"
+     inkscape:zoom="3.6750161"
+     inkscape:cx="184.21688"
+     inkscape:cy="60.135791"
      inkscape:window-width="1957"
      inkscape:window-height="908"
-     inkscape:window-x="1949"
-     inkscape:window-y="300"
+     inkscape:window-x="1873"
+     inkscape:window-y="129"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg162"
      height="73mm"
@@ -103,15 +103,15 @@
     </marker>
   </defs>
   <path
-     d="M 35,5 H 13 l -10e-7,8"
-     marker-end="url(#a)"
-     id="path3155"
-     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
-     sodipodi:nodetypes="ccc" />
-  <path
      d="M 80.999999,5 H 103 v 8"
      marker-end="url(#a)"
      id="path131775"
+     style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M 35,5 H 13 l -10e-7,8"
+     marker-end="url(#a)"
+     id="path3155"
      style="fill:none;stroke:#666666;stroke-width:0.6;stroke-miterlimit:4;stroke-dasharray:none"
      sodipodi:nodetypes="ccc" />
   <use
@@ -205,7 +205,7 @@
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan8976">System</tspan></text>
+       id="tspan8976">Cloud</tspan></text>
   <text
      x="102.91504"
      y="20.258659"
@@ -219,7 +219,7 @@
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan8980">System</tspan></text>
+       id="tspan8980">Cloud</tspan></text>
   <text
      x="35.090332"
      y="2.9545898"
@@ -274,7 +274,7 @@
        stroke-width="0.26458"
        text-align="center"
        text-anchor="middle"
-       id="tspan44010">System-of-Systems</tspan></text>
+       id="tspan44010">System-of-Clouds</tspan></text>
   <text
      x="58.031479"
      y="19.999996"

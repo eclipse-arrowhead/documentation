@@ -1,4 +1,4 @@
-% Copyright (c) 2021 Eclipse Arrowhead Project
+% Copyright (c) 2021-2023 Eclipse Arrowhead Project
 %
 % This program and the accompanying materials are made available under the
 % terms of the Eclipse Public License 2.0 which is available at
@@ -6,24 +6,33 @@
 %
 % SPDX-License-Identifier: EPL-2.0
 
-The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework} can be divided into a \GlossaryHyperRef{framework-idea}{framework of ideas} and a \GlossaryHyperRef{framework-software}{framework of software}, as shown in Figure \ref{fig:framework}.
-The former division concerns the assumptions, concepts, values and practices that frame the problem domain of \textit{coordinating dynamic \GlossaryHyperRef{system-automation}{automation systems}}.
-The latter division concerns the software \GlossaryHyperRef{specification-software}{specifications} and \GlossaryHyperRef{implementation-software}{implementations} meant to address that problem domain.
-In this section, we provide an overview of the primary \textit{concepts} of the Arrowhead framework.
-While \textit{assumptions} and \textit{values} may be possible derive from this overview, no other framework aspects are considered here or in the rest of this document.
-
-\vfill
+The \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}, which is illustrated in Figure \ref{fig:framework}, consists of two subframeworks: a \GlossaryHyperRef{framework-idea}{framework of ideas} and a \GlossaryHyperRef{framework-software}{framework of software}.
+The framework of ideas formulates and frames the \GlossaryHyperRef{domain-problem}{\textit{problem domain}} the framework of software is meant to help address.
+By this we mean that the framework of ideas presents the \GlossaryHyperRef{assumption}{assumptions}, \GlossaryHyperRef{concept}{concepts}, \GlossaryHyperRef{value}{values} and \GlossaryHyperRef{practice}{practices} that should be applied when \GlossaryHyperRef{specification}{specifying} \GlossaryHyperRef{architecture}{architectural} or other technical documentation and when \GlossaryHyperRef{implementation}{implementing} any kinds of Arrowhead systems or components.
 
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.9]{figures/framework}
   \caption{
-    The two subframeworks of the Arrowhead framework, concerned with ideas and software.
+    The two subframeworks of the Arrowhead framework, concerned with \textit{ideas} and \textit{software}.
+    The specifications and implementations of the software framework must conform to the assumptions, concepts, values and practices of the idea framework.
+    The concepts of the idea framework are outlined in this document.
   }
   \label{fig:framework}
 \end{figure}
 
-\vspace*{-3mm}
+This document is part of Arrowhead's framework of ideas.
+As such, it is primarily concerned with defining concepts.
+However, before we move on to consider our overview those concepts, we will first present a few examples of other key framework ideas.\footnote{
+  At the time of writing, the best source of assumptions, values and practices of the Arrowhead framework is Jerker Delsing's book \textit{{IoT} Automation: Arrowhead Framework} \cite{delsing2017iot}.
+  The \GlossaryHyperRef{project-eclipse-arrowhead}{Eclipse Arrowhead project} may publish other works of relevance in the future.
+}
+It is, for example, \textit{assumed} that the framework may be applied in contexts where the primary activity is markedly physical, such as in transportation, mining, manufacturing, electricity generation, healthcare, and so on.
+One of the system characteristics \textit{valued} by the framework is \textit{resilience}, or the expectation that every system should do its outmost to mitigate and recover from degradations, failures or other contingencies that may affect its ability to perform its designated tasks.
+Finally, one of its \textit{recommended practices} is that every system-of-systems should be thoroughly documented at every level, from its smallest components up to its most high-level interactions.
+
+The rest of this section gives an overview of the most fundamental concepts of the framework.
+It is meant to prepare you for the next section, where the same concepts, and other supporting concepts, are presented in greater detail.
 
 \subsection{Stakeholders and Artifacts}
 
@@ -43,19 +52,13 @@ It is their business needs and ambitions that govern what and how Arrowhead arti
   \label{fig:world}
 \end{figure}
 
-\vspace*{-3mm}
-
 \subsection{Devices, Systems and Services}
 
 The most essential types of artifacts in the world of Arrowhead are (1) \GlossaryHyperRef{device}{hardware devices}, (2) \GlossaryHyperRef{system}{software systems} and (3) \GlossaryHyperRef{service}{services}, all shown in Figure \ref{fig:device-system-service}.
-\textit{Hardware devices}, or just \textit{devices}, are physical machines, such as servers, robots or tools, able to maintain, or \GlossaryHyperRef{hosting-system}{\textit{host}}, \textit{software systems}.
+\textit{Hardware devices}, or just \textit{devices}, are physical machines, such as servers, robots or tools, that are able to maintain, or \GlossaryHyperRef{hosting-system}{\textit{host}}, \textit{software systems}.
 A software system, or just \textit{system}, is a \GlossaryHyperRef{communication}{communicating} \GlossaryHyperRef{instance-software}{software instance} that \GlossaryHyperRef{provision-service}{provides} \textit{services}.
-Every service represents a set of tasks a system can perform for other systems.
-Those tasks are concretely represented by a set of \GlossaryHyperRef{operation-service}{operations} that system can execute as requested by other systems.
-A service may be concerned with manufacturing, repairs, analysis, or any other physical or virtual activity.
-Each of its operations is dedicated to one aspect of its concern.
-A service providing control over a door could, for example, have one operation for checking if the door is open and another for opening and closing it.
-Service operations can be executed, or \GlossaryHyperRef{consumption-service}{\textit{consumed}}, by other systems or \GlossaryHyperRef{person}{persons}.
+Every service represents a set of tasks a system can perform for other systems or for its stakeholders.
+When a system or stakeholder makes use of a service, it is said to \GlossaryHyperRef{consumption-service}{\textit{consume}} it.
 
 \vfill
 
@@ -68,12 +71,19 @@ Service operations can be executed, or \GlossaryHyperRef{consumption-service}{\t
   \label{fig:device-system-service}
 \end{figure}
 
-\vspace*{-3mm}
+\vfill
+
+Every service represents one area of concern its hosting system can address.
+Examples of such areas of concern could be generating financial statements, replacing propellers on drones, manufacturing bolts or measuring humidity.
+A service providing control over a door could, for example, make it possible to check if the door is open, to open it and to close it.
+Each such activity of every service is represented by one \GlossaryHyperRef{operation}{service operation}, which we will consider more in the next section.
 
 \subsection{Service Provision and Consumption}
 
-\GlossaryHyperRef{communication}{Communication} between systems is formulated in terms of the \GlossaryHyperRef{provision-service}{provision} and \GlossaryHyperRef{consumption-service}{consumption} of \GlossaryHyperRef{service}{services}.
-\GlossaryHyperRef{system}{Systems} may \textit{provide} services, which other systems can \textit{consume} by sending \GlossaryHyperRef{message}{messages}, as depicted in Figure \ref{fig:service-consumption}.
+As we have already established, \GlossaryHyperRef{communication}{communication} between systems is formulated in terms of the \GlossaryHyperRef{provision-service}{provision} and \GlossaryHyperRef{consumption-service}{consumption} of \GlossaryHyperRef{service}{services}.
+\GlossaryHyperRef{system}{Systems} may \textit{provide} services, which other systems can \textit{consume} by sending \GlossaryHyperRef{message}{messages} to their \GlossaryHyperRef{operation}{operations}, as depicted in Figure \ref{fig:service-consumption}.
+
+\vfill
 
 \begin{figure}[ht!]
   \centering
@@ -85,32 +95,68 @@ Service operations can be executed, or \GlossaryHyperRef{consumption-service}{\t
   \label{fig:service-consumption}
 \end{figure}
 
-When a providing system receives a message from a consuming system, it passes it on to the \GlossaryHyperRef{operation-service}{service operation} specified in that message, as described in Sections \ref{sec:concepts:service} and \ref{sec:concepts:interface}.
+\vfill
+
+Also \GlossaryHyperRef{person}{persons} can consume services, even though it is not explicitly depicted in Figure \ref{fig:service-consumption}.
+This, however, requires that a \GlossaryHyperRef{interface-human}{human interface} is attached to the providing system, or that another system with such an interface can act as \GlossaryHyperRef{proxy}{proxy}.
+The human interface enables the person, via its buttons, prompts or other elements, to send messages to the services in question, just as a regular system would.
+
+When a providing system receives a message from a consuming system or person, it passes it on to the service operation specified in that message, as described in Sections \ref{sec:concepts:service} and \ref{sec:concepts:interface}.
 The operation receiving the message will then handle it by performing whatever action it describes, given that the message is \GlossaryHyperRef{message-valid}{valid} and \GlossaryHyperRef{message-permitted}{permitted}.
-This handling may entail sending additional messages to other systems, starting or stopping various kinds of automation routines, reading from sensors, electronically signing contracts, sending notifications to an \GlossaryHyperRef{operator}{operator}, among many other possible examples.
+This handling may entail sending additional messages to other systems, starting or stopping various kinds of automation routines, reading from sensors, electronically signing contracts, sending notifications to an \GlossaryHyperRef{operator}{operator}, sending one or more messages back to the sender, among many other possible examples.
 
 \subsection{System Composition}
+\label{sec:overview:system-composition}
 
-When certain \GlossaryHyperRef{system}{systems} \GlossaryHyperRef{consumer-service}{consume} each other's \GlossaryHyperRef{service}{services}, they form a \GlossaryHyperRef{system-of-systems}{system-of-systems}.
-Such a system-of-systems is able to perform activities none of its constituent \GlossaryHyperRef{subsystem}{subsystems} could perform on its own.
-Two kinds of system-of-systems have particular significance in the context of the \GlossaryHyperRef{framework-arrowhead}{Arrowhead framework}.
-These are (1) the \GlossaryHyperRef{cloud-local}{local cloud}, and (2) the \GlossaryHyperRef{system-of-local-clouds}{system-of-local-clouds}, both depicted in Figure \ref{fig:system-of-systems}.
+\GlossaryHyperRef{system}{Systems} may \GlossaryHyperRef{consumer-service}{consume services} because it is a necessary part of executing the tasks they were designed to perform.
+Consider, for example, a scenario in which a number of automated guided vehicles, each of which is a system, are to move items around a factory as directed by a scheduling system.
+As the scheduling system does not have wheels, engines or other necessary sensors and actuators, it cannot physically move any items by itself. 
+Likewise, the individual vehicles are not capable of themselves deciding what needs to be taken to what location.
+However, if the scheduling system may consume the services of the vehicles, it gains the ability to physically execute its plans.
+When systems consume each others' services in this manner, they form a \GlossaryHyperRef{system-of-systems}{\textit{system-of-systems}}.
+
+As depicted in Figure \ref{fig:systems-of-systems}, there are different kinds of systems-of-systems with their own characteristics.
+There are \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-clouds}{systems-of-clouds}, as well as \textit{local} and \textit{virtual} variants of both.\footnote{
+  In addition to being local or virtual, a cloud may also be \textit{Arrowhead-compliant}.
+  Such a cloud is referred to as an \GlossaryHyperRef{cloud-arrowhead}{\textit{Arrowhead cloud}} and conforms to various architectural requirements put forth by the \GlossaryHyperRef{project-eclipse-arrowhead}{Eclipse Arrowhead project} in a separate document.
+}
+
+\vfill
 
 \begin{figure}[ht!]
   \centering
-  \includegraphics[scale=0.9]{figures/system-of-systems}
+  \includegraphics[scale=0.9]{figures/systems-of-systems}
   \caption{
-    The two primary kinds of Arrowhead systems-of-systems: the local cloud and the system-of-local-clouds.
+    The types of \textit{systems-of-systems}, each of which consists of a number of \textit{systems} that consume each others' services.
+    Clouds are systems-of-systems with \textit{boundaries}, while systems-of-clouds combine multiple clouds.
   }
-  \label{fig:system-of-systems}
+  \label{fig:systems-of-systems}
 \end{figure}
 
-A \textit{local cloud} is a set of systems engaged in some form of physical activity that makes those systems physically bound to a particular location.
-Local clouds come in many shapes and forms.
-They may be completely stationary, completely mobile, or consist of both stationary and mobile devices.
-Smelting stations, drone command centers, assembly lines, power distribution centers and satellite systems are a few examples of possible local clouds.
+\vfill
 
-A \textit{system-of-local-clouds} is a set of cooperating local clouds, each kept distinct from the other local clouds by some form of \GlossaryHyperRef{boundary-cloud}{boundary}.
-Boundaries may be organizational, physical, security-related, and so on.
-Every system-of-local-clouds contains at least one local cloud that depends on another local cloud to perform some activity of relevance.
-A systems-of-local-clouds could be formed by a set of weather stations, the robots of some collaborating parties at a mining site, the various departments of a manufacturing plant, the carriers of a supply chain, and so on.
+A \textbf{cloud} is a set of systems separated from all other systems by at least one \GlossaryHyperRef{boundary-cloud}{boundary}.
+Such a boundary may be formed via access control policies, firewalls, gateway systems, physical separation, among many other possible examples.
+Additionally, infrastructure must be in place, of any kind, allowing for any system part of the cloud to send messages to any other system in that cloud.\footnote{
+  Our term \textit{cloud} must not be confused with \textit{the cloud}, which is a common name for renting virtual compute, storage and networking resources from a so-called \textit{cloud provider}.
+}
+
+Because the Arrowhead framework is highly concerned with physical automation processes, we distinguish \GlossaryHyperRef{cloud-local}{local clouds} from \GlossaryHyperRef{cloud-virtual}{virtual clouds}.
+
+A \textbf{local cloud} has at least one system that depends on being at a specific location to provide at least one of its services.
+Examples of local clouds could be smelting stations, drone control towers, assembly lines, power distribution centers, or the components of a satellite.
+All of these examples involve performing physical activities that depend on occurring at specific physical locations.
+Also a common data center may be a local cloud, if its exact location matters for reasons such as privacy or performance.
+
+On the other hand, a \textbf{virtual cloud} has no systems that depend on being at a specific location to provide their services.
+In other words, all the \GlossaryHyperRef{resource}{resources} of such a cloud are \GlossaryHyperRef{virtual}{virtual}.
+This is the kind of cloud that can be rented by many cloud providers and is part of the greater trend many refer to as \textit{the cloud}.
+A virtual cloud could provide services for forecasting, analysis, design, planning or communication, among other possible examples.
+None of these use cases require any other resources than virtual compute, storage and network resources.
+
+Individual clouds may be interconnected to former even larger systems-of-systems, which we then refer to as \textbf{systems-of-clouds}.
+The individual clouds may be owned and operated by different departments, subdivisions or teams at the same company, or even by different legal entities.
+Some of them may be local, while other may be virtual.
+Examples of systems-of-clouds may be a set of weather stations operated by the same company, the robots of distinct collaborating companies at a mining site, or the carriers of a supply chain.
+When a system-of-clouds contain only local clouds, we refer to it as a \GlossaryHyperRef{system-of-local-clouds}{systems-of-local-clouds}.
+Likewise, a system-of-clouds with only virtual clouds constitute a \GlossaryHyperRef{system-of-virtual-clouds}{systems-of-virtual-clouds}.
