@@ -108,13 +108,12 @@ This handling may entail sending additional messages to other systems, starting 
 \subsection{System Composition}
 \label{sec:overview:system-composition}
 
-\GlossaryHyperRef{system}{Systems} will typically \GlossaryHyperRef{consumer-service}{consume services} because it is a necessary part of executing the tasks they were designed to perform.
+\GlossaryHyperRef{system}{Systems} may \GlossaryHyperRef{consumer-service}{consume services} because it is a necessary part of executing the tasks they were designed to perform.
 Consider, for example, a scenario in which a number of automated guided vehicles, each of which is a system, are to move items around a factory as directed by a scheduling system.
 As the scheduling system does not have wheels, engines or other necessary sensors and actuators, it cannot physically move any items by itself. 
 Likewise, the individual vehicles are not capable of themselves deciding what needs to be taken to what location.
-However, the combination of a scheduling system and vehicles becomes able to plan, track and execute the moving of items.
-When these systems cooperate by consuming each others' services, they become able to do things none of them could by themselves.
-When systems consume each other's services in this manner, they form a so-called \GlossaryHyperRef{system-of-systems}{system-of-systems}.
+However, if the scheduling system may consume the services of the vehicles, it gains the ability to physically execute its plans.
+When systems consume each others' services in this manner, they form a \GlossaryHyperRef{system-of-systems}{\textit{system-of-systems}}.
 
 As depicted in Figure \ref{fig:systems-of-systems}, there are different kinds of systems-of-systems with their own characteristics.
 There are \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-clouds}{systems-of-clouds}, as well as \textit{local} and \textit{virtual} variants of both.\footnote{
@@ -128,29 +127,32 @@ There are \GlossaryHyperRef{cloud}{clouds} and \GlossaryHyperRef{system-of-cloud
   \centering
   \includegraphics[scale=0.9]{figures/systems-of-systems}
   \caption{
-    The different kinds of \textit{systems-of-systems}, each of which consists of a number of \textit{systems} that consume each others' services.
-    Clouds are systems-of-systems with \textit{boundaries} and \textit{resource pools}, while systems-of-clouds combine multiple clouds.
+    The types of \textit{systems-of-systems}, each of which consists of a number of \textit{systems} that consume each others' services.
+    Clouds are systems-of-systems with \textit{boundaries}, while systems-of-clouds combine multiple clouds.
   }
   \label{fig:systems-of-systems}
 \end{figure}
 
 \vfill
 
-When a system-of-systems has at least one \GlossaryHyperRef{boundary-cloud}{boundary} and at least one pool of \GlossaryHyperRef{resource}{resources}, we refer to it as a \textbf{cloud}.
-Boundaries may be formed via access control policies, firewalls, gateway systems, physical separation, among many other possible examples.
-Pools of resources may consist of mining equipment, \GlossaryHyperRef{unit-compute}{compute units}, sand, or whatever else is used by the cloud in question to render its services.
+A \textbf{cloud} is a set of systems separated from all other systems by at least one \GlossaryHyperRef{boundary-cloud}{boundary}.
+Such a boundary may be formed via access control policies, firewalls, gateway systems, physical separation, among many other possible examples.
+Additionally, infrastructure must be in place, of any kind, allowing for any system part of the cloud to send messages to any other system in that cloud.\footnote{
+  Our term \textit{cloud} must not be confused with \textit{the cloud}, which is a common name for renting virtual compute, storage and networking resources from a so-called \textit{cloud provider}.
+}
+
 Because the Arrowhead framework is highly concerned with physical automation processes, we distinguish \GlossaryHyperRef{cloud-local}{local clouds} from \GlossaryHyperRef{cloud-virtual}{virtual clouds}.
 
-The \textbf{local cloud} has \GlossaryHyperRef{boundary-local}{local boundaries} and \GlossaryHyperRef{resource-local}{local resources}, which means that it must be associated with a physical location.
+A \textbf{local cloud} has at least one system that depends on being at a specific location to provide at least one of its services.
 Examples of local clouds could be smelting stations, drone control towers, assembly lines, power distribution centers, or the components of a satellite.
-Whether it be ore, drones, parts, power cables or a complex mesh of all those things, the resources of these example clouds are all markedly \textit{physical}.
-Because of their physicality, it matters \textit{where} the clouds are physically located.
-Since physical isolation is a form of physical boundary, each of them has both at least one local boundary and at least one local resource.
+All of these examples involve performing physical activities that depend on occurring at specific physical locations.
+Also a common data center may be a local cloud, if its exact location matters for reasons such as privacy or performance.
 
-On the other hand, a \textbf{virtual cloud} has only \GlossaryHyperRef{boundary-virtual}{virtual boundaries} and \GlossaryHyperRef{resource-virtual}{virtual resources}, which means that the values produced by the cloud are not tied to its physical location.
-This is the kind of cloud that underpins much of the modern Internet.
-A few companies let out virtual compute, storage and network resources, which their clients rent to provision their own virtual clouds and provide their own virtual services.
-A virtual cloud could provide services for forecasting, analysis, design, planning, communication, or digital entertainment, among other possible examples.
+On the other hand, a \textbf{virtual cloud} has no systems that depend on being at a specific location to provide their services.
+In other words, all the \GlossaryHyperRef{resource}{resources} of such a cloud are \GlossaryHyperRef{virtual}{virtual}.
+This is the kind of cloud that can be rented by many cloud providers and is part of the greater trend many refer to as \textit{the cloud}.
+A virtual cloud could provide services for forecasting, analysis, design, planning or communication, among other possible examples.
+None of these use cases require any other resources than virtual compute, storage and network resources.
 
 Individual clouds may be interconnected to former even larger systems-of-systems, which we then refer to as \textbf{systems-of-clouds}.
 The individual clouds may be owned and operated by different departments, subdivisions or teams at the same company, or even by different legal entities.

@@ -214,9 +214,10 @@ Systems-of-systems are often designed to take advantage of such \GlossaryHyperRe
 \subsection{Cloud}
 \label{sec:concepts:cloud}
 
-A \GlossaryHyperRef{cloud}{cloud} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} able to execute given tasks through the use of a pool of \GlossaryHyperRef{resource}{resources}, each of which is managed by a so-called \GlossaryHyperRef{system-supervisory}{\textit{supervisory system}}.
-The resource pool of a cloud could consist of 3D-printers, autonomous unmanned vehicles, conventional servers, sand, or anything else that could be used to produce value on demand.
-As depicted in Figure \ref{fig:cloud}, every cloud must also have at least one \GlossaryHyperRef{boundary}{boundary} separating it from other systems-of-systems.
+A \GlossaryHyperRef{cloud}{cloud} is an \GlossaryHyperRef{identifiable}{identifiable} \GlossaryHyperRef{system-of-systems}{system-of-systems} with at least one \GlossaryHyperRef{boundary}{boundary}.
+Examples of boundaries include access control policies, firewalls and gateway or border systems.
+I must be possible for every system within the boundary to send messages to any other system also inside the boundary, even if the sender in question does not support any services of the receiver.
+This means that for a system to be considered to be added to a cloud, it must be within its boundary and be able to communicate with all other systems inside it.
 Clouds can be either \GlossaryHyperRef{cloud-local}{\textit{local}} or \GlossaryHyperRef{cloud-virtual}{\textit{virtual}}, depending on if the value they produce are bound to specific physical locations or not.
 Refer to Section \ref{sec:overview:system-composition} for an overview of the differences between local and virtual clouds.
 
@@ -224,7 +225,7 @@ Refer to Section \ref{sec:overview:system-composition} for an overview of the di
   \centering
   \includegraphics[scale=0.9]{figures/cloud}
   \caption{
-    The cloud defined as a system-of-systems with at least one boundary and one resource.
+    The cloud defined as a system-of-systems with at least one boundary.
   }
   \label{fig:cloud}
 \end{figure}
